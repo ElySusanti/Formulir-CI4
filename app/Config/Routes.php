@@ -5,7 +5,8 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+// $routes->get('/', 'Home::index');
+$routes->get('/', 'Formulir::index');
 $routes->get('/formulir/satu', 'Formulir::satu');
 $routes->get('/formulir/dua', 'Formulir::dua');
 $routes->get('/formulir/tiga', 'Formulir::tiga');

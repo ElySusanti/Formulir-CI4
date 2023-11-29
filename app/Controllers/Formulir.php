@@ -4,28 +4,32 @@ namespace App\Controllers;
 
 class Formulir extends BaseController
 {
+    public function index()
+    {
+        return view('halaman_utama');
+    }
     public function satu()
     {
-        return view('persetujuan-anastesi');
+        return view('form/persetujuan-anastesi');
     }
     public function dua()
     {
-        return view('daftar-tilik-keselamatan-pasien');
+        return view('form/daftar-tilik-keselamatan-pasien');
     }
     public function tiga()
     {
-        return view('laporan-pemakaian-instrument');
+        return view('form/laporan-pemakaian-instrument');
     }
     public function empat()
     {
-        return view('pengkajian-awal');
+        return view('form/pengkajian-awal');
     }
     public function lima()
     {
-        return view('radiologi-online');
+        return view('form/radiologi-online');
     }
     public function enam()
     {
-        return view('lab-online');
+        return view('form/lab-online');
     }
 }

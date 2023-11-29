@@ -1,5 +1,13 @@
+<?php
+$db = \Config\Database::connect();
+$query = $db->query("SELECT * FROM ASSESSMENT_INFO");
+echo "<pre>";
+print_r($query->getResult());
+die();
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +19,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <style>
-        .kbw-signature { width: 150px; height: 70px; }
+        .kbw-signature {
+            width: 150px;
+            height: 70px;
+        }
     </style>
     <!--[if IE]>
     <script src="excanvas.js"></script>
@@ -39,6 +50,7 @@
         });
     </script>
 </head>
+
 <body>
     <div class="container" style="font-family: Verdana;">
         <form action="">
@@ -536,7 +548,7 @@
                             </div>
                         </div>
                     </div>
-                </div>                
+                </div>
                 <div class="col">
                     <div class="row mb-1">
                         <div class="col-md-5" style="background-color: rgb(138, 207, 224);">
@@ -569,7 +581,7 @@
                             </div>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
             <div class="row mb-5">
                 <div class="col">
@@ -624,4 +636,5 @@
         </form>
     </div>
 </body>
+
 </html>

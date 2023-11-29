@@ -26,11 +26,11 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
-        'username'     => '',
-        'password'     => '',
-        'database'     => '',
-        'DBDriver'     => 'MySQLi',
+        'hostname'     => 'SAMSUNG_ULTRA',
+        'username'     => 'sa',
+        'password'     => '12345',
+        'database'     => 'Formulir',
+        'DBDriver'     => 'sqlsrv',
         'DBPrefix'     => '',
         'pConnect'     => false,
         'DBDebug'      => true,
@@ -51,10 +51,10 @@ class Database extends Config
      */
     public array $tests = [
         'DSN'         => '',
-        'hostname'    => 'SAMSUNG_ULTRA',
+        'hostname'    => '',
         'username'    => '',
         'password'    => '',
-        'database'    => 'Formulir',
+        'database'    => '',
         'DBDriver'    => 'SQLite3',
         'DBPrefix'    => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
         'pConnect'    => false,

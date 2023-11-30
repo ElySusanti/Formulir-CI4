@@ -1,3 +1,10 @@
+<?php
+$db = db_connect();
+$query = $db->query("SELECT * FROM Table_Coba");
+echo "<pre>";
+print_r($query->getResult());
+die();
+?>
 <!DOCTYPE html>
 <html lang="en">
 

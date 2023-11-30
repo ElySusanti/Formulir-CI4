@@ -32,7 +32,7 @@ class Database extends Config
         'database'     => 'Formulir',
         'DBDriver'     => 'sqlsrv',
         'DBPrefix'     => '',
-        'pConnect'     => false,
+        'pConnect'     => true,
         'DBDebug'      => true,
         'charset'      => 'utf8',
         'DBCollat'     => 'utf8_general_ci',

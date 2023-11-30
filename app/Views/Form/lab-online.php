@@ -1,10 +1,3 @@
-<?php
-$db = \Config\Database::connect();
-$query = $db->query("SELECT * FROM ASSESSMENT_INFO");
-echo "<pre>";
-print_r($query->getResult());
-die();
-?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -241,7 +241,6 @@
                                 <label for="weight">BB/TB/PB: </label>
                                 <input type="number" id="weight" name="weight" style="width: 50px;">
                                 <input type="number" id="height" name="height" style="width: 50px;">
-                                <input type="number" id="height" name="height" style="width: 50px;">
                             </td>
                             <td colspan="4" rowspan="7" style="text-align: center;">
                                 <b>Skala Nyeri Untuk Anak (Skala Flacc):</b><br>
@@ -690,7 +689,7 @@
                                     </div>
                                 </div>
                             </td>
-                            <td colspan="3"><b>Skrining Gizi Dewasa</b></td>
+                            <td colspan="3" style="text-align: center;"><b>Skrining Gizi Dewasa</b></td>
                             <td style="text-align: center;"><b>Hasil</b></td>
                         </tr>
                         <tr>
@@ -757,7 +756,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="3"><b>Skrining Gizi Anak</b></td>
+                            <td colspan="3" style="text-align: center;"><b>Skrining Gizi Anak</b></td>
                             <td style="text-align: center;"><b>Hasil</b></td>
                         </tr>
                         <tr style="vertical-align: middle;">

@@ -1,10 +1,3 @@
-<?php
-$db = db_connect();
-$query = $db->query("SELECT * FROM Table_Coba");
-echo "<pre>";
-print_r($query->getResult());
-die();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,6 +45,17 @@ die();
 </head>
 
 <body>
+    <?php
+
+    $db = db_connect();
+    $query = $db->query("SELECT * FROM Table_Coba");
+
+    foreach ($query->getResult() as $row) {
+        echo $row->no_registration;
+        echo $row->thename;
+    };
+
+    ?>
     <div class="container" style="font-family: Verdana;">
         <form action="">
             <div class="row mt-5">

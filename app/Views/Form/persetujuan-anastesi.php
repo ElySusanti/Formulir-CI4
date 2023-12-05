@@ -1,6 +1,14 @@
+<?php
+$db = db_connect();
+
+foreach ($dataAssessmentformsatu as $row) {
+};
+?>
+
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -9,141 +17,140 @@
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('') ?>css/jquery.signature.css">
     <style>
-    .kbw-signature { width: 200px; height: 100px; }
+        .kbw-signature {
+            width: 200px;
+            height: 100px;
+        }
     </style>
     <!--[if IE]>
     <script src="excanvas.js"></script>
     <![endif]-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.signature.js"></script>
-<script>
-$(function() {
-	var sig = $('#sig').signature();
-	$('#disable').click(function() {
-		var disable = $(this).text() === 'Disable';
-		$(this).text(disable ? 'Enable' : 'Disable');
-		sig.signature(disable ? 'disable' : 'enable');
-	});
-	$('#clear').click(function() {
-		sig.signature('clear');
-	});
-	$('#json').click(function() {
-		alert(sig.signature('toJSON'));
-	});
-	$('#svg').click(function() {
-		alert(sig.signature('toSVG'));
-	});
-});
-</script>
-<script>
-$(function() {
-	var sig = $('#sig1').signature();
-	$('#disable').click(function() {
-		var disable = $(this).text() === 'Disable';
-		$(this).text(disable ? 'Enable' : 'Disable');
-		sig.signature(disable ? 'disable' : 'enable');
-	});
-	$('#clear').click(function() {
-		sig.signature('clear');
-	});
-	$('#json').click(function() {
-		alert(sig.signature('toJSON'));
-	});
-	$('#svg').click(function() {
-		alert(sig.signature('toSVG'));
-	});
-});
-</script>
-<script>
-$(function() {
-	var sig = $('#sig2').signature();
-	$('#disable').click(function() {
-		var disable = $(this).text() === 'Disable';
-		$(this).text(disable ? 'Enable' : 'Disable');
-		sig.signature(disable ? 'disable' : 'enable');
-	});
-	$('#clear').click(function() {
-		sig.signature('clear');
-	});
-	$('#json').click(function() {
-		alert(sig.signature('toJSON'));
-	});
-	$('#svg').click(function() {
-		alert(sig.signature('toSVG'));
-	});
-});
-</script>
-<script>
-$(function() {
-	var sig = $('#sig3').signature();
-	$('#disable').click(function() {
-		var disable = $(this).text() === 'Disable';
-		$(this).text(disable ? 'Enable' : 'Disable');
-		sig.signature(disable ? 'disable' : 'enable');
-	});
-	$('#clear').click(function() {
-		sig.signature('clear');
-	});
-	$('#json').click(function() {
-		alert(sig.signature('toJSON'));
-	});
-	$('#svg').click(function() {
-		alert(sig.signature('toSVG'));
-	});
-});
-</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(''); ?>js/jquery.signature.js"></script>
+    <script>
+        $(function() {
+            var sig = $('#sig').signature();
+            $('#disable').click(function() {
+                var disable = $(this).text() === 'Disable';
+                $(this).text(disable ? 'Enable' : 'Disable');
+                sig.signature(disable ? 'disable' : 'enable');
+            });
+            $('#clear').click(function() {
+                sig.signature('clear');
+            });
+            $('#json').click(function() {
+                alert(sig.signature('toJSON'));
+            });
+            $('#svg').click(function() {
+                alert(sig.signature('toSVG'));
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            var sig = $('#sig1').signature();
+            $('#disable').click(function() {
+                var disable = $(this).text() === 'Disable';
+                $(this).text(disable ? 'Enable' : 'Disable');
+                sig.signature(disable ? 'disable' : 'enable');
+            });
+            $('#clear').click(function() {
+                sig.signature('clear');
+            });
+            $('#json').click(function() {
+                alert(sig.signature('toJSON'));
+            });
+            $('#svg').click(function() {
+                alert(sig.signature('toSVG'));
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            var sig = $('#sig2').signature();
+            $('#disable').click(function() {
+                var disable = $(this).text() === 'Disable';
+                $(this).text(disable ? 'Enable' : 'Disable');
+                sig.signature(disable ? 'disable' : 'enable');
+            });
+            $('#clear').click(function() {
+                sig.signature('clear');
+            });
+            $('#json').click(function() {
+                alert(sig.signature('toJSON'));
+            });
+            $('#svg').click(function() {
+                alert(sig.signature('toSVG'));
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            var sig = $('#sig3').signature();
+            $('#disable').click(function() {
+                var disable = $(this).text() === 'Disable';
+                $(this).text(disable ? 'Enable' : 'Disable');
+                sig.signature(disable ? 'disable' : 'enable');
+            });
+            $('#clear').click(function() {
+                sig.signature('clear');
+            });
+            $('#json').click(function() {
+                alert(sig.signature('toJSON'));
+            });
+            $('#svg').click(function() {
+                alert(sig.signature('toSVG'));
+            });
+        });
+    </script>
 </head>
-  <body>
+
+<body>
     <div class="container">
         <form action="" autocomplete="off" class="mt-3" style="font-family: 'Times New Roman';">
             <h3 style="text-align: right;"><b>RM. 08 Lanjutan 3 </b></h3>
             <table class="table table-bordered mb-0" style="border: 1px; color: black;width: 100%;">
                 <tbody>
                     <tr>
-                        <td style="width: 50%; text-align: center; vertical-align: middle;"><h3><b>PERSETUJUAN TINDAKAN <br>ANASTESI</b></h3></td>
+                        <td style="width: 50%; text-align: center; vertical-align: middle;">
+                            <h3><b>PERSETUJUAN TINDAKAN <br>ANASTESI</b></h3>
+                        </td>
                         <td style="width: 50%;">
                             <div class="row mb-3">
                                 <div class="col-md-4">
-                                    <label for="v_01">Nomor Rekam Medis</label>
+                                    <label for="no_Registration">Nomor Rekam Medis</label>
                                 </div>
                                 <div class="col-md-6">
-                                    : <input type="text" id="v_01" name="v_01" style="width: 200px;" readonly>
+                                    : <input type="text" id="no_Registration" name="no_Registration" style="width: 200px;" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
                                 </div>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-md-4">
-                                    <label for="v_02">Nama Lengkap</label>
-                                    <br><label for="v_03">(Nama Keluarga)</label>
+                                    <label for="thename">Nama Lengkap</label>
+                                    <br><label for="alloanamnesis_contact">(Nama Keluarga)</label>
                                 </div>
                                 <div class="col-md-6">
-                                    : <input type="text" id="v_02" name="v_02" style="width: 100px;" readonly>, 
-                                    <input type="text" id="v_03" name="v_03" style="width: 100px;" readonly>
+                                    : <input type="text" id="thename" name="thename" style="width: 100px;" value="<?php echo $row->THENAME; ?>" readonly>,
+                                    <input type="text" id="alloanamnesis_contact" name="alloanamnesis_contact" style="width: 100px;" value="<?php echo $row->ALLOANAMNESIS_CONTACT; ?>" readonly>
                                 </div>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-md-3">
-                                    <label for="v_04">Tanggal Lahir</label>
+                                    <label for="date_of_birth">Tanggal Lahir</label>
                                 </div>
                                 <div class="col-md-9">
-                                    : <input type="date" id="v_04" name="v_04" style="width: 100px;" readonly>,
-                                    <label for="">Jenis Kelamin : </label>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="t_01" id="t_01_l" value="0" readonly>
-                                        <label class="form-check-label" for="t_01_l">L / </label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="t_01" id="t_01_p" value="1" readonly>
-                                        <label class="form-check-label" for="t_01_p">P</label>
-                                    </div>
+                                    : <input type="date" id="date_of_birth" name="date_of_birth" style="width: 100px;" readonly>,
+                                    <label for="gender">Jenis Kelamin : </label>
+                                    <input type="text" id="gender" name="gender" style="width: 100px;" value="<?php echo $row->GENDER; ?>" readonly>
                                 </div>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-md-3">
-                                    <label for="v_05">Ruangan</label>
+                                    <label for="class_room_id">Ruangan</label>
                                 </div>
                                 <div class="col-md-7">
-                                    : <input type="text" id="v_05" name="v_05" style="width: 100px;" readonly>
+                                    : <input type="text" id="class_room_id" name="class_room_id" style="width: 100px;" value="<?php echo $row->CLASS_ROOM_ID; ?>" readonly>
                                 </div>
                             </div>
                         </td>
@@ -226,8 +233,9 @@ $(function() {
                 <tr>
                     <td rowspan="3" style="width: 20%;">
                         <p>  Spinal atau Epidural Anestesi<br>
-                        &nbsp;&nbsp;&nbsp; Dengan Penenang (Sedasi)<br>
-                        &nbsp;&nbsp;&nbsp; Tanpa Penenang</p></td>
+                            &nbsp;&nbsp;&nbsp; Dengan Penenang (Sedasi)<br>
+                            &nbsp;&nbsp;&nbsp; Tanpa Penenang</p>
+                    </td>
                     <td style="width: 20%;">Hasil yang diharapkan</td>
                     <td style="width: 60%;">Penurunan / hilangnya sensasi / pergerakan di area bagian bawah</td>
                 </tr>
@@ -243,7 +251,8 @@ $(function() {
                     <td rowspan="3" style="width: 20%;">
                         <p>  Blok Syaraf Besar / Kecil<br>
                             &nbsp;&nbsp;&nbsp; Dengan Penenang (Sedasi)<br>
-                            &nbsp;&nbsp;&nbsp; Tanpa Penenang</p></td>
+                            &nbsp;&nbsp;&nbsp; Tanpa Penenang</p>
+                    </td>
                     <td style="width: 20%;">Hasil yang diharapkan</td>
                     <td style="width: 60%;">Hilang sementara dari sensasi merasakan dan / pergerakan pada area khusus pada alat gerak / kaki</td>
                 </tr>
@@ -259,7 +268,8 @@ $(function() {
                     <td rowspan="3" style="width: 20%;">
                         <p>  Anestesi Regional Intravena<br>
                             &nbsp;&nbsp;&nbsp; Dengan Penenang (Sedasi)<br>
-                            &nbsp;&nbsp;&nbsp; Tanpa Penenang</p></td>
+                            &nbsp;&nbsp;&nbsp; Tanpa Penenang</p>
+                    </td>
                     <td style="width: 20%;">Hasil yang diharapkan</td>
                     <td style="width: 60%;">Hilang sementara perasaan dan / pergerakan kaki</td>
                 </tr>
@@ -275,7 +285,8 @@ $(function() {
                     <td rowspan="3" style="width: 20%;">
                         <p>  Tindakan Termonitor Anestesi<br>
                             &nbsp;&nbsp;&nbsp; Dengan Penenang (Sedasi)<br>
-                            &nbsp;&nbsp;&nbsp; Tanpa Penenang</p></td>
+                            &nbsp;&nbsp;&nbsp; Tanpa Penenang</p>
+                    </td>
                     <td style="width: 20%;">Hasil yang diharapkan</td>
                     <td style="width: 60%;">Menurunnya ansietas dan nyeri, anestesi sebagian atau total</td>
                 </tr>
@@ -290,12 +301,13 @@ $(function() {
                 <tr>
                     <td rowspan="3" style="width: 20%;">
                         <p>  Monitoring Invasif<br>
-                            &nbsp;&nbsp;&nbsp;	Melalui Arteri<br>
-                            &nbsp;&nbsp;&nbsp;	Melaui Vena Central<br>
-                            &nbsp;&nbsp;&nbsp;	Melalui Arteri Pulmoner<br>
-                            &nbsp;&nbsp;&nbsp;	TEE (Trans Esofagus Echocardiography)<br>
-                            &nbsp;&nbsp;&nbsp;	Lumbar Drain<br>
-                            &nbsp;&nbsp;&nbsp;	Spinal dan Mengukur Tekanan Darah</p></td>
+                            &nbsp;&nbsp;&nbsp; Melalui Arteri<br>
+                            &nbsp;&nbsp;&nbsp; Melaui Vena Central<br>
+                            &nbsp;&nbsp;&nbsp; Melalui Arteri Pulmoner<br>
+                            &nbsp;&nbsp;&nbsp; TEE (Trans Esofagus Echocardiography)<br>
+                            &nbsp;&nbsp;&nbsp; Lumbar Drain<br>
+                            &nbsp;&nbsp;&nbsp; Spinal dan Mengukur Tekanan Darah</p>
+                    </td>
                     <td style="width: 20%;"></td>
                     <td style="width: 60%;">Monitoring selama pelayanan anestesi termasuk pengambilan darah, menyuntikkan obat ke dalam vena</td>
                 </tr>
@@ -306,7 +318,7 @@ $(function() {
                          Memasang tube di leher untuk memonitor tekanan didalam jantung<br>
                          Memasang probe ultra sound ke dalam tenggorokan untuk memonitor jantung<br>
                          Menempatkan tube diantara rulang belakang untuk mengeluarkan cairan
-                        </td>
+                    </td>
                 </tr>
                 <tr>
                     <td>Resiko (tapi tidak hanya terbatas pada yang disebut)</td>
@@ -315,16 +327,17 @@ $(function() {
                 <tr>
                     <td style="width: 20%;"> Pemberian obat analgetik</td>
                     <td style="width: 20%;">Teknik</td>
-                    <td style="width: 60%;"> Obat disuntikkan ke pembuluh darah/aliran infus, atau melalui rektal atau  ditempel di kulit<br>
+                    <td style="width: 60%;"> Obat disuntikkan ke pembuluh darah/aliran infus, atau melalui rektal atau ditempel di kulit<br>
                          Dapat efek samping berupa gatal, pingsan bahkan kematian</td>
                 </tr>
                 <tr>
-                    <td colspan="3"><p style="text-align: justify;">
-                        Sudah dijelaskan kepada saya, semua bentuk / macam teknik anestesi termasuk resiko yang bisa timbul dan bahwa tidak ada jaminan terhadap hasil yang dicapai dari tindakan atau terapi yang saya jalani. Meski jarang, dapat timbul komplikasi yang tidak terduga dari setiap teknik anestesi, termasuk kemungkinan infeksi, perdarahan, reaksi obat, bekuan darah, hilangnya sensasi, hilangnya penglihatan, hilangnya fungsi kaki dan tangan, paralysis / lumpuh, stroke, kerusakan otak, serangan jantung atau kematian. <br><br>
-                        Saya mengerti bahwa semua resiko diatas, dapat timbul pada semua teknik anestesi dan termasuk resiko tambahan / khusus yang dapat timbul pada teknik anestesi tertentu. <br><br>
-                        Saya sudah diberitahu teknik anestesi yang akan digunakan pada operasi saya dan bahwa teknik anestesi yang akan dilakukan ditentukan oleh banyak faktor termasuk kondisi fisik saya, jenis tindakan yang akan digunakan oleh dokter anestesi, berdasarkan pertimbangan tertentu dari dokter, dan juga keinginan saya. <br><br>
-                        Sudah dijelaskan kepada saya bahwa terkadang teknik anestesi lokal, dengan atau tanpa sedasi / penenang dapat berjalan tidak sesuai keinginan / harapan sehingga dibutuhkan teknik anestesi lain, termasuk anestesi umum.
-                    </p>
+                    <td colspan="3">
+                        <p style="text-align: justify;">
+                            Sudah dijelaskan kepada saya, semua bentuk / macam teknik anestesi termasuk resiko yang bisa timbul dan bahwa tidak ada jaminan terhadap hasil yang dicapai dari tindakan atau terapi yang saya jalani. Meski jarang, dapat timbul komplikasi yang tidak terduga dari setiap teknik anestesi, termasuk kemungkinan infeksi, perdarahan, reaksi obat, bekuan darah, hilangnya sensasi, hilangnya penglihatan, hilangnya fungsi kaki dan tangan, paralysis / lumpuh, stroke, kerusakan otak, serangan jantung atau kematian. <br><br>
+                            Saya mengerti bahwa semua resiko diatas, dapat timbul pada semua teknik anestesi dan termasuk resiko tambahan / khusus yang dapat timbul pada teknik anestesi tertentu. <br><br>
+                            Saya sudah diberitahu teknik anestesi yang akan digunakan pada operasi saya dan bahwa teknik anestesi yang akan dilakukan ditentukan oleh banyak faktor termasuk kondisi fisik saya, jenis tindakan yang akan digunakan oleh dokter anestesi, berdasarkan pertimbangan tertentu dari dokter, dan juga keinginan saya. <br><br>
+                            Sudah dijelaskan kepada saya bahwa terkadang teknik anestesi lokal, dengan atau tanpa sedasi / penenang dapat berjalan tidak sesuai keinginan / harapan sehingga dibutuhkan teknik anestesi lain, termasuk anestesi umum.
+                        </p>
                     </td>
                 </tr>
                 <tr>
@@ -332,7 +345,7 @@ $(function() {
                 </tr>
                 <tr>
                     <td colspan="3">
-                        Yang bertanda tangan dibawah ini, saya nama <input type="text" id="v_11" name="v_11" style="width: 200px;" required> umur <input type="text" id="v_12" name="v_12" style="width: 100px;" required> tahun, 
+                        Yang bertanda tangan dibawah ini, saya nama <input type="text" id="v_11" name="v_11" style="width: 200px;" required> umur <input type="text" id="v_12" name="v_12" style="width: 100px;" required> tahun,
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="t_02" id="t_02_laki-laki" value="0">
                             <label class="form-check-label" for="t_02_laki-laki">laki-laki /</label>
@@ -341,7 +354,7 @@ $(function() {
                             <input class="form-check-input" type="radio" name="t_02" id="t_02_perempuan" value="1">
                             <label class="form-check-label" for="t_02_perempuan">perempuan, </label>
                         </div><br>
-                        alamat <input type="text" id="v_13" name="v_13" style="width: 200px;" required> 
+                        alamat <input type="text" id="v_13" name="v_13" style="width: 200px;" required>
                         dengan ini menyatakan persetujuan untuk dilakukan tindakan anestesi terhadap&nbsp;
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="t_03" id="t_03_saya" value="0" onclick="fungsi1_disabled()">
@@ -350,9 +363,9 @@ $(function() {
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="t_03" id="t_03_input" value="1" onclick="fungsi1_enable()">
                             <input type="text" id="v_14" name="v_14" style="width: 150px;" disabled>
-                        </div>saya, 
-                        Yang bernama <input type="text" id="v_15" name="v_15" style="width: 200px;" disabled> 
-                        Tanggal lahir <input type="date" id="v_16" name="v_16" style="width: 100px;" required> 
+                        </div>saya,
+                        Yang bernama <input type="text" id="v_15" name="v_15" style="width: 200px;" disabled>
+                        Tanggal lahir <input type="date" id="v_16" name="v_16" style="width: 100px;" required>
                         Nomor Rekam Medis : <input type="text" id="v_17" name="v_17" style="width: 200px;" required>
                     </td>
                 </tr>
@@ -419,7 +432,8 @@ $(function() {
                                 <tr>
                                     <td style="text-align: center; width: 33%;">
                                         <label for="v_18" style="text-align: center;">Saksi 1</label>
-                                        <br><br><div id="sig"></div>
+                                        <br><br>
+                                        <div id="sig"></div>
                                         <br><input type="text" id="v_18" name="v_18" width="100px">
                                     </td>
                                     <td style="width: 33%;"></td>
@@ -428,19 +442,22 @@ $(function() {
                                         <input type="date" id="v_19" name="v_19">
                                         <br><br><label for="v_20">Jam</label>
                                         <input type="time" id="v_20" name="v_20">
-                                        <br><br><div id="sig3"></div>
+                                        <br><br>
+                                        <div id="sig3"></div>
                                         <br><input type="text" id="v_21" name="v_21" width="100px">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="text-align: center;">
                                         <label for="v_22" style="text-align: center;">Saksi 2</label>
-                                        <br><br><div id="sig1"></div>
+                                        <br><br>
+                                        <div id="sig1"></div>
                                         <br><input type="text" id="v_22" name="v_22" width="100px">
                                     </td>
                                     <td style="text-align: center;">
                                         <label for="v_23">Dokter Anastesi <br>Yang Menerangkan</label>
-                                        <br><div id="sig2"></div>
+                                        <br>
+                                        <div id="sig2"></div>
                                         <br><input type="text" id="v_23" name="v_23" width="100px">
                                     </td>
                                 </tr>
@@ -452,33 +469,36 @@ $(function() {
         </form>
     </div>
     <script>
-        $(function(){
+        $(function() {
             fungsi1_disabled();
             $("#t_03_saya").click(fungsi1_disabled);
         });
-        $(function(){
+        $(function() {
             fungsi1_enable();
             $("#t_03_input").click(fungsi1_enable);
         });
-        
-        function fungsi1_disabled(){
-            if (this.click){
+
+        function fungsi1_disabled() {
+            if (this.click) {
                 $("#v_14, #v_15").attr("disabled", true);
                 $("#v_14, #v_15").val("");
-            } else{
+            } else {
                 $("#v_14, #v_15").removeAttr("disabled");
             }
         }
-        function fungsi1_enable(){
+
+        function fungsi1_enable() {
             $("#v_14, #v_15").attr("disabled", true);
-            if (this.click){
+            if (this.click) {
                 $("#v_14, #v_15").removeAttr("disabled");
                 $("#v_14").focus();
-            } else{
+            } else {
                 $("#v_14, #v_15").attr("disabled", true);
             }
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+
+</body>
+
 </html>

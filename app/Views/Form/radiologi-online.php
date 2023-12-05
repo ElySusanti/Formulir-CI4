@@ -1,5 +1,12 @@
+<?php
+$db = db_connect();
+
+foreach ($dataAssessmentformlima as $row) {
+};
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +18,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <style>
-        .kbw-signature { width: 150px; height: 90px; }
+        .kbw-signature {
+            width: 150px;
+            height: 90px;
+        }
     </style>
     <!--[if IE]>
     <script src="excanvas.js"></script>
@@ -39,6 +49,7 @@
         });
     </script>
 </head>
+
 <body>
     <div class="container" style="font-family: Verdana;">
         <form action="">
@@ -57,13 +68,13 @@
                     <label for="no_registration">No CM/MR : </label>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" name="no_registration" id="no_registration" style="width: 200px;" readonly>
+                    <input type="text" name="no_registration" id="no_registration" style="width: 200px;" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
                 </div>
                 <div class="col-md-2" style="text-align: right;">
                     <label for="thename">Nama : </label>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" name="thename" id="thename" style="width: 300px;" readonly>
+                    <input type="text" name="thename" id="thename" style="width: 300px;" value="<?php echo $row->THENAME; ?>" readonly>
                 </div>
             </div>
             <div class="row mb-1">
@@ -71,15 +82,15 @@
                     <label for="theaddress">Alamat : </label>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" name="theaddress" id="theaddress" style="width: 300px;" readonly>
+                    <input type="text" name="theaddress" id="theaddress" style="width: 300px;" value="<?php echo $row->THEADDRESS; ?>" readonly>
                 </div>
                 <div class="col-md-2" style="text-align: right;">
                     <label for="">Umur : </label>
                 </div>
                 <div class="col-md-4">
-                    <input type="number" name="ageyear" id="ageyear" style="width: 50px;" min="0" readonly> Th &nbsp;
-                    <input type="number" name="agemonth" id="agemonth" style="width: 50px;" min="0" readonly> Bln &nbsp;
-                    <input type="number" name="ageday" id="ageday" style="width: 50px;" min="0" readonly> Hr &nbsp;
+                    <input type="number" name="ageyear" id="ageyear" style="width: 50px;" min="0" value="<?php echo $row->AGEYEAR; ?>" readonly> Th &nbsp;
+                    <input type="number" name="agemonth" id="agemonth" style="width: 50px;" min="0" value="<?php echo $row->AGEMONTH; ?>" readonly> Bln &nbsp;
+                    <input type="number" name="ageday" id="ageday" style="width: 50px;" min="0" value="<?php echo $row->AGEDAY; ?>" readonly> Hr &nbsp;
                 </div>
             </div>
             <div class="row mb-3">
@@ -165,7 +176,7 @@
                     </div>
                     <div class="row mb-2">
                         <div class="col">
-                            <b >Thorax :</b><br>
+                            <b>Thorax :</b><br>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="pr_035" id="pr_035
                                 ">
@@ -265,7 +276,7 @@
                     </div>
                     <div class="row mb-2">
                         <div class="col">
-                            <b >Abdomen :</b><br>
+                            <b>Abdomen :</b><br>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="pr_055" id="pr_055">
                                 <label class="form-check-label" for="pr_055">BNO Bayi</label>
@@ -449,4 +460,5 @@
         </form>
     </div>
 </body>
+
 </html>

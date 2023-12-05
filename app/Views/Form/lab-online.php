@@ -1,3 +1,9 @@
+<?php
+$db = db_connect();
+
+foreach ($dataAssessmentformenam as $row) {
+};
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,17 +51,6 @@
 </head>
 
 <body>
-    <?php
-
-    $db = db_connect();
-    $query = $db->query("SELECT * FROM Table_Coba");
-
-    foreach ($query->getResult() as $row) {
-        echo $row->no_registration;
-        echo $row->thename;
-    };
-
-    ?>
     <div class="container" style="font-family: Verdana;">
         <form action="">
             <div class="row mt-5">
@@ -77,20 +72,13 @@
                     <label for="no_registration">No RM : </label>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" name="no_registration" id="no_registration" style="width: 200px;" readonly>
+                    <input type="text" name="no_registration" id="no_registration" style="width: 200px;" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
                 </div>
                 <div class="col-md-2" style="text-align: right;">
                     <label for="gender">Jenis Kelamin : </label>
                 </div>
                 <div class="col-md-4">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="gender_laki" value="0" readonly>
-                        <label class="form-check-label" for="gender_laki">Laki-laki</label>&nbsp;
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="gender_perempuan" value="1" readonly>
-                        <label class="form-check-label" for="gender_perempuan">Perempuan</label>&nbsp;
-                    </div>
+                    <input type="text" name="gender" id="gender" style="width: 200px;" value="<?php echo $row->GENDER; ?>" readonly>
                 </div>
             </div>
             <div class="row mb-1">
@@ -98,7 +86,7 @@
                     <label for="thename">Nama : </label>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" name="thename" id="thename" style="width: 300px;" readonly>
+                    <input type="text" name="thename" id="thename" style="width: 300px;" value="<?php echo $row->THENAME; ?>" readonly>
                 </div>
                 <div class="col-md-2" style="text-align: right;">
                     <label for="date_of_birth">Tanggal Lahir : </label>
@@ -112,7 +100,7 @@
                     <label for="theaddress">Alamat : </label>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" name="theaddress" id="theaddress" style="width: 300px;" readonly>
+                    <input type="text" name="theaddress" id="theaddress" style="width: 300px;" value="<?php echo $row->THEADDRESS; ?>" readonly>
                 </div>
             </div>
             <div class="row mb-3">

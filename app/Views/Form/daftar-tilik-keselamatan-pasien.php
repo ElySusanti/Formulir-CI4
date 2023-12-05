@@ -1,6 +1,13 @@
+<?php
+$db = db_connect();
+
+foreach ($dataAssessmentformdua as $row) {
+};
+?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -9,97 +16,105 @@
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('') ?>css/jquery.signature.css">
     <style>
-        .kbw-signature { width: 150px; height: 90px; }
+        .kbw-signature {
+            width: 150px;
+            height: 90px;
+        }
     </style>
-<!--[if IE]>
+    <!--[if IE]>
 <script src="excanvas.js"></script>
 <![endif]-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.signature.js"></script>
-<script>
-$(function() {
-	var sig = $('#sig').signature();
-	$('#disable').click(function() {
-		var disable = $(this).text() === 'Disable';
-		$(this).text(disable ? 'Enable' : 'Disable');
-		sig.signature(disable ? 'disable' : 'enable');
-	});
-	$('#clear').click(function() {
-		sig.signature('clear');
-	});
-	$('#json').click(function() {
-		alert(sig.signature('toJSON'));
-	});
-	$('#svg').click(function() {
-		alert(sig.signature('toSVG'));
-	});
-});
-</script>
-<script>
-$(function() {
-	var sig = $('#sig1').signature();
-	$('#disable').click(function() {
-		var disable = $(this).text() === 'Disable';
-		$(this).text(disable ? 'Enable' : 'Disable');
-		sig.signature(disable ? 'disable' : 'enable');
-	});
-	$('#clear').click(function() {
-		sig.signature('clear');
-	});
-	$('#json').click(function() {
-		alert(sig.signature('toJSON'));
-	});
-	$('#svg').click(function() {
-		alert(sig.signature('toSVG'));
-	});
-});
-</script>
-<script>
-$(function() {
-	var sig = $('#sig2').signature();
-	$('#disable').click(function() {
-		var disable = $(this).text() === 'Disable';
-		$(this).text(disable ? 'Enable' : 'Disable');
-		sig.signature(disable ? 'disable' : 'enable');
-	});
-	$('#clear').click(function() {
-		sig.signature('clear');
-	});
-	$('#json').click(function() {
-		alert(sig.signature('toJSON'));
-	});
-	$('#svg').click(function() {
-		alert(sig.signature('toSVG'));
-	});
-});
-</script>
-<script>
-$(function() {
-	var sig = $('#sig3').signature();
-	$('#disable').click(function() {
-		var disable = $(this).text() === 'Disable';
-		$(this).text(disable ? 'Enable' : 'Disable');
-		sig.signature(disable ? 'disable' : 'enable');
-	});
-	$('#clear').click(function() {
-		sig.signature('clear');
-	});
-	$('#json').click(function() {
-		alert(sig.signature('toJSON'));
-	});
-	$('#svg').click(function() {
-		alert(sig.signature('toSVG'));
-	});
-});
-</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.signature.js"></script>
+    <script>
+        $(function() {
+            var sig = $('#sig').signature();
+            $('#disable').click(function() {
+                var disable = $(this).text() === 'Disable';
+                $(this).text(disable ? 'Enable' : 'Disable');
+                sig.signature(disable ? 'disable' : 'enable');
+            });
+            $('#clear').click(function() {
+                sig.signature('clear');
+            });
+            $('#json').click(function() {
+                alert(sig.signature('toJSON'));
+            });
+            $('#svg').click(function() {
+                alert(sig.signature('toSVG'));
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            var sig = $('#sig1').signature();
+            $('#disable').click(function() {
+                var disable = $(this).text() === 'Disable';
+                $(this).text(disable ? 'Enable' : 'Disable');
+                sig.signature(disable ? 'disable' : 'enable');
+            });
+            $('#clear').click(function() {
+                sig.signature('clear');
+            });
+            $('#json').click(function() {
+                alert(sig.signature('toJSON'));
+            });
+            $('#svg').click(function() {
+                alert(sig.signature('toSVG'));
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            var sig = $('#sig2').signature();
+            $('#disable').click(function() {
+                var disable = $(this).text() === 'Disable';
+                $(this).text(disable ? 'Enable' : 'Disable');
+                sig.signature(disable ? 'disable' : 'enable');
+            });
+            $('#clear').click(function() {
+                sig.signature('clear');
+            });
+            $('#json').click(function() {
+                alert(sig.signature('toJSON'));
+            });
+            $('#svg').click(function() {
+                alert(sig.signature('toSVG'));
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            var sig = $('#sig3').signature();
+            $('#disable').click(function() {
+                var disable = $(this).text() === 'Disable';
+                $(this).text(disable ? 'Enable' : 'Disable');
+                sig.signature(disable ? 'disable' : 'enable');
+            });
+            $('#clear').click(function() {
+                sig.signature('clear');
+            });
+            $('#json').click(function() {
+                alert(sig.signature('toJSON'));
+            });
+            $('#svg').click(function() {
+                alert(sig.signature('toSVG'));
+            });
+        });
+    </script>
 </head>
+
 <body>
     <div class="container-fluid" style="font-family: 'Arial Narrow';">
         <form action="" autocomplete="off">
             <div class="row">
-                <div class="col md-6 text-start"><h4><b>RSUD Dr. M. YUNUS BENGKULU</b></h4></div>
-                <div class="col md-6 text-end"><h4><b>RM. 10 Lanjutan 3</b></h4></div>
+                <div class="col md-6 text-start">
+                    <h4><b>RSUD Dr. M. YUNUS BENGKULU</b></h4>
+                </div>
+                <div class="col md-6 text-end">
+                    <h4><b>RM. 10 Lanjutan 3</b></h4>
+                </div>
             </div>
             <table class="table table-bordered mb-1" align="right" style="border: 1px; color: black; width: auto;">
                 <tr>
@@ -107,33 +122,26 @@ $(function() {
                         <table style="text-align: left;">
                             <tr>
                                 <td>
-                                    <label for="v_01">Nama </label>
+                                    <label for="thename">Nama </label>
                                 </td>
                                 <td>
-                                    : <input type="text" name="v_01" id="v_01" style="width: 100px;" readonly>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="t_01" id="t_01_l" value="0" readonly>
-                                        <label class="form-check-label" for="t_01_l"> L/</label>&nbsp;
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="t_01" id="t_01_p" value="1" readonly>
-                                        <label class="form-check-label" for="t_01_p"> P</label>&nbsp;
-                                    </div>
+                                    : <input type="text" name="thename" id="thename" style="width: 100px;" value="<?php echo $row->THENAME; ?>" readonly>&nbsp;
+                                    <input type="text" name="gender" id="gender" style="width: 100px;" value="<?php echo $row->GENDER; ?>" readonly>
                                 </td>
                                 <td>
-                                    <label for="v_02">No. Reg </label>
+                                    <label for="no_Registration">No. Reg </label>
                                 </td>
-                                <td>: <input type="text" name="v_02" id="v_02" style="width: 100px;" readonly></td>
+                                <td>: <input type="text" name="no_Registration" id="no_Registration" style="width: 100px;" value="<?php echo $row->NO_REGISTRATION; ?>" readonly></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label for="v_03">Tanggal Lahir </label>
+                                    <label for="date_of_birth">Tanggal Lahir </label>
                                 </td>
-                                <td>: <input type="date" name="v_03" id="v_03" style="width: 100px;" readonly></td>
+                                <td>: <input type="date" name="date_of_birth" id="date_of_birth" style="width: 100px;" readonly></td>
                                 <td>
-                                    <label for="v_04">Ruang Rawat </label>
+                                    <label for="class_room_id">Ruang Rawat </label>
                                 </td>
-                                <td>: <input type="text" name="v_04" id="v_04" style="width: 100px;" readonly></td>
+                                <td>: <input type="text" name="class_room_id" id="class_room_id" style="width: 100px;" value="<?php echo $row->CLASS_ROOM_ID; ?>" readonly></td>
                             </tr>
                         </table>
                     </td>
@@ -340,12 +348,14 @@ $(function() {
                                     <br><br><br><br><br><br>
                                     <td style="text-align: center; width: 50%;">
                                         <label for="v_12" style="text-align: center;">Perawat IBS</label>
-                                        <br><div id="sig"></div>
+                                        <br>
+                                        <div id="sig"></div>
                                         <br>( <input type="text" id="v_12" name="v_12" style="width: 150px;"> )
                                     </td>
                                     <td style="text-align: center; width: 50%;">
                                         <label for="v_13" style="text-align: center;">Dokter Ahli Anastesi</label>
-                                        <br><div id="sig1"></div>
+                                        <br>
+                                        <div id="sig1"></div>
                                         <br>( <input type="text" id="v_13" name="v_13" style="width: 150px;"> )
                                     </td>
                                 </tr>
@@ -486,7 +496,8 @@ $(function() {
                                 <tr>
                                     <td style="text-align: center; width: 50%;">
                                         <label for="v_15" style="text-align: center;">Perawat Sirkuler</label>
-                                        <br><div id="sig2"></div>
+                                        <br>
+                                        <div id="sig2"></div>
                                         <br>( <input type="text" id="v_15" name="v_15" style="width: 150px;"> )
                                     </td>
                                 </tr>
@@ -641,7 +652,8 @@ $(function() {
                                 <tr>
                                     <td style="text-align: center; width: 50%;">
                                         <label for="" style="text-align: center;">Dokter Operator</label>
-                                        <br><div id="sig3"></div>
+                                        <br>
+                                        <div id="sig3"></div>
                                         <br>( <input type="text" id="v_19" name="v_19" style="width: 150px;"> )
                                     </td>
                                 </tr>
@@ -651,11 +663,11 @@ $(function() {
                 </tr>
             </table>
         </form>
-        
+
     </div>
 
     <script type="text/javascript">
-        function fungsi1 () {
+        function fungsi1() {
             if ($("#t_02_dokterbedah").is(":checked")) {
                 $("#v_05").removeAttr("disabled");
                 $("#v_05").focus();
@@ -666,7 +678,7 @@ $(function() {
         }
     </script>
     <script type="text/javascript">
-        function fungsi2 () {
+        function fungsi2() {
             if ($("#t_02_dokteranastesi").is(":checked")) {
                 $("#v_06").removeAttr("disabled");
                 $("#v_06").focus();
@@ -677,7 +689,7 @@ $(function() {
         }
     </script>
     <script type="text/javascript">
-        function fungsi3 () {
+        function fungsi3() {
             if ($("#t_02_namatindakan").is(":checked")) {
                 $("#v_07").removeAttr("disabled");
                 $("#v_07").focus();
@@ -688,7 +700,7 @@ $(function() {
         }
     </script>
     <script type="text/javascript">
-        function fungsi4 () {
+        function fungsi4() {
             if ($("#t_06_ada").is(":checked")) {
                 $("#v_08").removeAttr("disabled");
                 $("#v_08").focus();
@@ -699,7 +711,7 @@ $(function() {
         }
     </script>
     <script type="text/javascript">
-        function fungsi5 () {
+        function fungsi5() {
             if ($("#t_010_ya").is(":checked")) {
                 $("#v_09").removeAttr("disabled");
                 $("#v_09").focus();
@@ -710,7 +722,7 @@ $(function() {
         }
     </script>
     <script type="text/javascript">
-        function fungsi6 () {
+        function fungsi6() {
             if ($("#t_011_tidaklengkap").is(":checked")) {
                 $("#v_14").removeAttr("disabled");
                 $("#v_14").focus();
@@ -721,7 +733,7 @@ $(function() {
         }
     </script>
     <script type="text/javascript">
-        function fungsi7 () {
+        function fungsi7() {
             if ($("#t_023_ahlibedah").is(":checked")) {
                 $("#v_16").removeAttr("disabled");
                 $("#v_16").focus();
@@ -732,7 +744,7 @@ $(function() {
         }
     </script>
     <script type="text/javascript">
-        function fungsi8 () {
+        function fungsi8() {
             if ($("#t_023_ahlianastesi").is(":checked")) {
                 $("#v_17").removeAttr("disabled");
                 $("#v_17").focus();
@@ -743,7 +755,7 @@ $(function() {
         }
     </script>
     <script type="text/javascript">
-        function fungsi9 () {
+        function fungsi9() {
             if ($("#t_023_perawat").is(":checked")) {
                 $("#v_18").removeAttr("disabled");
                 $("#v_18").focus();
@@ -755,4 +767,5 @@ $(function() {
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
+
 </html>

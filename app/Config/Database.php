@@ -26,11 +26,11 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'SAMSUNG_ULTRA',
-        'username'     => 'sa',
-        'password'     => '12345',
+        'hostname'     => 'localhost',
+        'username'     => 'root',
+        'password'     => '',
         'database'     => 'Formulir',
-        'DBDriver'     => 'sqlsrv',
+        'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
         'DBDebug'      => true,

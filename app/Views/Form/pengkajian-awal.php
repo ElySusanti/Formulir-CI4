@@ -1,3 +1,9 @@
+<?php
+$db = db_connect();
+
+foreach ($dataAssessmentformempat as $row) {
+};
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +56,7 @@
                                             <label for="no_Registration">No. MR</label>
                                         </div>
                                         <div class="col-md-6">
-                                            : <input type="text" id="no_Registration" name="no_Registration" style="width: 150px;" readonly>
+                                            : <input type="text" id="no_Registration" name="no_Registration" style="width: 150px;" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
                                         </div>
                                     </div>
                                     <div class="row mb-1">
@@ -58,7 +64,7 @@
                                             <label for="thename">Nama Lengkap</label>
                                         </div>
                                         <div class="col-md-6">
-                                            : <input type="text" id="thename" name="thename" style="width: 150px;" readonly>
+                                            : <input type="text" id="thename" name="thename" style="width: 150px;" value="<?php echo $row->THENAME; ?>" readonly>
                                         </div>
                                     </div>
                                     <div class="row mb-1">
@@ -122,7 +128,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="4" rowspan="3" style="height: 200px"><label for="anamnesis">Keluhan utama </label><label for="anamnesis" style="font-style: italic;">(Riwayat kejadian):</label><br><textarea name="anamnesis" id="anamnesis" style="width: 100%; height: 180px;"></textarea></td>
+                            <td colspan="4" rowspan="3" style="height: 200px"><label for="anamnase">Keluhan utama </label><label for="anamnase" style="font-style: italic;">(Riwayat kejadian):</label><br><textarea name="anamnase" id="anamnase" style="width: 100%; height: 180px;"></textarea></td>
                             <td style="width: 10%;"><b>Status fungsional</b></td>
                             <td colspan="3">
                                 <div class="form-check form-check-inline">

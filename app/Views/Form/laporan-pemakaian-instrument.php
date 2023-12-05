@@ -1,5 +1,12 @@
+<?php
+$db = db_connect();
+
+foreach ($dataAssessmentformtiga as $row) {
+};
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +16,10 @@
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('') ?>css/jquery.signature.css">
     <style>
-        .kbw-signature { width: 150px; height: 90px; }
+        .kbw-signature {
+            width: 150px;
+            height: 90px;
+        }
     </style>
     <!--[if IE]>
     <script src="excanvas.js"></script>
@@ -17,51 +27,56 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.signature.js"></script>
-<script>
-$(function() {
-	var sig = $('#sig').signature();
-	$('#disable').click(function() {
-		var disable = $(this).text() === 'Disable';
-		$(this).text(disable ? 'Enable' : 'Disable');
-		sig.signature(disable ? 'disable' : 'enable');
-	});
-	$('#clear').click(function() {
-		sig.signature('clear');
-	});
-	$('#json').click(function() {
-		alert(sig.signature('toJSON'));
-	});
-	$('#svg').click(function() {
-		alert(sig.signature('toSVG'));
-	});
-});
-</script>
-<script>
-$(function() {
-	var sig = $('#sig1').signature();
-	$('#disable').click(function() {
-		var disable = $(this).text() === 'Disable';
-		$(this).text(disable ? 'Enable' : 'Disable');
-		sig.signature(disable ? 'disable' : 'enable');
-	});
-	$('#clear').click(function() {
-		sig.signature('clear');
-	});
-	$('#json').click(function() {
-		alert(sig.signature('toJSON'));
-	});
-	$('#svg').click(function() {
-		alert(sig.signature('toSVG'));
-	});
-});
-</script>
+    <script>
+        $(function() {
+            var sig = $('#sig').signature();
+            $('#disable').click(function() {
+                var disable = $(this).text() === 'Disable';
+                $(this).text(disable ? 'Enable' : 'Disable');
+                sig.signature(disable ? 'disable' : 'enable');
+            });
+            $('#clear').click(function() {
+                sig.signature('clear');
+            });
+            $('#json').click(function() {
+                alert(sig.signature('toJSON'));
+            });
+            $('#svg').click(function() {
+                alert(sig.signature('toSVG'));
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            var sig = $('#sig1').signature();
+            $('#disable').click(function() {
+                var disable = $(this).text() === 'Disable';
+                $(this).text(disable ? 'Enable' : 'Disable');
+                sig.signature(disable ? 'disable' : 'enable');
+            });
+            $('#clear').click(function() {
+                sig.signature('clear');
+            });
+            $('#json').click(function() {
+                alert(sig.signature('toJSON'));
+            });
+            $('#svg').click(function() {
+                alert(sig.signature('toSVG'));
+            });
+        });
+    </script>
 </head>
+
 <body>
     <div class="container" style="font-family: 'Times New Roman';">
         <form action="" autocomplete="off">
             <div class="row">
-                <div class="col md-6 text-start"><h3><b>RSUD Dr. M. YUNUS BENGKULU</b></h3></div>
-                <div class="col md-6 text-end"><h3><b>RM. 10 Lanjutan 4</b></h3></div>
+                <div class="col md-6 text-start">
+                    <h3><b>RSUD Dr. M. YUNUS BENGKULU</b></h3>
+                </div>
+                <div class="col md-6 text-end">
+                    <h3><b>RM. 10 Lanjutan 4</b></h3>
+                </div>
             </div>
             <table class="table table-bordered" style="border: 3px solid black; width: 100%;">
                 <tr style="border: 3px solid black;">
@@ -69,38 +84,35 @@ $(function() {
                     <td style="width: 40%; text-align: left; border: 3px solid black;">
                         <div class="row mb-3">
                             <div class="col-md-3">
-                                <label for="v_01">Nama</label>
+                                <label for="thename">Nama</label>
                             </div>
                             <div class="col-md-9">
-                                : <input type="text" id="v_01" name="v_01" style="width: 250px;" readonly>
+                                : <input type="text" id="thename" name="thename" style="width: 250px;" value="<?php echo $row->THENAME; ?>" readonly>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-3">
-                                <label for="v_02">Tgl. Lahir</label>
+                                <label for="date_of_birth">Tgl. Lahir</label>
                             </div>
                             <div class="col-md-9">
-                                : <input type="date" id="v_02" name="v_02" style="width: 150px;" readonly>&nbsp;
-                                <input class="form-check-input" type="radio" name="t_01" id="t_01_l" value="0">
-                                <label class="form-check-label" for="t_01_l">L / </label>
-                                <input class="form-check-input" type="radio" name="t_01" id="t_01_p" value="1">
-                                <label class="form-check-label" for="t_01_p">P</label>
+                                : <input type="date" id="date_of_birth" name="date_of_birth" style="width: 150px;" readonly>&nbsp;
+                                <input type="text" id="gender" name="gender" style="width: 100px;" value="<?php echo $row->GENDER; ?>" readonly>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-3">
-                                <label for="v_03">Register</label>
+                                <label for="no_Registraion">Register</label>
                             </div>
                             <div class="col-md-9">
-                                : <input type="text" id="v_03" name="v_03" style="width: 150px;" readonly>
+                                : <input type="text" id="no_Registraion" name="no_Registraion" style="width: 150px;" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-3">
-                                <label for="v_04">Ruang Rawat</label>
+                                <label for="class_room_id">Ruang Rawat</label>
                             </div>
                             <div class="col-md-9">
-                                : <input type="text" id="v_04" name="v_04" style="width: 150px;" readonly> (Stiker Pasien)
+                                : <input type="text" id="class_room_id" name="class_room_id" style="width: 150px;" value="<?php echo $row->CLASS_ROOM_ID; ?>" readonly> (Stiker Pasien)
                             </div>
                         </div>
                     </td>
@@ -342,7 +354,7 @@ $(function() {
                         </div>
                         <div class="row mb-1">
                             <div class="col">
-                                <textarea id="v_82" name="v_82" style="width: 100%; height: 80px;"></textarea> 
+                                <textarea id="v_82" name="v_82" style="width: 100%; height: 80px;"></textarea>
                             </div>
                         </div>
                         <div class="row mb-1">
@@ -371,7 +383,7 @@ $(function() {
                         </div>
                         <div class="row mb-1">
                             <div class="col">
-                                <textarea id="v_86" name="v_86" style="width: 100%; height: 80px;"></textarea> 
+                                <textarea id="v_86" name="v_86" style="width: 100%; height: 80px;"></textarea>
                             </div>
                         </div>
                         <div class="row mb-1">
@@ -403,13 +415,15 @@ $(function() {
                                 <tr>
                                     <td style="text-align: center; width: 50%;">
                                         <label for="v_90" style="text-align: center;">Perawat Instrumen</label>
-                                        <br><div id="sig"></div>
+                                        <br>
+                                        <div id="sig"></div>
                                         <br>( <input type="text" id="v_90" name="v_90" style="width: 150px;"> )
                                         <br>Tanda tangan dan nama lengkap
                                     </td>
                                     <td style="text-align: center; width: 50%;">
                                         <label for="v_91" style="text-align: center;">Perawat Sirkuler</label>
-                                        <br><div id="sig1"></div>
+                                        <br>
+                                        <div id="sig1"></div>
                                         <br>( <input type="text" id="v_91" name="v_91" style="width: 150px;"> )
                                         <br>Tanda tangan dan nama lengkap
                                     </td>
@@ -422,4 +436,5 @@ $(function() {
         </form>
     </div>
 </body>
+
 </html>

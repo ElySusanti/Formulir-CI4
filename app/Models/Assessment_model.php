@@ -8,7 +8,7 @@ class Assessment_model extends Model
 {
     public function tampildata()
     {
-        $query = $this->db->query("SELECT * FROM assessment_info");
+        $query = $this->db->query("SELECT * FROM BIODATA");
 
         return $query->getResult();
     }

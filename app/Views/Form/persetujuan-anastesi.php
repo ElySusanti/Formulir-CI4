@@ -107,7 +107,7 @@
     </a>
     <div class="container">
         <?php foreach ($dataAssessmentformsatu as $row) : ?>
-            <form action="<?php echo site_url('formulir/add_aksi') ?>" method="post" autocomplete="off" class="mt-3" style="font-family: 'Times New Roman';">
+            <form action="<?php echo site_url('formulir/simpan') ?>" method="post" autocomplete="off" class="mt-3" style="font-family: 'Times New Roman';">
                 <h3 style="text-align: right;"><b>RM. 08 Lanjutan 3 </b></h3>
                 <table class="table table-bordered mb-0" style="border: 1px; color: black;width: 100%;">
                     <tbody>
@@ -364,8 +364,8 @@
                                 <input type="text" id="v_14" name="v_14" style="width: 150px;" disabled>
                             </div>saya,
                             Yang bernama <input type="text" id="v_15" name="v_15" style="width: 200px;" disabled>
-                            Tanggal lahir <input type="date" id="v_16" name="v_16" style="width: 100px;">
-                            Nomor Rekam Medis : <input type="text" id="v_17" name="v_17" style="width: 200px;">
+                            Tanggal lahir <input type="date" id="date_of_birth" name="date_of_birth" style="width: 100px;" value="<?php echo $row->DATE_OF_BIRTH; ?>" readonly>
+                            Nomor Rekam Medis : <input type="text" id="no_Registration" name="no_Registration" style="width: 200px;" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
                         </td>
                     </tr>
                     <tr>

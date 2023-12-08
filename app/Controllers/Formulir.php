@@ -3,17 +3,14 @@
 
 namespace App\Controllers;
 
-use App\Models\Assessment_model;
-use App\Models\CONTOHModel;
+use App\Models\test_model;
 
 class Formulir extends BaseController
 {
-    protected $Assessment_model;
-    protected $CONTOHModel;
+    protected $test_model;
     public function __construct()
     {
-        $this->Assessment_model = new Assessment_model();
-        $this->CONTOHModel = new CONTOHModel();
+        $this->test_model = new test_model();
     }
     public function index()
     {
@@ -21,7 +18,7 @@ class Formulir extends BaseController
     }
     public function satu()
     {
-        $tampildata =  $this->Assessment_model->tampildata();
+        $tampildata =  $this->test_model->tampildata();
 
         $info = array(
             'dataAssessmentformsatu' => $tampildata,
@@ -31,7 +28,7 @@ class Formulir extends BaseController
     }
     public function dua()
     {
-        $tampildata =  $this->Assessment_model->tampildata();
+        $tampildata =  $this->test_model->tampildata();
 
         $info = array(
             'dataAssessmentformdua' => $tampildata,
@@ -41,7 +38,7 @@ class Formulir extends BaseController
     }
     public function tiga()
     {
-        $tampildata =  $this->Assessment_model->tampildata();
+        $tampildata =  $this->test_model->tampildata();
 
         $info = array(
             'dataAssessmentformtiga' => $tampildata,
@@ -51,7 +48,7 @@ class Formulir extends BaseController
     }
     public function empat()
     {
-        $tampildata =  $this->Assessment_model->tampildata();
+        $tampildata =  $this->test_model->tampildata();
 
         $info = array(
             'dataAssessmentformempat' => $tampildata,
@@ -61,7 +58,7 @@ class Formulir extends BaseController
     }
     public function lima()
     {
-        $tampildata =  $this->Assessment_model->tampildata();
+        $tampildata =  $this->test_model->tampildata();
 
         $info = array(
             'dataAssessmentformlima' => $tampildata,
@@ -71,7 +68,7 @@ class Formulir extends BaseController
     }
     public function enam()
     {
-        $tampildata =  $this->Assessment_model->tampildata();
+        $tampildata =  $this->test_model->tampildata();
 
         $info = array(
             'dataAssessmentformenam' => $tampildata,
@@ -79,9 +76,9 @@ class Formulir extends BaseController
 
         return view('form/lab-online', $info);
     }
-    public function add_aksi()
+    public function simpan()
     {
-        $simpan['contoh'] =  $this->CONTOHModel->simpan();
+        $simpan['test'] =  $this->test_model->simpandata();
 
         return redirect()->to('formulir/index');
     }

@@ -350,13 +350,13 @@
                                             <label for="v_12" style="text-align: center;">Perawat IBS</label>
                                             <br>
                                             <div id="sig"></div>
-                                            <br>( <input type="text" id="v_12" name="v_12" style="width: 150px;"> )
+                                            <br>( <input type="text" id="v_12" name="v_12" style="width: 150px; text-align: center;"> )
                                         </td>
                                         <td style="text-align: center; width: 50%;">
                                             <label for="v_13" style="text-align: center;">Dokter Ahli Anastesi</label>
                                             <br>
                                             <div id="sig1"></div>
-                                            <br>( <input type="text" id="v_13" name="v_13" style="width: 150px;"> )
+                                            <br>( <input type="text" id="v_13" name="v_13" style="width: 150px; text-align: center;"> )
                                         </td>
                                     </tr>
                                 </table>
@@ -498,7 +498,7 @@
                                             <label for="v_15" style="text-align: center;">Perawat Sirkuler</label>
                                             <br>
                                             <div id="sig2"></div>
-                                            <br>( <input type="text" id="v_15" name="v_15" style="width: 150px;"> )
+                                            <br>( <input type="text" id="v_15" name="v_15" style="width: 150px; text-align: center;"> )
                                         </td>
                                     </tr>
                                 </table>
@@ -654,7 +654,7 @@
                                             <label for="" style="text-align: center;">Dokter Operator</label>
                                             <br>
                                             <div id="sig3"></div>
-                                            <br>( <input type="text" id="v_19" name="v_19" style="width: 150px;"> )
+                                            <br>( <input type="text" id="v_19" name="v_19" style="width: 150px; text-align: center;"> )
                                         </td>
                                     </tr>
                                 </table>

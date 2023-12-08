@@ -385,19 +385,19 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="t_04" id="t_04_sangattidakmungkin">
+                                        <input class="form-check-input" type="checkbox" name="t_04" id="t_04_sangattidakmungkin" value="0">
                                         <label class="form-check-label" for="t_04_sangattidakmungkin">Sangat tidak mungkin</label>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="t_04" id="t_04_mungkin">
+                                        <input class="form-check-input" type="checkbox" name="t_04" id="t_04_mungkin" value="1">
                                         <label class="form-check-label" for="t_04_mungkin">Mungkin dibutuhkan</label>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="t_04" id="t_04_sangatmemungkinkan">
+                                        <input class="form-check-input" type="checkbox" name="t_04" id="t_04_sangatmemungkinkan" value="2">
                                         <label class="form-check-label" for="t_04_sangatmemungkinkan">Sangat memungkinkan</label>
                                     </div>
                                 </div>
@@ -409,15 +409,15 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_05" id="t_05_opsisatu">
+                                            <input class="form-check-input" type="checkbox" name="t_05" id="t_05_opsisatu" value="0">
                                             <label class="form-check-label" for="t_05_opsisatu">Saya menyetujui dan mengizinkan untuk menerima darah atau komponen darah sesuai dengan yang ditentukan/ diputuskan oleh dokter anestesi dan dokter lain yang merawat demi kebaikan saya/ keluarga.</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_05" id="t_05_opsidua">
+                                            <input class="form-check-input" type="checkbox" name="t_05" id="t_05_opsidua" value="1">
                                             <label class="form-check-label" for="t_05_opsidua">Saya menyetujui dan mengizinkan untuk menerima darah atau komponen darah hanya pada kondisi darurat menyelamatkan hidup saya/ keluarga.</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_05" id="t_05_opsitiga">
+                                            <input class="form-check-input" type="checkbox" name="t_05" id="t_05_opsitiga" value="2">
                                             <label class="form-check-label" for="t_05_opsitiga">Saya tidak menyetujui pemberian darah atau komponen darah pada kondisi apapun/ sejelek apapun, terhadap diri saya/ keluarga.</label>
                                         </div>
                                     </div>
@@ -433,7 +433,7 @@
                                             <label for="v_18" style="text-align: center;">Saksi 1</label>
                                             <br><br>
                                             <div id="sig"></div>
-                                            <br><input type="text" id="v_18" name="v_18" width="100px">
+                                            <br><input type="text" id="v_18" name="v_18" width="100px" style="text-align: center;">
                                         </td>
                                         <td style="width: 33%;"></td>
                                         <td rowspan="2" style="vertical-align: middle; width: 33%;">
@@ -443,7 +443,7 @@
                                             <input type="time" id="v_20" name="v_20">
                                             <br><br>
                                             <div id="sig3"></div>
-                                            <br><input type="text" id="v_21" name="v_21" width="100px">
+                                            <br><input type="text" id="v_21" name="v_21" width="100px" style="text-align: center;">
                                         </td>
                                     </tr>
                                     <tr>
@@ -451,13 +451,13 @@
                                             <label for="v_22" style="text-align: center;">Saksi 2</label>
                                             <br><br>
                                             <div id="sig1"></div>
-                                            <br><input type="text" id="v_22" name="v_22" width="100px">
+                                            <br><input type="text" id="v_22" name="v_22" width="100px" style="text-align: center;">
                                         </td>
                                         <td style="text-align: center;">
                                             <label for="v_23">Dokter Anastesi <br>Yang Menerangkan</label>
                                             <br>
                                             <div id="sig2"></div>
-                                            <br><input type="text" id="v_23" name="v_23" width="100px">
+                                            <br><input type="text" id="v_23" name="v_23" width="100px" style="text-align: center;">
                                         </td>
                                     </tr>
                                 </table>

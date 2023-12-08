@@ -48,36 +48,32 @@
                             <h5>Jl. Bhayangkara Bengkulu38229 Tlp. (0736) 52004 - 51111 Fax. (0736) 52007</h5>
                         </td>
                         <td>
-                            <table class="table table-bordered" align="right" style="border: 3px solid black; border-radius: 10px; width: 100%; font-family: Calibri;">
-                                <tr>
-                                    <td>
-                                        <div class="row mb-1">
-                                            <div class="col-md-4">
-                                                <label for="no_Registration">No. MR</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                : <input type="text" id="no_Registration" name="no_Registration" style="width: 150px;" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-1">
-                                            <div class="col-md-4">
-                                                <label for="thename">Nama Lengkap</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                : <input type="text" id="thename" name="thename" style="width: 150px;" value="<?php echo $row->THENAME; ?>" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-1">
-                                            <div class="col-md-4">
-                                                <label for="date_of_birth">Tanggal Lahir</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                : <input type="date" id="date_of_birth" name="date_of_birth" style="width: 150px;" value="<?php echo $row->DATE_OF_BIRTH; ?>" readonly>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
+                            <div class="container align:right" style="border: 3px solid black; border-radius: 10px; width: 100%; font-family: Calibri; text-align: left;">
+                                <div class="row mb-1 mt-3">
+                                    <div class="col-md-4">
+                                        <label for="no_Registration">No. MR</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        : <input type="text" id="no_Registration" name="no_Registration" style="width: 150px;" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-md-4">
+                                        <label for="thename">Nama Lengkap</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        : <input type="text" id="thename" name="thename" style="width: 150px;" value="<?php echo $row->THENAME; ?>" readonly>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <label for="date_of_birth">Tanggal Lahir</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        : <input type="date" id="date_of_birth" name="date_of_birth" style="width: 150px;" value="<?php echo $row->DATE_OF_BIRTH; ?>" readonly>
+                                    </div>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 </table>
@@ -1085,7 +1081,7 @@
                                                     <label for="v_39" style="text-align: center;">Perawat Pengkaji (PPJA)</label>
                                                     <br>
                                                     <div id="sig"></div>
-                                                    <br>( <input type="text" id="v_39" name="v_39" style="width: 150px;"> )
+                                                    <br>( <input type="text" id="v_39" name="v_39" style="width: 150px; text-align: center;"> )
                                                 </td>
                                             </tr>
                                         </table>

@@ -22,6 +22,20 @@ class test_model extends Model
     }
     public function simpandata()
     {
+        $GENDER = $this->request->getPost('GENDER');
+        $AGEDAY = $this->request->getPost('AGEDAY');
+        $THENAME = $this->request->getPost('THENAME');
+        $AGEYEAR = $this->request->getPost('AGEYEAR');
+        $AGEMONTH = $this->request->getPost('AGEMONTH');
+        $CLINIC_ID = $this->request->getPost('CLINIC_ID');
+        $CARA_BAYAR = $this->request->getPost('CARA_BAYAR');
+        $THEADDRESS = $this->request->getPost('THEADDRESS');
+        $EMPLOYEE_ID = $this->request->getPost('EMPLOYEE_ID');
+        $CLASS_ROOM_ID = $this->request->getPost('CLASS_ROOM_ID');
+        $DATE_OF_BIRTH = $this->request->getPost('DATE_OF_BIRTH');
+        $NO_REGISTRATION = $this->request->getPost('NO_REGISTRATION');
+        $VACTINATION_DATE = $this->request->getPost('VACTINATION_DATE');
+        $ALLOANAMNESIS_CONTACT = $this->request->getPost('ALLOANAMNESIS_CONTACT');
         $v_01 = $this->request->getPost('v_01');
         $v_02 = $this->request->getPost('v_02');
         $v_03 = $this->request->getPost('v_03');
@@ -124,7 +138,9 @@ class test_model extends Model
         $t_050 = $this->request->getPost('t_050');
 
 
-        $sql = "INSERT into TEST (v_01, v_02, v_03, v_04, v_05, v_06, v_07, v_08, v_09, v_10, 
+        $sql = "INSERT into TEST (NO_REGISTRATION, AGEYEAR, AGEMONTH, AGEDAY, THENAME, THEADDRESS, CLASS_ROOM_ID, DATE_OF_BIRTH, 
+                                EMPLOYEE_ID, ALLOANAMNESIS_CONTACT, GENDER, CARA_BAYAR, CLINIC_ID, VACTINATION_DATE,
+                                v_01, v_02, v_03, v_04, v_05, v_06, v_07, v_08, v_09, v_10, 
                                 v_11, v_12, v_13, v_14, v_15, v_16, v_17, v_18, v_19, v_20, 
                                 v_21, v_22, v_23, v_24, v_25, v_26, v_27, v_28, v_29, v_30, 
                                 v_31, v_32, v_33, v_34, v_35, v_36, v_37, v_38, v_39, v_40, 
@@ -134,7 +150,9 @@ class test_model extends Model
                                 t_021, t_022, t_023, t_024, t_025, t_026, t_027, t_028, t_029, t_030, 
                                 t_031, t_032, t_033, t_034, t_035, t_036, t_037, t_038, t_039, t_040, 
                                 t_041, t_042, t_043, t_044, t_045, t_046, t_047, t_048, t_049, t_050)
-                    VALUES ('$v_01', '$v_02', '$v_03', '$v_04', '$v_05', '$v_06', '$v_07', '$v_08', '$v_09', '$v_10',
+                    VALUES ('$NO_REGISTRATION', '$AGEYEAR', '$AGEMONTH', '$AGEDAY', '$THENAME', '$THEADDRESS', '$CLASS_ROOM_ID', '$DATE_OF_BIRTH', 
+                            '$EMPLOYEE_ID', '$ALLOANAMNESIS_CONTACT', '$GENDER', '$CARA_BAYAR', '$CLINIC_ID', '$VACTINATION_DATE',
+                            '$v_01', '$v_02', '$v_03', '$v_04', '$v_05', '$v_06', '$v_07', '$v_08', '$v_09', '$v_10',
                             '$v_11', '$v_12', '$v_13', '$v_14', '$v_15', '$v_16', '$v_17', '$v_18', '$v_19', '$v_20',
                             '$v_21', '$v_22', '$v_23', '$v_24', '$v_25', '$v_26', '$v_27', '$v_28', '$v_29', '$v_30',
                             '$v_31', '$v_32', '$v_33', '$v_34', '$v_35', '$v_36', '$v_37', '$v_38', '$v_39', '$v_40',

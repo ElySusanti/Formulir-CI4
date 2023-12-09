@@ -9,9 +9,9 @@
 </head>
 
 <body background="/img/background.jpg" style="width:100%; height:100%;">
-    <div class="container" style="margin-top:10%; width: 700px;; background-color:rgb(173, 216, 230); opacity:90%; border-radius:15px;">
+    <div class="container" style="margin-top:10%; width: 700px; background-color: #102C57; opacity:90%; border-radius:15px;">
         <form action="">
-            <div class="row" style="text-align:center">
+            <div class="row" style="text-align:center; color:white;">
                 <div class="col mt-3 mb-3">
                     <h5>Daftar Formulir:</h5>
                 </div>

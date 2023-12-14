@@ -94,7 +94,7 @@
                 <tr style="font-size: 13px; text-align: left;">
                     <td style="width: 33%;">
                         <div class="row">
-                            <label for="">1. Konfirmasi:</label>
+                            <label>1. Konfirmasi:</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -124,7 +124,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">2. Pemberian tanda lokasi operasi</label>
+                            <label>2. Pemberian tanda lokasi operasi</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -139,7 +139,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">3. Pemeriksaan kelengkapan anastesi</label>
+                            <label>3. Pemeriksaan kelengkapan anastesi</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -162,7 +162,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">4. Apakah monitor sudah terpasang (EKG, pulse oxymetri, RR, nadi dan TD)</label>
+                            <label>4. Apakah monitor sudah terpasang (EKG, pulse oxymetri, RR, nadi dan TD)</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -177,7 +177,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">5. Riwayat alergi</label>
+                            <label>5. Riwayat alergi</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -193,7 +193,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">6. Resiko aspirasi atau resiko sulit diintubasi</label>
+                            <label>6. Resiko aspirasi atau resiko sulit diintubasi</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -208,7 +208,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">7. Resiko pendarahan<br>&nbsp;&nbsp;&nbsp;&nbsp;Kehilangan darah > 500 ml (7ml/kgBB pada anak)</label>
+                            <label>7. Resiko pendarahan<br>&nbsp;&nbsp;&nbsp;&nbsp;Kehilangan darah > 500 ml (7ml/kgBB pada anak)</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -223,7 +223,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">8. Rencana Anastesi</label>
+                            <label>8. Rencana Anastesi</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -246,7 +246,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">9. Rencana pemasangan implant</label>
+                            <label>9. Rencana pemasangan implant</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -270,7 +270,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">Nama dan Tanda Tangan</label>
+                            <label>Nama dan Tanda Tangan</label>
                         </div>
                         <div class="row">
                             <table style="justify-content: center; width: 100%;">
@@ -294,7 +294,7 @@
                     </td>
                     <td style="width: 33%;">
                         <div class="row">
-                            <label for="">1. Kelengkapan tim operasi</label>
+                            <label>1. Kelengkapan tim operasi</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -310,7 +310,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">2. Dokter bedah mengkonfirmasi identifikasi pasien (verbal dan visual), diagnosa<br>
+                            <label>2. Dokter bedah mengkonfirmasi identifikasi pasien (verbal dan visual), diagnosa<br>
                                 &nbsp;&nbsp;&nbsp;&nbsp;preoperasi, prosedur operasi, lokasi insisi dan posisi operasi</label>
                         </div>
                         <div class="row">
@@ -326,11 +326,11 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">3. Antisipasi kondisi kritis</label>
+                            <label>3. Antisipasi kondisi kritis</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
-                                &nbsp;<label for=""><b>Untuk ahli bedah</b></label>
+                                &nbsp;<label><b>Untuk ahli bedah</b></label>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="t_030" id="t_030" value="1">
                                     <label class="form-check-label" for="t_030">Berapa perkiraan darah yang hilang</label>
@@ -347,7 +347,7 @@
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
-                                &nbsp;<label for=""><b>Untuk ahli anastesi</b></label>
+                                &nbsp;<label><b>Untuk ahli anastesi</b></label>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="t_033" id="t_033" value="1">
                                     <label class="form-check-label" for="t_033">Apakah ada hal khusus yang perlu diketahui dari pasien ini?</label>
@@ -356,7 +356,7 @@
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
-                                &nbsp;<label for=""><b>Untuk perawat</b></label>
+                                &nbsp;<label><b>Untuk perawat</b></label>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="t_034" id="t_034" value="1">
                                     <label class="form-check-label" for="t_034">Apakah sterilitas instrumen sudah dikonfirmasi (sesuai indikator sterilitas)</label>
@@ -368,7 +368,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">4. Antisipasi berkaitan dengan ILO (Infeksi Luka Operasi)</label>
+                            <label>4. Antisipasi berkaitan dengan ILO (Infeksi Luka Operasi)</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -391,7 +391,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">5. Pemberian obat-obatan premedikasi</label>
+                            <label>5. Pemberian obat-obatan premedikasi</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -406,7 +406,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">6. Hasil foto pemeriksaan radiologi yang diperlukan</label>
+                            <label>6. Hasil foto pemeriksaan radiologi yang diperlukan</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -437,10 +437,10 @@
                     <td style="width: 33%;">
                         <div class="row">
                             <b>Perawat sirkuler memastikan secara verbal:</b><br>
-                            <label for="">1. Prosedur operasi yang telah dilakukan</label>
+                            <label>1. Prosedur operasi yang telah dilakukan</label>
                         </div>
                         <div class="row">
-                            <label for="">2. Periksa kelengkapan sebelum luka operasi ditutup</label>
+                            <label>2. Periksa kelengkapan sebelum luka operasi ditutup</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -459,7 +459,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">3. Periksa kelengkapan bahan pemeriksaan</label>
+                            <label>3. Periksa kelengkapan bahan pemeriksaan</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -482,7 +482,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">4. Periksa kembali luka operasi</label>
+                            <label>4. Periksa kembali luka operasi</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -497,7 +497,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">5. Konfirmasi kondisi pasien sebelum ditransfer ke Recovery Room (RR)</label>
+                            <label>5. Konfirmasi kondisi pasien sebelum ditransfer ke Recovery Room (RR)</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -528,7 +528,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="">6. Catatan dari ahli bedah, ahli anastesi atau perawat tentang hal-hal penting untuk pemulian dan penatalaksanaan perawatan pasien</label>
+                            <label>6. Catatan dari ahli bedah, ahli anastesi atau perawat tentang hal-hal penting untuk pemulian dan penatalaksanaan perawatan pasien</label>
                         </div>
                         <div class="row">
                             &nbsp;&nbsp;&nbsp;&nbsp;<div class="col">
@@ -539,7 +539,7 @@
                                             <label class="form-check-label" for="t_059" style="vertical-align: top;">Ahli bedah</label>
                                         </div>
                                         <div class="col-md-1">
-                                            <label for="" style="vertical-align: top;">: </label>
+                                            <label style="vertical-align: top;">: </label>
                                         </div>
                                         <div class="col-md-8" style="text-align: start;">
                                             <textarea name="v_12" id="v_12" style="width: 200px; height: 70px;" disabled></textarea>
@@ -553,7 +553,7 @@
                                             <label class="form-check-label" for="t_060" style="vertical-align: top;">Ahli anastesi</label>
                                         </div>
                                         <div class="col-md-1">
-                                            <label for="" style="vertical-align: top;">: </label>
+                                            <label style="vertical-align: top;">: </label>
                                         </div>
                                         <div class="col-md-8">
                                             <textarea name="v_13" id="v_13" style="width: 200px; height: 70px;" disabled></textarea>
@@ -567,7 +567,7 @@
                                             <label class="form-check-label" for="t_061" style="vertical-align: top;">Perawat</label>
                                         </div>
                                         <div class="col-md-1">
-                                            <label for="" style="vertical-align: top;">: </label>
+                                            <label style="vertical-align: top;">: </label>
                                         </div>
                                         <div class="col-md-6">
                                             <textarea name="v_14" id="v_14" style="width: 200px; height: 70px;" disabled></textarea>
@@ -581,7 +581,7 @@
                             <table style="justify-content: center; width: 100%;">
                                 <tr>
                                     <td style="text-align: center; width: 50%;">
-                                        <label for="" style="text-align: center;">Dokter Operator</label>
+                                        <label style="text-align: center;">Dokter Operator</label>
                                         <br>
                                         <div id="TTD_3"></div>
                                         <br>( <input type="text" id="v_15" name="v_15" style="width: 150px; text-align: center;"> )

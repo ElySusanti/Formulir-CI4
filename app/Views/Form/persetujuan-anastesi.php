@@ -18,7 +18,6 @@
     <!--[if IE]>
     <script src="excanvas.js"></script>
     <![endif]-->
-    <script src="<?= base_url() ?>/js/jquery-3.6.0.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="<?= base_url() ?>/js/jquery.signature.js"></script>
@@ -309,7 +308,7 @@
                 <tr>
                     <td colspan="3">
                         <div class="row">
-                            <label for="">Kemungkinan prosedur atau tindakan yang dilakukan ini membutuhkan transfusi darah:</label>
+                            <label>Kemungkinan prosedur atau tindakan yang dilakukan ini membutuhkan transfusi darah:</label>
                         </div>
                         <div class="row">
                             <div class="col">
@@ -333,7 +332,7 @@
                         </div>
                         <div class="row mt-3">
                             <div class="row">
-                                <label for="">Saya mengerti bahwa ada kemungkinan resiko yang timbul dari transfusi darah, walaupun jarang dan ini termasuk reaksi transfusi, Hepatitis dan AIDS (Acquired Immune Deficiency Syndrome). Beri tanda pada kotak yang sesuai:</label>
+                                <label>Saya mengerti bahwa ada kemungkinan resiko yang timbul dari transfusi darah, walaupun jarang dan ini termasuk reaksi transfusi, Hepatitis dan AIDS (Acquired Immune Deficiency Syndrome). Beri tanda pada kotak yang sesuai:</label>
                             </div>
                             <div class="row">
                                 <div class="col">
@@ -353,7 +352,7 @@
                             </div>
                         </div>
                         <div class="row mt-3" style="text-align: justify;">
-                            <label for="">Saya menyatakan dan memberitahui bahwa saya sudah membaca / dibacakan formulir ini, bahwa saya mengerti resikonya, alternatif dan hasil hasil / outcome yang diperkirakan dari tindakan anestesi dan atau transfusi darah dan bahwa saya sudah diberi waktu untuk bertanya dan mempertimbangkan keputusan saya.</label>
+                            <label>Saya menyatakan dan memberitahui bahwa saya sudah membaca / dibacakan formulir ini, bahwa saya mengerti resikonya, alternatif dan hasil hasil / outcome yang diperkirakan dari tindakan anestesi dan atau transfusi darah dan bahwa saya sudah diberi waktu untuk bertanya dan mempertimbangkan keputusan saya.</label>
                         </div>
                         <div class="row mb-3">
                             <table style="justify-content: center; width: 100%;">
@@ -366,7 +365,7 @@
                                     </td>
                                     <td style="width: 33%;"></td>
                                     <td rowspan="2" style="vertical-align: middle; width: 33%;">
-                                        <label for="">Bengkulu, </label>
+                                        <label>Bengkulu, </label>
                                         <input type="date" id="v_12" name="v_12">
                                         <br><br><label for="v_13">Jam</label>
                                         <input type="time" id="v_13" name="v_13">

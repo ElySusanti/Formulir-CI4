@@ -36,7 +36,7 @@
             <table style="width: 100%; margin-top: 10px;">
                 <tr>
                     <td>
-                        <img src="img/logo.png" alt="" style="width: 70px;">
+                        <img src="/img/logo.png" alt="" style="width: 70px;">
                     </td>
                     <td colspan="3" style="text-align: center;">
                         <h4><b>DR. M YUNUS BENGKULU<br>FORMULIR PERMINTAAN PEMERIKSAAN<br>RADIOLOGI</b></h4>
@@ -70,7 +70,7 @@
                     <input type="text" name="THEADDRESS" id="THEADDRESS" style="width: 300px;" readonly>
                 </div>
                 <div class="col-md-2" style="text-align: right;">
-                    <label for="">Umur : </label>
+                    <label>Umur : </label>
                 </div>
                 <div class="col-md-4">
                     <input type="number" name="AGEYEAR" id="AGEYEAR" style="width: 50px;" min="0" readonly> Th &nbsp;
@@ -89,7 +89,7 @@
             <hr style="border: 2px solid black;">
             <div class="row mb-2">
                 <div class="col">
-                    <label for="" style="color: red;"><b>Lembar Permintaan: 1 dari 1 Urut Lembar Permintaan Pemeriksaan</b></label><br>
+                    <label style="color: red;"><b>Lembar Permintaan: 1 dari 1 Urut Lembar Permintaan Pemeriksaan</b></label><br>
                     <label><i>Kode Lembar Permintaan : 20231124142140001710A / No. ID Kunjungan : 2023083119</i></label>
                 </div>
                 <div class="col-md-3">
@@ -431,7 +431,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="">Dokter yang meminta</label>
+                            <label>Dokter yang meminta</label>
                         </div>
                     </div>
                     <div class="row mb-3">

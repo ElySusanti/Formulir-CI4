@@ -107,7 +107,7 @@
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="t_01" id="t_01_input" value="2" onclick="fungsi1_enable()">
-                                    <label class="form-check-label" for=""> </label>
+                                    <label class="form-check-label"> </label>
                                     <input type="text" id="v_03" name="v_03" style="width: 100px;" disabled>
                                 </div>
                             </td>
@@ -541,7 +541,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <label for=""><label for="v_08">Nilai kepercayaan terhadap penyakit</label></label>
+                                        <label><label for="v_08">Nilai kepercayaan terhadap penyakit</label></label>
                                         <input type="text" id="v_08" name="v_08" style="width: 100px;">
                                     </div>
                                 </div>
@@ -744,7 +744,7 @@
                                     <div class="col-md-7">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="">Hambatan ekonomi: </label>
+                                                <label>Hambatan ekonomi: </label>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="t_031" id="t_031_tidak" value="0" onclick="fungsi7_disabled()">
                                                     <label class="form-check-label" for="t_031_tidak"> Tidak </label>
@@ -773,7 +773,7 @@
                             <td colspan="3">
                                 <div class="row mb-1">
                                     <div class="col">
-                                        <label for="">Membutuhkan konseling Spiritual/Agama:</label>
+                                        <label>Membutuhkan konseling Spiritual/Agama:</label>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="t_032" id="t_032_tidak" value="0" onclick="fungsi8_disabled()">
                                             <label class="form-check-label" for="t_032_tidak"> Tidak </label>

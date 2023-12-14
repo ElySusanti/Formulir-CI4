@@ -67,7 +67,5 @@ class Formulir extends BaseController
         $data['data'] = $this->assessment_model->AddData();
 
         return redirect()->to('formulir/index');
-        // $biodata_model = new biodata_model();
-        // $test_model = new test_model();
     }
 }

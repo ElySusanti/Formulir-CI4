@@ -18,85 +18,10 @@
     <!--[if IE]>
     <script src="excanvas.js"></script>
     <![endif]-->
+    <script src="<?= base_url() ?>/js/jquery-3.6.0.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="/js/jquery.signature.js"></script>
-    <script>
-        $(function() {
-            var sig = $('#sig').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
-    </script>
-    <script>
-        $(function() {
-            var sig = $('#sig1').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
-    </script>
-    <script>
-        $(function() {
-            var sig = $('#sig2').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
-    </script>
-    <script>
-        $(function() {
-            var sig = $('#sig3').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
-    </script>
+    <script type="text/javascript" src="<?= base_url() ?>/js/jquery.signature.js"></script>
 </head>
 
 <body>
@@ -106,7 +31,7 @@
         </svg>
     </a>
     <div class="container">
-        <form action="<?php echo site_url('formulir/simpan') ?>" method="post" autocomplete="off" class="mt-3" style="font-family: 'Times New Roman';">
+        <form action="<?= base_url('formulir/simpan') ?>" method="post" autocomplete="off" class="mt-3" style="font-family: 'Times New Roman';">
             <h3 style="text-align: right;"><b>RM. 08 Lanjutan 3 </b></h3>
             <table class="table table-bordered mb-0" style="border: 1px; color: black;width: 100%;">
                 <tbody>
@@ -117,43 +42,43 @@
                         <td style="width: 50%;">
                             <div class="row mb-3">
                                 <div class="col-md-4">
-                                    <label for="no_Registration">Nomor Rekam Medis</label>
+                                    <label for="NO_REGISTRATION">Nomor Rekam Medis</label>
                                 </div>
                                 <div class="col-md-8">
-                                    : <select name="no_Registration" id="no_Registration" style="width: 200px; height: 30PX;" required>
-                                        <option value="" hidden></option>
-                                        <?php foreach ($biodata as $bio) : ?>
-                                            <option value="<?= $bio['BODY_ID']; ?>"><?= $bio['NO_REGISTRATION']; ?></option>
+                                    : <select name="NO_REGISTRATION" id="NO_REGISTRATION" style="width: 250px; height: 30PX;" required>
+                                        <option value="" selected disabled>--Pilih Nomor Rekam Medis--</option>
+                                        <?php foreach ($Biodata as $value) : ?>
+                                            <option value="<?= $value['NO_REGISTRATION']; ?>"><?= $value['NO_REGISTRATION']; ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-md-3">
-                                    <label for="thename">Nama Lengkap</label>
-                                    <br><label for="alloanamnesis_contact">Nama Keluarga</label>
+                                    <label for="THENAME">Nama Lengkap</label>
+                                    <br><label for="ALLOANAMNESIS_CONTACT">Nama Keluarga</label>
                                 </div>
                                 <div class="col-md-9">
-                                    : <input type="text" id="thename" name="thename" style="width: 150px;" readonly>,
-                                    <input type="text" id="alloanamnesis_contact" name="alloanamnesis_contact" style="width: 150px;" readonly>
+                                    : <input type="text" id="THENAME" name="THENAME" style="width: 150px;" readonly>,
+                                    <input type="text" id="ALLOANAMNESIS_CONTACT" name="ALLOANAMNESIS_CONTACT" style="width: 150px;" readonly>
                                 </div>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-md-3">
-                                    <label for="date_of_birth">Tanggal Lahir</label>
+                                    <label for="DATE_OF_BIRTH">Tanggal Lahir</label>
                                 </div>
                                 <div class="col-md-9">
-                                    : <input type="date" id="date_of_birth" name="date_of_birth" style="width: 100px;" readonly>,
-                                    <label for="gender">Jenis Kelamin : </label>
-                                    <input type="text" id="gender" name="gender" style="width: 150px;" readonly>
+                                    : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 100px;" readonly>,
+                                    <label for="GENDER">Jenis Kelamin : </label>
+                                    <input type="text" id="GENDER" name="GENDER" style="width: 150px;" readonly>
                                 </div>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-md-3">
-                                    <label for="class_room_id">Ruangan</label>
+                                    <label for="CLASS_ROOM_ID">Ruangan</label>
                                 </div>
                                 <div class="col-md-7">
-                                    : <input type="text" id="class_room_id" name="class_room_id" style="width: 100px;" readonly>
+                                    : <input type="text" id="CLASS_ROOM_ID" name="CLASS_ROOM_ID" style="width: 100px;" readonly>
                                 </div>
                             </div>
                         </td>
@@ -162,20 +87,20 @@
                         <td>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <label for="v_06">Tanggal Operasi</label>
+                                    <label for="v_01">Tanggal Operasi</label>
                                 </div>
                                 <div class="col-md-7">
-                                    : <input type="date" id="v_06" name="v_06" style="width: 100px;">
+                                    : <input type="date" id="v_01" name="v_01" style="width: 100px;">
                                 </div>
                             </div>
                         </td>
                         <td rowspan="2" style="vertical-align: middle;">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <label for="v_07">Dr. Anastesi <br>Yang Menerangkan</label>
+                                    <label for="v_02">Dr. Anastesi <br>Yang Menerangkan</label>
                                 </div>
                                 <div class="col-md-6">
-                                    : <input type="text" id="v_07" name="v_07" style="width: 200px;">
+                                    : <input type="text" id="v_02" name="v_02" style="width: 200px;">
                                 </div>
                             </div>
                         </td>
@@ -184,10 +109,10 @@
                         <td>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <label for="v_08">Diagnosa</label>
+                                    <label for="v_03">Diagnosa</label>
                                 </div>
                                 <div class="col-md-7">
-                                    : <input type="text" id="v_08" name="v_08" style="width: 200px;">
+                                    : <input type="text" id="v_03" name="v_03" style="width: 200px;">
                                 </div>
                             </div>
                         </td>
@@ -196,20 +121,20 @@
                         <td>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <label for="v_09">R/Tindakan</label>
+                                    <label for="v_04">R/Tindakan</label>
                                 </div>
                                 <div class="col-md-7">
-                                    : <input type="text" id="v_09" name="v_09" style="width: 200px;">
+                                    : <input type="text" id="v_04" name="v_04" style="width: 200px;">
                                 </div>
                             </div>
                         </td>
                         <td>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <label for="v_10">Dr. Operator</label>
+                                    <label for="v_05">Dr. Operator</label>
                                 </div>
                                 <div class="col-md-6">
-                                    : <input type="text" id="v_10" name="v_10" style="width: 200px;">
+                                    : <input type="text" id="v_05" name="v_05" style="width: 200px;">
                                 </div>
                             </div>
                         </td>
@@ -348,28 +273,28 @@
                 </tr>
                 <tr>
                     <td colspan="3">
-                        Yang bertanda tangan dibawah ini, saya nama <input type="text" id="v_11" name="v_11" style="width: 200px;"> umur <input type="text" id="v_12" name="v_12" style="width: 100px;"> tahun,
+                        Yang bertanda tangan dibawah ini, saya nama <input type="text" id="v_06" name="v_06" style="width: 200px;"> umur <input type="text" id="v_07" name="v_07" style="width: 100px;"> tahun,
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="t_02" id="t_02_laki-laki" value="0">
-                            <label class="form-check-label" for="t_02_laki-laki">laki-laki /</label>
+                            <input class="form-check-input" type="radio" name="t_01" id="t_01_laki-laki" value="0">
+                            <label class="form-check-label" for="t_01_laki-laki">laki-laki /</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="t_02" id="t_02_perempuan" value="1">
-                            <label class="form-check-label" for="t_02_perempuan">perempuan, </label>
+                            <input class="form-check-input" type="radio" name="t_01" id="t_01_perempuan" value="1">
+                            <label class="form-check-label" for="t_01_perempuan">perempuan, </label>
                         </div><br>
-                        alamat <input type="text" id="v_13" name="v_13" style="width: 200px;">
+                        alamat <input type="text" id="v_08" name="v_08" style="width: 200px;">
                         dengan ini menyatakan persetujuan untuk dilakukan tindakan anestesi terhadap&nbsp;
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="t_03" id="t_03_saya" value="0" onclick="fungsi1_disabled()">
-                            <label class="form-check-label" for="t_03_saya">saya / </label>
+                            <input class="form-check-input" type="radio" name="t_02" id="t_02_saya" value="0" onclick="fungsi1_disabled()">
+                            <label class="form-check-label" for="t_02_saya">saya / </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="t_03" id="t_03_input" value="1" onclick="fungsi1_enable()">
-                            <input type="text" id="v_14" name="v_14" style="width: 150px;" disabled>
+                            <input class="form-check-input" type="radio" name="t_02" id="t_02_input" value="1" onclick="fungsi1_enable()">
+                            <input type="text" id="v_09" name="v_09" style="width: 150px;" disabled>
                         </div>saya,
-                        Yang bernama <input type="text" id="v_15" name="v_15" style="width: 200px;" disabled>
+                        Yang bernama <input type="text" id="v_10" name="v_10" style="width: 200px;" disabled>
                         Tanggal lahir <input type="date" id="date_of_birth" name="date_of_birth" style="width: 100px;" readonly>
-                        Nomor Rekam Medis : <input type="text" id="no_Registration" name="no_Registration" style="width: 200px;" readonly>
+                        Nomor Rekam Medis : <input type="text" id="No_Registration" name="No_Registration" style="width: 200px;" readonly>
                     </td>
                 </tr>
                 <tr>
@@ -389,20 +314,20 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="t_04" id="t_04_sangattidakmungkin" value="0">
-                                    <label class="form-check-label" for="t_04_sangattidakmungkin">Sangat tidak mungkin</label>
+                                    <input class="form-check-input" type="checkbox" name="t_03" id="t_03" value="1">
+                                    <label class="form-check-label" for="t_03">Sangat tidak mungkin</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="t_04" id="t_04_mungkin" value="1">
-                                    <label class="form-check-label" for="t_04_mungkin">Mungkin dibutuhkan</label>
+                                    <input class="form-check-input" type="checkbox" name="t_04" id="t_04" value="1">
+                                    <label class="form-check-label" for="t_04">Mungkin dibutuhkan</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="t_04" id="t_04_sangatmemungkinkan" value="2">
-                                    <label class="form-check-label" for="t_04_sangatmemungkinkan">Sangat memungkinkan</label>
+                                    <input class="form-check-input" type="checkbox" name="t_05" id="t_05" value="1">
+                                    <label class="form-check-label" for="t_05">Sangat memungkinkan</label>
                                 </div>
                             </div>
                         </div>
@@ -413,16 +338,16 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="t_05" id="t_05_opsisatu" value="0">
-                                        <label class="form-check-label" for="t_05_opsisatu">Saya menyetujui dan mengizinkan untuk menerima darah atau komponen darah sesuai dengan yang ditentukan/ diputuskan oleh dokter anestesi dan dokter lain yang merawat demi kebaikan saya/ keluarga.</label>
+                                        <input class="form-check-input" type="checkbox" name="t_06" id="t_06" value="1">
+                                        <label class="form-check-label" for="t_06">Saya menyetujui dan mengizinkan untuk menerima darah atau komponen darah sesuai dengan yang ditentukan/ diputuskan oleh dokter anestesi dan dokter lain yang merawat demi kebaikan saya/ keluarga.</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="t_05" id="t_05_opsidua" value="1">
-                                        <label class="form-check-label" for="t_05_opsidua">Saya menyetujui dan mengizinkan untuk menerima darah atau komponen darah hanya pada kondisi darurat menyelamatkan hidup saya/ keluarga.</label>
+                                        <input class="form-check-input" type="checkbox" name="t_07" id="t_07" value="1">
+                                        <label class="form-check-label" for="t_07">Saya menyetujui dan mengizinkan untuk menerima darah atau komponen darah hanya pada kondisi darurat menyelamatkan hidup saya/ keluarga.</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="t_05" id="t_05_opsitiga" value="2">
-                                        <label class="form-check-label" for="t_05_opsitiga">Saya tidak menyetujui pemberian darah atau komponen darah pada kondisi apapun/ sejelek apapun, terhadap diri saya/ keluarga.</label>
+                                        <input class="form-check-input" type="checkbox" name="t_08" id="t_08" value="1">
+                                        <label class="form-check-label" for="t_08">Saya tidak menyetujui pemberian darah atau komponen darah pada kondisi apapun/ sejelek apapun, terhadap diri saya/ keluarga.</label>
                                     </div>
                                 </div>
                             </div>
@@ -434,34 +359,34 @@
                             <table style="justify-content: center; width: 100%;">
                                 <tr>
                                     <td style="text-align: center; width: 33%;">
-                                        <label for="v_18" style="text-align: center;">Saksi 1</label>
+                                        <label for="v_11" style="text-align: center;">Saksi 1</label>
                                         <br><br>
-                                        <div id="sig"></div>
-                                        <br><input type="text" id="v_18" name="v_18" width="100px" style="text-align: center;">
+                                        <div id="TTD"></div>
+                                        <br><input type="text" id="v_11" name="v_11" width="100px" style="text-align: center;">
                                     </td>
                                     <td style="width: 33%;"></td>
                                     <td rowspan="2" style="vertical-align: middle; width: 33%;">
                                         <label for="">Bengkulu, </label>
-                                        <input type="date" id="v_19" name="v_19">
-                                        <br><br><label for="v_20">Jam</label>
-                                        <input type="time" id="v_20" name="v_20">
+                                        <input type="date" id="v_12" name="v_12">
+                                        <br><br><label for="v_13">Jam</label>
+                                        <input type="time" id="v_13" name="v_13">
                                         <br><br>
-                                        <div id="sig3"></div>
-                                        <br><input type="text" id="v_21" name="v_21" width="100px" style="text-align: center;">
+                                        <div id="TTD_1"></div>
+                                        <br><input type="text" id="v_14" name="v_14" width="100px" style="text-align: center;">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="text-align: center;">
-                                        <label for="v_22" style="text-align: center;">Saksi 2</label>
+                                        <label for="v_15" style="text-align: center;">Saksi 2</label>
                                         <br><br>
-                                        <div id="sig1"></div>
-                                        <br><input type="text" id="v_22" name="v_22" width="100px" style="text-align: center;">
+                                        <div id="TTD_2"></div>
+                                        <br><input type="text" id="v_15" name="v_15" width="100px" style="text-align: center;">
                                     </td>
                                     <td style="text-align: center;">
-                                        <label for="v_23">Dokter Anastesi <br>Yang Menerangkan</label>
+                                        <label for="v_16">Dokter Anastesi <br>Yang Menerangkan</label>
                                         <br>
-                                        <div id="sig2"></div>
-                                        <br><input type="text" id="v_23" name="v_23" width="100px" style="text-align: center;">
+                                        <div id="TTD_3"></div>
+                                        <br><input type="text" id="v_16" name="v_16" width="100px" style="text-align: center;">
                                     </td>
                                 </tr>
                             </table>
@@ -473,36 +398,131 @@
                 <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
             </div>
         </form>
-
     </div>
+    <script>
+        $('#NO_REGISTRATION').on('change', (event) => {
+            getBiodata(event.target.value).then(Biodata => {
+                $('#THENAME').val(Biodata.THENAME);
+                $('#ALLOANAMNESIS_CONTACT').val(Biodata.ALLOANAMNESIS_CONTACT);
+                $('#DATE_OF_BIRTH').val(Biodata.DATE_OF_BIRTH);
+                $('#GENDER').val(Biodata.GENDER);
+                $('#CLASS_ROOM_ID').val(Biodata.CLASS_ROOM_ID);
+                $('#date_of_birth').val(Biodata.DATE_OF_BIRTH);
+                $('#No_Registration').val(Biodata.NO_REGISTRATION);
+            });
+        });
+
+        async function getBiodata(BODY_ID) {
+            let response = await fetch('/api/databiodata/show/' + BODY_ID)
+            let data = await response.json();
+
+            return data;
+        }
+    </script>
     <script>
         $(function() {
             fungsi1_disabled();
-            $("#t_03_saya").click(fungsi1_disabled);
+            $("#t_02_saya").click(fungsi1_disabled);
         });
         $(function() {
             fungsi1_enable();
-            $("#t_03_input").click(fungsi1_enable);
+            $("#t_02_input").click(fungsi1_enable);
         });
 
         function fungsi1_disabled() {
             if (this.click) {
-                $("#v_14, #v_15").attr("disabled", true);
-                $("#v_14, #v_15").val("");
+                $("#v_09, #v_10").attr("disabled", true);
+                $("#v_09, #v_10").val("");
             } else {
-                $("#v_14, #v_15").removeAttr("disabled");
+                $("#v_09, #v_10").removeAttr("disabled");
             }
         }
 
         function fungsi1_enable() {
-            $("#v_14, #v_15").attr("disabled", true);
+            $("#v_09, #v_10").attr("disabled", true);
             if (this.click) {
-                $("#v_14, #v_15").removeAttr("disabled");
-                $("#v_14").focus();
+                $("#v_09, #v_10").removeAttr("disabled");
+                $("#v_09").focus();
             } else {
-                $("#v_14, #v_15").attr("disabled", true);
+                $("#v_09, #v_10").attr("disabled", true);
             }
         }
+    </script>
+    <script>
+        $(function() {
+            var sig = $('#TTD').signature();
+            $('#disable').click(function() {
+                var disable = $(this).text() === 'Disable';
+                $(this).text(disable ? 'Enable' : 'Disable');
+                sig.signature(disable ? 'disable' : 'enable');
+            });
+            $('#clear').click(function() {
+                sig.signature('clear');
+            });
+            $('#json').click(function() {
+                alert(sig.signature('toJSON'));
+            });
+            $('#svg').click(function() {
+                alert(sig.signature('toSVG'));
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            var sig = $('#TTD_1').signature();
+            $('#disable').click(function() {
+                var disable = $(this).text() === 'Disable';
+                $(this).text(disable ? 'Enable' : 'Disable');
+                sig.signature(disable ? 'disable' : 'enable');
+            });
+            $('#clear').click(function() {
+                sig.signature('clear');
+            });
+            $('#json').click(function() {
+                alert(sig.signature('toJSON'));
+            });
+            $('#svg').click(function() {
+                alert(sig.signature('toSVG'));
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            var sig = $('#TTD_2').signature();
+            $('#disable').click(function() {
+                var disable = $(this).text() === 'Disable';
+                $(this).text(disable ? 'Enable' : 'Disable');
+                sig.signature(disable ? 'disable' : 'enable');
+            });
+            $('#clear').click(function() {
+                sig.signature('clear');
+            });
+            $('#json').click(function() {
+                alert(sig.signature('toJSON'));
+            });
+            $('#svg').click(function() {
+                alert(sig.signature('toSVG'));
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            var sig = $('#TTD_3').signature();
+            $('#disable').click(function() {
+                var disable = $(this).text() === 'Disable';
+                $(this).text(disable ? 'Enable' : 'Disable');
+                sig.signature(disable ? 'disable' : 'enable');
+            });
+            $('#clear').click(function() {
+                sig.signature('clear');
+            });
+            $('#json').click(function() {
+                alert(sig.signature('toJSON'));
+            });
+            $('#svg').click(function() {
+                alert(sig.signature('toSVG'));
+            });
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 

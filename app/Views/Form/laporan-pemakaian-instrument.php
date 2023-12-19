@@ -24,13 +24,14 @@
 </head>
 
 <body>
-    <a class="btn btn-outline-dark sticky-top" href="/Formulir" role="button">
+    <a class="btn btn-outline-dark sticky-top" href="/Formulir/input" role="button">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
         </svg>
     </a>
     <div class="container" style="font-family: 'Times New Roman';">
         <form action="<?= base_url('formulir/simpan') ?>" method="post" autocomplete="off">
+            <input type="hidden" id="FORM" name="FORM" value="F1">
             <div class="row">
                 <div class="col md-6 text-start">
                     <h3><b>RSUD Dr. M. YUNUS BENGKULU</b></h3>
@@ -88,7 +89,7 @@
                         <div class="row mb-1">
                             <div class="col">
                                 <label for="v_01">Nama Set Instrumen</label>&nbsp;
-                                : <input type="text" id="v_01" name="v_01" style="width: 500px;" autofocus>
+                                : <input type="text" id="v_01" name="v_01" style="width: 500px;">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -383,14 +384,14 @@
                                         <label for="v_86" style="text-align: center;">Perawat Instrumen</label>
                                         <br>
                                         <div id="TTD"></div>
-                                        <br>( <input type="text" id="v_86" name="v_86" style="width: 150px;"> )
+                                        <br>( <input type="text" id="v_86" name="v_86" style="width: 150px; text-align: center;"> )
                                         <br>Tanda tangan dan nama lengkap
                                     </td>
                                     <td style="text-align: center; width: 50%;">
                                         <label for="v_87" style="text-align: center;">Perawat Sirkuler</label>
                                         <br>
                                         <div id="TTD_1"></div>
-                                        <br>( <input type="text" id="v_87" name="v_87" style="width: 150px;"> )
+                                        <br>( <input type="text" id="v_87" name="v_87" style="width: 150px; text-align: center;"> )
                                         <br>Tanda tangan dan nama lengkap
                                     </td>
                                 </tr>

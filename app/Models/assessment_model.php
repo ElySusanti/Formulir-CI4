@@ -10,9 +10,8 @@ class assessment_model extends Model
     protected $db;
     protected $request;
     protected $table = 'assessment_info';
-    protected $primaryKey = 'NO_REGISTRATION';
     protected $allowedFields = [
-        'BODY_ID', 'ORG_UNIT_CODE', 'PASIEN_DIAGNOSA_ID', 'DIAGNOSA_ID', 'NO_REGISTRATION',
+        'FORM', 'BODY_ID', 'ORG_UNIT_CODE', 'PASIEN_DIAGNOSA_ID', 'DIAGNOSA_ID', 'NO_REGISTRATION',
         'VISIT_ID', 'BILL_ID', 'CLINIC_ID', 'CLASS_ROOM_ID', 'BED_ID', 'IN_DATE', 'EXIT_DATE',
         'KELUAR_ID', 'EXAMINATION_DATE', 'TEMPERATURE', 'TENSION_UPPER', 'TENSION_BELOW', 'NADI',
         'NAFAS', 'WEIGHT', 'HEIGHT', 'ARM_DIAMETER', 'ANAMNASE', 'PEMERIKSAAN', 'TERAPHY_DESC',
@@ -51,6 +50,7 @@ class assessment_model extends Model
     }
     public function AddData()
     {
+        $FORM = $this->request->getPost('FORM');
         $BODY_ID = $this->request->getPost('BODY_ID');
         $ORG_UNIT_CODE = $this->request->getPost('ORG_UNIT_CODE');
         $PASIEN_DIAGNOSA_ID = $this->request->getPost('PASIEN_DIAGNOSA_ID');
@@ -320,7 +320,7 @@ class assessment_model extends Model
         $t_100 = $this->request->getPost('t_100');
 
 
-        $sql = "INSERT into ASSESSMENT_INFO (BODY_ID, ORG_UNIT_CODE, PASIEN_DIAGNOSA_ID, DIAGNOSA_ID, NO_REGISTRATION, 
+        $sql = "INSERT into ASSESSMENT_INFO (FORM, BODY_ID, ORG_UNIT_CODE, PASIEN_DIAGNOSA_ID, DIAGNOSA_ID, NO_REGISTRATION, 
                                 VISIT_ID, BILL_ID, CLINIC_ID, CLASS_ROOM_ID, BED_ID, IN_DATE, EXIT_DATE, KELUAR_ID, 
                                 EXAMINATION_DATE, TEMPERATURE, TENSION_UPPER, TENSION_BELOW, NADI, NAFAS, WEIGHT, 
                                 HEIGHT, ARM_DIAMETER, ANAMNASE, PEMERIKSAAN, TERAPHY_DESC, INSTRUCTION, MEDICAL_TREATMENT,
@@ -350,7 +350,7 @@ class assessment_model extends Model
                                 t_071, t_072, t_073, t_074, t_075, t_076, t_077, t_078, t_079, t_080, 
                                 t_081, t_082, t_083, t_084, t_085, t_086, t_087, t_088, t_089, t_090, 
                                 t_091, t_092, t_093, t_094, t_095, t_096, t_097, t_098, t_099, t_100)
-                    VALUES ('$BODY_ID', '$ORG_UNIT_CODE', '$PASIEN_DIAGNOSA_ID', '$DIAGNOSA_ID', '$NO_REGISTRATION', 
+                    VALUES ('$FORM', '$BODY_ID', '$ORG_UNIT_CODE', '$PASIEN_DIAGNOSA_ID', '$DIAGNOSA_ID', '$NO_REGISTRATION', 
                             '$VISIT_ID', '$BILL_ID', '$CLINIC_ID', '$CLASS_ROOM_ID', '$BED_ID', '$IN_DATE', '$EXIT_DATE', 
                             '$KELUAR_ID', '$EXAMINATION_DATE', '$TEMPERATURE', '$TENSION_UPPER', '$TENSION_BELOW', 
                             '$NADI', '$NAFAS', '$WEIGHT', '$HEIGHT', '$ARM_DIAMETER', '$ANAMNASE', '$PEMERIKSAAN', 
@@ -386,5 +386,95 @@ class assessment_model extends Model
         $this->db->query($sql);
 
         return;
+    }
+    public function tampildataform1()
+    {
+        $sql = "SELECT biodata.DATE_OF_BIRTH, assessment_info.NO_REGISTRATION, assessment_info.THENAME, assessment_info.ALLOANAMNESIS_CONTACT, assessment_info.GENDER, assessment_info.CLASS_ROOM_ID
+       FROM biodata
+       INNER JOIN assessment_info
+       ON biodata.NO_REGISTRATION = assessment_info.NO_REGISTRATION
+       WHERE assessment_info.FORM = 'F1'";
+
+        $query = $this->db->query($sql);
+
+        //uraikan hasil query dalam bentuk array
+        $hasil = $query->getResult();
+
+        return $hasil;
+    }
+    public function tampildataform2()
+    {
+        $sql = "SELECT biodata.DATE_OF_BIRTH, assessment_info.NO_REGISTRATION, assessment_info.THENAME, assessment_info.GENDER, assessment_info.CLASS_ROOM_ID
+       FROM biodata
+       INNER JOIN assessment_info
+       ON biodata.NO_REGISTRATION = assessment_info.NO_REGISTRATION
+       WHERE assessment_info.FORM = 'F2'";
+
+        $query = $this->db->query($sql);
+
+        //uraikan hasil query dalam bentuk array
+        $hasil = $query->getResult();
+
+        return $hasil;
+    }
+    public function tampildataform3()
+    {
+        $sql = "SELECT biodata.DATE_OF_BIRTH, assessment_info.NO_REGISTRATION, assessment_info.THENAME, assessment_info.GENDER, assessment_info.CLASS_ROOM_ID
+       FROM biodata
+       INNER JOIN assessment_info
+       ON biodata.NO_REGISTRATION = assessment_info.NO_REGISTRATION
+       WHERE assessment_info.FORM = 'F3'";
+
+        $query = $this->db->query($sql);
+
+        //uraikan hasil query dalam bentuk array
+        $hasil = $query->getResult();
+
+        return $hasil;
+    }
+    public function tampildataform4()
+    {
+        $sql = "SELECT biodata.DATE_OF_BIRTH, assessment_info.NO_REGISTRATION, assessment_info.THENAME
+       FROM biodata
+       INNER JOIN assessment_info
+       ON biodata.NO_REGISTRATION = assessment_info.NO_REGISTRATION
+       WHERE assessment_info.FORM = 'F4'";
+
+        $query = $this->db->query($sql);
+
+        //uraikan hasil query dalam bentuk array
+        $hasil = $query->getResult();
+
+        return $hasil;
+    }
+    public function tampildataform5()
+    {
+        $sql = "SELECT biodata.CARA_BAYAR, assessment_info.NO_REGISTRATION, assessment_info.THENAME, assessment_info.THEADDRESS, assessment_info.AGEYEAR, assessment_info.AGEMONTH, assessment_info.AGEDAY, assessment_info.EMPLOYEE_ID
+       FROM biodata
+       INNER JOIN assessment_info
+       ON biodata.NO_REGISTRATION = assessment_info.NO_REGISTRATION
+       WHERE assessment_info.FORM = 'F5'";
+
+        $query = $this->db->query($sql);
+
+        //uraikan hasil query dalam bentuk array
+        $hasil = $query->getResult();
+
+        return $hasil;
+    }
+    public function tampildataform6()
+    {
+        $sql = "SELECT biodata.DATE_OF_BIRTH, biodata.CARA_BAYAR, assessment_info.NO_REGISTRATION, assessment_info.THENAME, assessment_info.THEADDRESS, assessment_info.GENDER
+       FROM biodata
+       INNER JOIN assessment_info
+       ON biodata.NO_REGISTRATION = assessment_info.NO_REGISTRATION
+       WHERE assessment_info.FORM = 'F6'";
+
+        $query = $this->db->query($sql);
+
+        //uraikan hasil query dalam bentuk array
+        $hasil = $query->getResult();
+
+        return $hasil;
     }
 }

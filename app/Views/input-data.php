@@ -13,20 +13,23 @@
         <form action="">
             <div class="row" style="text-align:center; color:white;">
                 <div class="col mt-3 mb-3">
-                    <h5>Daftar Formulir:</h5>
+                    <h5>Input Data:</h5>
                 </div>
             </div>
             <div class="row mb-2">
                 <div class="col">
                     <ul class="list-group">
-                        <a href="/formulir/satu" class="list-group-item list-group-item-action">1. PERSETUJUAN ANASTESI</a>
-                        <a href="/formulir/dua" class="list-group-item list-group-item-action">2. DAFTAR TILIK KESELAMATAN PASIEN</a>
-                        <a href="/formulir/tiga" class="list-group-item list-group-item-action">3. LAPORAN PEMAKAIAN INSTRUMEN</a>
-                        <a href="/formulir/empat" class="list-group-item list-group-item-action">4. PENGKAJIAN AWAL KEPERAWATAN DAN MEDIS INSTALASI GAWAT DARURAT</a>
-                        <a href="/formulir/lima" class="list-group-item list-group-item-action">5. RADIOLOGI ONLINE</a>
-                        <a href="/formulir/enam" class="list-group-item list-group-item-action">6. LAB ONLINE</a>
+                        <a href="/Formulir/satu" class="list-group-item list-group-item-action">1. PERSETUJUAN ANASTESI</a>
+                        <a href="/Formulir/dua" class="list-group-item list-group-item-action">2. DAFTAR TILIK KESELAMATAN PASIEN</a>
+                        <a href="/Formulir/tiga" class="list-group-item list-group-item-action">3. LAPORAN PEMAKAIAN INSTRUMEN</a>
+                        <a href="/Formulir/empat" class="list-group-item list-group-item-action">4. PENGKAJIAN AWAL KEPERAWATAN DAN MEDIS INSTALASI GAWAT DARURAT</a>
+                        <a href="/Formulir/lima" class="list-group-item list-group-item-action">5. RADIOLOGI ONLINE</a>
+                        <a href="/Formulir/enam" class="list-group-item list-group-item-action">6. LAB ONLINE</a>
                     </ul>
                 </div>
+            </div>
+            <div class="d-grid gap-2">
+                <a class="btn btn-light my-3" href="/Formulir" role="button">Kembali</a>
             </div>
         </form>
     </div>

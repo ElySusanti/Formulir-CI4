@@ -9,7 +9,7 @@
 </head>
 
 <body background="/img/background.jpg" style="width:100%; height:100%;">
-    <div class="container-fluid" style="background-color: #102C57; height: 120px; opacity:90%; color:white;">
+    <div class="container-fluid" style="background-color: #102C57; height: 110px; opacity:90%; color:white;">
         <div class="row">
             <div class="col-md-1 mt-2">
                 <img src="/img/logo.png" alt="" style="width: 70px;"> &nbsp;&nbsp;&nbsp;

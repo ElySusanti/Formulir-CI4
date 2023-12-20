@@ -31,7 +31,7 @@
             </svg>
         </a>
         <form action="<?= base_url('formulir/simpan') ?>" method="post" autocomplete="off">
-            <input type="hidden" id="FORM" name="FORM" value="F1">
+            <input type="hidden" id="FORM" name="FORM" value="F2">
             <div class="row">
                 <div class="col md-6 text-start">
                     <h4><b>RSUD Dr. M. YUNUS BENGKULU</b></h4>

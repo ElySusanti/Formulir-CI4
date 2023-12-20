@@ -37,7 +37,7 @@
             </svg>
         </a>
         <form action="<?= base_url('formulir/simpan') ?>" method="post" autocomplete="off">
-            <input type="hidden" id="FORM" name="FORM" value="F1">
+            <input type="hidden" id="FORM" name="FORM" value="F4">
             <table style="width: 100%;">
                 <tr>
                     <td>
@@ -258,10 +258,10 @@
                                 <table class="table table-bordered" align="center" style="border: 1px solid black; width: 97%; text-align: left;">
                                     <tr style="text-align: center;">
                                         <td style="width: 10%;">PENGKAJIAN</td>
-                                        <td style="width: 26%;">0</td>
-                                        <td style="width: 26%;">1</td>
-                                        <td style="width: 26%;">2</td>
-                                        <td style="width: 7%;">NILAI</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td style="width: 10%;">NILAI</td>
                                     </tr>
                                     <tr>
                                         <td>Wajah</td>
@@ -269,7 +269,7 @@
                                         <td>Terkadang meringis/menarik diri</td>
                                         <td>Sering menggetarkan dagu dan mengatupkan rahang</td>
                                         <td>
-                                            <select type="number" class="number" name="t_08" id="t_08" onchange="myFunction()" style="height: 30px; width: 30px;">
+                                            <select type="number" class="number" name="t_08" id="t_08" onchange="myFunction()" style="height: 30px; width: 35px;">
                                                 <option value="0">0</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -282,7 +282,7 @@
                                         <td>Tidak tenang/tegang</td>
                                         <td>Kaki dibuat menendang/menarik diri</td>
                                         <td>
-                                            <select type="number" class="number" name="t_09" id="t_09" onchange="myFunction()" style="height: 30px; width: 30px;">
+                                            <select type="number" class="number" name="t_09" id="t_09" onchange="myFunction()" style="height: 30px; width: 35px;">
                                                 <option value="0">0</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -295,7 +295,7 @@
                                         <td>Gerakan menggeliat/berguling/kaku</td>
                                         <td>Melengkungkan punggung/kaku/menghentak</td>
                                         <td>
-                                            <select type="number" class="number" name="t_010" id="t_010" onchange="myFunction()" style="height: 30px; width: 30px;">
+                                            <select type="number" class="number" name="t_010" id="t_010" onchange="myFunction()" style="height: 30px; width: 35px;">
                                                 <option value="0">0</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -308,7 +308,7 @@
                                         <td>Mengerang, merengek-rengek</td>
                                         <td>Menangis terus menerus, terisak, menjerit</td>
                                         <td>
-                                            <select type="number" class="number" name="t_011" id="t_011" onchange="myFunction()" style="height: 30px; width: 30px;">
+                                            <select type="number" class="number" name="t_011" id="t_011" onchange="myFunction()" style="height: 30px; width: 35px;">
                                                 <option value="0">0</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -321,7 +321,7 @@
                                         <td>Tenang bila dipeluk, digendong atau diajak bicara</td>
                                         <td>Sulit untuk menenangkan</td>
                                         <td>
-                                            <select type="number" class="number" name="t_012" id="t_012" onchange="myFunction()" style="height: 30px; width: 30px;">
+                                            <select type="number" class="number" name="t_012" id="t_012" onchange="myFunction()" style="height: 30px; width: 35px;">
                                                 <option value="0">0</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -330,7 +330,7 @@
                                     </tr>
                                     <tr style="text-align: center;">
                                         <td colspan="4">TOTAL SKOR</td>
-                                        <td><input type="number" id="total" name="t_013" id="t_013" style="width: 30px;" disabled /></td>
+                                        <td><input type="number" name="t_013" id="t_013" style="width: 40px;" disabled /></td>
                                     </tr>
                                 </table>
                             </td>
@@ -1192,7 +1192,7 @@
             $('.number').each(function() {
                 sum += Number($(this).val());
             });
-            $('#total').val(sum);
+            $('#t_013').val(sum);
         };
     </script>
     <script>

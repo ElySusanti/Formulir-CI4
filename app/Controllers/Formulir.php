@@ -96,6 +96,13 @@ class Formulir extends BaseController
 
         return view('Tampil/form4', $data);
     }
+    public function GetAge()
+    {
+        $model = new biodata_model();
+        $data['data'] = $model->Age();
+
+        return view('Tampil/form5', $data);
+    }
     public function form5()
     {
         $data['data'] = $this->assessment_model->tampildataform5();

@@ -31,7 +31,7 @@
     </a>
     <div class="container" style="font-family: 'Times New Roman';">
         <form action="<?= base_url('formulir/simpan') ?>" method="post" autocomplete="off">
-            <input type="hidden" id="FORM" name="FORM" value="F1">
+            <input type="hidden" id="FORM" name="FORM" value="F3">
             <div class="row">
                 <div class="col md-6 text-start">
                     <h3><b>RSUD Dr. M. YUNUS BENGKULU</b></h3>

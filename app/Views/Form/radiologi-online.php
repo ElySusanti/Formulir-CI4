@@ -33,7 +33,7 @@
     </a>
     <div class="container" style="font-family: Verdana;">
         <form action="<?= base_url('formulir/simpan') ?>" method="post" autocomplete="off">
-            <input type="hidden" id="FORM" name="FORM" value="F1">
+            <input type="hidden" id="FORM" name="FORM" value="F5">
             <table style="width: 100%; margin-top: 10px;">
                 <tr>
                     <td>
@@ -453,9 +453,9 @@
             getBiodata(event.target.value).then(Biodata => {
                 $('#THENAME').val(Biodata.THENAME);
                 $('#THEADDRESS').val(Biodata.THEADDRESS);
-                $('#AGEYEAR').val(Biodata.AGEYEAR);
-                $('#AGEMONTH').val(Biodata.AGEMONTH);
-                $('#AGEDAY').val(Biodata.AGEDAY);
+                $('#AGEYEAR').y;
+                $('#AGEMONTH').m;
+                $('#AGEDAY').d;
                 $('#CARA_BAYAR').val(Biodata.CARA_BAYAR);
                 $('#EMPLOYEE_ID').val(Biodata.EMPLOYEE_ID);
             });

@@ -33,7 +33,7 @@
     </a>
     <div class="container" style="font-family: Verdana;">
         <form action="<?= base_url('formulir/simpan') ?>" method="post" autocomplete="off">
-            <input type="hidden" id="FORM" name="FORM" value="F1">
+            <input type="hidden" id="FORM" name="FORM" value="F6">
             <div class="row mt-5">
                 <div class="col" style="text-align: center;">
                     <h4><b>DR. M YUNUS BENGKULU<br></b></h4>

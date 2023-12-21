@@ -10,6 +10,8 @@
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet">
     <!-- <link href="css/jquery.signature.css" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="/css/jquery.signature.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <style>
         .kbw-signature {
             width: 150px;
@@ -31,12 +33,11 @@
 
 <body>
     <div class="container-fluid mt-3" style="font-family: 'Arial Narrow';">
-        <a class="btn btn-outline-dark" href="/Formulir/input" role="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
-            </svg>
+        <a class="btn btn-outline-primary my-3" href="/Formulir/input" role="button">
+            <i class="bi bi-arrow-left"> Back</i>
         </a>
         <form action="<?= base_url('formulir/simpan') ?>" method="post" autocomplete="off">
+            <?= csrf_field(); ?>
             <input type="hidden" id="FORM" name="FORM" value="F4">
             <table style="width: 100%;">
                 <tr>

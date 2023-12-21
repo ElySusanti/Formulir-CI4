@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <a class="btn btn-primary my-3" href="/Formulir/input" role="button" style="width: 97%">
+                <a class="btn btn-primary my-5" href="/Formulir/input" role="button" style="width: 97%">
                     <h5>Input Data</h5>
                 </a>
             </div>

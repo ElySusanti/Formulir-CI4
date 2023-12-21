@@ -1,28 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <title>Persetujuan Anastesi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/jquery.signature.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    <style>
-        .kbw-signature {
-            width: 200px;
-            height: 100px;
-        }
-    </style>
-    <!--[if IE]>
-    <script src="excanvas.js"></script>
-    <![endif]-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="<?= base_url() ?>/js/jquery.signature.js"></script>
+    <title>Detail Formulir</title>
 </head>
 
 <body>
@@ -30,8 +15,7 @@
         <a class="btn btn-outline-primary my-3" href="/Formulir/input" role="button">
             <i class="bi bi-arrow-left"> Back</i>
         </a>
-        <form action="<?= base_url('formulir/simpan') ?>" method="post" autocomplete="off" class="mt-3" style="font-family: 'Times New Roman';">
-            <?= csrf_field(); ?>
+        <form class="mt-3" style="font-family: 'Times New Roman';">
             <input type="hidden" id="FORM" name="FORM" value="F1">
             <h3 style="text-align: right;"><b>RM. 08 Lanjutan 3 </b></h3>
             <table class="table table-bordered mb-0" style="border: 1px; color: black;width: 100%;">
@@ -46,12 +30,7 @@
                                     <label for="NO_REGISTRATION">Nomor Rekam Medis</label>
                                 </div>
                                 <div class="col-md-8">
-                                    : <select name="NO_REGISTRATION" id="NO_REGISTRATION" style="width: 250px; height: 30PX;" required>
-                                        <option value="" selected disabled>--Pilih Nomor Rekam Medis--</option>
-                                        <?php foreach ($Biodata as $value) : ?>
-                                            <option value="<?= $value['NO_REGISTRATION']; ?>"><?= $value['NO_REGISTRATION']; ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
+                                    : <input type="text" id="NO_REGISTRATION" name="NO_REGISTRATION" style="width: 250px;" value="<?= $detail['NO_REGISTRATION']; ?>" readonly>
                                 </div>
                             </div>
                             <div class="row mb-2">
@@ -400,133 +379,6 @@
             </div>
         </form>
     </div>
-    <script>
-        $('#NO_REGISTRATION').on('change', (event) => {
-            getBiodata(event.target.value).then(Biodata => {
-                $('#THENAME').val(Biodata.THENAME);
-                $('#ALLOANAMNESIS_CONTACT').val(Biodata.ALLOANAMNESIS_CONTACT);
-                $('#DATE_OF_BIRTH').val(Biodata.DATE_OF_BIRTH);
-                $('#GENDER').val(Biodata.GENDER);
-                $('#CLASS_ROOM_ID').val(Biodata.CLASS_ROOM_ID);
-                $('#date_of_birth').val(Biodata.DATE_OF_BIRTH);
-                $('#No_Registration').val(Biodata.NO_REGISTRATION);
-            });
-        });
-
-        async function getBiodata(BODY_ID) {
-            let response = await fetch('/api/databiodata/show/' + BODY_ID)
-            let data = await response.json();
-
-            return data;
-        }
-    </script>
-    <script>
-        $(function() {
-            fungsi1_disabled();
-            $("#t_02_saya").click(fungsi1_disabled);
-        });
-        $(function() {
-            fungsi1_enable();
-            $("#t_02_input").click(fungsi1_enable);
-        });
-
-        function fungsi1_disabled() {
-            if (this.click) {
-                $("#v_09, #v_10").attr("disabled", true);
-                $("#v_09, #v_10").val("");
-            } else {
-                $("#v_09, #v_10").removeAttr("disabled");
-            }
-        }
-
-        function fungsi1_enable() {
-            $("#v_09, #v_10").attr("disabled", true);
-            if (this.click) {
-                $("#v_09, #v_10").removeAttr("disabled");
-                $("#v_09").focus();
-            } else {
-                $("#v_09, #v_10").attr("disabled", true);
-            }
-        }
-    </script>
-    <script>
-        $(function() {
-            var sig = $('#TTD').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
-    </script>
-    <script>
-        $(function() {
-            var sig = $('#TTD_1').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
-    </script>
-    <script>
-        $(function() {
-            var sig = $('#TTD_2').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
-    </script>
-    <script>
-        $(function() {
-            var sig = $('#TTD_3').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

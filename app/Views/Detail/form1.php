@@ -12,12 +12,14 @@
 
 <body>
     <div class="container">
-        <a class="btn btn-outline-primary my-3" href="/Formulir/input" role="button">
+        <a class="btn btn-outline-primary my-3" href="/Formulir" role="button">
             <i class="bi bi-arrow-left"> Back</i>
         </a>
         <form class="mt-3" style="font-family: 'Times New Roman';">
             <input type="hidden" id="FORM" name="FORM" value="F1">
+            <input type="hidden" id="id" name="id" value="<?= $detail['id']; ?>">
             <h3 style="text-align: right;"><b>RM. 08 Lanjutan 3 </b></h3>
+
             <table class="table table-bordered mb-0" style="border: 1px; color: black;width: 100%;">
                 <tbody>
                     <tr>

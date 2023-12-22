@@ -39,7 +39,7 @@
                         <td><?= $data['GENDER']; ?></td>
                         <td><?= $data['CLASS_ROOM_ID']; ?></td>
                         <td>
-                            <a class="btn btn-primary my-3" href="/Formulir/detail" role="button">Detail</a>
+                            <a class="btn btn-primary my-3" href="/Formulir/detail1" role="button">Detail</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

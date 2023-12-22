@@ -21,3 +21,4 @@ $routes->setAutoRoute(true);
 $routes->resource('/api/formulir', ['controller' => 'Api\DataBiodata']);
 $routes->get('/', 'Formulir::index');
 $routes->post('/', 'Formulir::simpan');
+$routes->get('/Formulir/detail1/(:num)', 'Formulir::detail1/$1');

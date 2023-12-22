@@ -350,46 +350,52 @@ class Formulir extends BaseController
     }
     public function form1()
     {
-        $data = $this->assessment_model->getDataByValue('F1');
-
-        return view('Tampil/form1', ['data' => $data]);
+        $data = [
+            'data' => $this->assessment_model->getDataByValue('F1')
+        ];
+        return view('Tampil/form1', $data);
     }
     public function form2()
     {
-        $data = $this->assessment_model->getDataByValue('F2');
-
-        return view('Tampil/form2', ['data' => $data]);
+        $data = [
+            'data' => $this->assessment_model->getDataByValue('F2')
+        ];
+        return view('Tampil/form2', $data);
     }
     public function form3()
     {
-        $data = $this->assessment_model->getDataByValue('F3');
-
-        return view('Tampil/form3', ['data' => $data]);
+        $data = [
+            'data' => $this->assessment_model->getDataByValue('F3')
+        ];
+        return view('Tampil/form3', $data);
     }
     public function form4()
     {
-        $data = $this->assessment_model->getDataByValue('F4');
-
-        return view('Tampil/form4', ['data' => $data]);
+        $data = [
+            'data' => $this->assessment_model->getDataByValue('F4')
+        ];
+        return view('Tampil/form4', $data);
     }
     public function form5()
     {
-        $data = $this->assessment_model->getDataByValue('F5');
-
-        return view('Tampil/form5', ['data' => $data]);
+        $data = [
+            'data' => $this->assessment_model->getDataByValue('F5')
+        ];
+        return view('Tampil/form5', $data);
     }
     public function form6()
     {
-        $data = $this->assessment_model->getDataByValue('F6');
-
-        return view('Tampil/form6', ['data' => $data]);
+        $data = [
+            'data' => $this->assessment_model->getDataByValue('F6')
+        ];
+        return view('Tampil/form6', $data);
     }
-    public function detail($id)
+    public function detail1($id = ['id'])
     {
         $data = [
-            'detail' => $this->assessment_model->getData($id)
+            'detail' => $this->assessment_model->getDataById($id)
         ];
-
-        return view('Detail/form1', $data);
+        dd($data);
+        // return view('Detail/form1', $data);
     }
 }

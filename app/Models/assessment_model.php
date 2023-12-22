@@ -47,12 +47,8 @@ class assessment_model extends Model
     {
         return $this->where('form', $value)->findAll();
     }
-    public function getData($id = false)
+    public function getDataById($id)
     {
-        if ($id == false) {
-            return $this->findAll();
-        }
-
-        return $this->where(['id' => $id])->first();
+        return $this->find($id);
     }
 }

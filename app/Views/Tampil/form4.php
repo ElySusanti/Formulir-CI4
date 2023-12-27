@@ -12,7 +12,7 @@
 
 <body>
     <div class="container my-5">
-        <a class="btn btn-outline-primary sticky-top mt-3" href="/Formulir" role="button">
+        <a class="btn btn-outline-dark sticky-top mt-3" href="/Formulir" role="button">
             <i class="bi bi-arrow-left" style=" width:30; height:30"> Back</i>
         </a>
         <h3 style="text-align:center">Pengkajian Awal Keperawatan dan Medis Instalasi Gawat Darurat</h3>
@@ -32,7 +32,11 @@
                         <td><?= $data['NO_REGISTRATION']; ?></td>
                         <td><?= $data['THENAME']; ?></td>
                         <td>
-                            <a class="btn btn-primary my-3" href="/Formulir/detail" role="button">Detail</a>
+                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                <a class="btn btn-outline-primary my-3" href="/Formulir/detail4" role="button">Detail</a>
+                                <a class="btn btn-outline-success my-3" href="/Formulir/update4" role="button">Update</a>
+                                <a class="btn btn-outline-danger my-3" href="/Formulir/delete4" role="button">Delete</a>
+                            </div>
                         </td>
                     </tr>
                 <?php endforeach; ?>

@@ -390,12 +390,46 @@ class Formulir extends BaseController
         ];
         return view('Tampil/form6', $data);
     }
-    public function detail1($id = ['id'])
+    public function detail1($id)
     {
         $data = [
             'detail' => $this->assessment_model->getDataById($id)
         ];
-        dd($data);
-        // return view('Detail/form1', $data);
+        return view('Detail/form1', $data);
+    }
+    public function detail2()
+    {
+        $data = [
+            'detail' => $this->assessment_model->getDataById('3')
+        ];
+        return view('Detail/form2', $data);
+    }
+    public function detail3()
+    {
+        $data = [
+            'detail' => $this->assessment_model->getDataById('4')
+        ];
+        return view('Detail/form3', $data);
+    }
+    public function detail4($id)
+    {
+        $data = [
+            'detail' => $this->assessment_model->getDataById($id)
+        ];
+        return view('Detail/form4', $data);
+    }
+    public function detail5()
+    {
+        $data = [
+            'detail' => $this->assessment_model->getDataById('2')
+        ];
+        return view('Detail/form5', $data);
+    }
+    public function detail6($id)
+    {
+        $data = [
+            'detail' => $this->assessment_model->getDataById($id)
+        ];
+        return view('Detail/form6', $data);
     }
 }

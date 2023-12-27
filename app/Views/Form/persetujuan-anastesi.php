@@ -88,20 +88,20 @@
                         <td>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <label for="v_01">Tanggal Operasi</label>
+                                    <label for="V_01">Tanggal Operasi</label>
                                 </div>
                                 <div class="col-md-7">
-                                    : <input type="date" id="v_01" name="v_01" style="width: 100px;">
+                                    : <input type="date" id="V_01" name="V_01" style="width: 100px;">
                                 </div>
                             </div>
                         </td>
                         <td rowspan="2" style="vertical-align: middle;">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <label for="v_02">Dr. Anastesi <br>Yang Menerangkan</label>
+                                    <label for="V_02">Dr. Anastesi <br>Yang Menerangkan</label>
                                 </div>
                                 <div class="col-md-6">
-                                    : <input type="text" id="v_02" name="v_02" style="width: 200px;">
+                                    : <input type="text" id="V_02" name="V_02" style="width: 200px;">
                                 </div>
                             </div>
                         </td>
@@ -110,10 +110,10 @@
                         <td>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <label for="v_03">Diagnosa</label>
+                                    <label for="V_03">Diagnosa</label>
                                 </div>
                                 <div class="col-md-7">
-                                    : <input type="text" id="v_03" name="v_03" style="width: 200px;">
+                                    : <input type="text" id="V_03" name="V_03" style="width: 200px;">
                                 </div>
                             </div>
                         </td>
@@ -122,20 +122,20 @@
                         <td>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <label for="v_04">R/Tindakan</label>
+                                    <label for="V_04">R/Tindakan</label>
                                 </div>
                                 <div class="col-md-7">
-                                    : <input type="text" id="v_04" name="v_04" style="width: 200px;">
+                                    : <input type="text" id="V_04" name="V_04" style="width: 200px;">
                                 </div>
                             </div>
                         </td>
                         <td>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <label for="v_05">Dr. Operator</label>
+                                    <label for="V_05">Dr. Operator</label>
                                 </div>
                                 <div class="col-md-6">
-                                    : <input type="text" id="v_05" name="v_05" style="width: 200px;">
+                                    : <input type="text" id="V_05" name="V_05" style="width: 200px;">
                                 </div>
                             </div>
                         </td>
@@ -274,26 +274,26 @@
                 </tr>
                 <tr>
                     <td colspan="3">
-                        Yang bertanda tangan dibawah ini, saya nama <input type="text" id="v_06" name="v_06" style="width: 200px;"> umur <input type="text" id="v_07" name="v_07" style="width: 100px;"> tahun,
+                        Yang bertanda tangan dibawah ini, saya nama <input type="text" id="V_06" name="V_06" style="width: 200px;"> umur <input type="text" id="V_07" name="V_07" style="width: 100px;"> tahun,
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="t_01" id="t_01_laki-laki" value="0">
-                            <label class="form-check-label" for="t_01_laki-laki">laki-laki /</label>
+                            <input class="form-check-input" type="radio" name="T_01" id="T_01_laki-laki" value="0">
+                            <label class="form-check-label" for="T_01_laki-laki">laki-laki /</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="t_01" id="t_01_perempuan" value="1">
-                            <label class="form-check-label" for="t_01_perempuan">perempuan, </label>
+                            <input class="form-check-input" type="radio" name="T_01" id="T_01_perempuan" value="1">
+                            <label class="form-check-label" for="T_01_perempuan">perempuan, </label>
                         </div><br>
-                        alamat <input type="text" id="v_08" name="v_08" style="width: 200px;">
+                        alamat <input type="text" id="V_08" name="V_08" style="width: 200px;">
                         dengan ini menyatakan persetujuan untuk dilakukan tindakan anestesi terhadap&nbsp;
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="t_02" id="t_02_saya" value="0" onclick="fungsi1_disabled()">
-                            <label class="form-check-label" for="t_02_saya">saya / </label>
+                            <input class="form-check-input" type="radio" name="T_02" id="T_02_saya" value="0" onclick="fungsi1_disabled()">
+                            <label class="form-check-label" for="T_02_saya">saya / </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="t_02" id="t_02_input" value="1" onclick="fungsi1_enable()">
-                            <input type="text" id="v_09" name="v_09" style="width: 150px;" disabled>
+                            <input class="form-check-input" type="radio" name="T_02" id="T_02_input" value="1" onclick="fungsi1_enable()">
+                            <input type="text" id="V_09" name="V_09" style="width: 150px;" disabled>
                         </div>saya,
-                        Yang bernama <input type="text" id="v_10" name="v_10" style="width: 200px;" disabled>
+                        Yang bernama <input type="text" id="V_10" name="V_10" style="width: 200px;" disabled>
                         Tanggal lahir <input type="date" id="date_of_birth" name="date_of_birth" style="width: 100px;" readonly>
                         Nomor Rekam Medis : <input type="text" id="No_Registration" name="No_Registration" style="width: 200px;" readonly>
                     </td>
@@ -315,20 +315,20 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="t_03" id="t_03" value="1">
-                                    <label class="form-check-label" for="t_03">Sangat tidak mungkin</label>
+                                    <input class="form-check-input" type="checkbox" name="T_03" id="T_03" value="1">
+                                    <label class="form-check-label" for="T_03">Sangat tidak mungkin</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="t_04" id="t_04" value="1">
-                                    <label class="form-check-label" for="t_04">Mungkin dibutuhkan</label>
+                                    <input class="form-check-input" type="checkbox" name="T_04" id="T_04" value="1">
+                                    <label class="form-check-label" for="T_04">Mungkin dibutuhkan</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="t_05" id="t_05" value="1">
-                                    <label class="form-check-label" for="t_05">Sangat memungkinkan</label>
+                                    <input class="form-check-input" type="checkbox" name="T_05" id="T_05" value="1">
+                                    <label class="form-check-label" for="T_05">Sangat memungkinkan</label>
                                 </div>
                             </div>
                         </div>
@@ -339,16 +339,16 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="t_06" id="t_06" value="1">
-                                        <label class="form-check-label" for="t_06">Saya menyetujui dan mengizinkan untuk menerima darah atau komponen darah sesuai dengan yang ditentukan/ diputuskan oleh dokter anestesi dan dokter lain yang merawat demi kebaikan saya/ keluarga.</label>
+                                        <input class="form-check-input" type="checkbox" name="T_06" id="T_06" value="1">
+                                        <label class="form-check-label" for="T_06">Saya menyetujui dan mengizinkan untuk menerima darah atau komponen darah sesuai dengan yang ditentukan/ diputuskan oleh dokter anestesi dan dokter lain yang merawat demi kebaikan saya/ keluarga.</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="t_07" id="t_07" value="1">
-                                        <label class="form-check-label" for="t_07">Saya menyetujui dan mengizinkan untuk menerima darah atau komponen darah hanya pada kondisi darurat menyelamatkan hidup saya/ keluarga.</label>
+                                        <input class="form-check-input" type="checkbox" name="T_07" id="T_07" value="1">
+                                        <label class="form-check-label" for="T_07">Saya menyetujui dan mengizinkan untuk menerima darah atau komponen darah hanya pada kondisi darurat menyelamatkan hidup saya/ keluarga.</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="t_08" id="t_08" value="1">
-                                        <label class="form-check-label" for="t_08">Saya tidak menyetujui pemberian darah atau komponen darah pada kondisi apapun/ sejelek apapun, terhadap diri saya/ keluarga.</label>
+                                        <input class="form-check-input" type="checkbox" name="T_08" id="T_08" value="1">
+                                        <label class="form-check-label" for="T_08">Saya tidak menyetujui pemberian darah atau komponen darah pada kondisi apapun/ sejelek apapun, terhadap diri saya/ keluarga.</label>
                                     </div>
                                 </div>
                             </div>
@@ -360,34 +360,34 @@
                             <table style="justify-content: center; width: 100%;">
                                 <tr>
                                     <td style="text-align: center; width: 33%;">
-                                        <label for="v_11" style="text-align: center;">Saksi 1</label>
+                                        <label for="V_11" style="text-align: center;">Saksi 1</label>
                                         <br><br>
                                         <div id="TTD"></div>
-                                        <br><input type="text" id="v_11" name="v_11" width="100px" style="text-align: center;">
+                                        <br><input type="text" id="V_11" name="V_11" width="100px" style="text-align: center;">
                                     </td>
                                     <td style="width: 33%;"></td>
                                     <td rowspan="2" style="vertical-align: middle; width: 33%;">
                                         <label>Bengkulu, </label>
-                                        <input type="date" id="v_12" name="v_12">
-                                        <br><br><label for="v_13">Jam</label>
-                                        <input type="time" id="v_13" name="v_13">
+                                        <input type="date" id="V_12" name="V_12">
+                                        <br><br><label for="V_13">Jam</label>
+                                        <input type="time" id="V_13" name="V_13">
                                         <br><br>
                                         <div id="TTD_1"></div>
-                                        <br><input type="text" id="v_14" name="v_14" width="100px" style="text-align: center;">
+                                        <br><input type="text" id="V_14" name="V_14" width="100px" style="text-align: center;">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="text-align: center;">
-                                        <label for="v_15" style="text-align: center;">Saksi 2</label>
+                                        <label for="V_15" style="text-align: center;">Saksi 2</label>
                                         <br><br>
                                         <div id="TTD_2"></div>
-                                        <br><input type="text" id="v_15" name="v_15" width="100px" style="text-align: center;">
+                                        <br><input type="text" id="V_15" name="V_15" width="100px" style="text-align: center;">
                                     </td>
                                     <td style="text-align: center;">
-                                        <label for="v_16">Dokter Anastesi <br>Yang Menerangkan</label>
+                                        <label for="V_16">Dokter Anastesi <br>Yang Menerangkan</label>
                                         <br>
                                         <div id="TTD_3"></div>
-                                        <br><input type="text" id="v_16" name="v_16" width="100px" style="text-align: center;">
+                                        <br><input type="text" id="V_16" name="V_16" width="100px" style="text-align: center;">
                                     </td>
                                 </tr>
                             </table>
@@ -423,29 +423,29 @@
     <script>
         $(function() {
             fungsi1_disabled();
-            $("#t_02_saya").click(fungsi1_disabled);
+            $("#T_02_saya").click(fungsi1_disabled);
         });
         $(function() {
             fungsi1_enable();
-            $("#t_02_input").click(fungsi1_enable);
+            $("#T_02_input").click(fungsi1_enable);
         });
 
         function fungsi1_disabled() {
             if (this.click) {
-                $("#v_09, #v_10").attr("disabled", true);
-                $("#v_09, #v_10").val("");
+                $("#V_09, #V_10").attr("disabled", true);
+                $("#V_09, #V_10").val("");
             } else {
-                $("#v_09, #v_10").removeAttr("disabled");
+                $("#V_09, #V_10").removeAttr("disabled");
             }
         }
 
         function fungsi1_enable() {
-            $("#v_09, #v_10").attr("disabled", true);
+            $("#V_09, #V_10").attr("disabled", true);
             if (this.click) {
-                $("#v_09, #v_10").removeAttr("disabled");
-                $("#v_09").focus();
+                $("#V_09, #V_10").removeAttr("disabled");
+                $("#V_09").focus();
             } else {
-                $("#v_09, #v_10").attr("disabled", true);
+                $("#V_09, #V_10").attr("disabled", true);
             }
         }
     </script>

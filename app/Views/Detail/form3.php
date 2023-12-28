@@ -26,10 +26,13 @@
 </head>
 
 <body>
+    <a class="btn btn-outline-dark" href="/" role="button">
+        <i class="bi bi-house-fill"></i>
+    </a>
+    <a class="btn btn-outline-dark" href="/Formulir/form3" role="button">
+        <i class="bi bi-arrow-left"> Back</i>
+    </a>
     <div class="container" style="font-family: 'Times New Roman';">
-        <a class="btn btn-outline-primary my-3" href="/Formulir/form3" role="button">
-            <i class="bi bi-arrow-left"> Back</i>
-        </a>
         <form>
             <?= csrf_field(); ?>
             <input type="hidden" id="FORM" name="FORM" value="F3">
@@ -41,7 +44,7 @@
                     <h3><b>RM. 10 Lanjutan 4</b></h3>
                 </div>
             </div>
-            <table class="table table-bordered" style="border: 3px solid black; width: 100%;">
+            <table class="table table-bordered mb-3" style="border: 3px solid black; width: 100%;">
                 <tr style="border: 3px solid black;">
                     <td style="vertical-align: middle; text-align: center; width: 60%; font-size: 25px;"><b>LAPORAN PEMAKAIAN INSTRUMEN BEDAH</b></td>
                     <td style="width: 40%; text-align: left; border: 3px solid black;">
@@ -58,7 +61,7 @@
                                 <label for="DATE_OF_BIRTH">Tgl. Lahir</label>
                             </div>
                             <div class="col-md-9">
-                                : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 100px;" value="<?= $detail['']; ?>" readonly>&nbsp;
+                                : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 100px;" value="" readonly>&nbsp;
                                 <input type="text" id="GENDER" name="GENDER" style="width: 150px;" value="<?= $detail['GENDER']; ?>" readonly>
                             </div>
                         </div>
@@ -379,14 +382,14 @@
                                     <td style="text-align: center; width: 50%;">
                                         <label for="V_86" style="text-align: center;">Perawat Instrumen</label>
                                         <br>
-                                        <div id="TTD" value="<?= $detail['TTD']; ?>" readonly></div>
+                                        <input id="TTD" value="<?= $detail['TTD']; ?>" disabled>
                                         <br>( <input type="text" id="V_86" name="V_86" style="width: 150px; text-align: center;" value="<?= $detail['V_86']; ?>" readonly> )
                                         <br>Tanda tangan dan nama lengkap
                                     </td>
                                     <td style="text-align: center; width: 50%;">
                                         <label for="V_87" style="text-align: center;">Perawat Sirkuler</label>
                                         <br>
-                                        <div id="TTD_1" value="<?= $detail['TTD_1']; ?>" readonly></div>
+                                        <input id="TTD_1" value="<?= $detail['TTD_1']; ?>" disabled>
                                         <br>( <input type="text" id="V_87" name="V_87" style="width: 150px; text-align: center;" value="<?= $detail['V_87']; ?>" readonly> )
                                         <br>Tanda tangan dan nama lengkap
                                     </td>
@@ -396,9 +399,6 @@
                     </td>
                 </tr>
             </table>
-            <div class="d-grid gap-2 mt-3 mb-3">
-                <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
-            </div>
         </form>
     </div>
     <script>

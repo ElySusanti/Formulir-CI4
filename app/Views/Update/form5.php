@@ -28,11 +28,14 @@
 </head>
 
 <body>
+    <a class="btn btn-outline-dark" href="/" role="button">
+        <i class="bi bi-house-fill"></i>
+    </a>
+    <a class="btn btn-outline-dark" href="/Formulir/form5" role="button">
+        <i class="bi bi-arrow-left"> Back</i>
+    </a>
     <div class="container" style="font-family: Verdana;">
-        <a class="btn btn-outline-primary my-3" href="/Formulir/form5" role="button">
-            <i class="bi bi-arrow-left"> Back</i>
-        </a>
-        <form>
+        <form action="<?= base_url('formulir/update5') ?>" method="post">
             <?= csrf_field(); ?>
             <input type="hidden" id="FORM" name="FORM" value="F5">
             <table style="width: 100%; margin-top: 10px;">
@@ -106,10 +109,10 @@
                     <b>Diagnosis Klinis :</b>
                 </div>
                 <div class="col">
-                    <input type="text" name="DESCRIPTION" id="DESCRIPTION" style="width: 300px;" value="<?= $detail['DESCRIPTION']; ?>" readonly>
+                    <input type="text" name="DESCRIPTION" id="DESCRIPTION" style="width: 300px;" value="<?= $detail['DESCRIPTION']; ?>">
                 </div>
                 <div class="col-md-3">
-                    <input class="form-check-input" type="checkbox" name="patient_category_id" id="patient_category_id" value="<?= $detail['']; ?>" readonly>
+                    <input class="form-check-input" type="checkbox" name="patient_category_id" id="patient_category_id" value="<?= $detail['']; ?>">
                     <label class="form-check-label" for="patient_category_id"><b>&nbsp;C &nbsp; Y &nbsp; T &nbsp; O</b></label>
                 </div>
             </div>
@@ -119,39 +122,39 @@
                         <div class="col">
                             <b>Ekstremilitas Bawah :</b><br>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_001" id="pr_001" <?= ($detail['pr_001'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_001" id="pr_001" <?= ($detail['pr_001'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_001">Fermur AP / Lat</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_002" id="pr_002" <?= ($detail['pr_002'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_002" id="pr_002" <?= ($detail['pr_002'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_002">Ankle Joint</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_003" id="pr_003" <?= ($detail['pr_003'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_003" id="pr_003" <?= ($detail['pr_003'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_003">Genu AP / Lat</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_004" id="pr_004" <?= ($detail['pr_004'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_004" id="pr_004" <?= ($detail['pr_004'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_004">Cruris AP / Lat</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_005" id="pr_005" <?= ($detail['pr_005'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_005" id="pr_005" <?= ($detail['pr_005'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_005">Panggul AP / Lat</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_006" id="pr_006" <?= ($detail['pr_006'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_006" id="pr_006" <?= ($detail['pr_006'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_006">Calcaneus</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_007" id="pr_007" <?= ($detail['pr_007'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_007" id="pr_007" <?= ($detail['pr_007'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_007">HIP Join</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_008" id="pr_008" <?= ($detail['pr_008'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_008" id="pr_008" <?= ($detail['pr_008'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_008">Pedis</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_009" id="pr_009" <?= ($detail['pr_009'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_009" id="pr_009" <?= ($detail['pr_009'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_009">Vertebra</label>
                             </div>
                         </div>
@@ -160,18 +163,18 @@
                         <div class="col">
                             <b>Thorax :</b><br>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_035" id="pr_035" <?= ($detail['pr_035'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_035" id="pr_035" <?= ($detail['pr_035'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_035
                                 ">Thoraks satu posisi
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_037" id="pr_037" <?= ($detail['pr_037'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_037" id="pr_037" <?= ($detail['pr_037'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_037">Thoraks 2 posisi
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_038" id="pr_038" <?= ($detail['pr_038'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_038" id="pr_038" <?= ($detail['pr_038'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_038">Top Lordotik</label>
                             </div>
                         </div>
@@ -180,21 +183,21 @@
                         <div class="col">
                             <b>Tulang Belakang :</b><br>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_042" id="pr_042" <?= ($detail['pr_042'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_042" id="pr_042" <?= ($detail['pr_042'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_042">Cervical 2 posisi
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_043" id="pr_043" <?= ($detail['pr_043'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_043" id="pr_043" <?= ($detail['pr_043'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_043">Cervical 3 posisi
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_044" id="pr_044" <?= ($detail['pr_044'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_044" id="pr_044" <?= ($detail['pr_044'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_044">Vertebra</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_045" id="pr_045" <?= ($detail['pr_045'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_045" id="pr_045" <?= ($detail['pr_045'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_045">Lumbo Sacral</label>
                             </div>
                         </div>
@@ -203,11 +206,11 @@
                         <div class="col">
                             <b>Gigi :</b><br>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_053" id="pr_053" <?= ($detail['pr_053'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_053" id="pr_053" <?= ($detail['pr_053'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_053">Foto gigi</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_046" id="pr_046" <?= ($detail['pr_046'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_046" id="pr_046" <?= ($detail['pr_046'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_046">Panoramic</label>
                             </div>
                         </div>
@@ -218,39 +221,39 @@
                         <div class="col">
                             <b>Ekstremilitas Atas :</b><br>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_012" id="pr_012" <?= ($detail['pr_012'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_012" id="pr_012" <?= ($detail['pr_012'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_012">Manus</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_013" id="pr_013" <?= ($detail['pr_013'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_013" id="pr_013" <?= ($detail['pr_013'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_013">Scapula / Clavicula</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_014" id="pr_014" <?= ($detail['pr_014'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_014" id="pr_014" <?= ($detail['pr_014'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_014">Antebrachi</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_015" id="pr_015" <?= ($detail['pr_015'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_015" id="pr_015" <?= ($detail['pr_015'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_015">Brachi</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_016" id="pr_016" <?= ($detail['pr_016'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_016" id="pr_016" <?= ($detail['pr_016'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_016">Clavicula</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_017" id="pr_017" <?= ($detail['pr_017'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_017" id="pr_017" <?= ($detail['pr_017'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_017">Wrist Join</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_018" id="pr_018" <?= ($detail['pr_018'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_018" id="pr_018" <?= ($detail['pr_018'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_018">Bahu AP / Lat</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_019" id="pr_019" <?= ($detail['pr_019'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_019" id="pr_019" <?= ($detail['pr_019'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_019">Bone Survey</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_020" id="pr_020" <?= ($detail['pr_020'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_020" id="pr_020" <?= ($detail['pr_020'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_020">Vertebra</label>
                             </div>
                         </div>
@@ -259,27 +262,27 @@
                         <div class="col">
                             <b>Abdomen :</b><br>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_055" id="pr_055" <?= ($detail['pr_055'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_055" id="pr_055" <?= ($detail['pr_055'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_055">BNO Bayi</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_056" id="pr_056" <?= ($detail['pr_056'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_056" id="pr_056" <?= ($detail['pr_056'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_056">BNO AP</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_057" id="pr_057" <?= ($detail['pr_057'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_057" id="pr_057" <?= ($detail['pr_057'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_057">BNO AP / Lat</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_058" id="pr_058" <?= ($detail['pr_058'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_058" id="pr_058" <?= ($detail['pr_058'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_058">Costae</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_074" id="pr_074" <?= ($detail['pr_074'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_074" id="pr_074" <?= ($detail['pr_074'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_074">Abdomen</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_036" id="pr_036" <?= ($detail['pr_036'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_036" id="pr_036" <?= ($detail['pr_036'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_036">Abdomen 3 posisi</label>
                             </div>
                         </div>
@@ -288,15 +291,15 @@
                         <div class="col">
                             <b>Lain -lain :</b><br>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_032" id="pr_032" <?= ($detail['pr_032'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_032" id="pr_032" <?= ($detail['pr_032'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_032">Mammografi </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_033" id="pr_033" <?= ($detail['pr_033'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_033" id="pr_033" <?= ($detail['pr_033'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_033">Expertise Foto</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_034" id="pr_034" <?= ($detail['pr_034'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_034" id="pr_034" <?= ($detail['pr_034'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_034">Chepalometri</label>
                             </div>
                         </div>
@@ -307,53 +310,53 @@
                         <div class="col">
                             <b>Kepala :</b><br>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_021" id="pr_021" <?= ($detail['pr_021'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_021" id="pr_021" <?= ($detail['pr_021'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_021">Mandibula</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_022" id="pr_022" <?= ($detail['pr_022'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_022" id="pr_022" <?= ($detail['pr_022'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_022">Os Nasal
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_023" id="pr_023" <?= ($detail['pr_023'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_023" id="pr_023" <?= ($detail['pr_023'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_023">Orbita</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_028" id="pr_028" <?= ($detail['pr_028'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_028" id="pr_028" <?= ($detail['pr_028'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_028">SPN (Sinus Pranasalis)
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_040" id="pr_040" <?= ($detail['pr_040'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_040" id="pr_040" <?= ($detail['pr_040'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_040">Kepala AP / Lat</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_010" id="pr_010" <?= ($detail['pr_010'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_010" id="pr_010" <?= ($detail['pr_010'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_010">Mastoid</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_011" id="pr_011" <?= ($detail['pr_011'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_011" id="pr_011" <?= ($detail['pr_011'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_011">TMJ (Temporo Mandibular Join)</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_066" id="pr_066" <?= ($detail['pr_066'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_066" id="pr_066" <?= ($detail['pr_066'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_066">Basis Cranii</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_067" id="pr_067" <?= ($detail['pr_067'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_067" id="pr_067" <?= ($detail['pr_067'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_067">Sella Tursika</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_068" id="pr_068" <?= ($detail['pr_068'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_068" id="pr_068" <?= ($detail['pr_068'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_068">Foramen Opticum</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_072" id="pr_072" <?= ($detail['pr_072'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_072" id="pr_072" <?= ($detail['pr_072'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_072">Maxilla</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_073" id="pr_073" <?= ($detail['pr_073'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_073" id="pr_073" <?= ($detail['pr_073'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_073">Mandibulla</label>
                             </div>
                         </div>
@@ -362,59 +365,59 @@
                         <div class="col">
                             <b>Pemeriksaan dengan Kontras :</b><br>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_062" id="pr_062" <?= ($detail['pr_062'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_062" id="pr_062" <?= ($detail['pr_062'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_062">Appendicografi</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_063" id="pr_063" <?= ($detail['pr_063'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_063" id="pr_063" <?= ($detail['pr_063'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_063">Oesophagografi</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_064" id="pr_064" <?= ($detail['pr_064'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_064" id="pr_064" <?= ($detail['pr_064'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_064">Cor Analisa</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_065" id="pr_065" <?= ($detail['pr_065'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_065" id="pr_065" <?= ($detail['pr_065'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_065">Cystografi</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_070" id="pr_070" <?= ($detail['pr_070'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_070" id="pr_070" <?= ($detail['pr_070'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_070">Fistulografi</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_071" id="pr_071" <?= ($detail['pr_071'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_071" id="pr_071" <?= ($detail['pr_071'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_071">Cholecystografi</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_076" id="pr_076" <?= ($detail['pr_076'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_076" id="pr_076" <?= ($detail['pr_076'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_076">Uretrocystografi</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_075" id="pr_075" <?= ($detail['pr_075'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_075" id="pr_075" <?= ($detail['pr_075'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_075">Arthrografi</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_041" id="pr_041" <?= ($detail['pr_041'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_041" id="pr_041" <?= ($detail['pr_041'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_041">Myelografi thoracal / cervical</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_031" id="pr_031" <?= ($detail['pr_031'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_031" id="pr_031" <?= ($detail['pr_031'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_031">Myelografi Lumbal</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_024" id="pr_024" <?= ($detail['pr_024'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_024" id="pr_024" <?= ($detail['pr_024'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_024">HSG</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_059" id="pr_059" <?= ($detail['pr_059'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_059" id="pr_059" <?= ($detail['pr_059'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_059">Colon Inloop</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_060" id="pr_060" <?= ($detail['pr_060'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_060" id="pr_060" <?= ($detail['pr_060'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_060">OMD</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pr_052" id="pr_052" <?= ($detail['pr_052'] == "0" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" name="pr_052" id="pr_052" <?= ($detail['pr_052'] == "0" ? 'checked' : ''); ?>>
                                 <label class="form-check-label" for="pr_052">BNO IVP</label>
                             </div>
                         </div>
@@ -439,7 +442,7 @@
                 </div>
             </div>
             <div class="d-grid gap-2 mt-3 mb-3">
-                <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
+                <input class="btn btn-success" type="submit" name="submit" value="Update">
             </div>
         </form>
     </div>

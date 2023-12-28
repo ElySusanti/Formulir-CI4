@@ -28,10 +28,13 @@
 </head>
 
 <body>
+    <a class="btn btn-outline-dark" href="/" role="button">
+        <i class="bi bi-house-fill"></i>
+    </a>
+    <a class="btn btn-outline-dark" href="/Formulir/form6" role="button">
+        <i class="bi bi-arrow-left"> Back</i>
+    </a>
     <div class="container" style="font-family: Verdana;">
-        <a class="btn btn-outline-primary my-3" href="/Formulir/form6" role="button">
-            <i class="bi bi-arrow-left"> Back</i>
-        </a>
         <form>
             <?= csrf_field(); ?>
             <input type="hidden" id="FORM" name="FORM" value="F6">
@@ -114,12 +117,12 @@
                     <input type="date" name="VACTINATION_DATE" id="VACTINATION_DATE" style="width: 200px;" value="<?= $detail['']; ?>" readonly>
                 </div>
                 <div class="col-md-3" style="color: red; border-color: red;">
-                    <input class="form-check-input" type="checkbox" name="patient_category_id" id="patient_category_id" <?= ($detail['patient_category_id'] == "0" ? 'checked' : ''); ?> readonly>
-                    <label class="form-check-label" for="patient_category_id"><b>CITO</b></label>
+                    <input class="form-check-input" type="checkbox" name="patient_category_id" id="patient_category_id" <?= ($detail['patient_category_id'] == "0" ? 'checked' : ''); ?> disabled>
+                    <label for="patient_category_id"><b>CITO</b></label>
                 </div>
                 <div class="col-md-3">
-                    <input class="form-check-input" type="checkbox" name="validation" id="validation" <?= ($detail['validation'] == "0" ? 'checked' : ''); ?> readonly>
-                    <label class="form-check-label" for="validation"><b>Hasil</b></label>
+                    <input class="form-check-input" type="checkbox" name="validation" id="validation" <?= ($detail['validation'] == "0" ? 'checked' : ''); ?> disabled>
+                    <label for="validation"><b>Hasil</b></label>
                 </div>
             </div>
             <div class="row mb-5">
@@ -140,92 +143,92 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_011" id="pl_011" <?= ($detail['pl_011'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_011">Laju Endap Darah</label>
+                                <input class="form-check-input" type="checkbox" name="pl_011" id="pl_011" <?= ($detail['pl_011'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_011">Laju Endap Darah</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_010" id="pl_010" <?= ($detail['pl_010'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_010">Hematokrit</label>
+                                <input class="form-check-input" type="checkbox" name="pl_010" id="pl_010" <?= ($detail['pl_010'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_010">Hematokrit</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_024" id="pl_024" <?= ($detail['pl_024'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_024">Haemoglobin</label>
+                                <input class="form-check-input" type="checkbox" name="pl_024" id="pl_024" <?= ($detail['pl_024'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_024">Haemoglobin</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_025" id="pl_025" <?= ($detail['pl_025'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_025">Eritrosit</label>
+                                <input class="form-check-input" type="checkbox" name="pl_025" id="pl_025" <?= ($detail['pl_025'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_025">Eritrosit</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_029" id="pl_029" <?= ($detail['pl_029'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_029">Leukosit</label>
+                                <input class="form-check-input" type="checkbox" name="pl_029" id="pl_029" <?= ($detail['pl_029'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_029">Leukosit</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_037" id="pl_037" <?= ($detail['pl_037'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_037">Trombosit</label>
+                                <input class="form-check-input" type="checkbox" name="pl_037" id="pl_037" <?= ($detail['pl_037'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_037">Trombosit</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_022" id="pl_022" <?= ($detail['pl_022'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_022">Retikulosit</label>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_064" id="pl_064" <?= ($detail['pl_064'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_064">Hitung Jenis Leukosit Sdif</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_065" id="pl_065" <?= ($detail['pl_065'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_065">Masa Pendarahan</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_051" id="pl_051" <?= ($detail['pl_051'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_051">Masa Pembekuan</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_041" id="pl_041" <?= ($detail['pl_041'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_041">Tes Rumpel Leede</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_046" id="pl_046" <?= ($detail['pl_046'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_046">Gambar Darah Tepi</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_178" id="pl_178" <?= ($detail['pl_178'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_178">MCV</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_179" id="pl_179" <?= ($detail['pl_179'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_179">MCHC</label>
+                                <input class="form-check-input" type="checkbox" name="pl_022" id="pl_022" <?= ($detail['pl_022'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_022">Retikulosit</label>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_087" id="pl_087" <?= ($detail['pl_087'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_087">RDW</label>
+                                <input class="form-check-input" type="checkbox" name="pl_064" id="pl_064" <?= ($detail['pl_064'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_064">Hitung Jenis Leukosit Sdif</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_086" id="pl_086" <?= ($detail['pl_086'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_086">SI TIBC</label>
+                                <input class="form-check-input" type="checkbox" name="pl_065" id="pl_065" <?= ($detail['pl_065'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_065">Masa Pendarahan</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_005" id="pl_005" <?= ($detail['pl_005'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_005">APTT</label>
+                                <input class="form-check-input" type="checkbox" name="pl_051" id="pl_051" <?= ($detail['pl_051'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_051">Masa Pembekuan</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_115" id="pl_115" <?= ($detail['pl_115'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_115">Fibrinogen</label>
+                                <input class="form-check-input" type="checkbox" name="pl_041" id="pl_041" <?= ($detail['pl_041'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_041">Tes Rumpel Leede</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_117" id="pl_117" <?= ($detail['pl_117'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_117">D. Dimer</label>
+                                <input class="form-check-input" type="checkbox" name="pl_046" id="pl_046" <?= ($detail['pl_046'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_046">Gambar Darah Tepi</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_116" id="pl_116" <?= ($detail['pl_116'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_116">PT</label>
+                                <input class="form-check-input" type="checkbox" name="pl_178" id="pl_178" <?= ($detail['pl_178'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_178">MCV</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_122" id="pl_122" <?= ($detail['pl_122'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_122">INR</label>
+                                <input class="form-check-input" type="checkbox" name="pl_179" id="pl_179" <?= ($detail['pl_179'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_179">MCHC</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_087" id="pl_087" <?= ($detail['pl_087'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_087">RDW</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_086" id="pl_086" <?= ($detail['pl_086'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_086">SI TIBC</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_005" id="pl_005" <?= ($detail['pl_005'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_005">APTT</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_115" id="pl_115" <?= ($detail['pl_115'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_115">Fibrinogen</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_117" id="pl_117" <?= ($detail['pl_117'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_117">D. Dimer</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_116" id="pl_116" <?= ($detail['pl_116'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_116">PT</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_122" id="pl_122" <?= ($detail['pl_122'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_122">INR</label>
                             </div>
                         </div>
                     </div>
@@ -241,104 +244,104 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_006" id="pl_006" <?= ($detail['pl_006'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_006">Gula Darah Sewaktu</label>
+                                <input class="form-check-input" type="checkbox" name="pl_006" id="pl_006" <?= ($detail['pl_006'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_006">Gula Darah Sewaktu</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_021" id="pl_021" <?= ($detail['pl_021'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_021">Gula Darah Puasa</label>
+                                <input class="form-check-input" type="checkbox" name="pl_021" id="pl_021" <?= ($detail['pl_021'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_021">Gula Darah Puasa</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_001" id="pl_001" <?= ($detail['pl_001'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_001">Gula Darah Post Prandial</label>
+                                <input class="form-check-input" type="checkbox" name="pl_001" id="pl_001" <?= ($detail['pl_001'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_001">Gula Darah Post Prandial</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_026" id="pl_026" <?= ($detail['pl_026'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_026">Cholesterol Total</label>
+                                <input class="form-check-input" type="checkbox" name="pl_026" id="pl_026" <?= ($detail['pl_026'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_026">Cholesterol Total</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_028" id="pl_028" <?= ($detail['pl_028'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_028">Trigliserida</label>
+                                <input class="form-check-input" type="checkbox" name="pl_028" id="pl_028" <?= ($detail['pl_028'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_028">Trigliserida</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_031" id="pl_031" <?= ($detail['pl_031'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_031">HDL Cholesterol</label>
+                                <input class="form-check-input" type="checkbox" name="pl_031" id="pl_031" <?= ($detail['pl_031'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_031">HDL Cholesterol</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_020" id="pl_020" <?= ($detail['pl_020'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_020">LDL Cholesterol</label>
+                                <input class="form-check-input" type="checkbox" name="pl_020" id="pl_020" <?= ($detail['pl_020'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_020">LDL Cholesterol</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_033" id="pl_033" <?= ($detail['pl_033'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_033">Uric Acid</label>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_066" id="pl_066" <?= ($detail['pl_066'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_066">Ureum</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_039" id="pl_039" <?= ($detail['pl_039'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_039">Creatinin</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_048" id="pl_048" <?= ($detail['pl_048'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_048">Protein Total</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_063" id="pl_063" <?= ($detail['pl_063'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_063">Albumin</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_181" id="pl_181" <?= ($detail['pl_181'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_181">Globulin</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_069" id="pl_069" <?= ($detail['pl_069'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_069">Bilirubin Total</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_059" id="pl_059" <?= ($detail['pl_059'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_059">Bilirubin Direct</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_044" id="pl_044" <?= ($detail['pl_044'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_044">Bilirubin Indirect</label>
+                                <input class="form-check-input" type="checkbox" name="pl_033" id="pl_033" <?= ($detail['pl_033'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_033">Uric Acid</label>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_125" id="pl_125" <?= ($detail['pl_125'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_125">Alkaline Phosphatase</label>
+                                <input class="form-check-input" type="checkbox" name="pl_066" id="pl_066" <?= ($detail['pl_066'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_066">Ureum</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_096" id="pl_096" <?= ($detail['pl_096'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_096">Gamma-GT</label>
+                                <input class="form-check-input" type="checkbox" name="pl_039" id="pl_039" <?= ($detail['pl_039'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_039">Creatinin</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_113" id="pl_113" <?= ($detail['pl_113'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_113">SGOT</label>
+                                <input class="form-check-input" type="checkbox" name="pl_048" id="pl_048" <?= ($detail['pl_048'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_048">Protein Total</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_114" id="pl_114" <?= ($detail['pl_114'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_114">SGPT</label>
+                                <input class="form-check-input" type="checkbox" name="pl_063" id="pl_063" <?= ($detail['pl_063'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_063">Albumin</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_060" id="pl_060" <?= ($detail['pl_060'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_060">LDH</label>
+                                <input class="form-check-input" type="checkbox" name="pl_181" id="pl_181" <?= ($detail['pl_181'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_181">Globulin</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_102" id="pl_102" <?= ($detail['pl_102'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_102">CK</label>
+                                <input class="form-check-input" type="checkbox" name="pl_069" id="pl_069" <?= ($detail['pl_069'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_069">Bilirubin Total</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_120" id="pl_120" <?= ($detail['pl_120'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_120">CK-MB</label>
+                                <input class="form-check-input" type="checkbox" name="pl_059" id="pl_059" <?= ($detail['pl_059'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_059">Bilirubin Direct</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_119" id="pl_119" <?= ($detail['pl_119'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_119">HB A1C</label>
+                                <input class="form-check-input" type="checkbox" name="pl_044" id="pl_044" <?= ($detail['pl_044'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_044">Bilirubin Indirect</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_125" id="pl_125" <?= ($detail['pl_125'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_125">Alkaline Phosphatase</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_096" id="pl_096" <?= ($detail['pl_096'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_096">Gamma-GT</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_113" id="pl_113" <?= ($detail['pl_113'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_113">SGOT</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_114" id="pl_114" <?= ($detail['pl_114'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_114">SGPT</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_060" id="pl_060" <?= ($detail['pl_060'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_060">LDH</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_102" id="pl_102" <?= ($detail['pl_102'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_102">CK</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_120" id="pl_120" <?= ($detail['pl_120'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_120">CK-MB</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_119" id="pl_119" <?= ($detail['pl_119'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_119">HB A1C</label>
                             </div>
                         </div>
                     </div>
@@ -354,36 +357,36 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_075" id="pl_075" <?= ($detail['pl_075'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_075">Natrium</label>
+                                <input class="form-check-input" type="checkbox" name="pl_075" id="pl_075" <?= ($detail['pl_075'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_075">Natrium</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_072" id="pl_072" <?= ($detail['pl_072'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_072">Kalium</label>
+                                <input class="form-check-input" type="checkbox" name="pl_072" id="pl_072" <?= ($detail['pl_072'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_072">Kalium</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_071" id="pl_071" <?= ($detail['pl_071'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_071">AGD</label>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_018" id="pl_018" <?= ($detail['pl_018'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_018">Clorida</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_019" id="pl_019" <?= ($detail['pl_019'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_019">Calsium</label>
+                                <input class="form-check-input" type="checkbox" name="pl_071" id="pl_071" <?= ($detail['pl_071'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_071">AGD</label>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_079" id="pl_079" <?= ($detail['pl_079'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_079">Magnesium</label>
+                                <input class="form-check-input" type="checkbox" name="pl_018" id="pl_018" <?= ($detail['pl_018'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_018">Clorida</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_173" id="pl_173" <?= ($detail['pl_173'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_173">TPSA</label>
+                                <input class="form-check-input" type="checkbox" name="pl_019" id="pl_019" <?= ($detail['pl_019'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_019">Calsium</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_079" id="pl_079" <?= ($detail['pl_079'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_079">Magnesium</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_173" id="pl_173" <?= ($detail['pl_173'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_173">TPSA</label>
                             </div>
                         </div>
                     </div>
@@ -399,64 +402,64 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_013" id="pl_013" <?= ($detail['pl_013'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_013">Hbs Ag</label>
+                                <input class="form-check-input" type="checkbox" name="pl_013" id="pl_013" <?= ($detail['pl_013'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_013">Hbs Ag</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_008" id="pl_008" <?= ($detail['pl_008'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_008">Anti HBS</label>
+                                <input class="form-check-input" type="checkbox" name="pl_008" id="pl_008" <?= ($detail['pl_008'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_008">Anti HBS</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_034" id="pl_034" <?= ($detail['pl_034'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_034">VDRL</label>
+                                <input class="form-check-input" type="checkbox" name="pl_034" id="pl_034" <?= ($detail['pl_034'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_034">VDRL</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_017" id="pl_017" <?= ($detail['pl_017'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_017">ASTO</label>
+                                <input class="form-check-input" type="checkbox" name="pl_017" id="pl_017" <?= ($detail['pl_017'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_017">ASTO</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_015" id="pl_015" <?= ($detail['pl_015'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_015">CRP</label>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_184" id="pl_184" <?= ($detail['pl_184'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_184">Rhemotoid Factor</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_070" id="pl_070" <?= ($detail['pl_070'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_070">Widal Test</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_073" id="pl_073" <?= ($detail['pl_073'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_073">HIV</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_074" id="pl_074" <?= ($detail['pl_074'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_074">Serologi DHF</label>
+                                <input class="form-check-input" type="checkbox" name="pl_015" id="pl_015" <?= ($detail['pl_015'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_015">CRP</label>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_108" id="pl_108" <?= ($detail['pl_108'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_108">TORCH</label>
+                                <input class="form-check-input" type="checkbox" name="pl_184" id="pl_184" <?= ($detail['pl_184'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_184">Rhemotoid Factor</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_139" id="pl_139" <?= ($detail['pl_139'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_139">T3</label>
+                                <input class="form-check-input" type="checkbox" name="pl_070" id="pl_070" <?= ($detail['pl_070'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_070">Widal Test</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_140" id="pl_140" <?= ($detail['pl_140'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_140">T4</label>
+                                <input class="form-check-input" type="checkbox" name="pl_073" id="pl_073" <?= ($detail['pl_073'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_073">HIV</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_112" id="pl_112" <?= ($detail['pl_112'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_112">TSH</label>
+                                <input class="form-check-input" type="checkbox" name="pl_074" id="pl_074" <?= ($detail['pl_074'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_074">Serologi DHF</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_108" id="pl_108" <?= ($detail['pl_108'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_108">TORCH</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_109" id="pl_109" <?= ($detail['pl_109'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_109">Troponin</label>
+                                <input class="form-check-input" type="checkbox" name="pl_139" id="pl_139" <?= ($detail['pl_139'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_139">T3</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_140" id="pl_140" <?= ($detail['pl_140'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_140">T4</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_112" id="pl_112" <?= ($detail['pl_112'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_112">TSH</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_109" id="pl_109" <?= ($detail['pl_109'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_109">Troponin</label>
                             </div>
                         </div>
                     </div>
@@ -472,32 +475,32 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_007" id="pl_007" <?= ($detail['pl_007'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_007">Malaria</label>
+                                <input class="form-check-input" type="checkbox" name="pl_007" id="pl_007" <?= ($detail['pl_007'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_007">Malaria</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_036" id="pl_036" <?= ($detail['pl_036'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_036">Telur Cacing</label>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_050" id="pl_050" <?= ($detail['pl_050'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_050">BTA Sputum</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_009" id="pl_009" <?= ($detail['pl_009'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_009">Filaria</label>
+                                <input class="form-check-input" type="checkbox" name="pl_036" id="pl_036" <?= ($detail['pl_036'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_036">Telur Cacing</label>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_077" id="pl_077" <?= ($detail['pl_077'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_077">Secret Urethra</label>
+                                <input class="form-check-input" type="checkbox" name="pl_050" id="pl_050" <?= ($detail['pl_050'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_050">BTA Sputum</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_110" id="pl_110" <?= ($detail['pl_110'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_110">Secret Vagina</label>
+                                <input class="form-check-input" type="checkbox" name="pl_009" id="pl_009" <?= ($detail['pl_009'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_009">Filaria</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_077" id="pl_077" <?= ($detail['pl_077'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_077">Secret Urethra</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pl_110" id="pl_110" <?= ($detail['pl_110'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_110">Secret Vagina</label>
                             </div>
                         </div>
                     </div>
@@ -512,12 +515,12 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="pl_027" id="pl_027" <?= ($detail['pl_027'] == "0" ? 'checked' : ''); ?> readonly>
-                                    <label class="form-check-label" for="pl_027">Urine Lengkap</label>
+                                    <input class="form-check-input" type="checkbox" name="pl_027" id="pl_027" <?= ($detail['pl_027'] == "0" ? 'checked' : ''); ?> disabled>
+                                    <label for="pl_027">Urine Lengkap</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="pl_016" id="pl_016" <?= ($detail['pl_016'] == "0" ? 'checked' : ''); ?> readonly>
-                                    <label class="form-check-label" for="pl_016">Faeces Lengkap</label>
+                                    <input class="form-check-input" type="checkbox" name="pl_016" id="pl_016" <?= ($detail['pl_016'] == "0" ? 'checked' : ''); ?> disabled>
+                                    <label for="pl_016">Faeces Lengkap</label>
                                 </div>
                             </div>
                         </div>
@@ -531,26 +534,26 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="pl_050" id="pl_050" <?= ($detail['pl_050'] == "0" ? 'checked' : ''); ?> readonly>
-                                    <label class="form-check-label" for="pl_050">BTA Sputum</label>
+                                    <input class="form-check-input" type="checkbox" name="pl_050" id="pl_050" <?= ($detail['pl_050'] == "0" ? 'checked' : ''); ?> disabled>
+                                    <label for="pl_050">BTA Sputum</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="pl_040" id="pl_040" <?= ($detail['pl_040'] == "0" ? 'checked' : ''); ?> readonly>
-                                    <label class="form-check-label" for="pl_040">Analisa Sperma</label>
+                                    <input class="form-check-input" type="checkbox" name="pl_040" id="pl_040" <?= ($detail['pl_040'] == "0" ? 'checked' : ''); ?> disabled>
+                                    <label for="pl_040">Analisa Sperma</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="pl_068" id="pl_068" <?= ($detail['pl_068'] == "0" ? 'checked' : ''); ?> readonly>
-                                    <label class="form-check-label" for="pl_068">None-Pandy</label>
+                                    <input class="form-check-input" type="checkbox" name="pl_068" id="pl_068" <?= ($detail['pl_068'] == "0" ? 'checked' : ''); ?> disabled>
+                                    <label for="pl_068">None-Pandy</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="pl_154" id="pl_154" <?= ($detail['pl_154'] == "0" ? 'checked' : ''); ?> readonly>
-                                    <label class="form-check-label" for="pl_154">Narkoba Test</label>
+                                    <input class="form-check-input" type="checkbox" name="pl_154" id="pl_154" <?= ($detail['pl_154'] == "0" ? 'checked' : ''); ?> disabled>
+                                    <label for="pl_154">Narkoba Test</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="pl_152" id="pl_152" <?= ($detail['pl_152'] == "0" ? 'checked' : ''); ?> readonly>
-                                    <label class="form-check-label" for="pl_152">Test Kelamin</label>
+                                    <input class="form-check-input" type="checkbox" name="pl_152" id="pl_152" <?= ($detail['pl_152'] == "0" ? 'checked' : ''); ?> disabled>
+                                    <label for="pl_152">Test Kelamin</label>
                                 </div>
                             </div>
                         </div>
@@ -567,18 +570,18 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_038" id="pl_038" <?= ($detail['pl_038'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_038">Analisa Fluera / Acites</label>
+                                <input class="form-check-input" type="checkbox" name="pl_038" id="pl_038" <?= ($detail['pl_038'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_038">Analisa Fluera / Acites</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_012" id="pl_012" <?= ($detail['pl_012'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_012">Analisa LCS</label>
+                                <input class="form-check-input" type="checkbox" name="pl_012" id="pl_012" <?= ($detail['pl_012'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_012">Analisa LCS</label>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="pl_049" id="pl_049" <?= ($detail['pl_049'] == "0" ? 'checked' : ''); ?> readonly>
-                                <label class="form-check-label" for="pl_049">Analisa Cairan Sendi</label>
+                                <input class="form-check-input" type="checkbox" name="pl_049" id="pl_049" <?= ($detail['pl_049'] == "0" ? 'checked' : ''); ?> disabled>
+                                <label for="pl_049">Analisa Cairan Sendi</label>
                             </div>
                         </div>
                     </div>
@@ -587,9 +590,9 @@
             <div class="row mb-3">
                 <div class="col-md-7">
                     <label for="pemeriksaan_lain"><b><i>Pemeriksaan Lain</i></b></label><br>
-                    <textarea name="pemeriksaan_lain" id="pemeriksaan_lain" style="width: 500px; height: 100px;"><?= $detail['pemeriksaan_lain']; ?></textarea>
+                    <textarea name="pemeriksaan_lain" id="pemeriksaan_lain" style="width: 500px; height: 100px;" readonly><?= $detail['pemeriksaan_lain']; ?></textarea>
                 </div>
-                <div class="col-md-5" style="text-align:center">
+                <div class="col-md-5 mb-3" style="text-align:center">
                     <div class="row">
                         <div class="col">
                             <label for="doctor">Tanda Tangan Dokter</label>
@@ -597,18 +600,15 @@
                     </div>
                     <div class="row mb-1">
                         <div class="col">
-                            <div id="TTD" value="<?= $detail['TTD']; ?>"></div>
+                            <input id="TTD" value="<?= $detail['TTD']; ?>" disabled>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            ( <input type="text" name="doctor" id="doctor" style="width: 150px;"> )
+                            ( <input type="text" name="doctor" id="doctor" style="width: 150px;" value="" readonly> )
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="d-grid gap-2 mt-3 mb-3">
-                <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
             </div>
         </form>
     </div>

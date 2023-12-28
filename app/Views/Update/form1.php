@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    <title>Detail Formulir</title>
+    <title>Update Formulir</title>
     <style>
         .kbw-signature {
             width: 200px;
@@ -24,11 +24,14 @@
 </head>
 
 <body>
+    <a class="btn btn-outline-dark" href="/" role="button">
+        <i class="bi bi-house-fill"></i>
+    </a>
+    <a class="btn btn-outline-dark" href="/Formulir/form1" role="button">
+        <i class="bi bi-arrow-left"> Back</i>
+    </a>
     <div class="container">
-        <a class="btn btn-outline-primary my-3" href="/Formulir/form1" role="button">
-            <i class="bi bi-arrow-left"> Back</i>
-        </a>
-        <form class="mt-3" style="font-family: 'Times New Roman';">
+        <form action="<?= base_url('formulir/update1') ?>" method="post" class="mt-3" style="font-family: 'Times New Roman';">
             <input type="hidden" id="FORM" name="FORM" value="F1">
             <h3 style="text-align: right;"><b>RM. 08 Lanjutan 3 </b></h3>
 
@@ -84,7 +87,7 @@
                                     <label for="V_01">Tanggal Operasi</label>
                                 </div>
                                 <div class="col-md-7">
-                                    : <input type="date" id="V_01" name="V_01" style="width: 100px;" value="<?= $detail['V_01']; ?>" readonly>
+                                    : <input type="date" id="V_01" name="V_01" style="width: 100px;" value="<?= $detail['V_01']; ?>">
                                 </div>
                             </div>
                         </td>
@@ -94,7 +97,7 @@
                                     <label for="V_02">Dr. Anastesi <br>Yang Menerangkan</label>
                                 </div>
                                 <div class="col-md-6">
-                                    : <input type="text" id="V_02" name="V_02" style="width: 200px;" value="<?= $detail['V_02']; ?>" readonly>
+                                    : <input type="text" id="V_02" name="V_02" style="width: 200px;" value="<?= $detail['V_02']; ?>">
                                 </div>
                             </div>
                         </td>
@@ -106,7 +109,7 @@
                                     <label for="V_03">Diagnosa</label>
                                 </div>
                                 <div class="col-md-7">
-                                    : <input type="text" id="V_03" name="V_03" style="width: 200px;" value="<?= $detail['V_03']; ?>" readonly>
+                                    : <input type="text" id="V_03" name="V_03" style="width: 200px;" value="<?= $detail['V_03']; ?>">
                                 </div>
                             </div>
                         </td>
@@ -118,7 +121,7 @@
                                     <label for="V_04">R/Tindakan</label>
                                 </div>
                                 <div class="col-md-7">
-                                    : <input type="text" id="V_04" name="V_04" style="width: 200px;" value="<?= $detail['V_04']; ?>" readonly>
+                                    : <input type="text" id="V_04" name="V_04" style="width: 200px;" value="<?= $detail['V_04']; ?>">
                                 </div>
                             </div>
                         </td>
@@ -128,7 +131,7 @@
                                     <label for="V_05">Dr. Operator</label>
                                 </div>
                                 <div class="col-md-6">
-                                    : <input type="text" id="V_05" name="V_05" style="width: 200px;" value="<?= $detail['V_05']; ?>" readonly>
+                                    : <input type="text" id="V_05" name="V_05" style="width: 200px;" value="<?= $detail['V_05']; ?>">
                                 </div>
                             </div>
                         </td>
@@ -267,28 +270,28 @@
                 </tr>
                 <tr>
                     <td colspan="3">
-                        Yang bertanda tangan dibawah ini, saya nama <input type="text" id="V_06" name="V_06" style="width: 200px;" value="<?= $detail['V_06']; ?>" readonly> umur <input type="text" id="V_07" name="V_07" style="width: 100px;" value="<?= $detail['V_07']; ?>" readonly> tahun,
+                        Yang bertanda tangan dibawah ini, saya nama <input type="text" id="V_06" name="V_06" style="width: 200px;" value="<?= $detail['V_06']; ?>"> umur <input type="text" id="V_07" name="V_07" style="width: 100px;" value="<?= $detail['V_07']; ?>"> tahun,
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="T_01" id="T_01_laki-laki" <?= ($detail['T_01'] == "0" ? 'checked' : ''); ?> readonly>
+                            <input class="form-check-input" type="radio" name="T_01" id="T_01_laki-laki" <?= ($detail['T_01'] == "0" ? 'checked' : ''); ?>>
                             <label class="form-check-label" for="T_01_laki-laki">laki-laki /</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="T_01" id="T_01_perempuan" <?= ($detail['T_01'] == "1" ? 'checked' : ''); ?> readonly>
+                            <input class="form-check-input" type="radio" name="T_01" id="T_01_perempuan" <?= ($detail['T_01'] == "1" ? 'checked' : ''); ?>>
                             <label class="form-check-label" for="T_01_perempuan">perempuan, </label>
                         </div><br>
-                        alamat <input type="text" id="V_08" name="V_08" style="width: 200px;" value="<?= $detail['V_08']; ?>" readonly>
+                        alamat <input type="text" id="V_08" name="V_08" style="width: 200px;" value="<?= $detail['V_08']; ?>">
                         dengan ini menyatakan persetujuan untuk dilakukan tindakan anestesi terhadap&nbsp;
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="T_02" id="T_02_saya" <?= ($detail['T_02'] == "0" ? 'checked' : ''); ?> onclick="fungsi1_disabled()" readonly>
+                            <input class="form-check-input" type="radio" name="T_02" id="T_02_saya" <?= ($detail['T_02'] == "0" ? 'checked' : ''); ?> onclick="fungsi1_disabled()">
                             <label class="form-check-label" for="T_02_saya">saya / </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="T_02" id="T_02_input" <?= ($detail['T_02'] == "1" ? 'checked' : ''); ?> onclick="fungsi1_enable()" readonly>
-                            <input type="text" id="V_09" name="V_09" style="width: 150px;" value="<?= $detail['V_09']; ?>" readonly>
+                            <input class="form-check-input" type="radio" name="T_02" id="T_02_input" <?= ($detail['T_02'] == "1" ? 'checked' : ''); ?> onclick="fungsi1_enable()">
+                            <input type="text" id="V_09" name="V_09" style="width: 150px;" value="<?= $detail['V_09']; ?>">
                         </div>saya,
-                        Yang bernama <input type="text" id="V_10" name="V_10" style="width: 200px;" value="<?= $detail['V_10']; ?>" readonly>
-                        Tanggal lahir <input type="date" id="date_of_birth" name="date_of_birth" style="width: 100px;" readonly>
-                        Nomor Rekam Medis : <input type="text" id="No_Registration" name="No_Registration" style="width: 200px;" readonly>
+                        Yang bernama <input type="text" id="V_10" name="V_10" style="width: 200px;" value="<?= $detail['V_10']; ?>">
+                        Tanggal lahir <input type="date" id="date_of_birth" name="date_of_birth" style="width: 100px;">
+                        Nomor Rekam Medis : <input type="text" id="No_Registration" name="No_Registration" style="width: 200px;">
                     </td>
                 </tr>
                 <tr>
@@ -308,19 +311,19 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="T_03" id="T_03" <?= ($detail['T_03'] == "1" ? 'checked' : ''); ?> readonly>
+                                    <input class="form-check-input" type="checkbox" name="T_03" id="T_03" <?= ($detail['T_03'] == "1" ? 'checked' : ''); ?>>
                                     <label class="form-check-label" for="T_03">Sangat tidak mungkin</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="T_04" id="T_04" <?= ($detail['T_04'] == "1" ? 'checked' : ''); ?> readonly>
+                                    <input class="form-check-input" type="checkbox" name="T_04" id="T_04" <?= ($detail['T_04'] == "1" ? 'checked' : ''); ?>>
                                     <label class="form-check-label" for="T_04">Mungkin dibutuhkan</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="T_05" id="T_05" <?= ($detail['T_05'] == "1" ? 'checked' : ''); ?> readonly>
+                                    <input class="form-check-input" type="checkbox" name="T_05" id="T_05" <?= ($detail['T_05'] == "1" ? 'checked' : ''); ?>>
                                     <label class="form-check-label" for="T_05">Sangat memungkinkan</label>
                                 </div>
                             </div>
@@ -332,15 +335,15 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="T_06" id="T_06" <?= ($detail['T_06'] == "1" ? 'checked' : ''); ?> readonly>
+                                        <input class="form-check-input" type="checkbox" name="T_06" id="T_06" <?= ($detail['T_06'] == "1" ? 'checked' : ''); ?>>
                                         <label class="form-check-label" for="T_06">Saya menyetujui dan mengizinkan untuk menerima darah atau komponen darah sesuai dengan yang ditentukan/ diputuskan oleh dokter anestesi dan dokter lain yang merawat demi kebaikan saya/ keluarga.</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="T_07" id="T_07" <?= ($detail['T_07'] == "1" ? 'checked' : ''); ?> readonly>
+                                        <input class="form-check-input" type="checkbox" name="T_07" id="T_07" <?= ($detail['T_07'] == "1" ? 'checked' : ''); ?>>
                                         <label class="form-check-label" for="T_07">Saya menyetujui dan mengizinkan untuk menerima darah atau komponen darah hanya pada kondisi darurat menyelamatkan hidup saya/ keluarga.</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="T_08" id="T_08" <?= ($detail['T_08'] == "1" ? 'checked' : ''); ?> readonly>
+                                        <input class="form-check-input" type="checkbox" name="T_08" id="T_08" <?= ($detail['T_08'] == "1" ? 'checked' : ''); ?>>
                                         <label class="form-check-label" for="T_08">Saya tidak menyetujui pemberian darah atau komponen darah pada kondisi apapun/ sejelek apapun, terhadap diri saya/ keluarga.</label>
                                     </div>
                                 </div>
@@ -355,32 +358,32 @@
                                     <td style="text-align: center; width: 33%;">
                                         <label for="V_11" style="text-align: center;">Saksi 1</label>
                                         <br><br>
-                                        <div id="TTD" value="<?= $detail['TTD']; ?>" readonly></div>
-                                        <br><input type="text" id="V_11" name="V_11" width="100px" style="text-align: center;" value="<?= $detail['V_11']; ?>" readonly>
+                                        <div id="TTD" value="<?= $detail['TTD']; ?>"></div>
+                                        <br><input type="text" id="V_11" name="V_11" width="100px" style="text-align: center;" value="<?= $detail['V_11']; ?>">
                                     </td>
                                     <td style="width: 33%;"></td>
                                     <td rowspan="2" style="vertical-align: middle; width: 33%;">
                                         <label>Bengkulu, </label>
-                                        <input type="date" id="V_12" name="V_12" value="<?= $detail['V_12']; ?>" readonly>
+                                        <input type="date" id="V_12" name="V_12" value="<?= $detail['V_12']; ?>">
                                         <br><br><label for="V_13">Jam</label>
-                                        <input type="time" id="V_13" name="V_13" value="<?= $detail['V_13']; ?>" readonly>
+                                        <input type="time" id="V_13" name="V_13" value="<?= $detail['V_13']; ?>">
                                         <br><br>
-                                        <div id="TTD_1" value="<?= $detail['TTD_1']; ?>" readonly></div>
-                                        <br><input type="text" id="V_14" name="V_14" width="100px" style="text-align: center;" value="<?= $detail['V_14']; ?>" readonly>
+                                        <div id="TTD_1" value="<?= $detail['TTD_1']; ?>"></div>
+                                        <br><input type="text" id="V_14" name="V_14" width="100px" style="text-align: center;" value="<?= $detail['V_14']; ?>">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="text-align: center;">
                                         <label for="V_15" style="text-align: center;">Saksi 2</label>
                                         <br><br>
-                                        <div id="TTD_2" value="<?= $detail['TTD_2']; ?>" readonly></div>
-                                        <br><input type="text" id="V_15" name="V_15" width="100px" style="text-align: center;" value="<?= $detail['V_15']; ?>" readonly>
+                                        <div id="TTD_2" value="<?= $detail['TTD_2']; ?>"></div>
+                                        <br><input type="text" id="V_15" name="V_15" width="100px" style="text-align: center;" value="<?= $detail['V_15']; ?>">
                                     </td>
                                     <td style="text-align: center;">
                                         <label for="V_16">Dokter Anastesi <br>Yang Menerangkan</label>
                                         <br>
-                                        <div id="TTD_3" value="<?= $detail['TTD_3']; ?>" readonly></div>
-                                        <br><input type="text" id="V_16" name="V_16" width="100px" style="text-align: center;" value="<?= $detail['V_16']; ?>" readonly>
+                                        <div id="TTD_3" value="<?= $detail['TTD_3']; ?>"></div>
+                                        <br><input type="text" id="V_16" name="V_16" width="100px" style="text-align: center;" value="<?= $detail['V_16']; ?>">
                                     </td>
                                 </tr>
                             </table>
@@ -389,7 +392,7 @@
                 </tr>
             </table>
             <div class="d-grid gap-2 mt-3 mb-3">
-                <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
+                <input class="btn btn-success" type="submit" name="submit" value="Update">
             </div>
         </form>
     </div>

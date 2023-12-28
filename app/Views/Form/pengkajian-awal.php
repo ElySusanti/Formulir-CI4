@@ -32,10 +32,13 @@
 </head>
 
 <body>
+    <a class="btn btn-outline-dark" href="/" role="button">
+        <i class="bi bi-house-fill"></i>
+    </a>
+    <a class="btn btn-outline-dark" href="/Formulir/input" role="button">
+        <i class="bi bi-arrow-left"> Back</i>
+    </a>
     <div class="container-fluid mt-3" style="font-family: 'Arial Narrow';">
-        <a class="btn btn-outline-primary my-3" href="/Formulir/input" role="button">
-            <i class="bi bi-arrow-left"> Back</i>
-        </a>
         <form action="<?= base_url('formulir/simpan') ?>" method="post" autocomplete="off">
             <?= csrf_field(); ?>
             <input type="hidden" id="FORM" name="FORM" value="F4">

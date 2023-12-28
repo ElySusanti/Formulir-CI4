@@ -28,10 +28,13 @@
 </head>
 
 <body>
+    <a class="btn btn-outline-dark" href="/" role="button">
+        <i class="bi bi-house-fill"></i>
+    </a>
+    <a class="btn btn-outline-dark" href="/Formulir/input" role="button">
+        <i class="bi bi-arrow-left"> Back</i>
+    </a>
     <div class="container" style="font-family: Verdana;">
-        <a class="btn btn-outline-primary my-3" href="/Formulir/input" role="button">
-            <i class="bi bi-arrow-left"> Back</i>
-        </a>
         <form action="<?= base_url('formulir/simpan') ?>" method="post" autocomplete="off">
             <?= csrf_field(); ?>
             <input type="hidden" id="FORM" name="FORM" value="F5">
@@ -454,9 +457,9 @@
             getBiodata(event.target.value).then(Biodata => {
                 $('#THENAME').val(Biodata.THENAME);
                 $('#THEADDRESS').val(Biodata.THEADDRESS);
-                $('#AGEYEAR').y;
-                $('#AGEMONTH').m;
-                $('#AGEDAY').d;
+                $('#AGEYEAR').val(Biodata.AGEYEAR);
+                $('#AGEMONTH').val(Biodata.AGEMONTH);
+                $('#AGEDAY').val(Biodata.AGEDAY);
                 $('#CARA_BAYAR').val(Biodata.CARA_BAYAR);
                 $('#EMPLOYEE_ID').val(Biodata.EMPLOYEE_ID);
             });

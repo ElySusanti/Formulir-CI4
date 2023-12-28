@@ -73,9 +73,10 @@ class Formulir extends BaseController
     }
     public function simpan()
     {
+        $body_id = $this->assessment_model->generate_id();
         $this->assessment_model->save([
             'FORM' => $this->request->getVar('FORM'),
-            'BODY_ID' => $this->request->getVar('BODY_ID'),
+            'BODY_ID' => $body_id,
             'ORG_UNIT_CODE' => $this->request->getVar('ORG_UNIT_CODE'),
             'PASIEN_DIAGNOSA_ID' => $this->request->getVar('PASIEN_DIAGNOSA_ID'),
             'DIAGNOSA_ID' => $this->request->getVar('DIAGNOSA_ID'),
@@ -351,7 +352,7 @@ class Formulir extends BaseController
     public function form1()
     {
         $data = [
-            'data' => $this->assessment_model->getDataByValue('F1')
+            'data' => $this->assessment_model->getDataByValue('F1'),
         ];
         return view('Tampil/form1', $data);
     }
@@ -393,21 +394,22 @@ class Formulir extends BaseController
     public function detail1($id)
     {
         $data = [
-            'detail' => $this->assessment_model->getDataById($id)
+            'detail' => $this->assessment_model->getDataById($id),
+            'detail1' => $this->assessment_model->getJoinedData()
         ];
         return view('Detail/form1', $data);
     }
-    public function detail2()
+    public function detail2($id)
     {
         $data = [
-            'detail' => $this->assessment_model->getDataById('3')
+            'detail' => $this->assessment_model->getDataById($id)
         ];
         return view('Detail/form2', $data);
     }
-    public function detail3()
+    public function detail3($id)
     {
         $data = [
-            'detail' => $this->assessment_model->getDataById('4')
+            'detail' => $this->assessment_model->getDataById($id)
         ];
         return view('Detail/form3', $data);
     }
@@ -418,10 +420,10 @@ class Formulir extends BaseController
         ];
         return view('Detail/form4', $data);
     }
-    public function detail5()
+    public function detail5($id)
     {
         $data = [
-            'detail' => $this->assessment_model->getDataById('2')
+            'detail' => $this->assessment_model->getDataById($id)
         ];
         return view('Detail/form5', $data);
     }
@@ -431,5 +433,83 @@ class Formulir extends BaseController
             'detail' => $this->assessment_model->getDataById($id)
         ];
         return view('Detail/form6', $data);
+    }
+    public function update1($id)
+    {
+        $data = [
+            'detail' => $this->assessment_model->getDataById($id)
+        ];
+        return view('Update/form1', $data);
+    }
+    public function update2($id)
+    {
+        $data = [
+            'detail' => $this->assessment_model->getDataById($id)
+        ];
+        return view('Update/form2', $data);
+    }
+    public function update3($id)
+    {
+        $data = [
+            'detail' => $this->assessment_model->getDataById($id)
+        ];
+        return view('Update/form3', $data);
+    }
+    public function update4($id)
+    {
+        $data = [
+            'detail' => $this->assessment_model->getDataById($id)
+        ];
+        return view('Update/form4', $data);
+    }
+    public function update5($id)
+    {
+        $data = [
+            'detail' => $this->assessment_model->getDataById($id)
+        ];
+        return view('Update/form5', $data);
+    }
+    public function update6($id)
+    {
+        $data = [
+            'detail' => $this->assessment_model->getDataById($id)
+        ];
+        return view('Update/form6', $data);
+    }
+    public function delete1($id)
+    {
+        $this->assessment_model->delete($id);
+        session()->setFlashdata('pesan', 'Data Berhasil Dihapus');
+        return redirect()->to('Formulir/form1');
+    }
+    public function delete2($id)
+    {
+        $this->assessment_model->delete($id);
+        session()->setFlashdata('pesan', 'Data Berhasil Dihapus');
+        return redirect()->to('Formulir/form2');
+    }
+    public function delete3($id)
+    {
+        $this->assessment_model->delete($id);
+        session()->setFlashdata('pesan', 'Data Berhasil Dihapus');
+        return redirect()->to('Formulir/form3');
+    }
+    public function delete4($id)
+    {
+        $this->assessment_model->delete($id);
+        session()->setFlashdata('pesan', 'Data Berhasil Dihapus');
+        return redirect()->to('Formulir/form4');
+    }
+    public function delete5($id)
+    {
+        $this->assessment_model->delete($id);
+        session()->setFlashdata('pesan', 'Data Berhasil Dihapus');
+        return redirect()->to('Formulir/form5');
+    }
+    public function delete6($id)
+    {
+        $this->assessment_model->delete($id);
+        session()->setFlashdata('pesan', 'Data Berhasil Dihapus');
+        return redirect()->to('Formulir/form6');
     }
 }

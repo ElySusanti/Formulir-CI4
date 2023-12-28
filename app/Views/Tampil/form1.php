@@ -11,15 +11,28 @@
 </head>
 
 <body>
+    <a class="btn btn-outline-dark" href="/" role="button">
+        <i class="bi bi-house-fill"></i>
+    </a>
+    <a class="btn btn-outline-dark" href="/Formulir" role="button">
+        <i class="bi bi-arrow-left" style=" width:30; height:30"> Back</i>
+    </a>
     <div class="container my-5">
-        <a class="btn btn-outline-dark sticky-top mt-3" href="/Formulir" role="button">
-            <i class="bi bi-arrow-left" style=" width:30; height:30"> Back</i>
-        </a>
+        <div class="row" style="text-align:center">
+            <div class="col">
+                <?php if (session()->getFlashdata('pesan')) : ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?= session()->getFlashdata('pesan'); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
         <h3 style="text-align:center">Data Persetujuan Anastesi</h3>
         <table class="table table-bordered my-3" style="border: 1px; color: black; width: 100%;">
             <thead>
                 <tr style="text-align:center">
                     <th scope="col">No</th>
+                    <th scope="col">Body ID</th>
                     <th scope="col">Nomor Rekam Medis</th>
                     <th scope="col">Nama Lengkap</th>
                     <th scope="col">Nama Keluarga</th>
@@ -33,6 +46,7 @@
                 foreach ($data as $data) : ?>
                     <tr style="vertical-align:middle; text-align:center">
                         <td><?= $i++; ?></td>
+                        <td><?= $data['BODY_ID']; ?></td>
                         <td><?= $data['NO_REGISTRATION']; ?></td>
                         <td><?= $data['THENAME']; ?></td>
                         <td><?= $data['ALLOANAMNESIS_CONTACT']; ?></td>
@@ -40,15 +54,14 @@
                         <td><?= $data['CLASS_ROOM_ID']; ?></td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                <a class="btn btn-outline-primary my-3" href="/Formulir/detail1" +id role="button">Detail</a>
-                                <a class="btn btn-outline-success my-3" href="/Formulir/update1" role="button">Update</a>
-                                <a class="btn btn-outline-danger my-3" href="/Formulir/delete1" role="button">Delete</a>
+                                <a class="btn btn-outline-primary my-3" href="<?= site_url('formulir/detail1/') . $data['id']; ?>" role="button"><i class="bi bi-eye"></i></a>
+                                <a class="btn btn-outline-success my-3" href="<?= site_url('formulir/update1/') . $data['id']; ?>" role="button"><i class="bi bi-pencil-square"></i></a>
+                                <a class="btn btn-outline-danger my-3" href="<?= site_url('formulir/delete1/') . $data['id']; ?>" role="button" onclick="javascript: return confirm('Yakin akan menghapus data?')"><i class="bi bi-trash"></i></a>
                             </div>
                         </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
-
         </table>
     </div>
 </body>

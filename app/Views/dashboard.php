@@ -28,6 +28,15 @@
                 </a>
             </div>
         </div>
+        <div class="row mb-3" style="text-align:center">
+            <div class="col">
+                <?php if (session()->getFlashdata('pesan')) : ?>
+                    <div class="alert alert-success" role="alert">
+                        <?= session()->getFlashdata('pesan'); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
         <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
             <div class="col">
                 <div class="card border-primary" style="max-width: 20rem; opacity:90%">

@@ -31,8 +31,9 @@
         <i class="bi bi-arrow-left"> Back</i>
     </a>
     <div class="container">
-        <form action="<?= base_url('formulir/update1') ?>" method="post" class="mt-3" style="font-family: 'Times New Roman';">
+        <form action="<?= base_url('formulir/update/' . $detail['id']); ?>" method="post" autocomplete="off" class="mt-3" style="font-family: 'Times New Roman';">
             <input type="hidden" id="FORM" name="FORM" value="F1">
+            <input type="hidden" id="id" name="id" value="<?= $detail['id']; ?>">
             <h3 style="text-align: right;"><b>RM. 08 Lanjutan 3 </b></h3>
 
             <table class="table table-bordered mb-0" style="border: 1px; color: black;width: 100%;">

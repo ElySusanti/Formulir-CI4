@@ -176,7 +176,7 @@
                                 <div class="row mb-3">
                                     <div class="col">
                                         <span class="awal"></span>
-                                        <input type="range" name="T_05" id="T_05" min="0" max="10" step="1" style="width: 95%;">
+                                        <input type="range" name="T_05" id="T_05" min="0" max="10" step="1" style="width: 95%;" value="<?= $detail['T_05']; ?>">
                                         <span class="akhir"></span>
                                     </div>
                                 </div>

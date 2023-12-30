@@ -334,7 +334,7 @@
                                     </tr>
                                     <tr style="text-align: center;">
                                         <td colspan="4">TOTAL SKOR</td>
-                                        <td><input type="number" name="T_013" id="T_013" style="width: 40px;" disabled /></td>
+                                        <td><input type="number" name="T_013" id="T_013" style="width: 40px;" readonly></td>
                                     </tr>
                                 </table>
                             </td>

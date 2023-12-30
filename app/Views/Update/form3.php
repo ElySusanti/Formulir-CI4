@@ -33,9 +33,10 @@
         <i class="bi bi-arrow-left"> Back</i>
     </a>
     <div class="container" style="font-family: 'Times New Roman';">
-        <form action="<?= base_url('formulir/update3') ?>" method="post">
+        <form action="<?= base_url('formulir/update/' . $detail['id']); ?>" method="post" autocomplete="off">
             <?= csrf_field(); ?>
             <input type="hidden" id="FORM" name="FORM" value="F3">
+            <input type="hidden" id="id" name="id" value="<?= $detail['id']; ?>">
             <div class="row">
                 <div class="col md-6 text-start">
                     <h3><b>RSUD Dr. M. YUNUS BENGKULU</b></h3>

@@ -757,7 +757,8 @@ class Formulir extends BaseController
 
         session()->setFlashdata('pesan', 'Data Berhasil Diubah');
 
-        return redirect()->to('/');
+        return redirect()->to('formulir');
+        // dd($this->request->getVar());
     }
     public function delete1($id)
     {

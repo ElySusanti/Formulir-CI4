@@ -74,7 +74,7 @@
                                     <label for="DATE_OF_BIRTH">Tanggal Lahir</label>
                                 </div>
                                 <div class="col-md-6">
-                                    : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 150px;" value="<?= $detail['']; ?>" readonly>
+                                    : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 150px;" value="" readonly>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="T_01" id="T_01_input" <?= ($detail['T_01'] == "2" ? 'checked' : ''); ?> disabled onclick="fungsi1_enable()">
                                     <label> </label>
-                                    <input type="text" id="V_03" name="V_03" style="width: 100px;" value="<?= $detail['V_03']; ?>" readonly disabled>
+                                    <input type="text" id="V_03" name="V_03" style="width: 100px;" value="<?= $detail['V_03']; ?>" readonly>
                                 </div>
                             </td>
                             <td colspan="2">
@@ -119,7 +119,7 @@
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="T_02" id="T_02_keluarga" <?= ($detail['T_02'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi2_enable()">
                                     <label for="T_02_keluarga"> Keluarga/</label>
-                                    <input type="text" id="V_04" name="V_04" style="width: 100px;" value="<?= $detail['V_04']; ?>" readonly disabled>
+                                    <input type="text" id="V_04" name="V_04" style="width: 100px;" value="<?= $detail['V_04']; ?>" readonly>
                                 </div>
                             </td>
                             <td colspan="2">
@@ -130,7 +130,7 @@
                         <tr>
                             <td colspan="4" rowspan="3" style="height: 200px"><label for="ANAMNASE">Keluhan utama </label>
                                 <label for="ANAMNASE" style="font-style: italic;">(Riwayat kejadian):</label><br>
-                                <textarea name="ANAMNASE" id="ANAMNASE" style="width: 100%; height: 180px;"><?= $detail['ANAMNASE']; ?></textarea>
+                                <textarea name="ANAMNASE" id="ANAMNASE" style="width: 100%; height: 180px;" readonly><?= $detail['ANAMNASE']; ?></textarea>
                             </td>
                             <td style="width: 10%;"><b>Status fungsional</b></td>
                             <td colspan="3">
@@ -214,43 +214,43 @@
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="T_07" id="T_07_ada" <?= ($detail['T_07'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi3_enable">
                                     <label for="T_07_ada"> Ada</label>
-                                    <input type="text" id="RIWAYAT_ALERGI" name="RIWAYAT_ALERGI" style="width: 200px;" disabled>
+                                    <input type="text" id="RIWAYAT_ALERGI" name="RIWAYAT_ALERGI" style="width: 200px;" value="<?= $detail['RIWAYAT_ALERGI']; ?>" readonly>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td><label for="DIAGNOSA_HISTORY">Riwayat Kesehatan</label></td>
                             <td colspan="3">
-                                <input type="text" id="DIAGNOSA_HISTORY" name="DIAGNOSA_HISTORY" style="width: 300px;">
+                                <input type="text" id="DIAGNOSA_HISTORY" name="DIAGNOSA_HISTORY" style="width: 300px;" value="<?= $detail['DIAGNOSA_HISTORY']; ?>" readonly>
                             </td>
                         </tr>
                         <tr>
                             <td><label for="RIWAYAT_OBAT">Pengobatan</label></td>
                             <td colspan="3">
-                                <input type="text" id="RIWAYAT_OBAT" name="RIWAYAT_OBAT" style="width: 300px;">
+                                <input type="text" id="RIWAYAT_OBAT" name="RIWAYAT_OBAT" style="width: 300px;" value="<?= $detail['RIWAYAT_OBAT']; ?>" readonly>
                             </td>
                         </tr>
                         <tr style="vertical-align: middle;">
                             <td rowspan="2">Tanda-tanda Vital</td>
                             <td colspan="3" style="height: 60px;">
                                 <label for="TENSION_UPPER">TD: </label>
-                                <input type="number" id="TENSION_UPPER" name="TENSION_UPPER" style="width: 50px;"> /
-                                <input type="number" id="TENSION_BELOW" name="TENSION_BELOW" style="width: 50px;"> mmHg &nbsp;
+                                <input type="number" id="TENSION_UPPER" name="TENSION_UPPER" style="width: 50px;" value="<?= $detail['TENSION_UPPER']; ?>" readonly> /
+                                <input type="number" id="TENSION_BELOW" name="TENSION_BELOW" style="width: 50px;" value="<?= $detail['TENSION_BELOW']; ?>" readonly> mmHg &nbsp;
                                 <label for="NADI">HR: </label>
-                                <input type="number" id="NADI" name="NADI" style="width: 50px;"> x/Mnt &nbsp;
+                                <input type="number" id="NADI" name="NADI" style="width: 50px;" value="<?= $detail['NADI']; ?>" readonly> x/Mnt &nbsp;
                                 <label for="NAFAS">RR: </label>
-                                <input type="number" id="NAFAS" name="NAFAS" style="width: 50px;"> x/mnt
+                                <input type="number" id="NAFAS" name="NAFAS" style="width: 50px;" value="<?= $detail['NAFAS']; ?>" readonly> x/mnt
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3" style="vertical-align: middle;">
                                 <label for="SATURASI">SPO2: </label>
-                                <input type="number" id="SATURASI" name="SATURASI" style="width: 50px;"> % &nbsp;
+                                <input type="number" id="SATURASI" name="SATURASI" style="width: 50px;" value="<?= $detail['SATURASI']; ?>" readonly> % &nbsp;
                                 <label for="TEMPERATURE">Suhu: </label>
-                                <input type="number" id="TEMPERATURE" name="TEMPERATURE" style="width: 50px;"> &nbsp;
+                                <input type="number" id="TEMPERATURE" name="TEMPERATURE" style="width: 50px;" value="<?= $detail['TEMPERATURE']; ?>" readonly> &nbsp;
                                 <label for="WEIGHT">BB/TB/PB: </label>
-                                <input type="number" id="WEIGHT" name="WEIGHT" style="width: 50px;">
-                                <input type="number" id="HEIGHT" name="HEIGHT" style="width: 50px;">
+                                <input type="number" id="WEIGHT" name="WEIGHT" style="width: 50px;" value="<?= $detail['WEIGHT']; ?>" readonly>
+                                <input type="number" id="HEIGHT" name="HEIGHT" style="width: 50px;" value="<?= $detail['HEIGHT']; ?>" readonly>
                             </td>
                             <td colspan="4" rowspan="7" style="text-align: center;">
                                 <b>Skala Nyeri Untuk Anak (Skala Flacc):</b><br>
@@ -268,9 +268,7 @@
                                         <td>Terkadang meringis/menarik diri</td>
                                         <td>Sering menggetarkan dagu dan mengatupkan rahang</td>
                                         <td>
-                                            <select type="number" class="number" name="T_08" id="T_08" onchange="myFunction()" style="height: 30px; width: 35px;">
-                                                <option value="<?= $detail['T_08']; ?>" disabled></option>
-                                            </select>
+                                            <input type="number" class="number" name="T_08" id="T_08" onchange="myFunction()" style="height: 30px; width: 35px;" value="<?= $detail['T_08']; ?>" readonly>
                                         </td>
                                     </tr>
                                     <tr>
@@ -279,9 +277,7 @@
                                         <td>Tidak tenang/tegang</td>
                                         <td>Kaki dibuat menendang/menarik diri</td>
                                         <td>
-                                            <select type="number" class="number" name="T_09" id="T_09" onchange="myFunction()" style="height: 30px; width: 35px;">
-                                                <option value="<?= $detail['T_09']; ?>" disabled></option>
-                                            </select>
+                                            <input type="number" class="number" name="T_09" id="T_09" onchange="myFunction()" style="height: 30px; width: 35px;" value="<?= $detail['T_09']; ?>" readonly>
                                         </td>
                                     </tr>
                                     <tr>
@@ -290,9 +286,7 @@
                                         <td>Gerakan menggeliat/berguling/kaku</td>
                                         <td>Melengkungkan punggung/kaku/menghentak</td>
                                         <td>
-                                            <select type="number" class="number" name="T_010" id="T_010" onchange="myFunction()" style="height: 30px; width: 35px;">
-                                                <option value="<?= $detail['T_010']; ?>" disabled></option>
-                                            </select>
+                                            <input type="number" class="number" name="T_010" id="T_010" onchange="myFunction()" style="height: 30px; width: 35px;" value="<?= $detail['T_010']; ?>" readonly>
                                         </td>
                                     </tr>
                                     <tr>
@@ -301,9 +295,7 @@
                                         <td>Mengerang, merengek-rengek</td>
                                         <td>Menangis terus menerus, terisak, menjerit</td>
                                         <td>
-                                            <select type="number" class="number" name="T_011" id="T_011" onchange="myFunction()" style="height: 30px; width: 35px;">
-                                                <option value="<?= $detail['T_011']; ?>" disabled></option>
-                                            </select>
+                                            <input type="number" class="number" name="T_011" id="T_011" onchange="myFunction()" style="height: 30px; width: 35px;" value="<?= $detail['T_011']; ?>" readonly>
                                         </td>
                                     </tr>
                                     <tr>
@@ -312,14 +304,12 @@
                                         <td>Tenang bila dipeluk, digendong atau diajak bicara</td>
                                         <td>Sulit untuk menenangkan</td>
                                         <td>
-                                            <select type="number" class="number" name="T_012" id="T_012" onchange="myFunction()" style="height: 30px; width: 35px;">
-                                                <option value="<?= $detail['T_012']; ?>" disabled></option>
-                                            </select>
+                                            <input type="number" class="number" name="T_012" id="T_012" onchange="myFunction()" style="height: 30px; width: 35px;" value="<?= $detail['T_012']; ?>" readonly>
                                         </td>
                                     </tr>
                                     <tr style="text-align: center;">
                                         <td colspan="4">TOTAL SKOR</td>
-                                        <td><input type="number" name="T_013" id="T_013" style="width: 40px;" value="<?= $detail['T_013']; ?>" disabled /></td>
+                                        <td><input type="number" name="T_013" id="T_013" style="width: 40px;" value="<?= $detail['T_013']; ?>" readonly></td>
                                     </tr>
                                 </table>
                             </td>
@@ -525,7 +515,7 @@
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox" name="T_023" id="T_023" <?= ($detail['T_023'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi4_input()">
-                                            <input type="text" id="V_07" name="V_07" style="width: 100px;" value="<?= $detail['V_07']; ?>" readonly disabled>
+                                            <input type="text" id="V_07" name="V_07" style="width: 100px;" value="<?= $detail['V_07']; ?>" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -641,7 +631,7 @@
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="T_026" id="T_026_ada" <?= ($detail['T_026'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi5_enable()">
                                     <label for="T_026_ada"> Ada </label>
-                                    <input type="text" id="V_13" name="V_13" style="width: 200px;" value="<?= $detail['V_13']; ?>" readonly disabled>
+                                    <input type="text" id="V_13" name="V_13" style="width: 200px;" value="<?= $detail['V_13']; ?>" readonly>
                                 </div>
                             </td>
                         </tr>
@@ -683,7 +673,7 @@
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="T_029" id="T_029_input" <?= ($detail['T_029'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi6_enable()">
-                                            <input type="text" id="V_14" name="V_14" style="width: 150px;" value="<?= $detail['V_14']; ?>" readonly disabled>
+                                            <input type="text" id="V_14" name="V_14" style="width: 150px;" value="<?= $detail['V_14']; ?>" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -747,7 +737,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col">
-                                                <input type="text" id="V_16" name="V_16" style="width: 100%;" value="<?= $detail['V_16']; ?>" readonly disabled>
+                                                <input type="text" id="V_16" name="V_16" style="width: 100%;" value="<?= $detail['V_16']; ?>" readonly>
                                             </div>
                                         </div>
                                     </div>
@@ -776,7 +766,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <input type="text" id="V_17" name="V_17" style="width: 100%;" value="<?= $detail['V_17']; ?>" readonly disabled>
+                                        <input type="text" id="V_17" name="V_17" style="width: 100%;" value="<?= $detail['V_17']; ?>" readonly>
                                     </div>
                                 </div>
                             </td>
@@ -882,7 +872,7 @@
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" name="T_047" id="T_047" <?= ($detail['T_047'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi9()">
-                                                    <input type="text" id="V_18" name="V_18" style="width: 200px;" value="<?= $detail['V_18']; ?>" readonly disabled>
+                                                    <input type="text" id="V_18" name="V_18" style="width: 200px;" value="<?= $detail['V_18']; ?>" readonly>
                                                 </div>
                                             </div>
                                         </div>
@@ -909,11 +899,11 @@
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" name="t_052" id="t_052" <?= ($detail['t_052'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi10()">
-                                                    <input type="text" id="V_19" name="V_19" style="width: 200px;" value="<?= $detail['V_19']; ?>" readonly disabled>
+                                                    <input type="text" id="V_19" name="V_19" style="width: 200px;" value="<?= $detail['V_19']; ?>" readonly>
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" name="t_053" id="t_053" <?= ($detail['t_053'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi11()">
-                                                    <input type="text" id="V_20" name="V_20" style="width: 200px;" value="<?= $detail['V_20']; ?>" readonly disabled>
+                                                    <input type="text" id="V_20" name="V_20" style="width: 200px;" value="<?= $detail['V_20']; ?>" readonly>
                                                 </div>
                                             </div>
                                         </div>
@@ -926,15 +916,15 @@
                                                 </div>
                                                 <div class="form-check mb-5">
                                                     <input class="form-check-input" type="checkbox" name="t_055" id="t_055" <?= ($detail['t_055'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi12()">
-                                                    <input type="text" id="V_21" name="V_21" style="width: 200px;" value="<?= $detail['V_21']; ?>" readonly disabled>
+                                                    <input type="text" id="V_21" name="V_21" style="width: 200px;" value="<?= $detail['V_21']; ?>" readonly>
                                                 </div>
                                                 <div class="form-check mb-5">
                                                     <input class="form-check-input" type="checkbox" name="t_056" id="t_056" <?= ($detail['t_056'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi13()">
-                                                    <input type="text" id="V_22" name="V_22" style="width: 200px;" value="<?= $detail['V_22']; ?>" readonly disabled>
+                                                    <input type="text" id="V_22" name="V_22" style="width: 200px;" value="<?= $detail['V_22']; ?>" readonly>
                                                 </div>
                                                 <div class="form-check mb-5">
                                                     <input class="form-check-input" type="checkbox" name="t_057" id="t_057" <?= ($detail['t_057'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi14()">
-                                                    <input type="text" id="V_23" name="V_23" style="width: 200px;" value="<?= $detail['V_23']; ?>" readonly disabled>
+                                                    <input type="text" id="V_23" name="V_23" style="width: 200px;" value="<?= $detail['V_23']; ?>" readonly>
                                                 </div>
                                             </div>
                                         </div>
@@ -1019,7 +1009,7 @@
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="t_076" id="t_076" <?= ($detail['t_076'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi15()">
-                                            <input type="text" id="V_24" name="V_24" style="width: 300px;" value="<?= $detail['V_24']; ?>" readonly disabled>
+                                            <input type="text" id="V_24" name="V_24" style="width: 300px;" value="<?= $detail['V_24']; ?>" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -1111,12 +1101,12 @@
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="t_089" id="t_089" <?= ($detail['t_089'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi17()">
-                                            <input type="text" id="V_27" name="V_27" style="width: 300px;" value="<?= $detail['V_27']; ?>" readonly disabled>
+                                            <input type="text" id="V_27" name="V_27" style="width: 300px;" value="<?= $detail['V_27']; ?>" readonly>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_090" id="t_090" <?= ($detail['T_090'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi18()">
+                                            <input class="form-check-input" type="checkbox" name="t_090" id="t_090" <?= ($detail['t_090'] == "1" ? 'checked' : ''); ?> disabled onclick="fungsi18()">
                                             <label for="t_090">Lain-lain</label>
-                                            <input type="text" id="V_28" name="V_28" style="width: 200px;" value="<?= $detail['V_28']; ?>" readonly disabled>
+                                            <input type="text" id="V_28" name="V_28" style="width: 200px;" value="<?= $detail['V_28']; ?>" readonly>
                                         </div>
                                     </div>
                                 </div>

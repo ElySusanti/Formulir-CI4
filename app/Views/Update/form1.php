@@ -273,21 +273,21 @@
                     <td colspan="3">
                         Yang bertanda tangan dibawah ini, saya nama <input type="text" id="V_06" name="V_06" style="width: 200px;" value="<?= $detail['V_06']; ?>"> umur <input type="text" id="V_07" name="V_07" style="width: 100px;" value="<?= $detail['V_07']; ?>"> tahun,
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="T_01" id="T_01_laki-laki" <?= ($detail['T_01'] == "0" ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="radio" name="T_01" id="T_01_laki-laki" <?= ($detail['T_01'] == "0" ? 'checked' : ''); ?> value="0">
                             <label class="form-check-label" for="T_01_laki-laki">laki-laki /</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="T_01" id="T_01_perempuan" <?= ($detail['T_01'] == "1" ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="radio" name="T_01" id="T_01_perempuan" <?= ($detail['T_01'] == "1" ? 'checked' : ''); ?> value="1">
                             <label class="form-check-label" for="T_01_perempuan">perempuan, </label>
                         </div><br>
                         alamat <input type="text" id="V_08" name="V_08" style="width: 200px;" value="<?= $detail['V_08']; ?>">
                         dengan ini menyatakan persetujuan untuk dilakukan tindakan anestesi terhadap&nbsp;
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="T_02" id="T_02_saya" <?= ($detail['T_02'] == "0" ? 'checked' : ''); ?> onclick="fungsi1_disabled()">
+                            <input class="form-check-input" type="radio" name="T_02" id="T_02_saya" <?= ($detail['T_02'] == "0" ? 'checked' : ''); ?> value="0" onclick="fungsi1_disabled()">
                             <label class="form-check-label" for="T_02_saya">saya / </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="T_02" id="T_02_input" <?= ($detail['T_02'] == "1" ? 'checked' : ''); ?> onclick="fungsi1_enable()">
+                            <input class="form-check-input" type="radio" name="T_02" id="T_02_input" <?= ($detail['T_02'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi1_enable()">
                             <input type="text" id="V_09" name="V_09" style="width: 150px;" value="<?= $detail['V_09']; ?>">
                         </div>saya,
                         Yang bernama <input type="text" id="V_10" name="V_10" style="width: 200px;" value="<?= $detail['V_10']; ?>">
@@ -312,19 +312,19 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="T_03" id="T_03" <?= ($detail['T_03'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="checkbox" name="T_03" id="T_03" <?= ($detail['T_03'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="T_03">Sangat tidak mungkin</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="T_04" id="T_04" <?= ($detail['T_04'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="checkbox" name="T_04" id="T_04" <?= ($detail['T_04'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="T_04">Mungkin dibutuhkan</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="T_05" id="T_05" <?= ($detail['T_05'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="checkbox" name="T_05" id="T_05" <?= ($detail['T_05'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="T_05">Sangat memungkinkan</label>
                                 </div>
                             </div>
@@ -336,15 +336,15 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="T_06" id="T_06" <?= ($detail['T_06'] == "1" ? 'checked' : ''); ?>>
+                                        <input class="form-check-input" type="checkbox" name="T_06" id="T_06" <?= ($detail['T_06'] == "1" ? 'checked' : ''); ?> value="1">
                                         <label class="form-check-label" for="T_06">Saya menyetujui dan mengizinkan untuk menerima darah atau komponen darah sesuai dengan yang ditentukan/ diputuskan oleh dokter anestesi dan dokter lain yang merawat demi kebaikan saya/ keluarga.</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="T_07" id="T_07" <?= ($detail['T_07'] == "1" ? 'checked' : ''); ?>>
+                                        <input class="form-check-input" type="checkbox" name="T_07" id="T_07" <?= ($detail['T_07'] == "1" ? 'checked' : ''); ?> value="1">
                                         <label class="form-check-label" for="T_07">Saya menyetujui dan mengizinkan untuk menerima darah atau komponen darah hanya pada kondisi darurat menyelamatkan hidup saya/ keluarga.</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="T_08" id="T_08" <?= ($detail['T_08'] == "1" ? 'checked' : ''); ?>>
+                                        <input class="form-check-input" type="checkbox" name="T_08" id="T_08" <?= ($detail['T_08'] == "1" ? 'checked' : ''); ?> value="1">
                                         <label class="form-check-label" for="T_08">Saya tidak menyetujui pemberian darah atau komponen darah pada kondisi apapun/ sejelek apapun, terhadap diri saya/ keluarga.</label>
                                     </div>
                                 </div>

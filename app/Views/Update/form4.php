@@ -39,9 +39,10 @@
         <i class="bi bi-arrow-left"> Back</i>
     </a>
     <div class="container-fluid mt-3" style="font-family: 'Arial Narrow';">
-        <form action="<?= base_url('formulir/update4') ?>" method="post">
+        <form action="<?= base_url('formulir/update/' . $detail['id']); ?>" method="post" autocomplete="off">
             <?= csrf_field(); ?>
             <input type="hidden" id="FORM" name="FORM" value="F4">
+            <input type="hidden" id="id" name="id" value="<?= $detail['id']; ?>">
             <table style="width: 100%;">
                 <tr>
                     <td>
@@ -74,7 +75,7 @@
                                     <label for="DATE_OF_BIRTH">Tanggal Lahir</label>
                                 </div>
                                 <div class="col-md-6">
-                                    : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 150px;" value="<?= $detail['']; ?>" readonly>
+                                    : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 150px;" value="" readonly>
                                 </div>
                             </div>
                         </div>
@@ -98,26 +99,26 @@
                             </td>
                             <td colspan="2">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_01" id="T_01_umum" <?= ($detail['T_01'] == "0" ? 'checked' : ''); ?> onclick="fungsi1_disabled()">
+                                    <input class="form-check-input" type="radio" name="T_01" id="T_01_umum" <?= ($detail['T_01'] == "0" ? 'checked' : ''); ?> value="0" onclick="fungsi1_disabled()">
                                     <label class="form-check-label" for="T_01_umum"> Umum</label>&nbsp;
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_01" id="T_01_bpjs" <?= ($detail['T_01'] == "1" ? 'checked' : ''); ?> onclick="fungsi1_disabled()">
+                                    <input class="form-check-input" type="radio" name="T_01" id="T_01_bpjs" <?= ($detail['T_01'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi1_disabled()">
                                     <label class="form-check-label" for="T_01_bpjs"> BPJS</label>&nbsp;
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_01" id="T_01_input" <?= ($detail['T_01'] == "2" ? 'checked' : ''); ?> onclick="fungsi1_enable()">
+                                    <input class="form-check-input" type="radio" name="T_01" id="T_01_input" <?= ($detail['T_01'] == "2" ? 'checked' : ''); ?> value="2" onclick="fungsi1_enable()">
                                     <label class="form-check-label"> </label>
                                     <input type="text" id="V_03" name="V_03" style="width: 100px;" value="<?= $detail['V_03']; ?>" disabled>
                                 </div>
                             </td>
                             <td colspan="2">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_02" id="T_02_pasien" <?= ($detail['T_02'] == "0" ? 'checked' : ''); ?> onclick="fungsi2_disabled()">
+                                    <input class="form-check-input" type="radio" name="T_02" id="T_02_pasien" <?= ($detail['T_02'] == "0" ? 'checked' : ''); ?> value="0" onclick="fungsi2_disabled()">
                                     <label class="form-check-label" for="T_02_pasien"> Pasien</label>&nbsp;
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_02" id="T_02_keluarga" <?= ($detail['T_02'] == "1" ? 'checked' : ''); ?> onclick="fungsi2_enable()">
+                                    <input class="form-check-input" type="radio" name="T_02" id="T_02_keluarga" <?= ($detail['T_02'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi2_enable()">
                                     <label class="form-check-label" for="T_02_keluarga"> Keluarga/</label>
                                     <input type="text" id="V_04" name="V_04" style="width: 100px;" value="<?= $detail['V_04']; ?>" disabled>
                                 </div>
@@ -135,11 +136,11 @@
                             <td style="width: 10%;"><b>Status fungsional</b></td>
                             <td colspan="3">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_03" id="T_03_mandiri" <?= ($detail['T_03'] == "0" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_03" id="T_03_mandiri" <?= ($detail['T_03'] == "0" ? 'checked' : ''); ?> value="0">
                                     <label class="form-check-label" for="T_03_mandiri"> Mandiri</label>&nbsp;
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_03" id="T_03_ketergantungan" <?= ($detail['T_03'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_03" id="T_03_ketergantungan" <?= ($detail['T_03'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="T_03_ketergantungan"> Ketergantungan sebagian/Total</label>&nbsp;
                                 </div>
                             </td>
@@ -148,15 +149,15 @@
                             <td><b>Resiko jatuh</b></td>
                             <td colspan="3">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_04" id="T_04_tidakberesiko" <?= ($detail['T_04'] == "0" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_04" id="T_04_tidakberesiko" <?= ($detail['T_04'] == "0" ? 'checked' : ''); ?> value="0">
                                     <label class="form-check-label" for="T_04_tidakberesiko"> Tidak beresiko</label>&nbsp;
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_04" id="T_04_resikorendah" <?= ($detail['T_04'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_04" id="T_04_resikorendah" <?= ($detail['T_04'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="T_04_resikorendah"> Resiko rendah</label>&nbsp;
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_04" id="T_04_resikotinggi" <?= ($detail['T_04'] == "2" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_04" id="T_04_resikotinggi" <?= ($detail['T_04'] == "2" ? 'checked' : ''); ?> value="2">
                                     <label class="form-check-label" for="T_04_resikotinggi"> Resiko tinggi</label>&nbsp;
                                 </div>
                             </td>
@@ -191,15 +192,15 @@
                             <td style="width: 15%;">Keadaan Umum</td>
                             <td colspan="3">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_06" id="T_06_sakitringan" <?= ($detail['T_06'] == "0" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_06" id="T_06_sakitringan" <?= ($detail['T_06'] == "0" ? 'checked' : ''); ?> value="0">
                                     <label class="form-check-label" for="T_06_sakitringan"> Sakit ringan</label>&nbsp;
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_06" id="T_06_sakitsedang" <?= ($detail['T_06'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_06" id="T_06_sakitsedang" <?= ($detail['T_06'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="T_06_sakitsedang"> Sakit sedang</label>&nbsp;
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_06" id="T_06_sakitberat" <?= ($detail['T_06'] == "2" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_06" id="T_06_sakitberat" <?= ($detail['T_06'] == "2" ? 'checked' : ''); ?> value="2">
                                     <label class="form-check-label" for="T_06_sakitberat"> Sakit berat</label>&nbsp;
                                 </div>
                             </td>
@@ -208,11 +209,11 @@
                             <td>Riwayat Alergi</td>
                             <td colspan="3">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_07" id="T_07_tidakada" <?= ($detail['T_07'] == "0" ? 'checked' : ''); ?> onclick="fungsi3_disabled()">
+                                    <input class="form-check-input" type="radio" name="T_07" id="T_07_tidakada" <?= ($detail['T_07'] == "0" ? 'checked' : ''); ?> value="0" onclick="fungsi3_disabled()">
                                     <label class="form-check-label" for="T_07_tidakada"> Tidak ada</label>&nbsp;
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_07" id="T_07_ada" <?= ($detail['T_07'] == "1" ? 'checked' : ''); ?> onclick="fungsi3_enable">
+                                    <input class="form-check-input" type="radio" name="T_07" id="T_07_ada" <?= ($detail['T_07'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi3_enable">
                                     <label class="form-check-label" for="T_07_ada"> Ada</label>
                                     <input type="text" id="RIWAYAT_ALERGI" name="RIWAYAT_ALERGI" style="width: 200px;" disabled>
                                 </div>
@@ -269,7 +270,10 @@
                                         <td>Sering menggetarkan dagu dan mengatupkan rahang</td>
                                         <td>
                                             <select type="number" class="number" name="T_08" id="T_08" onchange="myFunction()" style="height: 30px; width: 35px;">
-                                                <option value="<?= $detail['T_08']; ?>"></option>
+                                                <option selected><?= $detail['T_08']; ?></option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
                                             </select>
                                         </td>
                                     </tr>
@@ -280,7 +284,10 @@
                                         <td>Kaki dibuat menendang/menarik diri</td>
                                         <td>
                                             <select type="number" class="number" name="T_09" id="T_09" onchange="myFunction()" style="height: 30px; width: 35px;">
-                                                <option value="<?= $detail['T_09']; ?>"></option>
+                                                <option selected><?= $detail['T_09']; ?></option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
                                             </select>
                                         </td>
                                     </tr>
@@ -291,7 +298,10 @@
                                         <td>Melengkungkan punggung/kaku/menghentak</td>
                                         <td>
                                             <select type="number" class="number" name="T_010" id="T_010" onchange="myFunction()" style="height: 30px; width: 35px;">
-                                                <option value="<?= $detail['T_010']; ?>"></option>
+                                                <option selected><?= $detail['T_010']; ?></option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
                                             </select>
                                         </td>
                                     </tr>
@@ -302,7 +312,10 @@
                                         <td>Menangis terus menerus, terisak, menjerit</td>
                                         <td>
                                             <select type="number" class="number" name="T_011" id="T_011" onchange="myFunction()" style="height: 30px; width: 35px;">
-                                                <option value="<?= $detail['T_011']; ?>"></option>
+                                                <option selected><?= $detail['T_011']; ?></option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
                                             </select>
                                         </td>
                                     </tr>
@@ -313,13 +326,16 @@
                                         <td>Sulit untuk menenangkan</td>
                                         <td>
                                             <select type="number" class="number" name="T_012" id="T_012" onchange="myFunction()" style="height: 30px; width: 35px;">
-                                                <option value="<?= $detail['T_012']; ?>"></option>
+                                                <option selected><?= $detail['T_012']; ?></option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
                                             </select>
                                         </td>
                                     </tr>
                                     <tr style="text-align: center;">
                                         <td colspan="4">TOTAL SKOR</td>
-                                        <td><input type="number" name="T_013" id="T_013" style="width: 40px;" value="<?= $detail['T_013']; ?>" disabled /></td>
+                                        <td><input type="number" name="T_013" id="T_013" style="width: 40px;" value="<?= $detail['T_013']; ?>" readonly></td>
                                     </tr>
                                 </table>
                             </td>
@@ -328,15 +344,15 @@
                             <td>Jalan Nafas (A)</td>
                             <td colspan="3">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_014" id="T_014_bebas" <?= ($detail['T_014'] == "0" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_014" id="T_014_bebas" <?= ($detail['T_014'] == "0" ? 'checked' : ''); ?> value="0">
                                     <label class="form-check-label" for="T_014_bebas"> Bebas</label>&nbsp;
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_014" id="T_014_sumbatan" <?= ($detail['T_014'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_014" id="T_014_sumbatan" <?= ($detail['T_014'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="T_014_sumbatan"> Sumbatan (Oedema/Benda Asing/Cairan)</label>&nbsp;
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_014" id="T_014_terintubasi" <?= ($detail['T_014'] == "2" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_014" id="T_014_terintubasi" <?= ($detail['T_014'] == "2" ? 'checked' : ''); ?> value="2">
                                     <label class="form-check-label" for="T_014_terintubasi"> Terintubasi</label>&nbsp;
                                 </div>
                             </td>
@@ -347,15 +363,15 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_015" id="T_015_normal" <?= ($detail['T_015'] == "0" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_015" id="T_015_normal" <?= ($detail['T_015'] == "0" ? 'checked' : ''); ?> value="0">
                                             <label class="form-check-label" for="T_015_normal"> Normal</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_015" id="T_015_hentinafas" <?= ($detail['T_015'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_015" id="T_015_hentinafas" <?= ($detail['T_015'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="T_015_hentinafas"> Henti nafas</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_015" id="T_015_dsistresringan" <?= ($detail['T_015'] == "2" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_015" id="T_015_dsistresringan" <?= ($detail['T_015'] == "2" ? 'checked' : ''); ?> value="2">
                                             <label class="form-check-label" for="T_015_dsistresringan"> Dsistres pernafasan ringan</label>&nbsp;
                                         </div>
                                     </div>
@@ -363,11 +379,11 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_015" id="T_015_dsistressedang" <?= ($detail['T_015'] == "3" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_015" id="T_015_dsistressedang" <?= ($detail['T_015'] == "3" ? 'checked' : ''); ?> value="3">
                                             <label class="form-check-label" for="T_015_dsistressedang"> Dsistres pernafasan sedang</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_015" id="T_015_dsistresberat" <?= ($detail['T_015'] == "4" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_015" id="T_015_dsistresberat" <?= ($detail['T_015'] == "4" ? 'checked' : ''); ?> value="4">
                                             <label class="form-check-label" for="T_015_dsistresberat"> Dsistres pernafasan berat</label>&nbsp;
                                         </div>
                                     </div>
@@ -380,15 +396,15 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_016" id="T_016_normal" <?= ($detail['T_016'] == "0" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_016" id="T_016_normal" <?= ($detail['T_016'] == "0" ? 'checked' : ''); ?> value="0">
                                             <label class="form-check-label" for="T_016_normal"> Normal</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_016" id="T_016_hentijantung" <?= ($detail['T_016'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_016" id="T_016_hentijantung" <?= ($detail['T_016'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="T_016_hentijantung"> Henti jantung</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_016" id="T_016_bradicardi" <?= ($detail['T_016'] == "2" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_016" id="T_016_bradicardi" <?= ($detail['T_016'] == "2" ? 'checked' : ''); ?> value="2">
                                             <label class="form-check-label" for="T_016_bradicardi"> Bradicardi</label>&nbsp;
                                         </div>
                                     </div>
@@ -396,15 +412,15 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_016" id="T_016_taciadi" <?= ($detail['T_016'] == "3" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_016" id="T_016_taciadi" <?= ($detail['T_016'] == "3" ? 'checked' : ''); ?> value="3">
                                             <label class="form-check-label" for="T_016_taciadi"> Tacicardi</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_016" id="T_016_akral" <?= ($detail['T_016'] == "4" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_016" id="T_016_akral" <?= ($detail['T_016'] == "4" ? 'checked' : ''); ?> value="4">
                                             <label class="form-check-label" for="T_016_akral"> Akral dingin</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_016" id="T_016_sianosisi" <?= ($detail['T_016'] == "5" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_016" id="T_016_sianosisi" <?= ($detail['T_016'] == "5" ? 'checked' : ''); ?> value="5">
                                             <label class="form-check-label" for="T_016_sianosisi"> Sianosisi</label>&nbsp;
                                         </div>
                                     </div>
@@ -417,15 +433,15 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_017" id="T_017_14-15" <?= ($detail['T_017'] == "0" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_017" id="T_017_14-15" <?= ($detail['T_017'] == "0" ? 'checked' : ''); ?> value="0">
                                             <label class="form-check-label" for="T_017_14-15"> 14-15 Composmentis</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_017" id="T_017_12-13" <?= ($detail['T_017'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_017" id="T_017_12-13" <?= ($detail['T_017'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="T_017_12-13"> 12-13 Apastis</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_017" id="T_017_10-11" <?= ($detail['T_017'] == "2" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_017" id="T_017_10-11" <?= ($detail['T_017'] == "2" ? 'checked' : ''); ?> value="2">
                                             <label class="form-check-label" for="T_017_10-11"> 10-11 Delirium</label>&nbsp;
                                         </div>
                                     </div>
@@ -433,15 +449,15 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_017" id="T_017_7-9" <?= ($detail['T_017'] == "3" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_017" id="T_017_7-9" <?= ($detail['T_017'] == "3" ? 'checked' : ''); ?> value="3">
                                             <label class="form-check-label" for="T_017_7-9"> 7-9 Samnolen</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_017" id="T_017_5-6" <?= ($detail['T_017'] == "4" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_017" id="T_017_5-6" <?= ($detail['T_017'] == "4" ? 'checked' : ''); ?> value="4">
                                             <label class="form-check-label" for="T_017_5-6"> 5-6 Sopor</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_017" id="T_017_3-4" <?= ($detail['T_017'] == "5" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_017" id="T_017_3-4" <?= ($detail['T_017'] == "5" ? 'checked' : ''); ?> value="5">
                                             <label class="form-check-label" for="T_017_3-4"> 3-4 Coma</label>&nbsp;
                                         </div>
                                     </div>
@@ -452,23 +468,23 @@
                             <td>Eksposur</td>
                             <td colspan="3">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_018" id="T_018_TAK" <?= ($detail['T_018'] == "0" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_018" id="T_018_TAK" <?= ($detail['T_018'] == "0" ? 'checked' : ''); ?> value="0">
                                     <label class="form-check-label" for="T_018_TAK"> TAK </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_018" id="T_018_paraperesis" <?= ($detail['T_018'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_018" id="T_018_paraperesis" <?= ($detail['T_018'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="T_018_paraperesis"> Paraperesis </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_018" id="T_018_parase" <?= ($detail['T_018'] == "2" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_018" id="T_018_parase" <?= ($detail['T_018'] == "2" ? 'checked' : ''); ?> value="2">
                                     <label class="form-check-label" for="T_018_parase"> Parase </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_018" id="T_018_plegi" <?= ($detail['T_018'] == "3" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_018" id="T_018_plegi" <?= ($detail['T_018'] == "3" ? 'checked' : ''); ?> value="3">
                                     <label class="form-check-label" for="T_018_plegi"> Plegi </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_018" id="T_018_perdarahan" <?= ($detail['T_018'] == "4" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_018" id="T_018_perdarahan" <?= ($detail['T_018'] == "4" ? 'checked' : ''); ?> value="4">
                                     <label class="form-check-label" for="T_018_perdarahan"> Pendarahan/fraktur</label>
                                 </div>
                             </td>
@@ -479,15 +495,15 @@
                                 <div class="row mb-1">
                                     <div class="col">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_019" id="T_019_stabil" <?= ($detail['T_019'] == "0" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_019" id="T_019_stabil" <?= ($detail['T_019'] == "0" ? 'checked' : ''); ?> value="0">
                                             <label class="form-check-label" for="T_019_stabil"> Stabil/tenang</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_019" id="T_019_cemas" <?= ($detail['T_019'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_019" id="T_019_cemas" <?= ($detail['T_019'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="T_019_cemas"> Cemas/takut/sedih/depresi</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_019" id="T_019_marah" <?= ($detail['T_019'] == "2" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_019" id="T_019_marah" <?= ($detail['T_019'] == "2" ? 'checked' : ''); ?> value="2">
                                             <label class="form-check-label" for="T_019_marah"> Marah</label>&nbsp;
                                         </div>
                                     </div>
@@ -495,11 +511,11 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_019" id="T_019_potensial" <?= ($detail['T_019'] == "3" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_019" id="T_019_potensial" <?= ($detail['T_019'] == "3" ? 'checked' : ''); ?> value="3">
                                             <label class="form-check-label" for="T_019_potensial"> Potensial bunuh diri</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_019" id="T_019_mencederai" <?= ($detail['T_019'] == "4" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_019" id="T_019_mencederai" <?= ($detail['T_019'] == "4" ? 'checked' : ''); ?> value="4">
                                             <label class="form-check-label" for="T_019_mencederai"> Mencederai orang lain/lingkungan</label>&nbsp;
                                         </div>
                                     </div>
@@ -512,19 +528,19 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" name="T_020" id="T_020" <?= ($detail['T_020'] == "1" ? 'checked' : ''); ?> onclick="fungsi4()">
+                                            <input class="form-check-input" type="checkbox" name="T_020" id="T_020" <?= ($detail['T_020'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi4()">
                                             <label class="form-check-label" for="T_020"> Tidak ada </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" name="T_021" id="T_021" <?= ($detail['T_021'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="T_021" id="T_021" <?= ($detail['T_021'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="T_021"> Merokok </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" name="T_022" id="T_022" <?= ($detail['T_022'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="T_022" id="T_022" <?= ($detail['T_022'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="T_022"> Minum alkohol </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" name="T_023" id="T_023" <?= ($detail['T_023'] == "1" ? 'checked' : ''); ?> onclick="fungsi4_input()">
+                                            <input class="form-check-input" type="checkbox" name="T_023" id="T_023" <?= ($detail['T_023'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi4_input()">
                                             <input type="text" id="V_07" name="V_07" style="width: 100px;" value="<?= $detail['V_07']; ?>" disabled>
                                         </div>
                                     </div>
@@ -540,7 +556,7 @@
                                 <div class="row mb-3">
                                     <div class="col-md-6">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="T_024" id="T_024_tidaknyeri" <?= ($detail['T_024'] == "0" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_024" id="T_024_tidaknyeri" <?= ($detail['T_024'] == "0" ? 'checked' : ''); ?> value="0">
                                             <label class="form-check-label" for="T_024_tidaknyeri">Tidak nyeri</label>
                                         </div>
                                     </div>
@@ -551,7 +567,7 @@
                                 <div class="row mb-3">
                                     <div class="col-md-6">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="T_024" id="T_024_ringan" <?= ($detail['T_024'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_024" id="T_024_ringan" <?= ($detail['T_024'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="T_024_ringan">Ringan</label>
                                         </div>
                                     </div>
@@ -562,7 +578,7 @@
                                 <div class="row mb-3">
                                     <div class="col-md-6">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="T_024" id="T_024_sedang" <?= ($detail['T_024'] == "2" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_024" id="T_024_sedang" <?= ($detail['T_024'] == "2" ? 'checked' : ''); ?> value="2">
                                             <label class="form-check-label" for="T_024_sedang">Sedang</label>
                                         </div>
                                     </div>
@@ -573,7 +589,7 @@
                                 <div class="row mb-3">
                                     <div class="col-md-6">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="T_024" id="T_024_berat" <?= ($detail['T_024'] == "3" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_024" id="T_024_berat" <?= ($detail['T_024'] == "3" ? 'checked' : ''); ?> value="3">
                                             <label class="form-check-label" for="T_024_berat">Berat</label>
                                         </div>
                                     </div>
@@ -584,13 +600,13 @@
                                 <div class="row mb-3">
                                     <div class="col-md-6">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="T_025" id="T_025_akut" <?= ($detail['T_025'] == "0" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_025" id="T_025_akut" <?= ($detail['T_025'] == "0" ? 'checked' : ''); ?> value="0">
                                             <label class="form-check-label" for="T_025_akut">Akut</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="T_025" id="T_025_kronis" <?= ($detail['T_025'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_025" id="T_025_kronis" <?= ($detail['T_025'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="T_025_kronis">Kronis</label>
                                         </div>
                                     </div>
@@ -635,11 +651,11 @@
                             <td>Riwayat Gangguan Jiwa</td>
                             <td colspan="3">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_026" id="T_026_tidakada" <?= ($detail['T_026'] == "0" ? 'checked' : ''); ?> onclick="fungsi5_disabled()">
+                                    <input class="form-check-input" type="radio" name="T_026" id="T_026_tidakada" <?= ($detail['T_026'] == "0" ? 'checked' : ''); ?> value="0" onclick="fungsi5_disabled()">
                                     <label class="form-check-label" for="T_026_tidakada"> Tidak ada </label>&nbsp;
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_026" id="T_026_ada" <?= ($detail['T_026'] == "1" ? 'checked' : ''); ?> onclick="fungsi5_enable()">
+                                    <input class="form-check-input" type="radio" name="T_026" id="T_026_ada" <?= ($detail['T_026'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi5_enable()">
                                     <label class="form-check-label" for="T_026_ada"> Ada </label>
                                     <input type="text" id="V_13" name="V_13" style="width: 200px;" value="<?= $detail['V_13']; ?>" disabled>
                                 </div>
@@ -649,11 +665,11 @@
                             <td>Trauma Psikis</td>
                             <td colspan="3">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_027" id="T_027_tidakada" <?= ($detail['T_027'] == "0" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_027" id="T_027_tidakada" <?= ($detail['T_027'] == "0" ? 'checked' : ''); ?> value="0">
                                     <label class="form-check-label" for="T_027_tidakada"> Tidak ada </label>&nbsp;
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_027" id="T_027_aniaya" <?= ($detail['T_027'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="radio" name="T_027" id="T_027_aniaya" <?= ($detail['T_027'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="T_027_aniaya"> Aniaya fisik/psikologi/KDRT/kriminal </label>
                                 </div>
                             </td>
@@ -665,11 +681,11 @@
                                     <div class="col">
                                         Hubungan dengan anggota keluarga:
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_028" id="T_028_baik" <?= ($detail['T_028'] == "0" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_028" id="T_028_baik" <?= ($detail['T_028'] == "0" ? 'checked' : ''); ?> value="0">
                                             <label class="form-check-label" for="T_028_baik"> Baik</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_028" id="T_028_tidak" <?= ($detail['T_028'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="radio" name="T_028" id="T_028_tidak" <?= ($detail['T_028'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="T_028_tidak"> Tidak</label>
                                         </div>
                                     </div>
@@ -678,11 +694,11 @@
                                     <div class="col">
                                         Tempat tinggal:
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_029" id="T_029_rumahsendiri" <?= ($detail['T_029'] == "0" ? 'checked' : ''); ?> onclick="fungsi6_disabled()">
+                                            <input class="form-check-input" type="radio" name="T_029" id="T_029_rumahsendiri" <?= ($detail['T_029'] == "0" ? 'checked' : ''); ?> value="0" onclick="fungsi6_disabled()">
                                             <label class="form-check-label" for="T_029_rumahsendiri"> Rumah sendiri</label>&nbsp;
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_029" id="T_029_input" <?= ($detail['T_029'] == "1" ? 'checked' : ''); ?> onclick="fungsi6_enable()">
+                                            <input class="form-check-input" type="radio" name="T_029" id="T_029_input" <?= ($detail['T_029'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi6_enable()">
                                             <input type="text" id="V_14" name="V_14" style="width: 150px;" value="<?= $detail['V_14']; ?>" disabled>
                                         </div>
                                     </div>
@@ -703,13 +719,13 @@
                             <td rowspan="2" style="text-align: center;">
                                 <div class="row">
                                     <div class="col">
-                                        <input class="form-check-input" type="radio" name="T_030" id="T_030_ya" <?= ($detail['T_030'] == "0" ? 'checked' : ''); ?>>
+                                        <input class="form-check-input" type="radio" name="T_030" id="T_030_ya" <?= ($detail['T_030'] == "0" ? 'checked' : ''); ?> value="0">
                                         <label class="form-check-label" for="T_030_ya"> Ya</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <input class="form-check-input" type="radio" name="T_030" id="T_030_tidak" <?= ($detail['T_030'] == "1" ? 'checked' : ''); ?>>
+                                        <input class="form-check-input" type="radio" name="T_030" id="T_030_tidak" <?= ($detail['T_030'] == "1" ? 'checked' : ''); ?> value="1">
                                         <label class="form-check-label" for="T_030_tidak"> Tidak</label>
                                     </div>
                                 </div>
@@ -736,11 +752,11 @@
                                             <div class="col">
                                                 <label>Hambatan ekonomi: </label>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="T_031" id="T_031_tidak" <?= ($detail['T_031'] == "0" ? 'checked' : ''); ?> onclick="fungsi7_disabled()">
+                                                    <input class="form-check-input" type="radio" name="T_031" id="T_031_tidak" <?= ($detail['T_031'] == "0" ? 'checked' : ''); ?> value="0" onclick="fungsi7_disabled()">
                                                     <label class="form-check-label" for="T_031_tidak"> Tidak </label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="T_031" id="T_031_ya" <?= ($detail['T_031'] == "1" ? 'checked' : ''); ?> onclick="fungsi7_enable()">
+                                                    <input class="form-check-input" type="radio" name="T_031" id="T_031_ya" <?= ($detail['T_031'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi7_enable()">
                                                     <label class="form-check-label" for="T_031_ya"> Ya </label>
                                                 </div>
                                             </div>
@@ -765,11 +781,11 @@
                                     <div class="col">
                                         <label>Membutuhkan konseling Spiritual/Agama:</label>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_032" id="T_032_tidak" <?= ($detail['T_032'] == "0" ? 'checked' : ''); ?> onclick="fungsi8_disabled()">
+                                            <input class="form-check-input" type="radio" name="T_032" id="T_032_tidak" <?= ($detail['T_032'] == "0" ? 'checked' : ''); ?> value="0" onclick="fungsi8_disabled()">
                                             <label class="form-check-label" for="T_032_tidak"> Tidak </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="T_032" id="T_032_ya" <?= ($detail['T_032'] == "1" ? 'checked' : ''); ?> onclick="fungsi8_enable()">
+                                            <input class="form-check-input" type="radio" name="T_032" id="T_032_ya" <?= ($detail['T_032'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi8_enable()">
                                             <label class="form-check-label" for="T_032_ya"> Ya </label>
                                         </div>
                                     </div>
@@ -791,13 +807,13 @@
                             <td style="text-align: center;">
                                 <div class="row">
                                     <div class="col">
-                                        <input class="form-check-input" type="radio" name="T_033" id="T_033_ya" <?= ($detail['T_033'] == "0" ? 'checked' : ''); ?>>
+                                        <input class="form-check-input" type="radio" name="T_033" id="T_033_ya" <?= ($detail['T_033'] == "0" ? 'checked' : ''); ?> value="0">
                                         <label class="form-check-label" for="T_033_ya"> Ya</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <input class="form-check-input" type="radio" name="T_033" id="T_033_tidak" <?= ($detail['T_033'] == "1" ? 'checked' : ''); ?>>
+                                        <input class="form-check-input" type="radio" name="T_033" id="T_033_tidak" <?= ($detail['T_033'] == "1" ? 'checked' : ''); ?> value="1">
                                         <label class="form-check-label" for="T_033_tidak"> Tidak</label>
                                     </div>
                                 </div>
@@ -814,15 +830,15 @@
                                             <div class="col">
                                                 <b>Respirasi</b><br>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_034" id="T_034" <?= ($detail['T_034'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_034" id="T_034" <?= ($detail['T_034'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_034">Pola napas tidak efektif </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_035" id="T_035" <?= ($detail['T_035'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_035" id="T_035" <?= ($detail['T_035'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_035">Pembersihan jalan napas tidak efektif</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_036" id="T_036" <?= ($detail['T_036'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_036" id="T_036" <?= ($detail['T_036'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_036">Gangguan pertukaran gas</label>
                                                 </div>
                                             </div>
@@ -831,15 +847,15 @@
                                             <div class="col">
                                                 <b>Sirkulasi Cardovasculer</b><br>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_037" id="T_037" <?= ($detail['T_037'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_037" id="T_037" <?= ($detail['T_037'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_037">Gangguan perfusi jaringan perifer/serebral tidak efektif</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_038" id="T_038" <?= ($detail['T_038'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_038" id="T_038" <?= ($detail['T_038'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_038">Penurunan curah jantung</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_039" id="T_039" <?= ($detail['T_039'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_039" id="T_039" <?= ($detail['T_039'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_039">Resiko pendarahan</label>
                                                 </div>
                                             </div>
@@ -848,19 +864,19 @@
                                             <div class="col">
                                                 <b>Nutrisi dan cairan</b><br>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_040" id="T_040" <?= ($detail['T_040'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_040" id="T_040" <?= ($detail['T_040'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_040">Hipervolemia/hipovolemia</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_041" id="T_041" <?= ($detail['T_041'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_041" id="T_041" <?= ($detail['T_041'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_041">Berkurangnya cairan tubuh</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_042" id="T_042" <?= ($detail['T_042'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_042" id="T_042" <?= ($detail['T_042'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_042">Devisit nutrisi/resiko devisit nutrisi</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_043" id="T_043" <?= ($detail['T_043'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_043" id="T_043" <?= ($detail['T_043'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_043">Resiko syok</label>
                                                 </div>
                                             </div>
@@ -869,19 +885,19 @@
                                             <div class="col">
                                                 <b>Nyeri dan kenyamanan</b><br>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_044" id="T_044" <?= ($detail['T_044'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_044" id="T_044" <?= ($detail['T_044'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_044">Nyeri akut/kronis</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_045" id="T_045" <?= ($detail['T_045'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_045" id="T_045" <?= ($detail['T_045'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_045">Gangguan rasa nyaman</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_046" id="T_046" <?= ($detail['T_046'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_046" id="T_046" <?= ($detail['T_046'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_046">Resiko syok</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_047" id="T_047" <?= ($detail['T_047'] == "1" ? 'checked' : ''); ?> onclick="fungsi9()">
+                                                    <input class="form-check-input" type="checkbox" name="T_047" id="T_047" <?= ($detail['T_047'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi9()">
                                                     <input type="text" id="V_18" name="V_18" style="width: 200px;" value="<?= $detail['V_18']; ?>" disabled>
                                                 </div>
                                             </div>
@@ -892,27 +908,27 @@
                                             <div class="col">
                                                 <b>Keamanan dan proteksi</b><br>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_048" id="T_048" <?= ($detail['T_048'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_048" id="T_048" <?= ($detail['T_048'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_048">Hipotermia/hipertermia</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_049" id="T_049" <?= ($detail['T_049'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_049" id="T_049" <?= ($detail['T_049'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_049">Resiko infeksi</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="T_050" id="T_050" <?= ($detail['T_050'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="T_050" id="T_050" <?= ($detail['T_050'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="T_050">Resiko cedera / jatuh</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="t_051" id="t_051" <?= ($detail['t_051'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="t_051" id="t_051" <?= ($detail['t_051'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="t_051">Resiko / aktual gangguan interritas kulit</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="t_052" id="t_052" <?= ($detail['t_052'] == "1" ? 'checked' : ''); ?> onclick="fungsi10()">
+                                                    <input class="form-check-input" type="checkbox" name="t_052" id="t_052" <?= ($detail['t_052'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi10()">
                                                     <input type="text" id="V_19" name="V_19" style="width: 200px;" value="<?= $detail['V_19']; ?>" disabled>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="t_053" id="t_053" <?= ($detail['t_053'] == "1" ? 'checked' : ''); ?> onclick="fungsi11()">
+                                                    <input class="form-check-input" type="checkbox" name="t_053" id="t_053" <?= ($detail['t_053'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi11()">
                                                     <input type="text" id="V_20" name="V_20" style="width: 200px;" value="<?= $detail['V_20']; ?>" disabled>
                                                 </div>
                                             </div>
@@ -921,19 +937,19 @@
                                             <div class="col">
                                                 <b>Psikologis</b><br>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="t_054" id="t_054" <?= ($detail['t_054'] == "1" ? 'checked' : ''); ?>>
+                                                    <input class="form-check-input" type="checkbox" name="t_054" id="t_054" <?= ($detail['t_054'] == "1" ? 'checked' : ''); ?> value="1">
                                                     <label class="form-check-label" for="t_054">Resiko mencederai diri sendiri dan lingkungan</label>
                                                 </div>
                                                 <div class="form-check mb-5">
-                                                    <input class="form-check-input" type="checkbox" name="t_055" id="t_055" <?= ($detail['t_055'] == "1" ? 'checked' : ''); ?> onclick="fungsi12()">
+                                                    <input class="form-check-input" type="checkbox" name="t_055" id="t_055" <?= ($detail['t_055'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi12()">
                                                     <input type="text" id="V_21" name="V_21" style="width: 200px;" value="<?= $detail['V_21']; ?>" disabled>
                                                 </div>
                                                 <div class="form-check mb-5">
-                                                    <input class="form-check-input" type="checkbox" name="t_056" id="t_056" <?= ($detail['t_056'] == "1" ? 'checked' : ''); ?> onclick="fungsi13()">
+                                                    <input class="form-check-input" type="checkbox" name="t_056" id="t_056" <?= ($detail['t_056'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi13()">
                                                     <input type="text" id="V_22" name="V_22" style="width: 200px;" value="<?= $detail['V_22']; ?>" disabled>
                                                 </div>
                                                 <div class="form-check mb-5">
-                                                    <input class="form-check-input" type="checkbox" name="t_057" id="t_057" <?= ($detail['t_057'] == "1" ? 'checked' : ''); ?> onclick="fungsi14()">
+                                                    <input class="form-check-input" type="checkbox" name="t_057" id="t_057" <?= ($detail['t_057'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi14()">
                                                     <input type="text" id="V_23" name="V_23" style="width: 200px;" value="<?= $detail['V_23']; ?>" disabled>
                                                 </div>
                                             </div>
@@ -946,79 +962,79 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_058" id="t_058" <?= ($detail['t_058'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_058" id="t_058" <?= ($detail['t_058'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_058">Lakukan manuver jaw trust, head thin chin lift</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_059" id="t_059" <?= ($detail['t_059'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_059" id="t_059" <?= ($detail['t_059'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_059">Keluarkan benda asing, lakukan section</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_060" id="t_060" <?= ($detail['t_060'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_060" id="t_060" <?= ($detail['t_060'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_060">Berikan bantuan napas < Bag valve mask</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_061" id="t_061" <?= ($detail['t_061'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_061" id="t_061" <?= ($detail['t_061'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_061">Ajarkan teknik batuk efektif / nafas dalam</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_062" id="t_062" <?= ($detail['t_062'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_062" id="t_062" <?= ($detail['t_062'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_062">Berikan posisi miring mantap pada pasien tidak sadar</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_063" id="t_063" <?= ($detail['t_063'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_063" id="t_063" <?= ($detail['t_063'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_063">Observasi frekuensi, irama dan kedalaman pernapasan</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_064" id="t_064" <?= ($detail['t_064'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_064" id="t_064" <?= ($detail['t_064'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_064">Berikan oksigen sesuai kebutuhan melauali nasal kanul, masker oksigen</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_065" id="t_065" <?= ($detail['t_065'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_065" id="t_065" <?= ($detail['t_065'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_065">Monitor saturasi okigen</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_066" id="t_066" <?= ($detail['t_066'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_066" id="t_066" <?= ($detail['t_066'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_066">Monitor tanda-tanda vital secara periodik/saturasi oksigen</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_067" id="t_067" <?= ($detail['t_067'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_067" id="t_067" <?= ($detail['t_067'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_067">Monitor tingkat kesadaran (GCS) secara periodik</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_068" id="t_068" <?= ($detail['t_068'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_068" id="t_068" <?= ($detail['t_068'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_068">Tinggikan kepala 15-30 jika tidak ada kontra indikasi</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_069" id="t_069" <?= ($detail['t_069'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_069" id="t_069" <?= ($detail['t_069'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_069">Berikan posisi semi fowler bila tidak ada kontra indikasi</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_070" id="t_070" <?= ($detail['t_070'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_070" id="t_070" <?= ($detail['t_070'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_070">Pasang infus, ambil sampel darah, cek AGD</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_071" id="t_071" <?= ($detail['t_071'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_071" id="t_071" <?= ($detail['t_071'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_071">Kolaborasi pemberian cairan intravena, ciran koloid, darah, produk darah/obat</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_072" id="t_072" <?= ($detail['t_072'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_072" id="t_072" <?= ($detail['t_072'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_072">Berikan cairan intravena, cairan koloid, darah, produk darah</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_073" id="t_073" <?= ($detail['t_073'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_073" id="t_073" <?= ($detail['t_073'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_073">Pasang cateter urin untuk monitor cairan keluar</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_074" id="t_074" <?= ($detail['t_074'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_074" id="t_074" <?= ($detail['t_074'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_074">Lakukan perawatan luka</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_075" id="t_075" <?= ($detail['t_075'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_075" id="t_075" <?= ($detail['t_075'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_075">Kaji nyeri/tanda-tanda infeksi</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_076" id="t_076" <?= ($detail['t_076'] == "1" ? 'checked' : ''); ?> onclick="fungsi15()">
+                                            <input class="form-check-input" type="checkbox" name="t_076" id="t_076" <?= ($detail['t_076'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi15()">
                                             <input type="text" id="V_24" name="V_24" style="width: 300px;" value="<?= $detail['V_24']; ?>" disabled>
                                         </div>
                                     </div>
@@ -1029,39 +1045,39 @@
                             <td>Hambatan pelayanan<br>komunikasi, edukasi</td>
                             <td colspan="5" style="vertical-align: middle;">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="t_077" id="t_077_tidak" <?= ($detail['t_077'] == "0" ? 'checked' : ''); ?> onclick="fungsi16_disabled()" checked>
+                                    <input class="form-check-input" type="radio" name="t_077" id="t_077_tidak" <?= ($detail['t_077'] == "0" ? 'checked' : ''); ?> value="0" onclick="fungsi16_disabled()" checked>
                                     <label class="form-check-label" for="t_077_tidak"> Tidak </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="t_077" id="t_077_ada" <?= ($detail['t_077'] == "1" ? 'checked' : ''); ?> onclick="fungsi16_enable()">
+                                    <input class="form-check-input" type="radio" name="t_077" id="t_077_ada" <?= ($detail['t_077'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi16_enable()">
                                     <label class="form-check-label" for="t_077_ada"> Ada: </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input hambatan" type="checkbox" name="t_078" id="t_078" <?= ($detail['t_078'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input hambatan" type="checkbox" name="t_078" id="t_078" <?= ($detail['t_078'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="t_078"> Pendengaran </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input hambatan" type="checkbox" name="t_079" id="t_079" <?= ($detail['t_079'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input hambatan" type="checkbox" name="t_079" id="t_079" <?= ($detail['t_079'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="t_079"> Penglihatan </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input hambatan" type="checkbox" name="t_080" id="t_080" <?= ($detail['t_080'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input hambatan" type="checkbox" name="t_080" id="t_080" <?= ($detail['t_080'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="t_080"> Kognitif </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input hambatan" type="checkbox" name="t_081" id="t_081" <?= ($detail['t_081'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input hambatan" type="checkbox" name="t_081" id="t_081" <?= ($detail['t_081'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="t_081"> Fisik </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input hambatan" type="checkbox" name="t_082" id="t_082" <?= ($detail['t_082'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input hambatan" type="checkbox" name="t_082" id="t_082" <?= ($detail['t_082'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="t_082"> Budaya </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input hambatan" type="checkbox" name="t_083" id="t_083" <?= ($detail['t_083'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input hambatan" type="checkbox" name="t_083" id="t_083" <?= ($detail['t_083'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="t_083"> Emosi </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input hambatan" type="checkbox" name="t_084" id="t_084" <?= ($detail['t_084'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input hambatan" type="checkbox" name="t_084" id="t_084" <?= ($detail['t_084'] == "1" ? 'checked' : ''); ?> value="1">
                                     <label class="form-check-label" for="t_084"> Bahasa </label>
                                 </div>
                             </td>
@@ -1092,29 +1108,29 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_085" id="t_085" <?= ($detail['t_085'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_085" id="t_085" <?= ($detail['t_085'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_085">Manajemen nyeri</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_086" id="t_086" <?= ($detail['t_086'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_086" id="t_086" <?= ($detail['t_086'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_086">Nutrisi</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_087" id="t_087" <?= ($detail['t_087'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_087" id="t_087" <?= ($detail['t_087'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_087">Perawatan luka</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_088" id="t_088" <?= ($detail['t_088'] == "1" ? 'checked' : ''); ?>>
+                                            <input class="form-check-input" type="checkbox" name="t_088" id="t_088" <?= ($detail['t_088'] == "1" ? 'checked' : ''); ?> value="1">
                                             <label class="form-check-label" for="t_088">Jaminan finansial</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_089" id="t_089" <?= ($detail['t_089'] == "1" ? 'checked' : ''); ?> onclick="fungsi17()">
+                                            <input class="form-check-input" type="checkbox" name="t_089" id="t_089" <?= ($detail['t_089'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi17()">
                                             <input type="text" id="V_27" name="V_27" style="width: 300px;" value="<?= $detail['V_27']; ?>" disabled>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="t_090" id="t_090" <?= ($detail['T_090'] == "1" ? 'checked' : ''); ?> onclick="fungsi18()">
+                                            <input class="form-check-input" type="checkbox" name="t_090" id="t_090" <?= ($detail['t_090'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi18()">
                                             <label class="form-check-label" for="t_090">Lain-lain</label>
                                             <input type="text" id="V_28" name="V_28" style="width: 200px;" value="<?= $detail['V_28']; ?>" disabled>
                                         </div>

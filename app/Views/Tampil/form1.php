@@ -17,34 +17,45 @@
     <a class="btn btn-outline-dark" href="/Formulir" role="button">
         <i class="bi bi-arrow-left" style=" width:30; height:30"> Back</i>
     </a>
-    <div class="container my-5">
-        <div class="row" style="text-align:center">
+    <div class="container my-1">
+        <?php if (session()->getFlashdata('pesan')) : ?>
+            <div class="alert alert-danger" role="alert">
+                <?= session()->getFlashdata('pesan'); ?>
+            </div>
+        <?php endif; ?>
+        <div class="row mb-3" style="text-align:center">
             <div class="col">
-                <?php if (session()->getFlashdata('pesan')) : ?>
-                    <div class="alert alert-danger" role="alert">
-                        <?= session()->getFlashdata('pesan'); ?>
-                    </div>
-                <?php endif; ?>
+                <h3>Data Persetujuan Anastesi</h3>
             </div>
         </div>
-        <h3 style="text-align:center">Data Persetujuan Anastesi</h3>
-        <table class="table table-bordered my-3" style="border: 1px; color: black; width: 100%;">
+        <div class="row mb-1">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <form action="" method="post" autocomplete="off">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-info" placeholder="Masukkan Nama Pasien" name="keyword">
+                        <button class="btn btn-info" type="submit" name="submit">Cari</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <table class="table table-bordered my-3" style="border: 1px; color: black; width: 100%; vertical-align:middle; text-align:center">
             <thead>
-                <tr style="text-align:center">
-                    <th scope="col">No</th>
-                    <th scope="col">Body ID</th>
-                    <th scope="col">Nomor Rekam Medis</th>
-                    <th scope="col">Nama Lengkap</th>
-                    <th scope="col">Nama Keluarga</th>
-                    <th scope="col">Jenis Kelamin</th>
-                    <th scope="col">Ruangan</th>
-                    <th scope="col">Aksi</th>
+                <tr>
+                    <th>No</th>
+                    <th>Body ID</th>
+                    <th>Nomor Rekam Medis</th>
+                    <th>Nama Lengkap</th>
+                    <th>Nama Keluarga</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Ruangan</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
-                <?php $i = 1;
+                <?php $i = 1 + (4 * ($currentPage - 1));
                 foreach ($data as $data) : ?>
-                    <tr style="vertical-align:middle; text-align:center">
+                    <tr>
                         <td><?= $i++; ?></td>
                         <td><?= $data['BODY_ID']; ?></td>
                         <td><?= $data['NO_REGISTRATION']; ?></td>
@@ -63,6 +74,7 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <?= $pager->links('assessment_info', 'pagination') ?>
     </div>
 </body>
 

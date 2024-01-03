@@ -66,7 +66,7 @@
                                     <label for="DATE_OF_BIRTH">Tanggal Lahir</label>
                                 </div>
                                 <div class="col-md-9">
-                                    : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 100px;" value="" readonly>,
+                                    : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 100px;" value="<?= $detail['DATE_OF_BIRTH']; ?>" readonly>,
                                     <label for="GENDER">Jenis Kelamin : </label>
                                     <input type="text" id="GENDER" name="GENDER" style="width: 150px;" value="<?= $detail['GENDER']; ?>" readonly>
                                 </div>
@@ -291,8 +291,8 @@
                             <input type="text" id="V_09" name="V_09" style="width: 150px;" value="<?= $detail['V_09']; ?>">
                         </div>saya,
                         Yang bernama <input type="text" id="V_10" name="V_10" style="width: 200px;" value="<?= $detail['V_10']; ?>">
-                        Tanggal lahir <input type="date" id="date_of_birth" name="date_of_birth" style="width: 100px;">
-                        Nomor Rekam Medis : <input type="text" id="No_Registration" name="No_Registration" style="width: 200px;">
+                        Tanggal lahir <input type="date" id="date_of_birth" name="date_of_birth" style="width: 100px;" value="<?= $detail['DATE_OF_BIRTH']; ?>" readonly>
+                        Nomor Rekam Medis : <input type="text" id="No_Registration" name="No_Registration" style="width: 200px;" value="<?= $detail['NO_REGISTRATION']; ?>" readonly>
                     </td>
                 </tr>
                 <tr>

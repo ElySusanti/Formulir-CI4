@@ -44,21 +44,9 @@ class assessment_model extends Model
         't_081', 't_082', 't_083', 't_084', 't_085', 't_086', 't_087', 't_088', 't_089', 't_090',
         't_091', 't_092', 't_093', 't_094', 't_095', 't_096', 't_097', 't_098', 't_099', 't_100'
     ];
-    public function getJoinedData(string $id = 'id')
-    {
-        $builder = $this->db->table('assessment_info');
-        $builder->join('biodata', 'biodata.NO_REGISTRATION = assessment_info.NO_REGISTRATION', 'inner');
-        $query = $builder->get();
-
-        return $query->getResult($id);
-    }
     public function getDataByValue($value)
     {
         return $this->where('form', $value)->findAll();
-    }
-    public function getDataById($id)
-    {
-        return $this->find($id);
     }
     public function generate_id()
     {
@@ -68,4 +56,20 @@ class assessment_model extends Model
         $body_id = $prefix . $date . $random_number;
         return $body_id;
     }
+    public function search($keyword)
+    {
+        return $this->table('assessment_info')->like('THENAME', $keyword);
+    }
+    // public function getDataById($id)
+    // {
+    //     return $this->find($id);
+    // }
+    // public function getJoinedData($value = 'F1')
+    // {
+    //     $builder = $this->db->table('assessment_info');
+    //     $builder->join('biodata', 'biodata.NO_REGISTRATION = assessment_info.NO_REGISTRATION', 'inner');
+    //     $query = $builder->get();
+
+    //     return $query->getResult($value);
+    // }
 }

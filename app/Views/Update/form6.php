@@ -77,7 +77,7 @@
                     <label for="DATE_OF_BIRTH">Tanggal Lahir : </label>
                 </div>
                 <div class="col-md-4">
-                    <input type="date" name="DATE_OF_BIRTH" id="DATE_OF_BIRTH" style="width: 200px;" min="0" value="<?= $detail['']; ?>" readonly>
+                    <input type="date" name="DATE_OF_BIRTH" id="DATE_OF_BIRTH" style="width: 200px;" min="0" value="<?= $detail['DATE_OF_BITRH']; ?>" readonly>
                 </div>
             </div>
             <div class="row mb-3">
@@ -97,7 +97,7 @@
                     <label for="CARA_BAYAR"><b>Cara Bayar :</b></label>
                 </div>
                 <div class="col">
-                    <input type="text" name="CARA_BAYAR" id="CARA_BAYAR" style="width: 300px;" value="<?= $detail['']; ?>" readonly>
+                    <input type="text" name="CARA_BAYAR" id="CARA_BAYAR" style="width: 300px;" value="<?= $detail['CARA_BAYAR']; ?>" readonly>
                 </div>
             </div>
             <div class="row mb-2">
@@ -114,7 +114,7 @@
                     <label for="VACTINATION_DATE">Tanggal Periksa</label>
                 </div>
                 <div class="col-md-4">
-                    <input type="date" name="VACTINATION_DATE" id="VACTINATION_DATE" style="width: 200px;" value="<?= $detail['']; ?>" readonly>
+                    <input type="date" name="VACTINATION_DATE" id="VACTINATION_DATE" style="width: 200px;" value="<?= $detail['VACTINATION_DATE']; ?>" readonly>
                 </div>
                 <div class="col-md-3" style="color: red; border-color: red;">
                     <input class="form-check-input" type="checkbox" name="patient_category_id" id="patient_category_id" <?= ($detail['patient_category_id'] == "0" ? 'checked' : ''); ?>>

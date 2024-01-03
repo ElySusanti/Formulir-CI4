@@ -75,7 +75,7 @@
                                     <label for="DATE_OF_BIRTH">Tanggal Lahir</label>
                                 </div>
                                 <div class="col-md-6">
-                                    : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 150px;" value="" readonly>
+                                    : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 150px;" value="<?= $detail['DATE_OF_BIRTH']; ?>" readonly>
                                 </div>
                             </div>
                         </div>
@@ -215,43 +215,43 @@
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="T_07" id="T_07_ada" <?= ($detail['T_07'] == "1" ? 'checked' : ''); ?> value="1" onclick="fungsi3_enable">
                                     <label class="form-check-label" for="T_07_ada"> Ada</label>
-                                    <input type="text" id="RIWAYAT_ALERGI" name="RIWAYAT_ALERGI" style="width: 200px;" disabled>
+                                    <input type="text" id="RIWAYAT_ALERGI" name="RIWAYAT_ALERGI" style="width: 200px;" value="<?= $detail['RIWAYAT_ALERGI']; ?>" disabled>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td><label for="DIAGNOSA_HISTORY">Riwayat Kesehatan</label></td>
                             <td colspan="3">
-                                <input type="text" id="DIAGNOSA_HISTORY" name="DIAGNOSA_HISTORY" style="width: 300px;">
+                                <input type="text" id="DIAGNOSA_HISTORY" name="DIAGNOSA_HISTORY" style="width: 300px;" value="<?= $detail['DIAGNOSA_HISTORY']; ?>">
                             </td>
                         </tr>
                         <tr>
                             <td><label for="RIWAYAT_OBAT">Pengobatan</label></td>
                             <td colspan="3">
-                                <input type="text" id="RIWAYAT_OBAT" name="RIWAYAT_OBAT" style="width: 300px;">
+                                <input type="text" id="RIWAYAT_OBAT" name="RIWAYAT_OBAT" style="width: 300px;" value="<?= $detail['RIWAYAT_OBAT']; ?>">
                             </td>
                         </tr>
                         <tr style="vertical-align: middle;">
                             <td rowspan="2">Tanda-tanda Vital</td>
                             <td colspan="3" style="height: 60px;">
                                 <label for="TENSION_UPPER">TD: </label>
-                                <input type="number" id="TENSION_UPPER" name="TENSION_UPPER" style="width: 50px;"> /
-                                <input type="number" id="TENSION_BELOW" name="TENSION_BELOW" style="width: 50px;"> mmHg &nbsp;
+                                <input type="number" id="TENSION_UPPER" name="TENSION_UPPER" style="width: 50px;" value="<?= $detail['TENSION_UPPER']; ?>"> /
+                                <input type="number" id="TENSION_BELOW" name="TENSION_BELOW" style="width: 50px;" value="<?= $detail['TENSION_BELOW']; ?>"> mmHg &nbsp;
                                 <label for="NADI">HR: </label>
-                                <input type="number" id="NADI" name="NADI" style="width: 50px;"> x/Mnt &nbsp;
+                                <input type="number" id="NADI" name="NADI" style="width: 50px;" value="<?= $detail['NADI']; ?>"> x/Mnt &nbsp;
                                 <label for="NAFAS">RR: </label>
-                                <input type="number" id="NAFAS" name="NAFAS" style="width: 50px;"> x/mnt
+                                <input type="number" id="NAFAS" name="NAFAS" style="width: 50px;" value="<?= $detail['NAFAS']; ?>"> x/mnt
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3" style="vertical-align: middle;">
                                 <label for="SATURASI">SPO2: </label>
-                                <input type="number" id="SATURASI" name="SATURASI" style="width: 50px;"> % &nbsp;
+                                <input type="number" id="SATURASI" name="SATURASI" style="width: 50px;" value="<?= $detail['SATURASI']; ?>"> % &nbsp;
                                 <label for="TEMPERATURE">Suhu: </label>
-                                <input type="number" id="TEMPERATURE" name="TEMPERATURE" style="width: 50px;"> &nbsp;
+                                <input type="number" id="TEMPERATURE" name="TEMPERATURE" style="width: 50px;" value="<?= $detail['TEMPERATURE']; ?>"> &nbsp;
                                 <label for="WEIGHT">BB/TB/PB: </label>
-                                <input type="number" id="WEIGHT" name="WEIGHT" style="width: 50px;">
-                                <input type="number" id="HEIGHT" name="HEIGHT" style="width: 50px;">
+                                <input type="number" id="WEIGHT" name="WEIGHT" style="width: 50px;" value="<?= $detail['WEIGHT']; ?>">
+                                <input type="number" id="HEIGHT" name="HEIGHT" style="width: 50px;" value="<?= $detail['HEIGHT']; ?>">
                             </td>
                             <td colspan="4" rowspan="7" style="text-align: center;">
                                 <b>Skala Nyeri Untuk Anak (Skala Flacc):</b><br>

@@ -62,7 +62,7 @@
                                 <label for="DATE_OF_BIRTH">Tgl. Lahir</label>
                             </div>
                             <div class="col-md-9">
-                                : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 100px;" value="<?= $detail['']; ?>" readonly>&nbsp;
+                                : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 100px;" value="<?= $detail['DATE_OF_BIRTH']; ?>" readonly>&nbsp;
                                 <input type="text" id="GENDER" name="GENDER" style="width: 150px;" value="<?= $detail['GENDER']; ?>" readonly>
                             </div>
                         </div>

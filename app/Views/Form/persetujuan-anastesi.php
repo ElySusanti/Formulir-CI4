@@ -16,6 +16,10 @@
             width: 200px;
             height: 100px;
         }
+
+        #signatureCanvas {
+            border: 1px solid #000;
+        }
     </style>
     <!--[if IE]>
     <script src="excanvas.js"></script>
@@ -401,7 +405,8 @@
             <div class="d-grid gap-2 mt-3 mb-3">
                 <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
             </div>
-        </form>
+            <canvas id="signatureCanvas" width="200" height="100"></canvas>
+            <input type="hidden" name="signature_data" id="signatureDataInput" required>
     </div>
     <script>
         $('#NO_REGISTRATION').on('change', (event) => {
@@ -451,6 +456,71 @@
                 $("#V_09, #V_10").attr("disabled", true);
             }
         }
+    </script>
+    <!-- Tambahkan JavaScript untuk menghandle tanda tangan di canvas -->
+    <script>
+        // Mengambil elemen canvas dan konteksnya
+        var canvas = document.getElementById("signatureCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Variabel untuk menandai apakah pengguna sedang menggambar
+        var drawing = false;
+
+        // Mengatur warna dan ketebalan garis
+        ctx.strokeStyle = "#000"; // warna hitam
+        ctx.lineWidth = 2;
+
+        // Fungsi untuk memulai gambar saat tombol mouse ditekan
+        function startDrawing(e) {
+            drawing = true;
+            draw(e);
+        }
+
+        // Fungsi untuk menggambar pada canvas
+        function draw(e) {
+            if (!drawing) return;
+
+            // Mendapatkan posisi mouse relatif terhadap elemen canvas
+            var x = e.clientX - canvas.offsetLeft;
+            var y = e.clientY - canvas.offsetTop;
+
+            // Memulai path atau melanjutkan path yang ada
+            ctx.beginPath();
+
+            // Pindahkan pena ke posisi saat ini
+            ctx.moveTo(x, y);
+
+            // Atur garis ke posisi baru
+            ctx.lineTo(x, y);
+
+            // Gambar garis
+            ctx.stroke();
+        }
+
+        // Fungsi untuk mengakhiri gambar saat tombol mouse dilepas
+        function stopDrawing() {
+            drawing = false;
+            // Setelah tanda tangan selesai, Anda dapat mengambil data gambar
+            // menggunakan canvas.toDataURL() dan menyimpannya atau mengirimkannya ke server.
+        }
+
+        // Menambahkan event listener untuk memulai dan menghentikan gambar
+        canvas.addEventListener("mousedown", startDrawing);
+        canvas.addEventListener("mousemove", draw);
+        canvas.addEventListener("mouseup", stopDrawing);
+        canvas.addEventListener("mouseout", stopDrawing);
+    </script>
+    <script>
+        // Contoh sederhana, gunakan library khusus untuk implementasi yang lebih canggih
+        const canvas = document.getElementById('signatureCanvas');
+        const ctx = canvas.getContext('2d');
+        const signatureDataInput = document.getElementById('signatureDataInput');
+
+        // Implementasi logika tanda tangan di sini
+        // Misalnya, menggunakan event mouse untuk menggambar pada canvas
+
+        // Setelah menggambar, simpan data tanda tangan ke input tersembunyi
+        signatureDataInput.value = canvas.toDataURL();
     </script>
     <script>
         $(function() {

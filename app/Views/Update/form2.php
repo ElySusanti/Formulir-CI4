@@ -68,7 +68,7 @@
                                 <td>
                                     <label for="DATE_OF_BIRTH">Tanggal Lahir </label>
                                 </td>
-                                <td>: <input type="date" name="DATE_OF_BIRTH" id="DATE_OF_BIRTH" style="width: 100px;" value="" readonly></td>
+                                <td>: <input type="date" name="DATE_OF_BIRTH" id="DATE_OF_BIRTH" style="width: 100px;" value="<?= $detail['DATE_OF_BIRTH']; ?>" readonly></td>
                                 <td>
                                     <label for="CLASS_ROOM_ID">Ruang Rawat </label>
                                 </td>

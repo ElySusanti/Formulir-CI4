@@ -351,132 +351,241 @@ class Formulir extends BaseController
     }
     public function form1()
     {
+        $currentPage = $this->request->getVar('page_assessment_info') ? $this->request->getVar('page_assessment_info') : 1;
+
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $cari = $this->assessment_model->search($keyword);
+        } else {
+            $cari = $this->assessment_model->getDataByValue('F1');
+        }
+
         $data = [
-            'data' => $this->assessment_model->getDataByValue('F1'),
+            'data' => $this->assessment_model->where('FORM', 'F1')->paginate(4, 'assessment_info'),
+            'pager' => $this->assessment_model->pager,
+            'currentPage' => $currentPage
         ];
         return view('Tampil/form1', $data);
     }
     public function form2()
     {
+        $currentPage = $this->request->getVar('page_assessment_info') ? $this->request->getVar('page_assessment_info') : 1;
+
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $cari = $this->assessment_model->search($keyword);
+        } else {
+            $cari = $this->assessment_model->getDataByValue('F2');
+        }
+
         $data = [
-            'data' => $this->assessment_model->getDataByValue('F2')
+            'data' => $this->assessment_model->where('FORM', 'F2')->paginate(4, 'assessment_info'),
+            'pager' => $this->assessment_model->pager,
+            'currentPage' => $currentPage
         ];
         return view('Tampil/form2', $data);
     }
     public function form3()
     {
+        $currentPage = $this->request->getVar('page_assessment_info') ? $this->request->getVar('page_assessment_info') : 1;
+
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $cari = $this->assessment_model->search($keyword);
+        } else {
+            $cari = $this->assessment_model->getDataByValue('F3');
+        }
+
         $data = [
-            'data' => $this->assessment_model->getDataByValue('F3')
+            'data' => $this->assessment_model->where('FORM', 'F3')->paginate(4, 'assessment_info'),
+            'pager' => $this->assessment_model->pager,
+            'currentPage' => $currentPage
         ];
         return view('Tampil/form3', $data);
     }
     public function form4()
     {
+        $currentPage = $this->request->getVar('page_assessment_info') ? $this->request->getVar('page_assessment_info') : 1;
+
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $cari = $this->assessment_model->search($keyword);
+        } else {
+            $cari = $this->assessment_model->getDataByValue('F4');
+        }
+
         $data = [
-            'data' => $this->assessment_model->getDataByValue('F4')
+            'data' => $this->assessment_model->where('FORM', 'F4')->paginate(4, 'assessment_info'),
+            'pager' => $this->assessment_model->pager,
+            'currentPage' => $currentPage
         ];
         return view('Tampil/form4', $data);
     }
     public function form5()
     {
+        $currentPage = $this->request->getVar('page_assessment_info') ? $this->request->getVar('page_assessment_info') : 1;
+
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $cari = $this->assessment_model->search($keyword);
+        } else {
+            $cari = $this->assessment_model->getDataByValue('F5');
+        }
+
         $data = [
-            'data' => $this->assessment_model->getDataByValue('F5')
+            'data' => $this->assessment_model->where('FORM', 'F5')->paginate(4, 'assessment_info'),
+            'pager' => $this->assessment_model->pager,
+            'currentPage' => $currentPage
         ];
         return view('Tampil/form5', $data);
     }
     public function form6()
     {
+        $currentPage = $this->request->getVar('page_assessment_info') ? $this->request->getVar('page_assessment_info') : 1;
+
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $cari = $this->assessment_model->search($keyword);
+        } else {
+            $cari = $this->assessment_model->getDataByValue('F6');
+        }
+
         $data = [
-            'data' => $this->assessment_model->getDataByValue('F6')
+            'data' => $this->assessment_model->where('FORM', 'F6')->paginate(4, 'assessment_info'),
+            'pager' => $this->assessment_model->pager,
+            'currentPage' => $currentPage
         ];
         return view('Tampil/form6', $data);
     }
     public function detail1($id)
     {
-        // $dataJOIN = $this->assessment_model->join('biodata', 'biodata.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
-        //     ->where('assessment_info.NO_REGISTRATION', $id)
-        //     ->find($id);
+        $dataJOIN = $this->assessment_model->join('biodata', 'biodata.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.id', $id)
+            ->find($id);
 
         $data = [
-            'detail' => $this->assessment_model->getDataById($id)
+            'detail' => $dataJOIN
         ];
-        // dd($data);
         return view('Detail/form1', $data);
     }
     public function detail2($id)
     {
+        $dataJOIN = $this->assessment_model->join('biodata', 'biodata.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.id', $id)
+            ->find($id);
+
         $data = [
-            'detail' => $this->assessment_model->getDataById($id)
+            'detail' => $dataJOIN
         ];
         return view('Detail/form2', $data);
     }
     public function detail3($id)
     {
+        $dataJOIN = $this->assessment_model->join('biodata', 'biodata.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.id', $id)
+            ->find($id);
+
         $data = [
-            'detail' => $this->assessment_model->getDataById($id)
+            'detail' => $dataJOIN
         ];
         return view('Detail/form3', $data);
     }
     public function detail4($id)
     {
+        $dataJOIN = $this->assessment_model->join('biodata', 'biodata.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.id', $id)
+            ->find($id);
+
         $data = [
-            'detail' => $this->assessment_model->getDataById($id)
+            'detail' => $dataJOIN
         ];
         return view('Detail/form4', $data);
     }
     public function detail5($id)
     {
+        $dataJOIN = $this->assessment_model->join('biodata', 'biodata.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.id', $id)
+            ->find($id);
+
         $data = [
-            'detail' => $this->assessment_model->getDataById($id)
+            'detail' => $dataJOIN
         ];
         return view('Detail/form5', $data);
     }
     public function detail6($id)
     {
+        $dataJOIN = $this->assessment_model->join('biodata', 'biodata.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.id', $id)
+            ->find($id);
+
         $data = [
-            'detail' => $this->assessment_model->getDataById($id)
+            'detail' => $dataJOIN
         ];
         return view('Detail/form6', $data);
     }
     public function update1($id)
     {
+        $dataJOIN = $this->assessment_model->join('biodata', 'biodata.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.id', $id)
+            ->find($id);
+
         $data = [
-            'detail' => $this->assessment_model->getDataById($id)
+            'detail' => $dataJOIN
         ];
         return view('Update/form1', $data);
     }
     public function update2($id)
     {
+        $dataJOIN = $this->assessment_model->join('biodata', 'biodata.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.id', $id)
+            ->find($id);
+
         $data = [
-            'detail' => $this->assessment_model->getDataById($id)
+            'detail' => $dataJOIN
         ];
         return view('Update/form2', $data);
     }
     public function update3($id)
     {
+        $dataJOIN = $this->assessment_model->join('biodata', 'biodata.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.id', $id)
+            ->find($id);
+
         $data = [
-            'detail' => $this->assessment_model->getDataById($id)
+            'detail' => $dataJOIN
         ];
         return view('Update/form3', $data);
     }
     public function update4($id)
     {
+        $dataJOIN = $this->assessment_model->join('biodata', 'biodata.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.id', $id)
+            ->find($id);
+
         $data = [
-            'detail' => $this->assessment_model->getDataById($id)
+            'detail' => $dataJOIN
         ];
         return view('Update/form4', $data);
     }
     public function update5($id)
     {
+        $dataJOIN = $this->assessment_model->join('biodata', 'biodata.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.id', $id)
+            ->find($id);
+
         $data = [
-            'detail' => $this->assessment_model->getDataById($id)
+            'detail' => $dataJOIN
         ];
         return view('Update/form5', $data);
     }
     public function update6($id)
     {
+        $dataJOIN = $this->assessment_model->join('biodata', 'biodata.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.id', $id)
+            ->find($id);
+
         $data = [
-            'detail' => $this->assessment_model->getDataById($id)
+            'detail' => $dataJOIN
         ];
         return view('Update/form6', $data);
     }

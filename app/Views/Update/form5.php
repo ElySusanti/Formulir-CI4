@@ -83,7 +83,7 @@
                     <label for="CARA_BAYAR">Cara bayar : </label>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" name="CARA_BAYAR" id="CARA_BAYAR" style="width: 200px;" value="<?= $detail['']; ?>" readonly>
+                    <input type="text" name="CARA_BAYAR" id="CARA_BAYAR" style="width: 200px;" value="<?= $detail['CARA_BAYAR']; ?>" readonly>
                 </div>
             </div>
             <hr style="border: 2px solid black;">

@@ -338,8 +338,9 @@
                                 <td style="text-align: center; width: 33%;">
                                     <label for="V_11" style="text-align: center;">Saksi 1</label>
                                     <br><br>
-                                    <div id="TTD"></div>
-                                    <br><input type="text" id="V_11" name="V_11" width="100px" style="text-align: center;">
+                                    <canvas id="canvas" width="150" height="90" style="border:1px solid #000;">
+                                        <input type="hidden" name="TTD" id="TTD">
+                                        <br><input type="text" id="V_11" name="V_11" style="width:150px; text-align: center;">
                                 </td>
                                 <td style="width: 33%;"></td>
                                 <td rowspan="2" style="vertical-align: middle; width: 33%;">
@@ -349,7 +350,7 @@
                                     <input type="time" id="V_13" name="V_13">
                                     <br><br>
                                     <div id="TTD_1"></div>
-                                    <br><input type="text" id="V_14" name="V_14" width="100px" style="text-align: center;">
+                                    <br><input type="text" id="V_14" name="V_14" style="width:150px; text-align: center;">
                                 </td>
                             </tr>
                             <tr>
@@ -357,13 +358,13 @@
                                     <label for="V_15" style="text-align: center;">Saksi 2</label>
                                     <br><br>
                                     <div id="TTD_2"></div>
-                                    <br><input type="text" id="V_15" name="V_15" width="100px" style="text-align: center;">
+                                    <br><input type="text" id="V_15" name="V_15" style="width:150px; text-align: center;">
                                 </td>
                                 <td style="text-align: center;">
                                     <label for="V_16">Dokter Anastesi <br>Yang Menerangkan</label>
                                     <br>
                                     <div id="TTD_3"></div>
-                                    <br><input type="text" id="V_16" name="V_16" width="100px" style="text-align: center;">
+                                    <br><input type="text" id="V_16" name="V_16" style="width:150px; text-align: center;">
                                 </td>
                             </tr>
                         </table>
@@ -372,11 +373,62 @@
             </tr>
         </table>
         <div class="d-grid gap-2 mt-3 mb-3">
-            <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
+            <input class="btn btn-primary" type="submit" name="submit" value="Simpan" onclick="saveSignatureData()">
         </div>
-        <canvas id="signatureCanvas" width="200" height="100"></canvas>
-        <input type="hidden" name="signature_data" id="signatureDataInput" required>
+    </form>
 </div>
+
+<!-- JavaScript to handle signature functionality -->
+<script>
+    // Get the canvas element
+    var canvas = document.getElementById('canvas');
+    const canvasDataInput = document.getElementById('TTD');
+    var context = canvas.getContext('2d');
+
+    // Variables to track signature drawing
+    var drawing = false;
+
+    // Event listeners for mouse events
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', stopDrawing);
+    canvas.addEventListener('mouseout', stopDrawing);
+
+    // Function to start drawing
+    function startDrawing(e) {
+        drawing = true;
+        draw(e);
+    }
+
+    // Function to draw on the canvas
+    function draw(e) {
+        if (!drawing) return;
+
+        context.lineWidth = 2;
+        context.lineCap = 'round';
+        context.strokeStyle = '#000';
+
+        // Draw a line
+        context.lineTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
+        context.stroke();
+        context.beginPath();
+        context.moveTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
+    }
+
+    // Function to stop drawing
+    function stopDrawing() {
+        drawing = false;
+        context.beginPath();
+    }
+
+    function saveSignatureData() {
+        // Convert canvas data to base64
+        const canvasData = canvas.toDataURL('image/jpeg');
+
+        // Set hidden input value with the base64 data
+        canvasDataInput.value = canvasData;
+    }
+</script>
 <script>
     $('#NO_REGISTRATION').on('change', (event) => {
         getBiodata(event.target.value).then(Biodata => {
@@ -425,71 +477,6 @@
             $("#V_09, #V_10").attr("disabled", true);
         }
     }
-</script>
-<!-- Tambahkan JavaScript untuk menghandle tanda tangan di canvas -->
-<script>
-    // Mengambil elemen canvas dan konteksnya
-    var canvas = document.getElementById("signatureCanvas");
-    var ctx = canvas.getContext("2d");
-
-    // Variabel untuk menandai apakah pengguna sedang menggambar
-    var drawing = false;
-
-    // Mengatur warna dan ketebalan garis
-    ctx.strokeStyle = "#000"; // warna hitam
-    ctx.lineWidth = 2;
-
-    // Fungsi untuk memulai gambar saat tombol mouse ditekan
-    function startDrawing(e) {
-        drawing = true;
-        draw(e);
-    }
-
-    // Fungsi untuk menggambar pada canvas
-    function draw(e) {
-        if (!drawing) return;
-
-        // Mendapatkan posisi mouse relatif terhadap elemen canvas
-        var x = e.clientX - canvas.offsetLeft;
-        var y = e.clientY - canvas.offsetTop;
-
-        // Memulai path atau melanjutkan path yang ada
-        ctx.beginPath();
-
-        // Pindahkan pena ke posisi saat ini
-        ctx.moveTo(x, y);
-
-        // Atur garis ke posisi baru
-        ctx.lineTo(x, y);
-
-        // Gambar garis
-        ctx.stroke();
-    }
-
-    // Fungsi untuk mengakhiri gambar saat tombol mouse dilepas
-    function stopDrawing() {
-        drawing = false;
-        // Setelah tanda tangan selesai, Anda dapat mengambil data gambar
-        // menggunakan canvas.toDataURL() dan menyimpannya atau mengirimkannya ke server.
-    }
-
-    // Menambahkan event listener untuk memulai dan menghentikan gambar
-    canvas.addEventListener("mousedown", startDrawing);
-    canvas.addEventListener("mousemove", draw);
-    canvas.addEventListener("mouseup", stopDrawing);
-    canvas.addEventListener("mouseout", stopDrawing);
-</script>
-<script>
-    // Contoh sederhana, gunakan library khusus untuk implementasi yang lebih canggih
-    const canvas = document.getElementById('signatureCanvas');
-    const ctx = canvas.getContext('2d');
-    const signatureDataInput = document.getElementById('signatureDataInput');
-
-    // Implementasi logika tanda tangan di sini
-    // Misalnya, menggunakan event mouse untuk menggambar pada canvas
-
-    // Setelah menggambar, simpan data tanda tangan ke input tersembunyi
-    signatureDataInput.value = canvas.toDataURL();
 </script>
 <script>
     $(function() {

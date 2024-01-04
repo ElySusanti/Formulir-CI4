@@ -10,9 +10,9 @@
             <?= session()->getFlashdata('pesan'); ?>
         </div>
     <?php endif; ?>
-    <div class="row mb-3" style="text-align:center">
+    <div class="row mb-1" style="text-align:center">
         <div class="col">
-            <h3>Data Persetujuan Anastesi</h3>
+            <h4>Data Persetujuan Anastesi</h4>
         </div>
     </div>
     <div class="row mb-1">

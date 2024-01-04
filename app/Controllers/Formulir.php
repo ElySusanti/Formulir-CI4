@@ -27,6 +27,7 @@ class Formulir extends BaseController
     {
         $biodata = $this->biodata_model->findAll();
         $data = [
+            'title' => 'Persetujuan Anastesi',
             'Biodata' => $biodata
         ];
         return view('Form/persetujuan-anastesi', $data);
@@ -35,6 +36,7 @@ class Formulir extends BaseController
     {
         $biodata = $this->biodata_model->findAll();
         $data = [
+            'title' => 'Daftar Tilik Keselamatan Pasien',
             'Biodata' => $biodata
         ];
         return view('Form/daftar-tilik-keselamatan-pasien', $data);
@@ -43,6 +45,7 @@ class Formulir extends BaseController
     {
         $biodata = $this->biodata_model->findAll();
         $data = [
+            'title' => 'Laporan Pemakaian Instrument',
             'Biodata' => $biodata
         ];
         return view('Form/laporan-pemakaian-instrument', $data);
@@ -51,6 +54,7 @@ class Formulir extends BaseController
     {
         $biodata = $this->biodata_model->findAll();
         $data = [
+            'title' => 'Pengkajian Awal Keperawatan',
             'Biodata' => $biodata
         ];
         return view('Form/pengkajian-awal', $data);
@@ -59,6 +63,7 @@ class Formulir extends BaseController
     {
         $biodata = $this->biodata_model->findAll();
         $data = [
+            'title' => 'Radiologi Online',
             'Biodata' => $biodata
         ];
         return view('Form/radiologi-online', $data);
@@ -67,6 +72,7 @@ class Formulir extends BaseController
     {
         $biodata = $this->biodata_model->findAll();
         $data = [
+            'title' => 'Lab Online',
             'Biodata' => $biodata
         ];
         return view('Form/lab-online', $data);
@@ -361,7 +367,8 @@ class Formulir extends BaseController
         }
 
         $data = [
-            'data' => $this->assessment_model->where('FORM', 'F1')->paginate(4, 'assessment_info'),
+            'title' => 'Persetujuan Anastesi',
+            'data' => $this->assessment_model->where('FORM', 'F1')->paginate(3, 'assessment_info'),
             'pager' => $this->assessment_model->pager,
             'currentPage' => $currentPage
         ];
@@ -379,7 +386,8 @@ class Formulir extends BaseController
         }
 
         $data = [
-            'data' => $this->assessment_model->where('FORM', 'F2')->paginate(4, 'assessment_info'),
+            'title' => 'Daftar Tilik Keselamatan Pasien',
+            'data' => $this->assessment_model->where('FORM', 'F2')->paginate(3, 'assessment_info'),
             'pager' => $this->assessment_model->pager,
             'currentPage' => $currentPage
         ];
@@ -397,7 +405,8 @@ class Formulir extends BaseController
         }
 
         $data = [
-            'data' => $this->assessment_model->where('FORM', 'F3')->paginate(4, 'assessment_info'),
+            'title' => 'Laporan Pemakaian Instrument',
+            'data' => $this->assessment_model->where('FORM', 'F3')->paginate(3, 'assessment_info'),
             'pager' => $this->assessment_model->pager,
             'currentPage' => $currentPage
         ];
@@ -415,7 +424,8 @@ class Formulir extends BaseController
         }
 
         $data = [
-            'data' => $this->assessment_model->where('FORM', 'F4')->paginate(4, 'assessment_info'),
+            'title' => 'Pengkajian Awal Keperawatan',
+            'data' => $this->assessment_model->where('FORM', 'F4')->paginate(3, 'assessment_info'),
             'pager' => $this->assessment_model->pager,
             'currentPage' => $currentPage
         ];
@@ -433,7 +443,8 @@ class Formulir extends BaseController
         }
 
         $data = [
-            'data' => $this->assessment_model->where('FORM', 'F5')->paginate(4, 'assessment_info'),
+            'title' => 'Radiologi Online',
+            'data' => $this->assessment_model->where('FORM', 'F5')->paginate(3, 'assessment_info'),
             'pager' => $this->assessment_model->pager,
             'currentPage' => $currentPage
         ];
@@ -451,7 +462,8 @@ class Formulir extends BaseController
         }
 
         $data = [
-            'data' => $this->assessment_model->where('FORM', 'F6')->paginate(4, 'assessment_info'),
+            'title' => 'Lab Online',
+            'data' => $this->assessment_model->where('FORM', 'F6')->paginate(3, 'assessment_info'),
             'pager' => $this->assessment_model->pager,
             'currentPage' => $currentPage
         ];

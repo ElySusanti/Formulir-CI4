@@ -31,7 +31,7 @@
         </table>
     </div>
     <div class="container">
-        <div class="row mt-5 contents-align-center">
+        <div class="row mt-5">
             <div class="col-md"></div>
             <div class="col-md-8">
                 <div class="card border-primary text-center" style="opacity:90%">
@@ -57,7 +57,7 @@
                 <div class="card border-primary" style="opacity:90%">
                     <div class="card-header bg-primary text-white">Form 1</div>
                     <div class="card-body">
-                        <h5><a href="Formulir/form1" class="list-group-item list-group-item-action">Persetujuan Anastesi</a></h5>
+                        <h5><a href="Formulir/form1" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;Persetujuan Anastesi</a></h5>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                 <div class="card border-primary" style="opacity:90%">
                     <div class="card-header bg-primary text-white">Form 2</div>
                     <div class="card-body">
-                        <h5><a href="Formulir/form2" class="list-group-item list-group-item-action">Daftar Tilik Keselamatan Pasien</a></h5>
+                        <h5><a href="Formulir/form2" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;Daftar Tilik Keselamatan Pasien</a></h5>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                 <div class="card border-primary" style="opacity:90%">
                     <div class="card-header bg-primary text-white">Form 3</div>
                     <div class="card-body">
-                        <h5><a href="Formulir/form3" class="list-group-item list-group-item-action">Laporan Pemakaian Instrument</a></h5>
+                        <h5><a href="Formulir/form3" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;Laporan Pemakaian Instrument</a></h5>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                 <div class="card border-primary" style="opacity:90%">
                     <div class="card-header bg-primary text-white">Form 4</div>
                     <div class="card-body">
-                        <h5><a href="Formulir/form4" class="list-group-item list-group-item-action">Pengkajian Awal Keperawatan dan Medis Instalasi Gawat Darurat</a></h5>
+                        <h5><a href="Formulir/form4" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;Pengkajian Awal Keperawatan</a></h5>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                 <div class="card border-primary" style="opacity:90%">
                     <div class="card-header bg-primary text-white">Form 5</div>
                     <div class="card-body">
-                        <h5><a href="Formulir/form5" class="list-group-item list-group-item-action">Radiologi Online</a></h5>
+                        <h5><a href="Formulir/form5" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;Radiologi Online</a></h5>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                 <div class="card border-primary" style="opacity:90%">
                     <div class="card-header bg-primary text-white">Form 6</div>
                     <div class="card-body">
-                        <h5><a href="Formulir/form6" class="list-group-item list-group-item-action">Lab Online</a></h5>
+                        <h5><a href="Formulir/form6" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;Lab Online</a></h5>
                     </div>
                 </div>
             </div>

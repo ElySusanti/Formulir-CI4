@@ -279,13 +279,15 @@
                                     <td style="text-align: center; width: 50%;">
                                         <label for="V_08" style="text-align: center;">Perawat IBS</label>
                                         <br>
-                                        <input id="TTD" value="<?= $detail['TTD']; ?>" disabled>
+                                        <canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                        <input type="hidden" name="TTD" id="TTD" value="<?= $detail['TTD']; ?>">
                                         <br>( <input type="text" id="V_08" name="V_08" style="width: 150px; text-align: center;" value="<?= $detail['V_08']; ?>" readonly> )
                                     </td>
                                     <td style="text-align: center; width: 50%;">
                                         <label for="V_09" style="text-align: center;">Dokter Ahli Anastesi</label>
                                         <br>
-                                        <input id="TTD_1" value="<?= $detail['TTD_1']; ?>" disabled>
+                                        <canvas id="canvas1" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                        <input type="hidden" name="TTD_1" id="TTD_1" value="<?= $detail['TTD_1']; ?>">
                                         <br>( <input type="text" id="V_09" name="V_09" style="width: 150px; text-align: center;" value="<?= $detail['V_09']; ?>" readonly> )
                                     </td>
                                 </tr>
@@ -427,7 +429,8 @@
                                     <td style="text-align: center; width: 50%;">
                                         <label for="V_11" style="text-align: center;">Perawat Sirkuler</label>
                                         <br>
-                                        <input id="TTD_2" value="<?= $detail['TTD_2']; ?>" disabled>
+                                        <canvas id="canvas2" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                        <input type="hidden" name="TTD_2" id="TTD_2" value="<?= $detail['TTD_2']; ?>">
                                         <br>( <input type="text" id="V_11" name="V_11" style="width: 150px; text-align: center;" value="<?= $detail['V_11']; ?>" readonly> )
                                     </td>
                                 </tr>
@@ -583,7 +586,8 @@
                                     <td style="text-align: center; width: 50%;">
                                         <label style="text-align: center;">Dokter Operator</label>
                                         <br>
-                                        <input id="TTD_3" value="<?= $detail['TTD_3']; ?>" disabled>
+                                        <canvas id="canvas3" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                        <input type="hidden" name="TTD_3" id="TTD_3" value="<?= $detail['TTD_3']; ?>">
                                         <br>( <input type="text" id="V_15" name="V_15" style="width: 150px; text-align: center;" value="<?= $detail['V_15']; ?>" readonly> )
                                     </td>
                                 </tr>
@@ -694,80 +698,44 @@
         }
     </script>
     <script>
-        $(function() {
-            var sig = $('#TTD').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var imageUrl = '<?= $detail['TTD'] ?>';
+        var img = new Image();
+        img.src = imageUrl;
+        img.onload = function() {
+            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
     </script>
     <script>
-        $(function() {
-            var sig = $('#TTD_1').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
+        var canvas1 = document.getElementById('canvas1');
+        var context1 = canvas1.getContext('2d');
+        var imageUrl1 = '<?= $detail['TTD_1'] ?>';
+        var img1 = new Image();
+        img1.src = imageUrl1;
+        img1.onload = function() {
+            context1.drawImage(img1, 0, 0, canvas1.width, canvas1.height);
+        };
     </script>
     <script>
-        $(function() {
-            var sig = $('#TTD_2').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
+        var canvas2 = document.getElementById('canvas2');
+        var context2 = canvas2.getContext('2d');
+        var imageUrl2 = '<?= $detail['TTD_2'] ?>';
+        var img2 = new Image();
+        img2.src = imageUrl2;
+        img2.onload = function() {
+            context2.drawImage(img2, 0, 0, canvas2.width, canvas2.height);
+        };
     </script>
     <script>
-        $(function() {
-            var sig = $('#TTD_3').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
+        var canvas3 = document.getElementById('canvas3');
+        var context3 = canvas3.getContext('2d');
+        var imageUrl3 = '<?= $detail['TTD_3'] ?>';
+        var img3 = new Image();
+        img3.src = imageUrl3;
+        img3.onload = function() {
+            context3.drawImage(img3, 0, 0, canvas3.width, canvas3.height);
+        };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

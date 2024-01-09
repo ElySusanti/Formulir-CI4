@@ -16,6 +16,7 @@
                     <td style="width: 50%; text-align: center; vertical-align: middle;">
                         <h3><b>PERSETUJUAN TINDAKAN <br>ANASTESI</b></h3>
                     </td>
+                    <!-- <a href="" class="btn btn-outline-dark scroll-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></a> -->
                     <td style="width: 50%;">
                         <div class="row mb-3">
                             <div class="col-md-4">
@@ -36,7 +37,7 @@
                                 <br><label for="ALLOANAMNESIS_CONTACT">Nama Keluarga</label>
                             </div>
                             <div class="col-md-9">
-                                : <input type="text" id="THENAME" name="THENAME" style="width: 150px;" readonly>,
+                                : <input type="text" id="THENAME" name="THENAME" style="width: 200px;" readonly>,
                                 <input type="text" id="ALLOANAMNESIS_CONTACT" name="ALLOANAMNESIS_CONTACT" style="width: 150px;" readonly>
                             </div>
                         </div>
@@ -337,10 +338,11 @@
                             <tr>
                                 <td style="text-align: center; width: 33%;">
                                     <label for="V_11" style="text-align: center;">Saksi 1</label>
-                                    <br><br>
-                                    <canvas id="canvas" width="150" height="90" style="border:1px solid #000;">
-                                        <input type="hidden" name="TTD" id="TTD">
-                                        <br><input type="text" id="V_11" name="V_11" style="width:150px; text-align: center;">
+                                    <br>
+                                    <button class="btn btn-outline-success" type="button" onclick="clearCanvas()">Clear Signature</button><br>
+                                    <canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                    <input type="hidden" name="TTD" id="TTD">
+                                    <br><input type="text" id="V_11" name="V_11" style="width:150px; text-align: center;">
                                 </td>
                                 <td style="width: 33%;"></td>
                                 <td rowspan="2" style="vertical-align: middle; width: 33%;">
@@ -349,21 +351,27 @@
                                     <br><br><label for="V_13">Jam</label>
                                     <input type="time" id="V_13" name="V_13">
                                     <br><br>
-                                    <div id="TTD_1"></div>
+                                    <button class="btn btn-outline-success" type="button" onclick="clearCanvas1()">Clear Signature</button><br>
+                                    <canvas id="canvas1" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                    <input type="hidden" name="TTD_1" id="TTD_1">
                                     <br><input type="text" id="V_14" name="V_14" style="width:150px; text-align: center;">
                                 </td>
                             </tr>
                             <tr>
                                 <td style="text-align: center;">
                                     <label for="V_15" style="text-align: center;">Saksi 2</label>
-                                    <br><br>
-                                    <div id="TTD_2"></div>
+                                    <br>
+                                    <button class="btn btn-outline-success" type="button" onclick="clearCanvas2()">Clear Signature</button><br>
+                                    <canvas id="canvas2" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                    <input type="hidden" name="TTD_2" id="TTD_2">
                                     <br><input type="text" id="V_15" name="V_15" style="width:150px; text-align: center;">
                                 </td>
                                 <td style="text-align: center;">
                                     <label for="V_16">Dokter Anastesi <br>Yang Menerangkan</label>
                                     <br>
-                                    <div id="TTD_3"></div>
+                                    <button class="btn btn-outline-success" type="button" onclick="clearCanvas3()">Clear Signature</button><br>
+                                    <canvas id="canvas3" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                    <input type="hidden" name="TTD_3" id="TTD_3">
                                     <br><input type="text" id="V_16" name="V_16" style="width:150px; text-align: center;">
                                 </td>
                             </tr>
@@ -373,34 +381,27 @@
             </tr>
         </table>
         <div class="d-grid gap-2 mt-3 mb-3">
-            <input class="btn btn-primary" type="submit" name="submit" value="Simpan" onclick="saveSignatureData()">
+            <input class="btn btn-primary" type="submit" name="submit" value="Simpan" onclick="saveSignatureData(); saveSignatureData1(); saveSignatureData2(); saveSignatureData3()">
         </div>
     </form>
 </div>
 
-<!-- JavaScript to handle signature functionality -->
 <script>
-    // Get the canvas element
     var canvas = document.getElementById('canvas');
     const canvasDataInput = document.getElementById('TTD');
     var context = canvas.getContext('2d');
-
-    // Variables to track signature drawing
     var drawing = false;
 
-    // Event listeners for mouse events
     canvas.addEventListener('mousedown', startDrawing);
     canvas.addEventListener('mousemove', draw);
     canvas.addEventListener('mouseup', stopDrawing);
     canvas.addEventListener('mouseout', stopDrawing);
 
-    // Function to start drawing
     function startDrawing(e) {
         drawing = true;
         draw(e);
     }
 
-    // Function to draw on the canvas
     function draw(e) {
         if (!drawing) return;
 
@@ -408,25 +409,157 @@
         context.lineCap = 'round';
         context.strokeStyle = '#000';
 
-        // Draw a line
         context.lineTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
         context.stroke();
         context.beginPath();
         context.moveTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
     }
 
-    // Function to stop drawing
     function stopDrawing() {
         drawing = false;
         context.beginPath();
     }
 
-    function saveSignatureData() {
-        // Convert canvas data to base64
-        const canvasData = canvas.toDataURL('image/jpeg');
+    function clearCanvas() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+    }
 
-        // Set hidden input value with the base64 data
+    function saveSignatureData() {
+        const canvasData = canvas.toDataURL('image/png');
+
         canvasDataInput.value = canvasData;
+    }
+</script>
+<script>
+    var canvas1 = document.getElementById('canvas1');
+    const canvasDataInput1 = document.getElementById('TTD_1');
+    var context1 = canvas1.getContext('2d');
+    var drawing = false;
+
+    canvas1.addEventListener('mousedown', startDrawing);
+    canvas1.addEventListener('mousemove', draw);
+    canvas1.addEventListener('mouseup', stopDrawing);
+    canvas1.addEventListener('mouseout', stopDrawing);
+
+    function startDrawing(e) {
+        drawing = true;
+        draw(e);
+    }
+
+    function draw(e) {
+        if (!drawing) return;
+
+        context1.lineWidth = 2;
+        context1.lineCap = 'round';
+        context1.strokeStyle = '#000';
+
+        context1.lineTo(e.clientX - canvas1.getBoundingClientRect().left, e.clientY - canvas1.getBoundingClientRect().top);
+        context1.stroke();
+        context1.beginPath();
+        context1.moveTo(e.clientX - canvas1.getBoundingClientRect().left, e.clientY - canvas1.getBoundingClientRect().top);
+    }
+
+    function stopDrawing() {
+        drawing = false;
+        context1.beginPath();
+    }
+
+    function clearCanvas1() {
+        context1.clearRect(0, 0, canvas1.width, canvas1.height);
+    }
+
+    function saveSignatureData1() {
+        const canvasData1 = canvas1.toDataURL('image/png');
+
+        canvasDataInput1.value = canvasData1;
+    }
+</script>
+<script>
+    var canvas2 = document.getElementById('canvas2');
+    const canvasDataInput2 = document.getElementById('TTD_2');
+    var context2 = canvas2.getContext('2d');
+    var drawing = false;
+
+    canvas2.addEventListener('mousedown', startDrawing);
+    canvas2.addEventListener('mousemove', draw);
+    canvas2.addEventListener('mouseup', stopDrawing);
+    canvas2.addEventListener('mouseout', stopDrawing);
+
+    function startDrawing(e) {
+        drawing = true;
+        draw(e);
+    }
+
+    function draw(e) {
+        if (!drawing) return;
+
+        context2.lineWidth = 2;
+        context2.lineCap = 'round';
+        context2.strokeStyle = '#000';
+
+        context2.lineTo(e.clientX - canvas2.getBoundingClientRect().left, e.clientY - canvas2.getBoundingClientRect().top);
+        context2.stroke();
+        context2.beginPath();
+        context2.moveTo(e.clientX - canvas2.getBoundingClientRect().left, e.clientY - canvas2.getBoundingClientRect().top);
+    }
+
+    function stopDrawing() {
+        drawing = false;
+        context2.beginPath();
+    }
+
+    function clearCanvas2() {
+        context2.clearRect(0, 0, canvas2.width, canvas2.height);
+    }
+
+    function saveSignatureData2() {
+        const canvasData2 = canvas2.toDataURL('image/png');
+
+        canvasDataInput2.value = canvasData2;
+    }
+</script>
+<script>
+    var canvas3 = document.getElementById('canvas3');
+    const canvasDataInput3 = document.getElementById('TTD_3');
+    var context3 = canvas3.getContext('2d');
+    var drawing = false;
+
+    canvas3.addEventListener('mousedown', startDrawing);
+    canvas3.addEventListener('mousemove', draw);
+    canvas3.addEventListener('mouseup', stopDrawing);
+    canvas3.addEventListener('mouseout', stopDrawing);
+
+    function startDrawing(e) {
+        drawing = true;
+        draw(e);
+    }
+
+    function draw(e) {
+        if (!drawing) return;
+
+        context3.lineWidth = 2;
+        context3.lineCap = 'round';
+        context3.strokeStyle = '#000';
+
+        context3.lineTo(e.clientX - canvas3.getBoundingClientRect().left, e.clientY - canvas3.getBoundingClientRect().top);
+        context3.stroke();
+        context3.beginPath();
+        context3.moveTo(e.clientX - canvas3.getBoundingClientRect().left, e.clientY - canvas3.getBoundingClientRect().top);
+    }
+
+    function stopDrawing() {
+        drawing = false;
+        context3.beginPath();
+    }
+
+    function clearCanvas3() {
+        context3.clearRect(0, 0, canvas3.width, canvas3.height);
+    }
+
+    function saveSignatureData3() {
+        const canvasData3 = canvas3.toDataURL('image/png');
+
+        canvasDataInput3.value = canvasData3;
     }
 </script>
 <script>

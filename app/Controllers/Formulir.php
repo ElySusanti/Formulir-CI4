@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Controllers;
 
 use App\Models\biodata_model;
@@ -17,7 +16,21 @@ class Formulir extends BaseController
     }
     public function index()
     {
-        return view('dashboard');
+        $totalF1 = $this->assessment_model->hitungtotalF1();
+        $totalF2 = $this->assessment_model->hitungtotalF2();
+        $totalF3 = $this->assessment_model->hitungtotalF3();
+        $totalF4 = $this->assessment_model->hitungtotalF4();
+        $totalF5 = $this->assessment_model->hitungtotalF5();
+        $totalF6 = $this->assessment_model->hitungtotalF6();
+        $data = [
+            'totalF1' => $totalF1,
+            'totalF2' => $totalF2,
+            'totalF3' => $totalF3,
+            'totalF4' => $totalF4,
+            'totalF5' => $totalF5,
+            'totalF6' => $totalF6
+        ];
+        return view('dashboard', $data);
     }
     public function input()
     {

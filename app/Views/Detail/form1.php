@@ -56,7 +56,7 @@
                                     <br><label for="ALLOANAMNESIS_CONTACT">Nama Keluarga</label>
                                 </div>
                                 <div class="col-md-9">
-                                    : <input type="text" id="THENAME" name="THENAME" style="width: 150px;" value="<?= $detail['THENAME']; ?>" readonly>,
+                                    : <input type="text" id="THENAME" name="THENAME" style="width: 200px;" value="<?= $detail['THENAME']; ?>" readonly>,
                                     <input type="text" id="ALLOANAMNESIS_CONTACT" name="ALLOANAMNESIS_CONTACT" style="width: 150px;" value="<?= $detail['ALLOANAMNESIS_CONTACT']; ?>" readonly>
                                 </div>
                             </div>
@@ -358,8 +358,9 @@
                                     <td style="text-align: center; width: 33%;">
                                         <label for="V_11" style="text-align: center;">Saksi 1</label>
                                         <br><br>
-                                        <input id="TTD" value="<?= $detail['TTD']; ?>" disabled>
-                                        <br><input type="text" id="V_11" name="V_11" width="100px" style="text-align: center;" value="<?= $detail['V_11']; ?>" readonly>
+                                        <canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                        <input type="hidden" name="TTD" id="TTD" value="<?= $detail['TTD']; ?>">
+                                        <br><input type="text" id="V_11" name="V_11" style="text-align: center; width:150px" value="<?= $detail['V_11']; ?>" readonly>
                                     </td>
                                     <td style="width: 33%;"></td>
                                     <td rowspan="2" style="vertical-align: middle; width: 33%;">
@@ -368,22 +369,25 @@
                                         <br><br><label for="V_13">Jam</label>
                                         <input type="time" id="V_13" name="V_13" value="<?= $detail['V_13']; ?>" readonly>
                                         <br><br>
-                                        <input id="TTD_1" value="<?= $detail['TTD_1']; ?>" disabled>
-                                        <br><input type="text" id="V_14" name="V_14" width="100px" style="text-align: center;" value="<?= $detail['V_14']; ?>" readonly>
+                                        <canvas id="canvas1" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                        <input type="hidden" name="TTD_1" id="TTD_1" value="<?= $detail['TTD_1']; ?>">
+                                        <br><input type="text" id="V_14" name="V_14" style="text-align: center; width:150px" value="<?= $detail['V_14']; ?>" readonly>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="text-align: center;">
                                         <label for="V_15" style="text-align: center;">Saksi 2</label>
                                         <br><br>
-                                        <input id="TTD_2" value="<?= $detail['TTD_2']; ?>" disabled>
-                                        <br><input type="text" id="V_15" name="V_15" width="100px" style="text-align: center;" value="<?= $detail['V_15']; ?>" readonly>
+                                        <canvas id="canvas2" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                        <input type="hidden" name="TTD_2" id="TTD_2" value="<?= $detail['TTD_2']; ?>">
+                                        <br><input type="text" id="V_15" name="V_15" style="text-align: center; width:150px" value="<?= $detail['V_15']; ?>" readonly>
                                     </td>
                                     <td style="text-align: center;">
                                         <label for="V_16">Dokter Anastesi <br>Yang Menerangkan</label>
                                         <br>
-                                        <input id="TTD_3" value="<?= $detail['TTD_3']; ?>" disabled>
-                                        <br><input type="text" id="V_16" name="V_16" width="100px" style="text-align: center;" value="<?= $detail['V_16']; ?>" readonly>
+                                        <canvas id="canvas3" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                        <input type="hidden" name="TTD_3" id="TTD_3" value="<?= $detail['TTD_3']; ?>">
+                                        <br><input type="text" id="V_16" name="V_16" style="text-align: center; width:150px" value="<?= $detail['V_16']; ?>" readonly>
                                     </td>
                                 </tr>
                             </table>
@@ -393,6 +397,46 @@
             </table>
         </form>
     </div>
+    <script>
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var imageUrl = '<?= $detail['TTD'] ?>';
+        var img = new Image();
+        img.src = imageUrl;
+        img.onload = function() {
+            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
+    </script>
+    <script>
+        var canvas1 = document.getElementById('canvas1');
+        var context1 = canvas1.getContext('2d');
+        var imageUrl1 = '<?= $detail['TTD_1'] ?>';
+        var img1 = new Image();
+        img1.src = imageUrl1;
+        img1.onload = function() {
+            context1.drawImage(img1, 0, 0, canvas1.width, canvas1.height);
+        };
+    </script>
+    <script>
+        var canvas2 = document.getElementById('canvas2');
+        var context2 = canvas2.getContext('2d');
+        var imageUrl2 = '<?= $detail['TTD_2'] ?>';
+        var img2 = new Image();
+        img2.src = imageUrl2;
+        img2.onload = function() {
+            context2.drawImage(img2, 0, 0, canvas2.width, canvas2.height);
+        };
+    </script>
+    <script>
+        var canvas3 = document.getElementById('canvas3');
+        var context3 = canvas3.getContext('2d');
+        var imageUrl3 = '<?= $detail['TTD_3'] ?>';
+        var img3 = new Image();
+        img3.src = imageUrl3;
+        img3.onload = function() {
+            context3.drawImage(img3, 0, 0, canvas3.width, canvas3.height);
+        };
+    </script>
     <script>
         $(function() {
             fungsi1_disabled();
@@ -421,82 +465,6 @@
                 $("#V_09, #V_10").attr("disabled", true);
             }
         }
-    </script>
-    <script>
-        $(function() {
-            var sig = $('#TTD').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
-    </script>
-    <script>
-        $(function() {
-            var sig = $('#TTD_1').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
-    </script>
-    <script>
-        $(function() {
-            var sig = $('#TTD_2').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
-    </script>
-    <script>
-        $(function() {
-            var sig = $('#TTD_3').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 

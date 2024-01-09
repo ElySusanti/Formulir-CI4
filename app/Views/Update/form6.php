@@ -600,7 +600,9 @@
                     </div>
                     <div class="row mb-1">
                         <div class="col">
-                            <div id="TTD" value="<?= $detail['TTD']; ?>"></div>
+                            <button class="btn btn-outline-success" type="button" onclick="clearCanvas()">Clear Signature</button><br>
+                            <canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas>
+                            <input type="hidden" name="TTD" id="TTD" value="<?= $detail['TTD']; ?>">
                         </div>
                     </div>
                     <div class="row">
@@ -611,28 +613,63 @@
                 </div>
             </div>
             <div class="d-grid gap-2 mt-3 mb-3">
-                <input class="btn btn-success" type="submit" name="submit" value="Update">
+                <input class="btn btn-success" type="submit" name="submit" value="Update" onclick="saveSignatureData()">
             </div>
         </form>
     </div>
     <script>
-        $(function() {
-            var sig = $('#TTD').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var imageUrl = '<?= $detail['TTD'] ?>';
+        var img = new Image();
+        img.src = imageUrl;
+        img.onload = function() {
+            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
+
+        function clearCanvas() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    </script>
+    <script>
+        var canvas = document.getElementById('canvas');
+        const canvasDataInput = document.getElementById('TTD');
+        var context = canvas.getContext('2d');
+        var drawing = false;
+
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseout', stopDrawing);
+
+        function startDrawing(e) {
+            drawing = true;
+            draw(e);
+        }
+
+        function draw(e) {
+            if (!drawing) return;
+
+            context.lineWidth = 2;
+            context.lineCap = 'round';
+            context.strokeStyle = '#000';
+
+            context.lineTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
+            context.stroke();
+            context.beginPath();
+            context.moveTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
+        }
+
+        function stopDrawing() {
+            drawing = false;
+            context.beginPath();
+        }
+
+        function saveSignatureData() {
+            const canvasData = canvas.toDataURL('image/png');
+
+            canvasDataInput.value = canvasData;
+        }
     </script>
 </body>
 

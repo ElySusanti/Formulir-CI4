@@ -60,16 +60,28 @@ class assessment_model extends Model
     {
         return $this->table('assessment_info')->like('THENAME', $keyword);
     }
-    // public function getDataById($id)
-    // {
-    //     return $this->find($id);
-    // }
-    // public function getJoinedData($value = 'F1')
-    // {
-    //     $builder = $this->db->table('assessment_info');
-    //     $builder->join('biodata', 'biodata.NO_REGISTRATION = assessment_info.NO_REGISTRATION', 'inner');
-    //     $query = $builder->get();
-
-    //     return $query->getResult($value);
-    // }
+    public function hitungtotalF1()
+    {
+        return $this->where('FORM', 'F1')->countAllResults();
+    }
+    public function hitungtotalF2()
+    {
+        return $this->where('FORM', 'F2')->countAllResults();
+    }
+    public function hitungtotalF3()
+    {
+        return $this->where('FORM', 'F3')->countAllResults();
+    }
+    public function hitungtotalF4()
+    {
+        return $this->where('FORM', 'F4')->countAllResults();
+    }
+    public function hitungtotalF5()
+    {
+        return $this->where('FORM', 'F5')->countAllResults();
+    }
+    public function hitungtotalF6()
+    {
+        return $this->where('FORM', 'F6')->countAllResults();
+    }
 }

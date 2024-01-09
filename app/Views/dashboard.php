@@ -55,15 +55,20 @@
         <div class="row mb-3">
             <div class="col-md-4">
                 <div class="card border-primary" style="opacity:90%">
-                    <div class="card-header bg-primary text-white">Form 1</div>
+                    <div class="card-header bg-primary text-white">
+                        Jumlah : <?php echo $totalF1; ?>
+                    </div>
                     <div class="card-body">
                         <h5><a href="Formulir/form1" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;Persetujuan Anastesi</a></h5>
+
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card border-primary" style="opacity:90%">
-                    <div class="card-header bg-primary text-white">Form 2</div>
+                    <div class="card-header bg-primary text-white">
+                        Jumlah : <?php echo $totalF2; ?>
+                    </div>
                     <div class="card-body">
                         <h5><a href="Formulir/form2" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;Daftar Tilik Keselamatan Pasien</a></h5>
                     </div>
@@ -71,7 +76,9 @@
             </div>
             <div class="col-md-4">
                 <div class="card border-primary" style="opacity:90%">
-                    <div class="card-header bg-primary text-white">Form 3</div>
+                    <div class="card-header bg-primary text-white">
+                        Jumlah : <?php echo $totalF3; ?>
+                    </div>
                     <div class="card-body">
                         <h5><a href="Formulir/form3" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;Laporan Pemakaian Instrument</a></h5>
                     </div>
@@ -81,7 +88,9 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card border-primary" style="opacity:90%">
-                    <div class="card-header bg-primary text-white">Form 4</div>
+                    <div class="card-header bg-primary text-white">
+                        Jumlah : <?php echo $totalF4; ?>
+                    </div>
                     <div class="card-body">
                         <h5><a href="Formulir/form4" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;Pengkajian Awal Keperawatan</a></h5>
                     </div>
@@ -89,7 +98,9 @@
             </div>
             <div class="col-md-4">
                 <div class="card border-primary" style="opacity:90%">
-                    <div class="card-header bg-primary text-white">Form 5</div>
+                    <div class="card-header bg-primary text-white">
+                        Jumlah : <?php echo $totalF5; ?>
+                    </div>
                     <div class="card-body">
                         <h5><a href="Formulir/form5" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;Radiologi Online</a></h5>
                     </div>
@@ -97,7 +108,9 @@
             </div>
             <div class="col-md-4">
                 <div class="card border-primary" style="opacity:90%">
-                    <div class="card-header bg-primary text-white">Form 6</div>
+                    <div class="card-header bg-primary text-white">
+                        Jumlah : <?php echo $totalF6; ?>
+                    </div>
                     <div class="card-body">
                         <h5><a href="Formulir/form6" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;Lab Online</a></h5>
                     </div>

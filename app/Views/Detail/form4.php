@@ -57,7 +57,7 @@
                                 <div class="col-md-4">
                                     <label for="NO_REGISTRATION">No. MR</label>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md">
                                     : <input type="text" id="NO_REGISTRATION" name="NO_REGISTRATION" style="width: 150px;" value="<?= $detail['NO_REGISTRATION']; ?>" readonly>
                                 </div>
                             </div>
@@ -65,15 +65,15 @@
                                 <div class="col-md-4">
                                     <label for="THENAME">Nama Lengkap</label>
                                 </div>
-                                <div class="col-md-6">
-                                    : <input type="text" id="THENAME" name="THENAME" style="width: 150px;" value="<?= $detail['THENAME']; ?>" readonly>
+                                <div class="col-md">
+                                    : <input type="text" id="THENAME" name="THENAME" style="width: 200px;" value="<?= $detail['THENAME']; ?>" readonly>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-4">
                                     <label for="DATE_OF_BIRTH">Tanggal Lahir</label>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md">
                                     : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 150px;" value="<?= $detail['DATE_OF_BIRTH']; ?>" readonly>
                                 </div>
                             </div>
@@ -234,23 +234,23 @@
                             <td rowspan="2">Tanda-tanda Vital</td>
                             <td colspan="3" style="height: 60px;">
                                 <label for="TENSION_UPPER">TD: </label>
-                                <input type="number" id="TENSION_UPPER" name="TENSION_UPPER" style="width: 50px;" value="<?= $detail['TENSION_UPPER']; ?>" readonly> /
-                                <input type="number" id="TENSION_BELOW" name="TENSION_BELOW" style="width: 50px;" value="<?= $detail['TENSION_BELOW']; ?>" readonly> mmHg &nbsp;
+                                <input type="text" id="TENSION_UPPER" name="TENSION_UPPER" style="width: 50px;" value="<?= $detail['TENSION_UPPER']; ?>" readonly> /
+                                <input type="text" id="TENSION_BELOW" name="TENSION_BELOW" style="width: 50px;" value="<?= $detail['TENSION_BELOW']; ?>" readonly> mmHg &nbsp;
                                 <label for="NADI">HR: </label>
-                                <input type="number" id="NADI" name="NADI" style="width: 50px;" value="<?= $detail['NADI']; ?>" readonly> x/Mnt &nbsp;
+                                <input type="text" id="NADI" name="NADI" style="width: 50px;" value="<?= $detail['NADI']; ?>" readonly> x/Mnt &nbsp;
                                 <label for="NAFAS">RR: </label>
-                                <input type="number" id="NAFAS" name="NAFAS" style="width: 50px;" value="<?= $detail['NAFAS']; ?>" readonly> x/mnt
+                                <input type="text" id="NAFAS" name="NAFAS" style="width: 50px;" value="<?= $detail['NAFAS']; ?>" readonly> x/mnt
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3" style="vertical-align: middle;">
                                 <label for="SATURASI">SPO2: </label>
-                                <input type="number" id="SATURASI" name="SATURASI" style="width: 50px;" value="<?= $detail['SATURASI']; ?>" readonly> % &nbsp;
+                                <input type="text" id="SATURASI" name="SATURASI" style="width: 50px;" value="<?= $detail['SATURASI']; ?>" readonly> % &nbsp;
                                 <label for="TEMPERATURE">Suhu: </label>
-                                <input type="number" id="TEMPERATURE" name="TEMPERATURE" style="width: 50px;" value="<?= $detail['TEMPERATURE']; ?>" readonly> &nbsp;
+                                <input type="text" id="TEMPERATURE" name="TEMPERATURE" style="width: 50px;" value="<?= $detail['TEMPERATURE']; ?>" readonly> &nbsp;
                                 <label for="WEIGHT">BB/TB/PB: </label>
-                                <input type="number" id="WEIGHT" name="WEIGHT" style="width: 50px;" value="<?= $detail['WEIGHT']; ?>" readonly>
-                                <input type="number" id="HEIGHT" name="HEIGHT" style="width: 50px;" value="<?= $detail['HEIGHT']; ?>" readonly>
+                                <input type="text" id="WEIGHT" name="WEIGHT" style="width: 50px;" value="<?= $detail['WEIGHT']; ?>" readonly>
+                                <input type="text" id="HEIGHT" name="HEIGHT" style="width: 50px;" value="<?= $detail['HEIGHT']; ?>" readonly>
                             </td>
                             <td colspan="4" rowspan="7" style="text-align: center;">
                                 <b>Skala Nyeri Untuk Anak (Skala Flacc):</b><br>
@@ -1068,7 +1068,8 @@
                                             <td style="text-align: center; width: 50%;">
                                                 <label for="V_26" style="text-align: center;">Perawat Pengkaji (PPJA)</label>
                                                 <br>
-                                                <input id="TTD" value="<?= $detail['TTD']; ?>" disabled>
+                                                <canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                                <input type="hidden" name="TTD" id="TTD" value="<?= $detail['TTD']; ?>">
                                                 <br>( <input type="text" id="V_26" name="V_26" style="width: 150px; text-align: center;" value="<?= $detail['V_26']; ?>" readonly> )
                                             </td>
                                         </tr>
@@ -1129,23 +1130,14 @@
         })
     </script>
     <script>
-        $(function() {
-            var sig = $('#TTD').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var imageUrl = '<?= $detail['TTD'] ?>';
+        var img = new Image();
+        img.src = imageUrl;
+        img.onload = function() {
+            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
     </script>
     <script>
         function myFunction() {

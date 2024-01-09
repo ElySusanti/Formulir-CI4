@@ -23,7 +23,7 @@
                             <div class="col-md-4">
                                 <label for="NO_REGISTRATION">No. MR</label>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md">
                                 : <select name="NO_REGISTRATION" id="NO_REGISTRATION" style="width: 150px; height: 30PX;" required>
                                     <option value="" selected disabled>--Pilih Nomor Rekam Medis--</option>
                                     <?php foreach ($Biodata as $value) : ?>
@@ -36,15 +36,15 @@
                             <div class="col-md-4">
                                 <label for="THENAME">Nama Lengkap</label>
                             </div>
-                            <div class="col-md-6">
-                                : <input type="text" id="THENAME" name="THENAME" style="width: 150px;" readonly>
+                            <div class="col-md">
+                                : <input type="text" id="THENAME" name="THENAME" style="width: 200px;" readonly>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-4">
                                 <label for="DATE_OF_BIRTH">Tanggal Lahir</label>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md">
                                 : <input type="date" id="DATE_OF_BIRTH" name="DATE_OF_BIRTH" style="width: 150px;" readonly>
                             </div>
                         </div>
@@ -147,7 +147,7 @@
                             <div class="row mb-3">
                                 <div class="col">
                                     <span class="awal"></span>
-                                    <input type="range" name="T_05" id="T_05" min="0" max="10" step="1" style="width: 95%;">
+                                    <input type="range" name="T_05" id="T_05" min="0" max="10" step="1" style="width: 95%;" value="0">
                                     <span class="akhir"></span>
                                 </div>
                             </div>
@@ -205,23 +205,23 @@
                         <td rowspan="2">Tanda-tanda Vital</td>
                         <td colspan="3" style="height: 60px;">
                             <label for="TENSION_UPPER">TD: </label>
-                            <input type="number" id="TENSION_UPPER" name="TENSION_UPPER" style="width: 50px;"> /
-                            <input type="number" id="TENSION_BELOW" name="TENSION_BELOW" style="width: 50px;"> mmHg &nbsp;
+                            <input type="text" id="TENSION_UPPER" name="TENSION_UPPER" style="width: 50px;"> /
+                            <input type="text" id="TENSION_BELOW" name="TENSION_BELOW" style="width: 50px;"> mmHg &nbsp;
                             <label for="NADI">HR: </label>
-                            <input type="number" id="NADI" name="NADI" style="width: 50px;"> x/Mnt &nbsp;
+                            <input type="text" id="NADI" name="NADI" style="width: 50px;"> x/Mnt &nbsp;
                             <label for="NAFAS">RR: </label>
-                            <input type="number" id="NAFAS" name="NAFAS" style="width: 50px;"> x/mnt
+                            <input type="text" id="NAFAS" name="NAFAS" style="width: 50px;"> x/mnt
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3" style="vertical-align: middle;">
                             <label for="SATURASI">SPO2: </label>
-                            <input type="number" id="SATURASI" name="SATURASI" style="width: 50px;"> % &nbsp;
+                            <input type="text" id="SATURASI" name="SATURASI" style="width: 50px;"> % &nbsp;
                             <label for="TEMPERATURE">Suhu: </label>
-                            <input type="number" id="TEMPERATURE" name="TEMPERATURE" style="width: 50px;"> &nbsp;
+                            <input type="text" id="TEMPERATURE" name="TEMPERATURE" style="width: 50px;"> &nbsp;
                             <label for="WEIGHT">BB/TB/PB: </label>
-                            <input type="number" id="WEIGHT" name="WEIGHT" style="width: 50px;">
-                            <input type="number" id="HEIGHT" name="HEIGHT" style="width: 50px;">
+                            <input type="text" id="WEIGHT" name="WEIGHT" style="width: 50px;">
+                            <input type="text" id="HEIGHT" name="HEIGHT" style="width: 50px;">
                         </td>
                         <td colspan="4" rowspan="7" style="text-align: center;">
                             <b>Skala Nyeri Untuk Anak (Skala Flacc):</b><br>
@@ -1058,8 +1058,9 @@
                                     <tr>
                                         <td style="text-align: center; width: 50%;">
                                             <label for="V_26" style="text-align: center;">Perawat Pengkaji (PPJA)</label>
-                                            <br>
-                                            <div id="TTD"></div>
+                                            <br><button class="btn btn-outline-success" type="button" onclick="clearCanvas()">Clear Signature</button><br>
+                                            <canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                            <input type="hidden" name="TTD" id="TTD">
                                             <br>( <input type="text" id="V_26" name="V_26" style="width: 150px; text-align: center;"> )
                                         </td>
                                     </tr>
@@ -1107,7 +1108,7 @@
             </table>
         </div>
         <div class="d-grid gap-2 mt-3 mb-3">
-            <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
+            <input class="btn btn-primary" type="submit" name="submit" value="Simpan" onclick="saveSignatureData()">
         </div>
     </form>
 </div>
@@ -1138,23 +1139,48 @@
     })
 </script>
 <script>
-    $(function() {
-        var sig = $('#TTD').signature();
-        $('#disable').click(function() {
-            var disable = $(this).text() === 'Disable';
-            $(this).text(disable ? 'Enable' : 'Disable');
-            sig.signature(disable ? 'disable' : 'enable');
-        });
-        $('#clear').click(function() {
-            sig.signature('clear');
-        });
-        $('#json').click(function() {
-            alert(sig.signature('toJSON'));
-        });
-        $('#svg').click(function() {
-            alert(sig.signature('toSVG'));
-        });
-    });
+    var canvas = document.getElementById('canvas');
+    const canvasDataInput = document.getElementById('TTD');
+    var context = canvas.getContext('2d');
+    var drawing = false;
+
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', stopDrawing);
+    canvas.addEventListener('mouseout', stopDrawing);
+
+    function startDrawing(e) {
+        drawing = true;
+        draw(e);
+    }
+
+    function draw(e) {
+        if (!drawing) return;
+
+        context.lineWidth = 2;
+        context.lineCap = 'round';
+        context.strokeStyle = '#000';
+
+        context.lineTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
+        context.stroke();
+        context.beginPath();
+        context.moveTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
+    }
+
+    function stopDrawing() {
+        drawing = false;
+        context.beginPath();
+    }
+
+    function clearCanvas() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function saveSignatureData() {
+        const canvasData = canvas.toDataURL('image/png');
+
+        canvasDataInput.value = canvasData;
+    }
 </script>
 <script>
     function myFunction() {

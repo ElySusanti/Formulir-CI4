@@ -435,7 +435,8 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col">
-                            &nbsp;&nbsp;<input id="TTD" value="<?= $detail['TTD']; ?>" disabled><br>
+                            &nbsp;&nbsp;<canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas>
+                            <input type="hidden" name="TTD" id="TTD" value="<?= $detail['TTD']; ?>"><br>
                             ( <input type="text" name="employee_id_1" id="employee_id_1" style="width: 150px;" value="" readonly> )
                         </div>
                     </div>
@@ -444,23 +445,14 @@
         </form>
     </div>
     <script>
-        $(function() {
-            var sig = $('#TTD').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var imageUrl = '<?= $detail['TTD'] ?>';
+        var img = new Image();
+        img.src = imageUrl;
+        img.onload = function() {
+            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
     </script>
 </body>
 

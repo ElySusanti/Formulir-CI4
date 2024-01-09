@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-primary text-white sticky-top">
+<nav class="navbar navbar-expand-lg bg-primary text-white">
     <div class="container-fluid">
         <a class="navbar-brand text-white" href="/" style="text-align:center; font-family:'Courier New'">
             <i class="bi bi-house" style="font-size:20px"></i><br>

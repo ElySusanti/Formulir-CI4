@@ -383,14 +383,18 @@
                                     <td style="text-align: center; width: 50%;">
                                         <label for="V_86" style="text-align: center;">Perawat Instrumen</label>
                                         <br>
-                                        <div id="TTD" value="<?= $detail['TTD']; ?>"></div>
+                                        <button class="btn btn-outline-success" type="button" onclick="clearCanvas()">Clear Signature</button><br>
+                                        <canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                        <input type="hidden" name="TTD" id="TTD" value="<?= $detail['TTD']; ?>">
                                         <br>( <input type="text" id="V_86" name="V_86" style="width: 150px; text-align: center;" value="<?= $detail['V_86']; ?>"> )
                                         <br>Tanda tangan dan nama lengkap
                                     </td>
                                     <td style="text-align: center; width: 50%;">
                                         <label for="V_87" style="text-align: center;">Perawat Sirkuler</label>
                                         <br>
-                                        <div id="TTD_1" value="<?= $detail['TTD_1']; ?>"></div>
+                                        <button class="btn btn-outline-success" type="button" onclick="clearCanvas1()">Clear Signature</button><br>
+                                        <canvas id="canvas1" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                        <input type="hidden" name="TTD_1" id="TTD_1" value="<?= $detail['TTD_1']; ?>">
                                         <br>( <input type="text" id="V_87" name="V_87" style="width: 150px; text-align: center;" value="<?= $detail['V_87']; ?>"> )
                                         <br>Tanda tangan dan nama lengkap
                                     </td>
@@ -401,47 +405,117 @@
                 </tr>
             </table>
             <div class="d-grid gap-2 mt-3 mb-3">
-                <input class="btn btn-success" type="submit" name="submit" value="Update">
+                <input class="btn btn-success" type="submit" name="submit" value="Update" onclick="saveSignatureData(); saveSignatureData1()">
             </div>
         </form>
     </div>
     <script>
-        $(function() {
-            var sig = $('#TTD').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var imageUrl = '<?= $detail['TTD'] ?>';
+        var img = new Image();
+        img.src = imageUrl;
+        img.onload = function() {
+            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
+
+        function clearCanvas() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        }
     </script>
     <script>
-        $(function() {
-            var sig = $('#TTD_1').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
+        var canvas1 = document.getElementById('canvas1');
+        var context1 = canvas1.getContext('2d');
+        var imageUrl1 = '<?= $detail['TTD_1'] ?>';
+        var img1 = new Image();
+        img1.src = imageUrl1;
+        img1.onload = function() {
+            context1.drawImage(img1, 0, 0, canvas1.width, canvas1.height);
+        };
+
+        function clearCanvas1() {
+            context1.clearRect(0, 0, canvas1.width, canvas1.height);
+        }
+    </script>
+    <script>
+        var canvas = document.getElementById('canvas');
+        const canvasDataInput = document.getElementById('TTD');
+        var context = canvas.getContext('2d');
+        var drawing = false;
+
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseout', stopDrawing);
+
+        function startDrawing(e) {
+            drawing = true;
+            draw(e);
+        }
+
+        function draw(e) {
+            if (!drawing) return;
+
+            context.lineWidth = 2;
+            context.lineCap = 'round';
+            context.strokeStyle = '#000';
+
+            context.lineTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
+            context.stroke();
+            context.beginPath();
+            context.moveTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
+        }
+
+        function stopDrawing() {
+            drawing = false;
+            context.beginPath();
+        }
+
+        function saveSignatureData() {
+            const canvasData = canvas.toDataURL('image/png');
+
+            canvasDataInput.value = canvasData;
+        }
+    </script>
+    <script>
+        var canvas1 = document.getElementById('canvas1');
+        const canvasDataInput1 = document.getElementById('TTD_1');
+        var context1 = canvas1.getContext('2d');
+        var drawing = false;
+
+        canvas1.addEventListener('mousedown', startDrawing);
+        canvas1.addEventListener('mousemove', draw);
+        canvas1.addEventListener('mouseup', stopDrawing);
+        canvas1.addEventListener('mouseout', stopDrawing);
+
+        function startDrawing(e) {
+            drawing = true;
+            draw(e);
+        }
+
+        function draw(e) {
+            if (!drawing) return;
+
+            context1.lineWidth = 2;
+            context1.lineCap = 'round';
+            context1.strokeStyle = '#000';
+
+            context1.lineTo(e.clientX - canvas1.getBoundingClientRect().left, e.clientY - canvas1.getBoundingClientRect().top);
+            context1.stroke();
+            context1.beginPath();
+            context1.moveTo(e.clientX - canvas1.getBoundingClientRect().left, e.clientY - canvas1.getBoundingClientRect().top);
+        }
+
+        function stopDrawing() {
+            drawing = false;
+            context1.beginPath();
+        }
+
+        function saveSignatureData1() {
+            const canvasData1 = canvas1.toDataURL('image/png');
+
+            canvasDataInput1.value = canvasData1;
+        }
     </script>
 </body>
 

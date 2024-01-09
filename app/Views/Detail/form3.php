@@ -382,14 +382,16 @@
                                     <td style="text-align: center; width: 50%;">
                                         <label for="V_86" style="text-align: center;">Perawat Instrumen</label>
                                         <br>
-                                        <input id="TTD" value="<?= $detail['TTD']; ?>" disabled>
+                                        <canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                        <input type="hidden" name="TTD" id="TTD" value="<?= $detail['TTD']; ?>">
                                         <br>( <input type="text" id="V_86" name="V_86" style="width: 150px; text-align: center;" value="<?= $detail['V_86']; ?>" readonly> )
                                         <br>Tanda tangan dan nama lengkap
                                     </td>
                                     <td style="text-align: center; width: 50%;">
                                         <label for="V_87" style="text-align: center;">Perawat Sirkuler</label>
                                         <br>
-                                        <input id="TTD_1" value="<?= $detail['TTD_1']; ?>" disabled>
+                                        <canvas id="canvas1" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                        <input type="hidden" name="TTD_1" id="TTD_1" value="<?= $detail['TTD_1']; ?>">
                                         <br>( <input type="text" id="V_87" name="V_87" style="width: 150px; text-align: center;" value="<?= $detail['V_87']; ?>" readonly> )
                                         <br>Tanda tangan dan nama lengkap
                                     </td>
@@ -402,42 +404,24 @@
         </form>
     </div>
     <script>
-        $(function() {
-            var sig = $('#TTD').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var imageUrl = '<?= $detail['TTD'] ?>';
+        var img = new Image();
+        img.src = imageUrl;
+        img.onload = function() {
+            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
     </script>
     <script>
-        $(function() {
-            var sig = $('#TTD_1').signature();
-            $('#disable').click(function() {
-                var disable = $(this).text() === 'Disable';
-                $(this).text(disable ? 'Enable' : 'Disable');
-                sig.signature(disable ? 'disable' : 'enable');
-            });
-            $('#clear').click(function() {
-                sig.signature('clear');
-            });
-            $('#json').click(function() {
-                alert(sig.signature('toJSON'));
-            });
-            $('#svg').click(function() {
-                alert(sig.signature('toSVG'));
-            });
-        });
+        var canvas1 = document.getElementById('canvas1');
+        var context1 = canvas1.getContext('2d');
+        var imageUrl1 = '<?= $detail['TTD_1'] ?>';
+        var img1 = new Image();
+        img1.src = imageUrl1;
+        img1.onload = function() {
+            context1.drawImage(img1, 0, 0, canvas1.width, canvas1.height);
+        };
     </script>
 </body>
 

@@ -21,7 +21,7 @@
         <form action="" autocomplete="off">
             <table class="table table-bordered border-black mb-0">
                 <tr>
-                    <td style="text-align:center; width:17%;">
+                    <td style="text-align:center; width:20%;">
                         <img src="\img\logo_PKU.png" alt="" style="width:90px"><br>
                         <p>SEHAT AMANAH<br>Tanggungjawab-Islami</p>
                     </td>
@@ -49,7 +49,7 @@
                                 <label for="V_01" class="form-label">DIAGNOSA MASUK</label>
                             </div>
                             <div class="col-auto">:</div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <input class="form-control" type="text" id="V_01" name="V_01">
                             </div>
                             <div class="col-md-2">
@@ -59,7 +59,7 @@
                             <div class="col-md-2">
                                 <input class="form-control" type="date" id="V_02" name="V_02">
                             </div>
-                            <div class="col">
+                            <div class="col-md-2">
                                 <input class="form-control" type="time" id="V_03" name="V_03">
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                                 <label for="V_04" class="form-label">INDIKASI RAWAT INAP</label>
                             </div>
                             <div class="col-auto">:</div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <input class="form-control" type="text" id="V_04" name="V_04">
                             </div>
                             <div class="col-md-2">
@@ -78,7 +78,7 @@
                             <div class="col-md-2">
                                 <input class="form-control" type="date" id="V_05" name="V_05">
                             </div>
-                            <div class="col">
+                            <div class="col-md-2">
                                 <input class="form-control" type="time" id="V_06" name="V_06">
                             </div>
                         </div>

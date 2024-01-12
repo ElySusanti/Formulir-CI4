@@ -22,7 +22,7 @@
             <h4 style="text-align:right; ">RM 1.2c</h4>
             <table class="table table-bordered border-black">
                 <tr style="vertical-align:middle; margin:0px">
-                    <td style="text-align:center; width:15%;">
+                    <td style="text-align:center; width:20%">
                         <img src="\img\logo_PKU.png" alt="" style="width:90px"><br>
                         <p>SEHAT AMANAH<br>Tanggungjawab-Islami</p>
                     </td>
@@ -34,7 +34,7 @@
                         </h5>
                     </td>
                     <td style="width:40%">
-                        <div class="container border border-black" style="height:150px">
+                        <div class="container" style="height:150px; border: 1px solid black; border-radius:5px">
                             <h5 style="text-align:center; margin-top:60px">Label Identitas Pasien</h5>
                         </div>
                     </td>

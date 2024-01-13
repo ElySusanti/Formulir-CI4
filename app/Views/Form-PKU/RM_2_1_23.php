@@ -391,6 +391,186 @@
                         &nbsp;&nbsp;&nbsp; menghalangi kegiatan anda (mis. Mengunjungi teman dll)
                     </td>
                     <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_029" id="T_029_0" value="0">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_029" id="T_029_1" value="1">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_029" id="T_029_2" value="2">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_029" id="T_029_3" value="3">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_029" id="T_029_4" value="4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        b. Berapa seringkah bulan lalu anda merasa gugup?
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_030" id="T_030_0" value="0">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_030" id="T_030_1" value="1">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_030" id="T_030_2" value="2">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_030" id="T_030_3" value="3">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_030" id="T_030_4" value="4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        c. Berapa seringkah bulan lalu anda merasa tenang dan damai?
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_031" id="T_031_0" value="0">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_031" id="T_031_1" value="1">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_031" id="T_031_2" value="2">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_031" id="T_031_3" value="3">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_031" id="T_031_4" value="4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        d. Berapa seringkah bulan lalu anda merasa sedih sekali?
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_032" id="T_032_0" value="0">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_032" id="T_032_1" value="1">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_032" id="T_032_2" value="2">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_032" id="T_032_3" value="3">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_032" id="T_032_4" value="4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        e. Berapa seringkah bulan lalu anda merasa bahagia?
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_033" id="T_033_0" value="0">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_033" id="T_033_1" value="1">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_033" id="T_033_2" value="2">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_033" id="T_033_3" value="3">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_033" id="T_033_4" value="4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        f. Berapa seringkah bulan lalu anda terasa begitu sedih sampai merasa tak ada sesuatupun yang mungkin menghiburnya ?
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_034" id="T_034_0" value="0">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_034" id="T_034_1" value="1">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_034" id="T_034_2" value="2">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_034" id="T_034_3" value="3">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_034" id="T_034_4" value="4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        g. Selama bulan lalu, berapa seringnya perasaan depresi anda menganggu kerja anda sehari-hari
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_035" id="T_035_0" value="0">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_035" id="T_035_1" value="1">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_035" id="T_035_2" value="2">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_035" id="T_035_3" value="3">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_035" id="T_035_4" value="4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        h. Selama bulan lalu, berapa sering anda merasa tak ada lagi sesuatu yang anda harapkan lagi
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_036" id="T_036_0" value="0">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_036" id="T_036_1" value="1">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_036" id="T_036_2" value="2">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_036" id="T_036_3" value="3">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_036" id="T_036_4" value="4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        i. Selama bulan lalu, berapa sering anda merasa tidak diperhatikan keluarga ?
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_037" id="T_037_0" value="0">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_037" id="T_037_1" value="1">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_037" id="T_037_2" value="2">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_037" id="T_037_3" value="3">
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
+                        <input class="form-check-input" type="radio" name="T_037" id="T_037_4" value="4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        j. Berapa sering selama bulan lalu anda merasa ingin menangis saja ?
+                    </td>
+                    <td style="text-align:center; vertical-align:middle">
                         <input class="form-check-input" type="radio" name="T_038" id="T_038_0" value="0">
                     </td>
                     <td style="text-align:center; vertical-align:middle">
@@ -408,7 +588,7 @@
                 </tr>
                 <tr>
                     <td>
-                        b. Berapa seringkah bulan lalu anda merasa gugup?
+                        k. Selama bulan lalu, berapa sering anda merasa bahwa hidup ini sudah tak ada gunanya lagi ?
                     </td>
                     <td style="text-align:center; vertical-align:middle">
                         <input class="form-check-input" type="radio" name="T_039" id="T_039_0" value="0">
@@ -424,186 +604,6 @@
                     </td>
                     <td style="text-align:center; vertical-align:middle">
                         <input class="form-check-input" type="radio" name="T_039" id="T_039_4" value="4">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        c. Berapa seringkah bulan lalu anda merasa tenang dan damai?
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_040" id="T_040_0" value="0">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_040" id="T_040_1" value="1">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_040" id="T_040_2" value="2">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_040" id="T_040_3" value="3">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_040" id="T_040_4" value="4">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        d. Berapa seringkah bulan lalu anda merasa sedih sekali?
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_041" id="T_041_0" value="0">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_041" id="T_041_1" value="1">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_041" id="T_041_2" value="2">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_041" id="T_041_3" value="3">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_041" id="T_041_4" value="4">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        e. Berapa seringkah bulan lalu anda merasa bahagia?
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_042" id="T_042_0" value="0">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_042" id="T_042_1" value="1">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_042" id="T_042_2" value="2">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_042" id="T_042_3" value="3">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_042" id="T_042_4" value="4">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        f. Berapa seringkah bulan lalu anda terasa begitu sedih sampai merasa tak ada sesuatupun yang mungkin menghiburnya ?
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_043" id="T_043_0" value="0">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_043" id="T_043_1" value="1">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_043" id="T_043_2" value="2">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_043" id="T_043_3" value="3">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_043" id="T_043_4" value="4">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        g. Selama bulan lalu, berapa seringnya perasaan depresi anda menganggu kerja anda sehari-hari
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_044" id="T_044_0" value="0">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_044" id="T_044_1" value="1">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_044" id="T_044_2" value="2">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_044" id="T_044_3" value="3">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_044" id="T_044_4" value="4">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        h. Selama bulan lalu, berapa sering anda merasa tak ada lagi sesuatu yang anda harapkan lagi
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_045" id="T_045_0" value="0">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_045" id="T_045_1" value="1">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_045" id="T_045_2" value="2">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_045" id="T_045_3" value="3">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_045" id="T_045_4" value="4">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        i. Selama bulan lalu, berapa sering anda merasa tidak diperhatikan keluarga ?
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_046" id="T_046_0" value="0">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_046" id="T_046_1" value="1">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_046" id="T_046_2" value="2">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_046" id="T_046_3" value="3">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_046" id="T_046_4" value="4">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        j. Berapa sering selama bulan lalu anda merasa ingin menangis saja ?
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_047" id="T_047_0" value="0">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_047" id="T_047_1" value="1">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_047" id="T_047_2" value="2">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_047" id="T_047_3" value="3">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_047" id="T_047_4" value="4">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        k. Selama bulan lalu, berapa sering anda merasa bahwa hidup ini sudah tak ada gunanya lagi ?
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_048" id="T_048_0" value="0">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_048" id="T_048_1" value="1">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_048" id="T_048_2" value="2">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_048" id="T_048_3" value="3">
-                    </td>
-                    <td style="text-align:center; vertical-align:middle">
-                        <input class="form-check-input" type="radio" name="T_048" id="T_048_4" value="4">
                     </td>
                 </tr>
             </table>
@@ -637,20 +637,20 @@
                 <tr>
                     <td>1</td>
                     <td style="text-align:left;">Tanggal berapa hari ini?</td>
-                    <td><input class="form-check-input" type="radio" name="T_049" id="T_049_0" value="0"></td>
-                    <td><input class="form-check-input" type="radio" name="T_049" id="T_049_1" value="1"></td>
+                    <td><input class="form-check-input" type="radio" name="T_040" id="T_040_0" value="0"></td>
+                    <td><input class="form-check-input" type="radio" name="T_040" id="T_040_1" value="1"></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td style="text-align:left;">Hari apa sekarang ini?</td>
-                    <td><input class="form-check-input" type="radio" name="T_050" id="T_050_0" value="0"></td>
-                    <td><input class="form-check-input" type="radio" name="T_050" id="T_050_1" value="1"></td>
+                    <td><input class="form-check-input" type="radio" name="T_041" id="T_041_0" value="0"></td>
+                    <td><input class="form-check-input" type="radio" name="T_041" id="T_041_1" value="1"></td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td style="text-align:left;">Apa nama tempat ini?</td>
-                    <td><input class="form-check-input" type="radio" name="T_051" id="T_051_0" value="0"></td>
-                    <td><input class="form-check-input" type="radio" name="T_051" id="T_051_1" value="1"></td>
+                    <td><input class="form-check-input" type="radio" name="T_042" id="T_042_0" value="0"></td>
+                    <td><input class="form-check-input" type="radio" name="T_042" id="T_042_1" value="1"></td>
                 </tr>
                 <tr>
                     <td>4</td>
@@ -659,54 +659,54 @@
                         b. Dimana alamat anda (tanyakan bila tidak memiliki telp)?
                     </td>
                     <td>
-                        <input class="form-check-input" type="radio" name="T_052" id="T_052_0" value="0"><br>
-                        <input class="form-check-input" type="radio" name="T_053" id="T_053_0" value="0">
+                        <input class="form-check-input" type="radio" name="T_043" id="T_043_0" value="0"><br>
+                        <input class="form-check-input" type="radio" name="T_044" id="T_044_0" value="0">
                     </td>
                     <td>
-                        <input class="form-check-input" type="radio" name="T_052" id="T_052_1" value="1"><br>
-                        <input class="form-check-input" type="radio" name="T_053" id="T_053_1" value="1">
+                        <input class="form-check-input" type="radio" name="T_043" id="T_043_1" value="1"><br>
+                        <input class="form-check-input" type="radio" name="T_044" id="T_044_1" value="1">
                     </td>
                 </tr>
                 <tr>
                     <td>5</td>
                     <td style="text-align:left;">Berapa umur anda?</td>
-                    <td><input class="form-check-input" type="radio" name="T_054" id="T_054_0" value="0"></td>
-                    <td><input class="form-check-input" type="radio" name="T_054" id="T_054_1" value="1"></td>
+                    <td><input class="form-check-input" type="radio" name="T_045" id="T_045_0" value="0"></td>
+                    <td><input class="form-check-input" type="radio" name="T_045" id="T_045_1" value="1"></td>
                 </tr>
                 <tr>
                     <td>6</td>
                     <td style="text-align:left;">Kapan anda lahir? (min.tahun lahir)</td>
-                    <td><input class="form-check-input" type="radio" name="T_055" id="T_055_0" value="0"></td>
-                    <td><input class="form-check-input" type="radio" name="T_055" id="T_055_1" value="1"></td>
+                    <td><input class="form-check-input" type="radio" name="T_046" id="T_046_0" value="0"></td>
+                    <td><input class="form-check-input" type="radio" name="T_046" id="T_046_1" value="1"></td>
                 </tr>
                 <tr>
                     <td>7</td>
                     <td style="text-align:left;">Siapa presiden Indonesia sekarang?</td>
-                    <td><input class="form-check-input" type="radio" name="T_056" id="T_056_0" value="0"></td>
-                    <td><input class="form-check-input" type="radio" name="T_056" id="T_056_1" value="1"></td>
+                    <td><input class="form-check-input" type="radio" name="T_047" id="T_047_0" value="0"></td>
+                    <td><input class="form-check-input" type="radio" name="T_047" id="T_047_1" value="1"></td>
                 </tr>
                 <tr>
                     <td>8</td>
                     <td style="text-align:left;">Siapa presiden sebelumnya?</td>
-                    <td><input class="form-check-input" type="radio" name="T_057" id="T_057_0" value="0"></td>
-                    <td><input class="form-check-input" type="radio" name="T_057" id="T_057_1" value="1"></td>
+                    <td><input class="form-check-input" type="radio" name="T_048" id="T_048_0" value="0"></td>
+                    <td><input class="form-check-input" type="radio" name="T_048" id="T_048_1" value="1"></td>
                 </tr>
                 <tr>
                     <td>9</td>
                     <td style="text-align:left;">Siapa nama kecil ibu anda?</td>
-                    <td><input class="form-check-input" type="radio" name="T_058" id="T_058_0" value="0"></td>
-                    <td><input class="form-check-input" type="radio" name="T_058" id="T_058_1" value="1"></td>
+                    <td><input class="form-check-input" type="radio" name="T_049" id="T_049_0" value="0"></td>
+                    <td><input class="form-check-input" type="radio" name="T_049" id="T_049_1" value="1"></td>
                 </tr>
                 <tr>
                     <td>10</td>
                     <td style="text-align:left;">Kurangi 3 angka dari 20, dan pengurangan 3 dari setiap angka baru, semua secara menurun</td>
-                    <td><input class="form-check-input" type="radio" name="T_059" id="T_059_0" value="0"></td>
-                    <td><input class="form-check-input" type="radio" name="T_059" id="T_059_1" value="1"></td>
+                    <td><input class="form-check-input" type="radio" name="T_050" id="T_050_0" value="0"></td>
+                    <td><input class="form-check-input" type="radio" name="T_050" id="T_050_1" value="1"></td>
                 </tr>
                 <tr>
                     <td colspan="2"><b>TOTAL SKOR</b></td>
-                    <td><input class="form-control" type="number" id="T_060" name="T_060"></td>
-                    <td><input class="form-control" type="number" id="T_061" name="T_061"></td>
+                    <td><input class="form-control" type="number" id="T_051" name="T_051"></td>
+                    <td><input class="form-control" type="number" id="T_052" name="T_052"></td>
                 </tr>
             </table>
             <div class="row">
@@ -755,7 +755,7 @@
                         </p>
                     </td>
                     <td style="vertical-align:middle">
-                        <select class="form-select number" type="number" name="T_062" id="T_062" onchange="myFunction1()">
+                        <select class="form-select number" type="number" name="T_053" id="T_053" onchange="myFunction1()">
                             <option selected>Pilih</option>
                             <option value="0">0</option>
                             <option value="1">1</option>
@@ -775,7 +775,7 @@
                         </p>
                     </td>
                     <td style="vertical-align:middle">
-                        <select class="form-select number" type="number" name="T_063" id="T_063" onchange="myFunction1()">
+                        <select class="form-select number" type="number" name="T_054" id="T_054" onchange="myFunction1()">
                             <option selected>Pilih</option>
                             <option value="0">0</option>
                             <option value="1">1</option>
@@ -795,7 +795,7 @@
                         </p>
                     </td>
                     <td style="vertical-align:middle">
-                        <select class="form-select number" type="number" name="T_064" id="T_064" onchange="myFunction1()">
+                        <select class="form-select number" type="number" name="T_055" id="T_055" onchange="myFunction1()">
                             <option selected>Pilih</option>
                             <option value="0">0</option>
                             <option value="1">1</option>
@@ -813,7 +813,7 @@
                         </p>
                     </td>
                     <td style="vertical-align:middle">
-                        <select class="form-select number" type="number" name="T_065" id="T_065" onchange="myFunction1()">
+                        <select class="form-select number" type="number" name="T_056" id="T_056" onchange="myFunction1()">
                             <option selected>Pilih</option>
                             <option value="0">0</option>
                             <option value="1">1</option>
@@ -831,7 +831,7 @@
                         </p>
                     </td>
                     <td style="vertical-align:middle">
-                        <select class="form-select number" type="number" name="T_066" id="T_066" onchange="myFunction1()">
+                        <select class="form-select number" type="number" name="T_057" id="T_057" onchange="myFunction1()">
                             <option selected>Pilih</option>
                             <option value="0">0</option>
                             <option value="1">1</option>
@@ -851,7 +851,7 @@
                         </p>
                     </td>
                     <td style="vertical-align:middle">
-                        <select class="form-select number" type="number" name="T_067" id="T_067" onchange="myFunction1()">
+                        <select class="form-select number" type="number" name="T_058" id="T_058" onchange="myFunction1()">
                             <option selected>Pilih</option>
                             <option value="0">0</option>
                             <option value="1">1</option>
@@ -863,7 +863,7 @@
                 <tr>
                     <td colspan="2"><b>TOTAL SKOR</b></td>
                     <td>
-                        <input class="form-control" type="number" name="T_068" id="T_068" readonly>
+                        <input class="form-control" type="number" name="T_059" id="T_059" readonly>
                     </td>
                 </tr>
             </table>
@@ -877,332 +877,240 @@
                 </div>
             </div>
             <div class="row" style="text-align:center">
-                <b>
-                    SKALA RESIKO JATUH ONTARIO <br>
-                    MODIFIED STRATIFY - SYDNEY SCORING ( GERIATRI )
-                </b>
+                <b>SKALA RESIKO JATUH FORSE MORSE</b>
             </div>
             <table class="table table-bordered border-black mb-0">
-                <tr>
-                    <td style="width:5%">No</td>
-                    <td style="width:15%">Parameter</td>
-                    <td>Skrining</td>
-                    <td style="width:17%">Jawaban</td>
-                    <td style="width:15%">Keterangan Nilai</td>
-                </tr>
-                <tr>
-                    <td>1.</td>
-                    <td>Riwayat Jatuh</td>
-                    <td>
-                        <p>
-                            Apakah pasien datang ke RS karena jatuh?<br>
-                            Jika tidak, apakah pasien mengalami jatuh dalam 2 bulan terakhir ini ?
-                        </p>
+                <tr style="text-align:center; vertical-align:middle">
+                    <td style="width:5%" rowspan="2"><b>No</b></td>
+                    <td style="width:25%" rowspan="2"><b>Resiko</b></td>
+                    <td style="width:auto" rowspan="2"><b>Skala</b></td>
+                    <td style="width:auto" rowspan="2"><b>Nilai</b></td>
+                    <td style="width:auto">
+                        <b>Hari/ tgl:</b>
+                        <input type="date" name="V_15" id="V_15" style="width:120px">
                     </td>
-                    <td>
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_069" id="T_069_ya" value="0">
-                                    <label class="form-check-label" for="T_069_ya">Ya /</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_069" id="T_069_tidak" value="1">
-                                    <label class="form-check-label" for="T_069_tidak">Tidak</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_070" id="T_070_ya" value="0">
-                                    <label class="form-check-label" for="T_070_ya">Ya /</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_070" id="T_070_tidak" value="1">
-                                    <label class="form-check-label" for="T_070_tidak">Tidak</label>
-                                </div>
-                            </div>
-                        </div>
+                    <td style="width:auto">
+                        <b>Hari/ tgl:</b>
+                        <input type="date" name="V_16" id="V_16" style="width:120px">
                     </td>
-                    <td>
-                        <p>Salah satu jawabanya = 6</p>
+                    <td style="width:auto">
+                        <b>Hari/ tgl:</b>
+                        <input type="date" name="V_17" id="V_17" style="width:120px">
+                    </td>
+                    <td style="width:auto">
+                        <b>Hari/ tgl:</b>
+                        <input type="date" name="V_18" id="V_18" style="width:120px">
                     </td>
                 </tr>
-                <tr>
-                    <td>2.</td>
-                    <td>Status Mental</td>
-                    <td>
-                        <p>
-                            Apakah pasien delirium ? (Tidak dapat membuat keputusan, pola pikir tidak terorganisir, ganguan daya ingat )<br>
-                            Apakah pasien disorientasi ? (salah menyebutkan waktu, tempat atau orang )<br>
-                            Apakah pasien mengalami agitasi ? (ketakutan, gelisah, dan cemas)
-                        </p>
-                    </td>
-                    <td>
-                        <div class="row mb-4">
-                            <div class="col">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_071" id="T_071_ya" value="0">
-                                    <label class="form-check-label" for="T_071_ya">Ya /</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_071" id="T_071_tidak" value="1">
-                                    <label class="form-check-label" for="T_071_tidak">Tidak</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_072" id="T_072_ya" value="0">
-                                    <label class="form-check-label" for="T_072_ya">Ya /</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_072" id="T_072_tidak" value="1">
-                                    <label class="form-check-label" for="T_072_tidak">Tidak</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_073" id="T_073_ya" value="0">
-                                    <label class="form-check-label" for="T_073_ya">Ya /</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_073" id="T_073_tidak" value="1">
-                                    <label class="form-check-label" for="T_073_tidak">Tidak</label>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <p>Salah satu jawabanya = 14</p>
-                    </td>
+                <tr style="text-align:center">
+                    <td><b>Skor</b></td>
+                    <td><b>Skor</b></td>
+                    <td><b>Skor</b></td>
+                    <td><b>Skor</b></td>
                 </tr>
                 <tr>
-                    <td>3.</td>
-                    <td>Penglihatan</td>
-                    <td>
-                        <p>
-                            Apakah pasien memakai kacamata ?<br>
-                            Apakah pasien mengeluh adanya penglihatan buram ?<br>
-                            Apakah pasien mempunyai glaukoma? Katarak / degenerasi makula ?
-                        </p>
-                    </td>
-                    <td>
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_074" id="T_074_ya" value="0">
-                                    <label class="form-check-label" for="T_074_ya">Ya /</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_074" id="T_074_tidak" value="1">
-                                    <label class="form-check-label" for="T_074_tidak">Tidak</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_075" id="T_075_ya" value="0">
-                                    <label class="form-check-label" for="T_075_ya">Ya /</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_075" id="T_075_tidak" value="1">
-                                    <label class="form-check-label" for="T_075_tidak">Tidak</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_076" id="T_076_ya" value="0">
-                                    <label class="form-check-label" for="T_076_ya">Ya /</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_076" id="T_076_tidak" value="1">
-                                    <label class="form-check-label" for="T_076_tidak">Tidak</label>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <p>Salah satu jawabanya = 1</p>
-                    </td>
+                    <td rowspan="2">1</td>
+                    <td>Riwayat jatuh : apakah pernah jatuh dalam 3 bulan terakhir?</td>
+                    <td>Tidak</td>
+                    <td>0</td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
                 </tr>
                 <tr>
-                    <td>4.</td>
-                    <td>Kebiasaan Berkemih</td>
-                    <td>
-                        <p>
-                            Apakah terdapat perubahan perilaku berkemih? ( frekuensi, urgensi, inkontinensia, nokturia)
-                        </p>
-                    </td>
-                    <td>
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_077" id="T_077_ya" value="0">
-                                    <label class="form-check-label" for="T_077_ya">Ya /</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="T_077" id="T_077_tidak" value="1">
-                                    <label class="form-check-label" for="T_077_tidak">Tidak</label>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <p>Salah satu jawabanya = 2</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5.</td>
-                    <td>Transfer ( dari tempat tidur ke kursi dan kembali lagi ke tempat tidur )</td>
-                    <td>
-                        <p>
-                            Mandiri ( boleh memakai alat bantu jalan )<br>
-                            Memerlukan sedikit bantuan ( 1 orang )/ dalam pengawasan<br>
-                            Memerlukan bantuan yang nyata ( 2 orang )<br>
-                            Tidak dapat duduk dengan seimbang, perlu bantuan total
-                        </p>
-                    </td>
-                    <td>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="T_078" id="T_078_0" value="0">
-                            <label class="form-check-label" for="T_078_0">0</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="T_078" id="T_078_1" value="1">
-                            <label class="form-check-label" for="T_078_1">1</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="T_078" id="T_078_2" value="2">
-                            <label class="form-check-label" for="T_078_2">2</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="T_078" id="T_078_3" value="3">
-                            <label class="form-check-label" for="T_078_3">3</label>
-                        </div>
-                    </td>
-                    <td>
-                        <p>
-                            Jumlah nilai transfer dan mobilitas jika nilai total 0 - 3 maka scor = 0
-                            Jika nilai total 4 - 6, maka skor = 7
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>6.</td>
-                    <td>Mobilitas</td>
-                    <td>
-                        <p>
-                            Mandiri ( boleh memakai alat bantu jalan )<br>
-                            Berjalan dengan bantuan 1 orang ( verbal / fisik )<br>
-                            Menggunakan kursi roda<br>
-                            Imobilisasi
-                        </p>
-                    </td>
-                    <td>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="T_079" id="T_079_0" value="0">
-                            <label class="form-check-label" for="T_079_0">0</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="T_079" id="T_079_1" value="1">
-                            <label class="form-check-label" for="T_079_1">1</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="T_079" id="T_079_2" value="2">
-                            <label class="form-check-label" for="T_079_2">2</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="T_079" id="T_079_3" value="3">
-                            <label class="form-check-label" for="T_079_3">3</label>
-                        </div>
-                    </td>
                     <td></td>
+                    <td>Ya</td>
+                    <td>25</td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">2</td>
+                    <td>Diagnosa sekunder: apakah memiliki lebih dari satu penyakit?</td>
+                    <td>Tidak</td>
+                    <td>0</td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Ya</td>
+                    <td>15</td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td rowspan="4">3</td>
+                    <td><b>Alat bantu jalan</b></td>
+                    <td></td>
+                    <td></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td>Bed rest/ dibantu perawat</td>
+                    <td></td>
+                    <td>0</td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td>Kruk/tongkat/walker</td>
+                    <td></td>
+                    <td>15</td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td>Berpegangan pada benda-benda di sekitar (kursi, meja, lemari)</td>
+                    <td></td>
+                    <td>30</td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">4</td>
+                    <td>Terapi inta vena : apakah saat ini terpasang infuse?</td>
+                    <td>Tidak</td>
+                    <td>0</td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Ya</td>
+                    <td>20</td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td rowspan="4">5</td>
+                    <td><b>Gaya berjalan/ cara pindah</b></td>
+                    <td></td>
+                    <td></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td>Normal/ bed rest/ immobile</td>
+                    <td></td>
+                    <td>0</td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td>Lemah (tidak bertenaga)</td>
+                    <td></td>
+                    <td>10</td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td>Gangguan/tidak normal (pincang /diseret)</td>
+                    <td></td>
+                    <td>20</td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td rowspan="3">6</td>
+                    <td><b>Status mental</b></td>
+                    <td></td>
+                    <td></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td>Menyadari kondisi dirinya</td>
+                    <td></td>
+                    <td>0</td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td>Mengalami keterbatasan daya ingat</td>
+                    <td></td>
+                    <td>15</td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align:center">Jumlah skor Forse Morse</td>
+                    <td></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
+                    <td style="vertical-align:middle"></td>
                 </tr>
             </table>
-            <div class="row mb-3">
+            <div class="row mb-5">
                 <div class="col">
-                    <p>
-                        Keterangan skor :<br>
-                        0-5 = Resiko rendah<br>
-                        6-16 = Resiko sedang<br>
-                        17-30 = Resiko tinggi
-                    </p>
+                    <div class="row">
+                        <div class="col">Tingkat resiko ditentukan dengan cara:</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2" style="text-align:right">
+                            Skor 0-24 : <br>
+                            25-44 : <br>
+                            ≥45 : <br>
+                        </div>
+                        <div class="col">
+                            Resiko Rendah<br>
+                            Resiko Sedang<br>
+                            Resiko tinggi (memakai gelang Orange)<br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="text-align:center">
+                    <label for="V_19">Dokter / Perawat :</label><br>
+                    <button class="btn btn-outline-success" type="button" onclick="clearCanvas()">Clear Signature</button><br>
+                    <canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas><br>
+                    <input type="hidden" name="TTD" id="TTD">
+                    ( <input type="text" id="V_19" name="V_19" style="width:200px"> )
                 </div>
             </div>
-            <table class="table table-bordered border-black mb-5">
-                <tr style="text-align:center">
-                    <td><b>Tanggal dan jam</b></td>
-                    <td><b>Nama tenaga kesehatan</b></td>
-                    <td><b>TTD</b></td>
-                </tr>
-                <tr style="vertical-align:middle">
-                    <td>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <input type="date" class="form-control" id="V_70" name="V_70">
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="time" class="form-control" id="V_71" name="V_71">
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="row">
-                            <label for="V_72" class="col-sm-auto col-form-label">Dokter / Perawat :</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="V_72" name="V_72">
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="btn btn-outline-success" type="button" onclick="clearCanvas()">Clear Signature</button><br>
-                        <canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas>
-                        <input type="hidden" name="TTD" id="TTD">
-                    </td>
-                </tr>
-                <tr style="vertical-align:middle">
-                    <td>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <input type="date" class="form-control" id="V_73" name="V_73">
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="time" class="form-control" id="V_74" name="V_74">
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="row">
-                            <label for="V_75" class="col-sm-auto col-form-label">Verifikasi Dokter :</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="V_75" name="V_75">
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="btn btn-outline-success" type="button" onclick="clearCanvas1()">Clear Signature</button><br>
-                        <canvas id="canvas1" width="150" height="90" style="border:1px solid #000;"></canvas>
-                        <input type="hidden" name="TTD_1" id="TTD_1">
-                    </td>
-                </tr>
-            </table>
             <table class="table table-bordered border-black">
                 <tr style="vertical-align:middle; margin:0px; font-family:'Times New Roman'">
                     <td>
                         <div class="row">
-                            <div class="col-md-2" style="text-align:center">
+                            <div class="col-md-3" style="text-align:center">
                                 <img src="\img\logo_PKU.png" alt="" style="width:90px"><br>
                                 <p>SEHAT AMANAH<br>Tanggungjawab-Islami</p>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <h4><b>RS PKU MUHAMMADIYAH SAMPANGAN</b></h4>
                                 <p>Semanggi RT 02/20 Pasar Kliwon Surakarta<br>
                                     Telp. ( 0271 ) 633894 Fax: 0271- 630229 <br>
@@ -1228,41 +1136,41 @@
                         <div class="row">
                             <div class="col">
                                 I. DIAGNOSIS (NO. ICIDH)
-                                <textarea class="form-control" name="V_76" id="V_76" rows="5"></textarea>
+                                <textarea class="form-control" name="V_20" id="V_20" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 II. IMPAIRMENT (NO. ICIDH)
-                                <textarea class="form-control" name="V_77" id="V_77" rows="5"></textarea>
+                                <textarea class="form-control" name="V_21" id="V_21" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 III. DISABILITY (NO. ICIDH)
-                                <textarea class="form-control" name="V_78" id="V_78" rows="5"></textarea>
+                                <textarea class="form-control" name="V_22" id="V_22" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 IV. HANDICAP (NO. ICIDH)
-                                <textarea class="form-control" name="V_79" id="V_79" rows="5"></textarea>
+                                <textarea class="form-control" name="V_23" id="V_23" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="row mb-1">
                             <div class="col">
                                 V. REKOMENDASI
-                                <textarea class="form-control" name="V_80" id="V_80" rows="5"></textarea>
+                                <textarea class="form-control" name="V_24" id="V_24" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-8"></div>
                             <div class="col" style="text-align:center">
                                 Ketua Tim,<br>
-                                <button class="btn btn-outline-success" type="button" onclick="clearCanvas2()">Clear Signature</button><br>
-                                <canvas id="canvas2" width="150" height="90" style="border:1px solid #000;"></canvas>
-                                <input type="hidden" name="TTD_2" id="TTD_2"><br>
-                                ( <input type="text" id="V_81" name="V_81" style="width:250px; text-align: center;"> )<br>
+                                <button class="btn btn-outline-success" type="button" onclick="clearCanvas1()">Clear Signature</button><br>
+                                <canvas id="canvas1" width="150" height="90" style="border:1px solid #000;"></canvas>
+                                <input type="hidden" name="TTD_1" id="TTD_1"><br>
+                                ( <input type="text" id="V_25" name="V_25" style="width:250px; text-align: center;"> )<br>
                                 Nama dan tanda tangan
                             </div>
                         </div>
@@ -1297,7 +1205,7 @@
             $('select.number').each(function() {
                 sum += Number($(this).val());
             });
-            $('#T_068').val(sum);
+            $('#T_059').val(sum);
         };
     </script>
     <script>
@@ -1386,50 +1294,6 @@
             const canvasData1 = canvas1.toDataURL('image/png');
 
             canvasDataInput1.value = canvasData1;
-        }
-    </script>
-    <script>
-        var canvas2 = document.getElementById('canvas2');
-        const canvasDataInput2 = document.getElementById('TTD_2');
-        var context2 = canvas2.getContext('2d');
-        var drawing = false;
-
-        canvas2.addEventListener('mousedown', startDrawing);
-        canvas2.addEventListener('mousemove', draw);
-        canvas2.addEventListener('mouseup', stopDrawing);
-        canvas2.addEventListener('mouseout', stopDrawing);
-
-        function startDrawing(e) {
-            drawing = true;
-            draw(e);
-        }
-
-        function draw(e) {
-            if (!drawing) return;
-
-            context2.lineWidth = 2;
-            context2.lineCap = 'round';
-            context2.strokeStyle = '#000';
-
-            context2.lineTo(e.clientX - canvas2.getBoundingClientRect().left, e.clientY - canvas2.getBoundingClientRect().top);
-            context2.stroke();
-            context2.beginPath();
-            context2.moveTo(e.clientX - canvas2.getBoundingClientRect().left, e.clientY - canvas2.getBoundingClientRect().top);
-        }
-
-        function stopDrawing() {
-            drawing = false;
-            context2.beginPath();
-        }
-
-        function clearCanvas2() {
-            context2.clearRect(0, 0, canvas2.width, canvas2.height);
-        }
-
-        function saveSignatureData2() {
-            const canvasData2 = canvas2.toDataURL('image/png');
-
-            canvasDataInput2.value = canvasData2;
         }
     </script>
 </body>

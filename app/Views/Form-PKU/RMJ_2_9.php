@@ -20,7 +20,7 @@
     <div class="container">
         <h6 style="text-align:right">RMJ.2.9</h6>
         <form action="" autocomplete="off" style="vertical-align:middle; font-family:'Times New Roman'">
-            <h4 style="text-align: center"><b>REKAM MEDIS RAWAT INAP</b></h4>
+            <h4 style="text-align: center"><b>REKAM MEDIS RAWAT JALAN</b></h4>
             <table class="table table-bordered border-black">
                 <tr style="vertical-align:middle; margin:0px">
                     <td colspan="2">
@@ -87,23 +87,23 @@
                                     <input class="form-check-input" type="radio" name="T_01" id="T_01_1" value="1">
                                     <label class="form-check-label" for="T_01_1"><b>Alloanamnesis</b></label>
                                 </div> dengan :
-                                <input type="text" id="V_03" name="V_03" style="width:90px">
-                                Hubungan dengan pasien :
                                 <input type="text" id="V_04" name="V_04" style="width:90px">
+                                Hubungan dengan pasien :
+                                <input type="text" id="V_05" name="V_05" style="width:90px">
                             </div>
                         </div>
                         <div class="row mb-1">
-                            <label for="V_05" class="col-sm-4 col-form-label"><b>Keluhan Utama</b></label>
+                            <label for="V_06" class="col-sm-4 col-form-label"><b>Keluhan Utama</b></label>
                             <div class="col-sm-auto col-form-label">:</div>
                             <div class="col">
-                                <input type="text" class="form-control" id="V_05" name="V_05">
+                                <input type="text" class="form-control" id="V_06" name="V_06">
                             </div>
                         </div>
                         <div class="row mb-1">
-                            <label for="V_06" class="col-sm-4 col-form-label"><b>Riwayat Penyakit Sekarang</b></label>
+                            <label for="V_07" class="col-sm-4 col-form-label"><b>Riwayat Penyakit Sekarang</b></label>
                             <div class="col-sm-auto col-form-label">:</div>
                             <div class="col">
-                                <textarea class="form-control" id="V_06" name="V_06" rows="2"></textarea>
+                                <textarea class="form-control" id="V_07" name="V_07" rows="2"></textarea>
                             </div>
                         </div>
                         <div class="row mb-1">
@@ -127,9 +127,9 @@
                             </div>
                         </div>
                         <div class="row mb-1">
-                            <label for="V_09" class="col-sm-auto col-form-label">2. </label>
+                            <label for="V_10" class="col-sm-auto col-form-label">2. </label>
                             <div class="col">
-                                <input type="text" class="form-control" id="V_09" name="V_09">
+                                <input type="text" class="form-control" id="V_10" name="V_10">
                             </div>
                         </div>
                     </td>
@@ -142,15 +142,15 @@
                         <div class="container mb-3">
                             <div class="row">
                                 <div class="col">Vital Sign:
-                                    <label for="V_14">TD :</label>
-                                    <input type="text" id="V_14" name="V_14" style="width:50px"> /
-                                    <input type="text" id="V_15" name="V_15" style="width:50px"> mmHg &nbsp;&nbsp;&nbsp;
-                                    <label for="V_16">N :</label>
-                                    <input type="text" id="V_16" name="V_16" style="width:100px"> x/menit &nbsp;&nbsp;&nbsp;
-                                    <label for="V_17">R :</label>
-                                    <input type="text" id="V_17" name="V_17" style="width:100px"> x/menit &nbsp;&nbsp;&nbsp;
-                                    <label for="V_18">S :</label>
-                                    <input type="text" id="V_18" name="V_18" style="width:70px"> °C
+                                    <label for="V_11">TD :</label>
+                                    <input type="text" id="V_11" name="V_11" style="width:50px"> /
+                                    <input type="text" id="V_12" name="V_12" style="width:50px"> mmHg &nbsp;&nbsp;&nbsp;
+                                    <label for="V_13">N :</label>
+                                    <input type="text" id="V_13" name="V_13" style="width:100px"> x/menit &nbsp;&nbsp;&nbsp;
+                                    <label for="V_14">R :</label>
+                                    <input type="text" id="V_14" name="V_14" style="width:100px"> x/menit &nbsp;&nbsp;&nbsp;
+                                    <label for="V_15">S :</label>
+                                    <input type="text" id="V_15" name="V_15" style="width:70px"> °C
                                 </div>
                             </div>
                         </div>
@@ -251,8 +251,8 @@
                     <td colspan="2">
                         <div class="row mb-1">
                             <div class="col">
-                                <label for="V_23" class="form-label"><b>Pemeriksaan Penunjang :</b></label>
-                                <textarea class="form-control" name="V_23" id="V_23" rows="3"></textarea>
+                                <label for="V_16" class="form-label"><b>Pemeriksaan Penunjang :</b></label>
+                                <textarea class="form-control" name="V_16" id="V_16" rows="3"></textarea>
                             </div>
                         </div>
                     </td>
@@ -261,8 +261,8 @@
                     <td colspan="2">
                         <div class="row mb-1">
                             <div class="col">
-                                <label for="V_23" class="form-label"><b>Diagnosis Kerja :</b></label>
-                                <textarea class="form-control" name="V_23" id="V_23" rows="3"></textarea>
+                                <label for="V_17" class="form-label"><b>Diagnosis Kerja :</b></label>
+                                <textarea class="form-control" name="V_17" id="V_17" rows="3"></textarea>
                             </div>
                         </div>
                     </td>
@@ -271,8 +271,8 @@
                     <td colspan="2">
                         <div class="row mb-1">
                             <div class="col">
-                                <label for="V_24" class="form-label"><b>Terapi :</b></label>
-                                <textarea class="form-control" name="V_24" id="V_24" rows="5"></textarea>
+                                <label for="V_18" class="form-label"><b>Terapi :</b></label>
+                                <textarea class="form-control" name="V_18" id="V_18" rows="5"></textarea>
                             </div>
                         </div>
                     </td>
@@ -283,23 +283,23 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="T_0" id="T_0_" value="">
-                                    <label class="form-check-label" for="T_0_">Rawat Jalan </label>
+                                    <input class="form-check-input" type="radio" name="T_02" id="T_02_0" value="0">
+                                    <label class="form-check-label" for="T_02_0">Rawat Jalan </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="T_0" id="T_0_" value="">
-                                    <label class="form-check-label" for="T_0_">Rawat Inap</label>
+                                    <input class="form-check-input" type="radio" name="T_02" id="T_02_1" value="1">
+                                    <label class="form-check-label" for="T_02_1">Rawat Inap</label>
                                 </div>
                                 DPJP Rawat Inap :
-                                <input type="text" id="V_" name="V_" style="width:150px">
+                                <input type="text" id="V_19" name="V_19" style="width:150px">
                             </div>
                             <div class="col">
-                                <label for="V_" class="form-label">Ruang </label>
-                                <input type="text" class="form-control" id="V_" name="V_">
+                                <label for="V_20" class="form-label">Ruang </label>
+                                <input type="text" class="form-control" id="V_20" name="V_20">
                             </div>
                             <div class="col">
-                                <label for="V_" class="form-label">Indikasi </label>
-                                <input type="text" class="form-control" id="V_" name="V_">
+                                <label for="V_21" class="form-label">Indikasi </label>
+                                <input type="text" class="form-control" id="V_21" name="V_21">
                             </div>
                         </div>
                     </td>
@@ -308,12 +308,12 @@
                     <td>
                         Pengantar Pasien :
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="T_0" id="T_0" value="0">
-                            <label class="form-check-label" for="T_0">Ada /</label>
+                            <input class="form-check-input" type="radio" name="T_03" id="T_03_0" value="0">
+                            <label class="form-check-label" for="T_03_0">Ada /</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="T_0" id="T_0" value="1">
-                            <label class="form-check-label" for="T_0">Tidak* (Bila tidak, rujuk ke Dinas Sosial)</label>
+                            <input class="form-check-input" type="radio" name="T_03" id="T_03_1" value="1">
+                            <label class="form-check-label" for="T_03_1">Tidak* (Bila tidak, rujuk ke Dinas Sosial)</label>
                         </div>
                     </td>
                 </tr>
@@ -322,46 +322,46 @@
                         <div class="row">
                             <div class="col">
                                 Rujuk ke :
-                                <input class="form-check-input" type="radio" name="T_0" id="T_0_" value="">
-                                <label class="form-check-label" for="T_0_">RS</label>
-                                <input type="text" id="V_" name="V_" style="width:150px"><br>
-                                <input class="form-check-input" type="radio" name="T_0" id="T_0_" value="">
-                                <label class="form-check-label" for="T_0_">Dokter Keluarga : </label>
-                                <input type="text" id="V_" name="V_" style="width:150px">
+                                <input class="form-check-input" type="radio" name="T_04" id="T_04_0" value="0">
+                                <label class="form-check-label" for="T_04_0">RS</label>
+                                <input type="text" id="V_22" name="V_22" style="width:150px"><br>
+                                <input class="form-check-input" type="radio" name="T_04" id="T_04_1" value="1">
+                                <label class="form-check-label" for="T_04_1">Dokter Keluarga : </label>
+                                <input type="text" id="V_23" name="V_23" style="width:150px">
                             </div>
                             <div class="col">
-                                <input class="form-check-input" type="radio" name="T_0" id="T_0_" value="">
-                                <label class="form-check-label" for="T_0_">Puskesmas </label>
-                                <input type="text" id="V_" name="V_" style="width:150px"><br>
-                                <input class="form-check-input" type="radio" name="T_0" id="T_0_" value="">
-                                <label class="form-check-label" for="T_0_">Dokter </label>
-                                <input type="text" id="V_" name="V_" style="width:150px">
-                                <input class="form-check-input" type="radio" name="T_0" id="T_0_" value="">
-                                <label class="form-check-label" for="T_0_">Homecare </label>
+                                <input class="form-check-input" type="radio" name="T_04" id="T_04_2" value="2">
+                                <label class="form-check-label" for="T_04_2">Puskesmas </label>
+                                <input type="text" id="V_24" name="V_24" style="width:150px"><br>
+                                <input class="form-check-input" type="radio" name="T_04" id="T_04_3" value="3">
+                                <label class="form-check-label" for="T_04_3">Dokter </label>
+                                <input type="text" id="V_25" name="V_25" style="width:150px">
+                                <input class="form-check-input" type="radio" name="T_04" id="T_04_4" value="4">
+                                <label class="form-check-label" for="T_04_4">Homecare </label>
                             </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="">Kontrol Klinik / Homecare di :</label>
-                        <input type="text" id="V_" name="V_" style="width:200px">&nbsp;&nbsp;&nbsp;
-                        <label for="">Tanggal :</label>
-                        <input type="date" id="V_" name="V_" style="width:150px">
+                        <label for="V_26">Kontrol Klinik / Homecare di :</label>
+                        <input type="text" id="V_26" name="V_26" style="width:200px">&nbsp;&nbsp;&nbsp;
+                        <label for="V_27">Tanggal :</label>
+                        <input type="date" id="V_27" name="V_27" style="width:150px">
                     </td>
                 </tr>
                 <tr>
                     <td style="width:20%; text-align:center"><b>EDUKASI PASIEN</b></td>
                     <td>
                         Edukasi Awal, disampaikan tentang diagnosis, Rencana dan Tujuan Terapi kepada :<br>
-                        <input class="form-check-input" type="radio" name="T_0" id="T_0_" value="">
-                        <label class="form-check-label" for="T_0_">Pasien </label><br>
-                        <input class="form-check-input" type="radio" name="T_0" id="T_0_" value="">
-                        <label class="form-check-label" for="T_0_">Keluarga pasien, nama : </label>
-                        <input type="text" id="V_" name="V_" style="width:250px"><br>
-                        <input class="form-check-input" type="radio" name="T_0" id="T_0_" value="">
-                        <label class="form-check-label" for="T_0_">Tidak dapat memberi edukasi kepada pasien atau keluarga, Karena </label>
-                        <input type="text" id="V_" name="V_" style="width:250px"><br>
+                        <input class="form-check-input" type="radio" name="T_05" id="T_05_0" value="0">
+                        <label class="form-check-label" for="T_05_0">Pasien </label><br>
+                        <input class="form-check-input" type="radio" name="T_05" id="T_05_1" value="1">
+                        <label class="form-check-label" for="T_05_1">Keluarga pasien, nama : </label>
+                        <input type="text" id="V_28" name="V_28" style="width:250px"><br>
+                        <input class="form-check-input" type="radio" name="T_05" id="T_05_2" value="2">
+                        <label class="form-check-label" for="T_05_2">Tidak dapat memberi edukasi kepada pasien atau keluarga, Karena </label>
+                        <input type="text" id="V_29" name="V_29" style="width:250px"><br>
                     </td>
                 </tr>
             </table>
@@ -371,7 +371,7 @@
                     <button class="btn btn-outline-success" type="button" onclick="clearCanvas()">Clear Signature</button><br>
                     <canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas>
                     <input type="hidden" name="TTD" id="TTD"><br>
-                    ( <input type="text" id="V_29" name="V_29" style="width:200px; text-align: center;"> )<br>
+                    ( <input type="text" id="V_30" name="V_30" style="width:200px; text-align: center;"> )<br>
                     Ttd & Nama Terang
                 </div>
                 <div class="col-md-6" style="text-align: center;">
@@ -379,7 +379,7 @@
                     <button class="btn btn-outline-success" type="button" onclick="clearCanvas1()">Clear Signature</button><br>
                     <canvas id="canvas1" width="150" height="90" style="border:1px solid #000;"></canvas>
                     <input type="hidden" name="TTD_1" id="TTD_1"><br>
-                    ( <input type="text" id="V_30" name="V_30" style="width:200px; text-align: center;"> )<br>
+                    ( <input type="text" id="V_31" name="V_31" style="width:200px; text-align: center;"> )<br>
                     Ttd & Nama Terang
                 </div>
             </div>

@@ -387,8 +387,7 @@
                 </tr>
                 <tr>
                     <td>
-                        a. Berapa seringkah bulan yang lalu, kesehatan anda<br>
-                        &nbsp;&nbsp;&nbsp; menghalangi kegiatan anda (mis. Mengunjungi teman dll)
+                        a. Berapa seringkah bulan yang lalu, kesehatan anda menghalangi kegiatan anda (mis. Mengunjungi teman dll)
                     </td>
                     <td style="text-align:center; vertical-align:middle">
                         <input class="form-check-input" type="radio" name="T_029" id="T_029_0" value="0">
@@ -548,7 +547,7 @@
                 </tr>
                 <tr>
                     <td>
-                        i. Selama bulan lalu, berapa sering anda merasa tidak diperhatikan keluarga ?
+                        i. Selama bulan lalu, berapa sering anda merasa tidak diperhatikan keluarga?
                     </td>
                     <td style="text-align:center; vertical-align:middle">
                         <input class="form-check-input" type="radio" name="T_037" id="T_037_0" value="0">
@@ -568,7 +567,7 @@
                 </tr>
                 <tr>
                     <td>
-                        j. Berapa sering selama bulan lalu anda merasa ingin menangis saja ?
+                        j. Berapa sering selama bulan lalu anda merasa ingin menangis saja?
                     </td>
                     <td style="text-align:center; vertical-align:middle">
                         <input class="form-check-input" type="radio" name="T_038" id="T_038_0" value="0">
@@ -588,7 +587,7 @@
                 </tr>
                 <tr>
                     <td>
-                        k. Selama bulan lalu, berapa sering anda merasa bahwa hidup ini sudah tak ada gunanya lagi ?
+                        k. Selama bulan lalu, berapa sering anda merasa bahwa hidup ini sudah tak ada gunanya lagi?
                     </td>
                     <td style="text-align:center; vertical-align:middle">
                         <input class="form-check-input" type="radio" name="T_039" id="T_039_0" value="0">
@@ -809,14 +808,14 @@
                         <p>
                             Menderita stres psikologis / penyakit akut dalam 3 bulan terakhir?<br>
                             0 = ya<br>
-                            1 = tidak
+                            2 = tidak
                         </p>
                     </td>
                     <td style="vertical-align:middle">
                         <select class="form-select number" type="number" name="T_056" id="T_056" onchange="myFunction1()">
                             <option selected>Pilih</option>
                             <option value="0">0</option>
-                            <option value="1">1</option>
+                            <option value="2">2</option>
                         </select>
                     </td>
                 </tr>
@@ -1129,38 +1128,39 @@
                     <td>
                         <h4 style="text-align:center; margin-bottom:5px"><b>REKAPITULASI ASESMEN</b></h4>
                         <div class="row">
-                            <div class="col">
-                                Rekapitulasi Asesmen dibuat tanggal :
+                            <label for="V_20" class="col-sm-auto col-form-label">Rekapitulasi Asesmen dibuat tanggal :</label>
+                            <div class="col-sm-4">
+                                <input type="date" class="form-control" id="V_20" name="V_20">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 I. DIAGNOSIS (NO. ICIDH)
-                                <textarea class="form-control" name="V_20" id="V_20" rows="5"></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                II. IMPAIRMENT (NO. ICIDH)
                                 <textarea class="form-control" name="V_21" id="V_21" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                III. DISABILITY (NO. ICIDH)
+                                II. IMPAIRMENT (NO. ICIDH)
                                 <textarea class="form-control" name="V_22" id="V_22" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                IV. HANDICAP (NO. ICIDH)
+                                III. DISABILITY (NO. ICIDH)
                                 <textarea class="form-control" name="V_23" id="V_23" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                IV. HANDICAP (NO. ICIDH)
+                                <textarea class="form-control" name="V_24" id="V_24" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="row mb-1">
                             <div class="col">
                                 V. REKOMENDASI
-                                <textarea class="form-control" name="V_24" id="V_24" rows="5"></textarea>
+                                <textarea class="form-control" name="V_25" id="V_25" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="row">
@@ -1170,7 +1170,7 @@
                                 <button class="btn btn-outline-success" type="button" onclick="clearCanvas1()">Clear Signature</button><br>
                                 <canvas id="canvas1" width="150" height="90" style="border:1px solid #000;"></canvas>
                                 <input type="hidden" name="TTD_1" id="TTD_1"><br>
-                                ( <input type="text" id="V_25" name="V_25" style="width:250px; text-align: center;"> )<br>
+                                ( <input type="text" id="V_26" name="V_26" style="width:250px; text-align: center;"> )<br>
                                 Nama dan tanda tangan
                             </div>
                         </div>

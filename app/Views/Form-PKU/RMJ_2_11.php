@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <title>ASESMEN RAWAT INAP GERIATRI</title>
+    <title>ASSESMEN GERIATRI RAWAT JALAN</title>
 </head>
 
 <body>
     <div class="container">
-        <h6 style="text-align:right">RM 2.17</h6>
+        <h6 style="text-align:right">RMJ 2.11</h6>
         <form action="" autocomplete="off">
-            <h4 style="text-align: center; font-family:'Times New Roman';"><b>REKAM MEDIS RAWAT INAP</b></h4>
+            <h4 style="text-align: center; font-family:'Times New Roman';"><b>REKAM MEDIS RAWAT JALAN</b></h4>
             <table class="table table-bordered border-black">
                 <tr style="vertical-align:middle; margin:0px; font-family:'Times New Roman'">
                     <td>
@@ -46,7 +46,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h4 style="text-align:center; margin-top:0px"><b>ASSESMEN GERIATRI RAWAT INAP</b></h4>
+                        <h4 style="text-align:center; margin-top:0px"><b>ASSESMEN GERIATRI RAWAT JALAN</b></h4>
                     </td>
                 </tr>
                 <tr>
@@ -768,7 +768,7 @@
                 </tr>
                 <tr>
                     <td>
-                        b. Berapa seringkah bulan lalu anda merasa gugup?
+                        b. Berapa seringkah bulan lalu anda merasa gugup ?
                     </td>
                     <td style="text-align:center; vertical-align:middle">
                         <input class="form-check-input" type="radio" name="T_039" id="T_039_0" value="0">
@@ -808,7 +808,7 @@
                 </tr>
                 <tr>
                     <td>
-                        d. Berapa seringkah bulan lalu anda merasa sedih sekali?
+                        d. Berapa seringkah bulan lalu anda merasa sedih sekali ?
                     </td>
                     <td style="text-align:center; vertical-align:middle">
                         <input class="form-check-input" type="radio" name="T_041" id="T_041_0" value="0">
@@ -828,7 +828,7 @@
                 </tr>
                 <tr>
                     <td>
-                        e. Berapa seringkah bulan lalu anda merasa bahagia?
+                        e. Berapa seringkah bulan lalu anda merasa bahagia ?
                     </td>
                     <td style="text-align:center; vertical-align:middle">
                         <input class="form-check-input" type="radio" name="T_042" id="T_042_0" value="0">
@@ -848,7 +848,7 @@
                 </tr>
                 <tr>
                     <td>
-                        f. Berapa seringkah bulan lalu anda terasa begitu sedih sampai merasa tak ada sesuatupun yang mungkin menghiburnya?
+                        f. Berapa seringkah bulan lalu anda terasa begitu sedih sampai merasa tak ada sesuatupun yang mungkin menghiburnya ?
                     </td>
                     <td style="text-align:center; vertical-align:middle">
                         <input class="form-check-input" type="radio" name="T_043" id="T_043_0" value="0">
@@ -908,7 +908,7 @@
                 </tr>
                 <tr>
                     <td>
-                        i. Selama bulan lalu, berapa sering anda merasa tidak diperhatikan keluarga?
+                        i. Selama bulan lalu, berapa sering anda merasa tidak diperhatikan keluarga ?
                     </td>
                     <td style="text-align:center; vertical-align:middle">
                         <input class="form-check-input" type="radio" name="T_046" id="T_046_0" value="0">
@@ -928,7 +928,7 @@
                 </tr>
                 <tr>
                     <td>
-                        j. Berapa sering selama bulan lalu anda merasa ingin menangis saja?
+                        j. Berapa sering selama bulan lalu anda merasa ingin menangis saja ?
                     </td>
                     <td style="text-align:center; vertical-align:middle">
                         <input class="form-check-input" type="radio" name="T_047" id="T_047_0" value="0">
@@ -948,7 +948,7 @@
                 </tr>
                 <tr>
                     <td>
-                        k. Selama bulan lalu, berapa sering anda merasa bahwa hidup ini sudah tak ada gunanya lagi?
+                        k. Selama bulan lalu, berapa sering anda merasa bahwa hidup ini sudah tak ada gunanya lagi ?
                     </td>
                     <td style="text-align:center; vertical-align:middle">
                         <input class="form-check-input" type="radio" name="T_048" id="T_048_0" value="0">
@@ -1073,7 +1073,7 @@
                 <div class="col"><b>Keterangan : </b></div>
             </div>
             <div class="row mb-0">
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <p>
                         1. Kesalahan 0 - 3<br>
                         2. Kesalahan 4 - 5<br>
@@ -1090,7 +1090,7 @@
                     </p>
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mt-0 mb-3">
                 <div class="col">
                     Jika ditemukan kerusakan intelektual sedang - berat, maka edukasi diberikan kepada keluarga atau penanggung jawab.
                 </div>
@@ -1438,7 +1438,7 @@
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="T_078" id="T_078_1" value="1">
                             <label class="form-check-label" for="T_078_1">1</label>
-                        </div>
+                        </div><br>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="T_078" id="T_078_2" value="2">
                             <label class="form-check-label" for="T_078_2">2</label>
@@ -1558,11 +1558,11 @@
                 <tr style="vertical-align:middle; margin:0px; font-family:'Times New Roman'">
                     <td>
                         <div class="row">
-                            <div class="col-md-2" style="text-align:center">
+                            <div class="col-md-3" style="text-align:center">
                                 <img src="\img\logo_PKU.png" alt="" style="width:90px"><br>
                                 <p>SEHAT AMANAH<br>Tanggungjawab-Islami</p>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <h4><b>RS PKU MUHAMMADIYAH SAMPANGAN</b></h4>
                                 <p>Semanggi RT 02/20 Pasar Kliwon Surakarta<br>
                                     Telp. ( 0271 ) 633894 Fax: 0271- 630229 <br>

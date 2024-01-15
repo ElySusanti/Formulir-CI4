@@ -159,7 +159,7 @@
                         RMJ 2.11
                     </div>
                     <div class="card-body">
-                        <a href="PKU/form12" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;ASESMEN RAWAT JALAN GERIATRI</a>
+                        <a href="PKU/form12" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;ASSESMEN GERIATRI RAWAT JALAN</a>
                     </div>
                 </div>
             </div>

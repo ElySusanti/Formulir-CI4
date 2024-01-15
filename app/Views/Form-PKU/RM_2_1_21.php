@@ -67,10 +67,18 @@
                     <td colspan="3">
                         <div class="row mb-1">
                             <div class="col">
-                                <b>ANAMNESIS : Autoanamnesis / Alloanamnesis</b> dengan :
+                                <b>ANAMNESIS : </b>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="T_01" id="T_01_0" value="0">
+                                    <label class="form-check-label" for="T_01_0"><b>Autoanamnesis / </b></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="T_01" id="T_01_1" value="1">
+                                    <label class="form-check-label" for="T_01_1"><b>Alloanamnesis*</b></label>
+                                </div> dengan :
                                 <input type="text" id="V_03" name="V_03" style="width:100px">
                                 Hubungan dengan pasien :
-                                <input type="text" id="V_04" name="V_04" style="width:100px">
+                                <input type="text" id="V_04" name="V_04" style="width:90px">
                             </div>
                         </div>
                         <div class="container">
@@ -154,16 +162,16 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="T_01" id="T_01_0" value="0">
-                                        <label class="form-check-label" for="T_01_0">Baik </label>
+                                        <input class="form-check-input" type="radio" name="T_02" id="T_02_0" value="0">
+                                        <label class="form-check-label" for="T_02_0">Baik </label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="T_01" id="T_01_1" value="1">
-                                        <label class="form-check-label" for="T_01_1">Sedang </label>
+                                        <input class="form-check-input" type="radio" name="T_02" id="T_02_1" value="1">
+                                        <label class="form-check-label" for="T_02_1">Sedang </label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="T_01" id="T_01_2" value="2">
-                                        <label class="form-check-label" for="T_01_2">Lemah </label>
+                                        <input class="form-check-input" type="radio" name="T_02" id="T_02_2" value="2">
+                                        <label class="form-check-label" for="T_02_2">Lemah </label>
                                     </div><br>
                                     <b>GCS</b>&nbsp;&nbsp;
                                     <label for="V_15"><b>E :</b></label>
@@ -509,7 +517,7 @@
                             </div>
                         </div>
                         <div class="row mb-5">
-                            <div class="col"><b>SASARAN :</b>
+                            <div class="col"><b>RENCANA ASUHAN/ TERAPI/INSTRUKSI <i>(standing order):</i></b>
                                 <textarea class="form-control" name="V_62" id="V_62" rows="9"></textarea>
                             </div>
                         </div>

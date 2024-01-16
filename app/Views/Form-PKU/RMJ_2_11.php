@@ -46,7 +46,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h4 style="text-align:center; margin-top:0px"><b>ASSESMEN GERIATRI RAWAT JALAN</b></h4>
+                        <h5 style="text-align:center; margin-top:0px"><b>ASSESMEN GERIATRI RAWAT JALAN</b></h5>
                     </td>
                 </tr>
                 <tr>

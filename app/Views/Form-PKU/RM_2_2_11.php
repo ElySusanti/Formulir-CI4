@@ -18,7 +18,7 @@
 
 <body>
     <div class="container">
-        <h6 style="text-align:right">RM 2.1.11</h6>
+        <h6 style="text-align:right">RM 2.2.11</h6>
         <form action="" autocomplete="off" style="vertical-align:middle">
             <h4 style="text-align: center"><b>REKAM MEDIS RAWAT INAP</b></h4>
             <table class="table table-bordered border-black">
@@ -42,7 +42,7 @@
                 </tr>
                 <tr>
                     <td colspan="3" style="text-align:center">
-                        <h3><b>ASESMEN MEDIS PASIEN MATA</b></h3>
+                        <h5><b>ASESMEN MEDIS PASIEN MATA</b></h5>
                     </td>
                 </tr>
                 <tr>

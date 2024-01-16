@@ -33,155 +33,130 @@
     </div>
     <div class="container">
         <div class="row my-3">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="card border-success" style="opacity:90%">
                     <div class="card-header bg-success text-white">
-                        RM 1.2
-                    </div>
-                    <div class="card-body">
-                        <a href="PKU/form1" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;RINGKASAN PULANG</a>
+                        <a href="PKU/RM_1_2" class="list-group-item list-group-item-action">RM 1.2</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="card border-success" style="opacity:90%">
                     <div class="card-header bg-success text-white">
-                        RM 1.2c
-                    </div>
-                    <div class="card-body">
-                        <a href="PKU/form2" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;PERENCANAAN PEMULANGAN PASIEN</a>
+                        <a href="PKU/RM_1_2c" class="list-group-item list-group-item-action">RM 1.2c</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="card border-success" style="opacity:90%">
                     <div class="card-header bg-success text-white">
-                        RM 2.1.17
-                    </div>
-                    <div class="card-body">
-                        <a href="PKU/form3" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;ASESMEN RAWAT INAP GERIATRI</a>
+                        <a href="PKU/RM_2_1_17" class="list-group-item list-group-item-action">RM 2.1.17</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="card border-success" style="opacity:90%">
                     <div class="card-header bg-success text-white">
-                        RM 2.1.18
-                    </div>
-                    <div class="card-body">
-                        <a href="PKU/form4" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;ASESMEN PASIEN DENGAN RISIKO MENDAPATKAN KEKERASAN FISIK</a>
+                        <a href="PKU/RM_2_1_18" class="list-group-item list-group-item-action">RM 2.1.18</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row mb-3">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="card border-success" style="opacity:90%">
                     <div class="card-header bg-success text-white">
-                        RM 2.1.19
-                    </div>
-                    <div class="card-body">
-                        <a href="PKU/form5" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;ASESMEN PASIEN KECANDUAN ALKOHOL ATAU OBAT TERLARANG</a>
+                        <a href="PKU/RM_2_1_19" class="list-group-item list-group-item-action">RM 2.1.19</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="card border-success" style="opacity:90%">
                     <div class="card-header bg-success text-white">
-                        RM 2.1.20
-                    </div>
-                    <div class="card-body">
-                        <a href="PKU/form6" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;ASESMEN PASIEN KEMOTERAPI</a>
+                        <a href="PKU/RM_2_1_20" class="list-group-item list-group-item-action">RM 2.1.20</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="card border-success" style="opacity:90%">
                     <div class="card-header bg-success text-white">
-                        RM 2.1.21
-                    </div>
-                    <div class="card-body">
-                        <a href="PKU/form7" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;ASESMEN MEDIS PASIEN PSIKIATRI</a>
+                        <a href="PKU/RM_2_1_21" class="list-group-item list-group-item-action">RM 2.1.21</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="card border-success" style="opacity:90%">
                     <div class="card-header bg-success text-white">
-                        RM 2.1.22
-                    </div>
-                    <div class="card-body">
-                        <a href="PKU/form8" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;ASSESMENT IKFR RAWAT INAP</a>
+                        <a href="PKU/RM_2_1_22" class="list-group-item list-group-item-action">RM 2.1.22</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row mb-3">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="card border-success" style="opacity:90%">
                     <div class="card-header bg-success text-white">
-                        RM 2.2.11
-                    </div>
-                    <div class="card-body">
-                        <a href="PKU/form9" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;ASESMEN MEDIS PASIEN MATA</a>
+                        <a href="PKU/RM_2_1_23" class="list-group-item list-group-item-action">RM 2.1.23</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="card border-success" style="opacity:90%">
                     <div class="card-header bg-success text-white">
-                        RM 2.1.23
-                    </div>
-                    <div class="card-body">
-                        <a href="PKU/form10" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;ASSESMEN GERIATRI RAWAT INAP</a>
+                        <a href="PKU/RM_2_2_11" class="list-group-item list-group-item-action">RM 2.2.11</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="card border-success" style="opacity:90%">
                     <div class="card-header bg-success text-white">
-                        RMJ 2.9
-                    </div>
-                    <div class="card-body">
-                        <a href="PKU/form11" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;ASESMEN MEDIS PASIEN MATA</a>
+                        <a href="PKU/RMJ_2_9" class="list-group-item list-group-item-action">RMJ 2.9</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="card border-success" style="opacity:90%">
                     <div class="card-header bg-success text-white">
-                        RMJ 2.11
-                    </div>
-                    <div class="card-body">
-                        <a href="PKU/form12" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;ASSESMEN GERIATRI RAWAT JALAN</a>
+                        <a href="PKU/RMJ_2_11" class="list-group-item list-group-item-action">RMJ 2.11</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row mb-3">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="card border-success" style="opacity:90%">
                     <div class="card-header bg-success text-white">
-                        RMJ 2.12
-                    </div>
-                    <div class="card-body">
-                        <a href="PKU/form13" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;ASSESMENT IKFR RAWAT JALAN</a>
+                        <a href="PKU/RMJ_2_12" class="list-group-item list-group-item-action">RMJ 2.12</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="card border-success" style="opacity:90%">
                     <div class="card-header bg-success text-white">
-                        RMJ 2.13
+                        <a href="PKU/RMJ_2_13" class="list-group-item list-group-item-action">RMJ 2.13</a>
                     </div>
-                    <div class="card-body">
-                        <a href="PKU/form14" class="list-group-item list-group-item-action"><i class="bi bi-journal-medical" style="font-size:25px"></i>&nbsp;ASSESMENT PSIKIATRI RAWAT JALAN</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-success" style="opacity:90%">
+                    <div class="card-header bg-success text-white">
+                        <a href="PKU/RM_4_2_1" class="list-group-item list-group-item-action">RM 4.2(1)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-success" style="opacity:90%">
+                    <div class="card-header bg-success text-white">
+                        <a href="PKU/RM_4_2_2" class="list-group-item list-group-item-action">RM 4.2(2)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <div class="card border-success" style="opacity:90%">
+                    <div class="card-header bg-success text-white">
+                        <a href="PKU/RM_4_11" class="list-group-item list-group-item-action">RM 4.11</a>
                     </div>
                 </div>
             </div>

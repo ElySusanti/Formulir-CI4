@@ -8,60 +8,72 @@ class PKU extends BaseController
     {
         return view('dashboard-PKU');
     }
-    public function form1()
+    public function RM_1_2()
     {
-        return view('Form-PKU/ringkasan-pulang');
+        return view('Form-PKU/RM_1_2');
     }
-    public function form2()
+    public function RM_1_2c()
     {
-        return view('Form-PKU/perencanaan-pemulangan');
+        return view('Form-PKU/RM_1_2c');
     }
-    public function form3()
+    public function RM_2_1_17()
     {
         return view('Form-PKU/RM_2_1_17');
     }
-    public function form4()
+    public function RM_2_1_18()
     {
         return view('Form-PKU/RM_2_1_18');
     }
-    public function form5()
+    public function RM_2_1_19()
     {
         return view('Form-PKU/RM_2_1_19');
     }
-    public function form6()
+    public function RM_2_1_20()
     {
         return view('Form-PKU/RM_2_1_20');
     }
-    public function form7()
+    public function RM_2_1_21()
     {
         return view('Form-PKU/RM_2_1_21');
     }
-    public function form8()
+    public function RM_2_1_22()
     {
         return view('Form-PKU/RM_2_1_22');
     }
-    public function form9()
-    {
-        return view('Form-PKU/RM_2_1_11');
-    }
-    public function form10()
+    public function RM_2_1_23()
     {
         return view('Form-PKU/RM_2_1_23');
     }
-    public function form11()
+    public function RM_2_2_11()
+    {
+        return view('Form-PKU/RM_2_2_11');
+    }
+    public function RMJ_2_9()
     {
         return view('Form-PKU/RMJ_2_9');
     }
-    public function form12()
+    public function RMJ_2_11()
     {
         return view('Form-PKU/RMJ_2_11');
     }
-    public function form13()
+    public function RMJ_2_12()
     {
         return view('Form-PKU/RMJ_2_12');
     }
-    public function form14()
+    public function RMJ_2_13()
     {
         return view('Form-PKU/RMJ_2_13');
+    }
+    public function RM_4_2_1()
+    {
+        return view('Form-PKU/RM_4_2(1)');
+    }
+    public function RM_4_2_2()
+    {
+        return view('Form-PKU/RM_4_2(2)');
+    }
+    public function RM_4_11()
+    {
+        return view('Form-PKU/RM_4_11');
     }
 }

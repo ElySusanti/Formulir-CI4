@@ -46,7 +46,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align:center">
-                        <h3><b>ASESMEN MEDIS PASIEN MATA</b></h3>
+                        <h5><b>ASESMEN MEDIS PASIEN MATA</b></h5>
                     </td>
                 </tr>
                 <tr>

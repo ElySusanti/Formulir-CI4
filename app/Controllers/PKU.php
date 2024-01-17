@@ -76,4 +76,8 @@ class PKU extends BaseController
     {
         return view('Form-PKU/RM_4_11');
     }
+    public function RM_5_1()
+    {
+        return view('Form-PKU/RM_5_1');
+    }
 }

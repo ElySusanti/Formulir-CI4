@@ -658,17 +658,17 @@
                             <input type="text" class="form-control" id="V_62" name="V_62">
                         </td>
                         <td>
-                            <canvas id="canvas" width="90" height="90" style="border:1px solid #000;"></canvas>
+                            <canvas id="canvas1" width="90" height="90" style="border:1px solid #000;"></canvas>
                             <input type="hidden" name="TTD" id="TTD"><br>
                             <input type="text" class="form-control" id="V_63" name="V_63" style="text-align: center;">
                         </td>
                         <td>
-                            <canvas id="canvas1" width="90" height="90" style="border:1px solid #000;"></canvas>
+                            <canvas id="canvas2" width="90" height="90" style="border:1px solid #000;"></canvas>
                             <input type="hidden" name="TTD_1" id="TTD_1"><br>
                             <input type="text" class="form-control" id="V_64" name="V_64" style="text-align: center;">
                         </td>
                         <td>
-                            <canvas id="canvas2" width="90" height="90" style="border:1px solid #000;"></canvas>
+                            <canvas id="canvas3" width="90" height="90" style="border:1px solid #000;"></canvas>
                             <input type="hidden" name="TTD_2" id="TTD_2"><br>
                             <input type="text" class="form-control" id="V_65" name="V_65" style="text-align: center;">
                         </td>
@@ -688,50 +688,6 @@
             </table>
         </form>
     </div>
-    <script>
-        var canvas = document.getElementById('canvas');
-        const canvasDataInput = document.getElementById('TTD');
-        var context = canvas.getContext('2d');
-        var drawing = false;
-
-        canvas.addEventListener('mousedown', startDrawing);
-        canvas.addEventListener('mousemove', draw);
-        canvas.addEventListener('mouseup', stopDrawing);
-        canvas.addEventListener('mouseout', stopDrawing);
-
-        function startDrawing(e) {
-            drawing = true;
-            draw(e);
-        }
-
-        function draw(e) {
-            if (!drawing) return;
-
-            context.lineWidth = 2;
-            context.lineCap = 'round';
-            context.strokeStyle = '#000';
-
-            context.lineTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
-            context.stroke();
-            context.beginPath();
-            context.moveTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
-        }
-
-        function stopDrawing() {
-            drawing = false;
-            context.beginPath();
-        }
-
-        function clearCanvas() {
-            context.clearRect(0, 0, canvas.width, canvas.height);
-        }
-
-        function saveSignatureData() {
-            const canvasData = canvas.toDataURL('image/png');
-
-            canvasDataInput.value = canvasData;
-        }
-    </script>
     <script>
         var canvas1 = document.getElementById('canvas1');
         const canvasDataInput1 = document.getElementById('TTD_1');
@@ -905,7 +861,7 @@
     <script type="text/javascript">
         // JavaScript Document
         var j = 67;
-        var canvas = 2;
+        var canvas = 3;
         var TTD = 2;
 
         function addRow1(tableID) {
@@ -927,14 +883,14 @@
             $("#" + tableID).append($("<tr>")
                 .append($("<td>").html('<div class="form-group"><input type="datetime-local" class="form-control" id="V_' + j1 + '" name="V_' + j1 + '"></div>'))
                 .append($("<td>").html('<div class="form-group"><input type="text" class="form-control" id="V_' + j2 + '" name="V_' + j2 + '"></div>'))
-                .append($("<td>").html('<canvas width="90" height="90" style="border:1px solid #000;" id="canvas' + canvas1 + '"></canvas><div class="form-group"><input type="hidden" class="form-control" id="TTD_' + TTD1 + '"></div><div class="form-group"><input type="text" class="form-control" style="text-align: center;" id="V_' + j3 + '" name="V_' + j3 + '"></div>'))
+                .append($("<td>").html('<canvas width="90" height="90" style="border:1px solid #000;" id="canvas' + canvas1 + '"/><div class="form-group"><input type="hidden" class="form-control" id="TTD_' + TTD1 + '"></div><div class="form-group"><input type="text" class="form-control" style="text-align: center;" id="V_' + j3 + '" name="V_' + j3 + '"></div>'))
                 .append($("<td>").html('<canvas width="90" height="90" style="border:1px solid #000;" id="canvas' + canvas2 + '"></canvas><div class="form-group"><input type="hidden" class="form-control" id="TTD_' + TTD2 + '"></div><div class="form-group"><input type="text" class="form-control" style="text-align: center;" id="V_' + j4 + '" name="V_' + j4 + '"></div>'))
                 .append($("<td>").html('<canvas width="90" height="90" style="border:1px solid #000;" id="canvas' + canvas3 + '"></canvas><div class="form-group"><input type="hidden" class="form-control" id="TTD_' + TTD3 + '"></div><div class="form-group"><input type="text" class="form-control" style="text-align: center;" id="V_' + j5 + '" name="V_' + j5 + '"></div>'))
                 .append($("<td>").html('<div class="form-group"><input type="text" class="form-control" id="V_' + j6 + '" name="V_' + j6 + '"></div>'))
                 .append($("<td>").html('<div class="form-group"><input type="text" class="form-control" id="V_' + j7 + '" name="V_' + j7 + '"></div>'))
             )
             i += 7;
-            canvas += 2;
+            canvas += 3;
             TTD += 2;
         }
     </script>

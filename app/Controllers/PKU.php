@@ -80,4 +80,20 @@ class PKU extends BaseController
     {
         return view('Form-PKU/RM_5_1');
     }
+    public function RM_8_a()
+    {
+        return view('Form-PKU/RM_8_a');
+    }
+    public function RM_8_b()
+    {
+        return view('Form-PKU/RM_8_b');
+    }
+    public function RM_7_3()
+    {
+        return view('Form-PKU/RM_7_3');
+    }
+    public function RM_7_5()
+    {
+        return view('Form-PKU/RM_7_5');
+    }
 }

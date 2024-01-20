@@ -167,6 +167,36 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-3">
+                <div class="card border-success" style="opacity:90%">
+                    <div class="card-header bg-success text-white">
+                        <a href="PKU/RM_8_a" class="list-group-item list-group-item-action">RM 8.a</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-success" style="opacity:90%">
+                    <div class="card-header bg-success text-white">
+                        <a href="PKU/RM_8_b" class="list-group-item list-group-item-action">RM 8.b</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <div class="card border-success" style="opacity:90%">
+                    <div class="card-header bg-success text-white">
+                        <a href="PKU/RM_7_3" class="list-group-item list-group-item-action">RM 7.3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-success" style="opacity:90%">
+                    <div class="card-header bg-success text-white">
+                        <a href="PKU/RM_7_5" class="list-group-item list-group-item-action">RM 7.5</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

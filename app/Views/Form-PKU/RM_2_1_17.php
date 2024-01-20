@@ -25,7 +25,7 @@
                 <tr style="vertical-align:middle; margin:0px; font-family:'Times New Roman'">
                     <td>
                         <div class="row">
-                            <div class="col-md-3" style="text-align:center">
+                            <div class="col-md-2" style="text-align:center">
                                 <img src="\img\logo_PKU.png" alt="" style="width:90px"><br>
                                 <p>SEHAT AMANAH<br>Tanggungjawab-Islami</p>
                             </div>
@@ -1562,7 +1562,7 @@
                                 <img src="\img\logo_PKU.png" alt="" style="width:90px"><br>
                                 <p>SEHAT AMANAH<br>Tanggungjawab-Islami</p>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <h4><b>RS PKU MUHAMMADIYAH SAMPANGAN</b></h4>
                                 <p>Semanggi RT 02/20 Pasar Kliwon Surakarta<br>
                                     Telp. ( 0271 ) 633894 Fax: 0271- 630229 <br>

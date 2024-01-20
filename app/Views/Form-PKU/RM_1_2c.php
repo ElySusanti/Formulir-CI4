@@ -33,7 +33,7 @@
                             Jawa Tengah 57117
                         </h5>
                     </td>
-                    <td style="width:40%">
+                    <td style="width:35%">
                         <div class="container" style="height:150px; border: 1px solid black; border-radius:5px">
                             <h5 style="text-align:center; margin-top:60px">Label Identitas Pasien</h5>
                         </div>
